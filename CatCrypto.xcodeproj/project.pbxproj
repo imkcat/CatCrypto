@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C356170C1FDD74A5005316BF /* CatCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C356170C1FDD74A5005316BF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C356170F1FDD74A5005316BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35617111FDD74A5005316BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C35617141FDD74A5005316BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,7 +77,8 @@
 		C35617031FDD74A5005316BF = {
 			isa = PBXGroup;
 			children = (
-				C356170E1FDD74A5005316BF /* CatCrypto */,
+				C356173D1FDD7592005316BF /* Sources */,
+				C356170E1FDD74A5005316BF /* Example */,
 				C35617231FDD74A6005316BF /* CatCryptoTests */,
 				C356172E1FDD74A6005316BF /* CatCryptoUITests */,
 				C356170D1FDD74A5005316BF /* Products */,
@@ -87,14 +88,14 @@
 		C356170D1FDD74A5005316BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C356170C1FDD74A5005316BF /* CatCrypto.app */,
+				C356170C1FDD74A5005316BF /* Example.app */,
 				C35617201FDD74A6005316BF /* CatCryptoTests.xctest */,
 				C356172B1FDD74A6005316BF /* CatCryptoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C356170E1FDD74A5005316BF /* CatCrypto */ = {
+		C356170E1FDD74A5005316BF /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				C356170F1FDD74A5005316BF /* AppDelegate.swift */,
@@ -104,7 +105,7 @@
 				C35617181FDD74A5005316BF /* LaunchScreen.storyboard */,
 				C356171B1FDD74A5005316BF /* Info.plist */,
 			);
-			path = CatCrypto;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		C35617231FDD74A6005316BF /* CatCryptoTests */ = {
@@ -125,12 +126,19 @@
 			path = CatCryptoUITests;
 			sourceTree = "<group>";
 		};
+		C356173D1FDD7592005316BF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C356170B1FDD74A5005316BF /* CatCrypto */ = {
+		C356170B1FDD74A5005316BF /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C35617341FDD74A6005316BF /* Build configuration list for PBXNativeTarget "CatCrypto" */;
+			buildConfigurationList = C35617341FDD74A6005316BF /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				C35617081FDD74A5005316BF /* Sources */,
 				C35617091FDD74A5005316BF /* Frameworks */,
@@ -140,9 +148,9 @@
 			);
 			dependencies = (
 			);
-			name = CatCrypto;
+			name = Example;
 			productName = CatCrypto;
-			productReference = C356170C1FDD74A5005316BF /* CatCrypto.app */;
+			productReference = C356170C1FDD74A5005316BF /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C356171F1FDD74A6005316BF /* CatCryptoTests */ = {
@@ -220,7 +228,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C356170B1FDD74A5005316BF /* CatCrypto */,
+				C356170B1FDD74A5005316BF /* Example */,
 				C356171F1FDD74A6005316BF /* CatCryptoTests */,
 				C356172A1FDD74A6005316BF /* CatCryptoUITests */,
 			);
@@ -285,12 +293,12 @@
 /* Begin PBXTargetDependency section */
 		C35617221FDD74A6005316BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C356170B1FDD74A5005316BF /* CatCrypto */;
+			target = C356170B1FDD74A5005316BF /* Example */;
 			targetProxy = C35617211FDD74A6005316BF /* PBXContainerItemProxy */;
 		};
 		C356172D1FDD74A6005316BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C356170B1FDD74A5005316BF /* CatCrypto */;
+			target = C356170B1FDD74A5005316BF /* Example */;
 			targetProxy = C356172C1FDD74A6005316BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -427,9 +435,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CatCrypto/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCrypto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,9 +450,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CatCrypto/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCrypto;
+				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -524,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C35617341FDD74A6005316BF /* Build configuration list for PBXNativeTarget "CatCrypto" */ = {
+		C35617341FDD74A6005316BF /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C35617351FDD74A6005316BF /* Debug */,
