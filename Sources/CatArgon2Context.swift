@@ -21,4 +21,18 @@ public class CatArgon2Context {
     public var mode: CatArgon2ContextMode = CatArgon2ContextMode.Argon2i
     public var salt: String = UUID().uuidString
     public var hashlen: Int = 32
+    
+    public init(iterations: Int = 3,
+                memory: Int = 1 << 12,
+                parallelism: Int = 1,
+                mode: CatArgon2ContextMode = .Argon2i,
+                salt: String = UUID().uuidString,
+                hashlen: Int = 32) {
+        self.iterations = iterations
+        self.memory = memory
+        self.parallelism = parallelism
+        self.mode = mode
+        self.salt = salt
+        self.hashlen = hashlen
+    }
 }

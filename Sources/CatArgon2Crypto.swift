@@ -51,6 +51,10 @@ public enum CatArgon2Error: Int {
 public class CatArgon2Crypto: CatUnsymmetricCrypto {
     public var context: CatArgon2Context = CatArgon2Context()
     
+    public init(context: CatArgon2Context = CatArgon2Context()) {
+        self.context = context
+    }
+    
     override public func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {
         let pwd = UnsafeRawPointer(strdup(NSString(string: password).utf8String))
         let pwdlen = strlen(NSString(string: password).utf8String)
