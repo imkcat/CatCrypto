@@ -35,6 +35,8 @@ argon2Crypto.verify(hash: hash, password: "password", completeHandler: { (verify
                     	print("Verify failure")
                     }
                 })
+
+// Verify success
 ```
 
 CatCrypto support Argon2i, Argon2d, and Argon2id three different mode, Argon2i is default mode and it is recommend.
