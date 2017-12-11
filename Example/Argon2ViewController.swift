@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Argon2ViewController.swift
 //  CatCrypto
 //
 //  Created by Kcat on 2017/12/10.
@@ -9,7 +9,7 @@
 import UIKit
 import CatCrypto
 
-class ViewController: UIViewController {
+class Argon2ViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var hashTextView: UITextView!
@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hashAction(_ sender: Any) {
+        passwordTextField.resignFirstResponder()
+        
         argon2Crypto.hash(password: passwordTextField.text ?? "", completeHandler: { (hashResult) in
             if hashResult.error == nil {
                 self.hashTextView.text = hashResult.value!

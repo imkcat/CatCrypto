@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C330B4E81FDEBC99005AEECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4E71FDEBC99005AEECC /* AppDelegate.swift */; };
-		C330B4EA1FDEBC99005AEECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4E91FDEBC99005AEECC /* ViewController.swift */; };
+		C330B4EA1FDEBC99005AEECC /* Argon2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */; };
 		C330B4ED1FDEBC99005AEECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C330B4EB1FDEBC99005AEECC /* Main.storyboard */; };
 		C330B4EF1FDEBC99005AEECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C330B4EE1FDEBC99005AEECC /* Assets.xcassets */; };
-		C330B4F21FDEBC99005AEECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C330B4F01FDEBC99005AEECC /* LaunchScreen.storyboard */; };
 		C3A43C741FDEBE1B004E32E6 /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; };
 		C3A43C751FDEBE1B004E32E6 /* CatCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C3AA15461FDEC6430047CE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,13 +23,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = C330B4BB1FDE944F005AEECC;
 			remoteInfo = CatCryptoTests;
-		};
-		C3A43C6F1FDEBDB3004E32E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C356172B1FDD74A6005316BF;
-			remoteInfo = CatCryptoUITests;
 		};
 		C3A43C711FDEBDB3004E32E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -64,12 +57,12 @@
 /* Begin PBXFileReference section */
 		C330B4E41FDEBC99005AEECC /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C330B4E71FDEBC99005AEECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C330B4E91FDEBC99005AEECC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argon2ViewController.swift; sourceTree = "<group>"; };
 		C330B4EC1FDEBC99005AEECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C330B4EE1FDEBC99005AEECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C330B4F11FDEBC99005AEECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C330B4F31FDEBC99005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
+		C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				C330B4E71FDEBC99005AEECC /* AppDelegate.swift */,
-				C330B4E91FDEBC99005AEECC /* ViewController.swift */,
+				C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */,
 				C330B4EB1FDEBC99005AEECC /* Main.storyboard */,
 				C330B4EE1FDEBC99005AEECC /* Assets.xcassets */,
-				C330B4F01FDEBC99005AEECC /* LaunchScreen.storyboard */,
 				C330B4F31FDEBC99005AEECC /* Info.plist */,
+				C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -117,9 +110,8 @@
 		C3A43C681FDEBDB3004E32E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3A43C6E1FDEBDB3004E32E6 /* CatCryptoTests.xctest */,
-				C3A43C701FDEBDB3004E32E6 /* CatCryptoUITests.xctest */,
 				C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */,
+				C3A43C6E1FDEBDB3004E32E6 /* CatCryptoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,13 +186,6 @@
 			remoteRef = C3A43C6D1FDEBDB3004E32E6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C3A43C701FDEBDB3004E32E6 /* CatCryptoUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CatCryptoUITests.xctest;
-			remoteRef = C3A43C6F1FDEBDB3004E32E6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -215,8 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C330B4F21FDEBC99005AEECC /* LaunchScreen.storyboard in Resources */,
 				C330B4EF1FDEBC99005AEECC /* Assets.xcassets in Resources */,
+				C3AA15461FDEC6430047CE81 /* LaunchScreen.storyboard in Resources */,
 				C330B4ED1FDEBC99005AEECC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C330B4EA1FDEBC99005AEECC /* ViewController.swift in Sources */,
+				C330B4EA1FDEBC99005AEECC /* Argon2ViewController.swift in Sources */,
 				C330B4E81FDEBC99005AEECC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,14 +235,6 @@
 				C330B4EC1FDEBC99005AEECC /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C330B4F01FDEBC99005AEECC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C330B4F11FDEBC99005AEECC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -377,6 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
