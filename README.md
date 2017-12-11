@@ -25,6 +25,16 @@ argon2Crypto.hash(password: "password", completeHandler: { (hashResult) in
             })
 
 // $argon2i$v=19$m=4096,t=3,p=1$OTY3Njk1RDAtMzAxMy00MDQxLUE1MkEtNDMwRThGN0QzQTgz$JIYBIOhvjT955Vxx2uTN6FrXUyPuzjhF1l3pFeEVpfQ
+
+let hash = "$argon2i$v=19$m=4096,t=3,p=1$OTY3Njk1RDAtMzAxMy00MDQxLUE1MkEtNDMwRThGN0QzQTgz$JIYBIOhvjT955Vxx2uTN6FrXUyPuzjhF1l3pFeEVpfQ"
+
+argon2Crypto.verify(hash: hash, password: "password", completeHandler: { (verifyResult) in
+                    if verifyResult.error == nil {
+                        print("Verify success")
+                    } else {
+                    	print("Verify failure")
+                    }
+                })
 ```
 
 CatCrypto support Argon2i, Argon2d, and Argon2id three different mode, Argon2i is default mode and it is recommend.
