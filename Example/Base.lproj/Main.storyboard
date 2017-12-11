@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,13 +18,52 @@
                         <viewControllerLayoutGuide type="bottom" id="UXn-Xm-5UQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDL-SY-hig">
+                                <rect key="frame" x="142" y="269" width="36" height="30"/>
+                                <state key="normal" title="Hash"/>
+                                <connections>
+                                    <action selector="hashAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tne-FB-mOL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vc-FZ-7T6">
+                                <rect key="frame" x="10" y="231" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="anP-fy-WV3"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e8U-dn-ICW">
+                                <rect key="frame" x="10" y="307" width="300" height="261"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6vc-FZ-7T6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1LU-fi-Klv"/>
+                            <constraint firstItem="e8U-dn-ICW" firstAttribute="width" secondItem="6vc-FZ-7T6" secondAttribute="width" id="3eh-cW-snX"/>
+                            <constraint firstItem="UXn-Xm-5UQ" firstAttribute="top" secondItem="e8U-dn-ICW" secondAttribute="bottom" id="FUs-SZ-hqZ"/>
+                            <constraint firstItem="UDL-SY-hig" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JUK-Nr-15f"/>
+                            <constraint firstItem="UDL-SY-hig" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aaU-R3-Kd4"/>
+                            <constraint firstItem="e8U-dn-ICW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaY-JU-RaC"/>
+                            <constraint firstItem="UDL-SY-hig" firstAttribute="top" secondItem="6vc-FZ-7T6" secondAttribute="bottom" constant="8" id="s56-hb-vIs"/>
+                            <constraint firstItem="e8U-dn-ICW" firstAttribute="top" secondItem="UDL-SY-hig" secondAttribute="bottom" constant="8" id="wmL-ZE-v6B"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hashTextView" destination="e8U-dn-ICW" id="y0M-eA-vnM"/>
+                        <outlet property="passwordTextField" destination="6vc-FZ-7T6" id="GnW-8j-0U7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

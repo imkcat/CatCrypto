@@ -7,56 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C35617101FDD74A5005316BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C356170F1FDD74A5005316BF /* AppDelegate.swift */; };
-		C35617121FDD74A5005316BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617111FDD74A5005316BF /* ViewController.swift */; };
-		C35617151FDD74A5005316BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35617131FDD74A5005316BF /* Main.storyboard */; };
-		C35617171FDD74A5005316BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35617161FDD74A5005316BF /* Assets.xcassets */; };
-		C356171A1FDD74A5005316BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35617181FDD74A5005316BF /* LaunchScreen.storyboard */; };
-		C35617251FDD74A6005316BF /* CatCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617241FDD74A6005316BF /* CatCryptoTests.swift */; };
-		C35617301FDD74A6005316BF /* CatCryptoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C356172F1FDD74A6005316BF /* CatCryptoUITests.swift */; };
-		C35617451FDD765D005316BF /* CatArgon2Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C356173E1FDD765D005316BF /* CatArgon2Crypto.swift */; };
-		C35617471FDD765D005316BF /* CatArgon2Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617431FDD765D005316BF /* CatArgon2Context.swift */; };
-		C35617481FDD765D005316BF /* CatUnsymmetricCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617441FDD765D005316BF /* CatUnsymmetricCrypto.swift */; };
-		C35617601FDD7C9C005316BF /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
-		C35617631FDD7C9C005316BF /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
-		C35617641FDD7C9C005316BF /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
-		C35617691FDD7C9C005316BF /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = C356175C1FDD7C9B005316BF /* core.c */; };
-		C356176D1FDD7E45005316BF /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
-		C35617701FDD7E5B005316BF /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
-		C35617721FDD7F96005316BF /* CatCryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617711FDD7F96005316BF /* CatCryptoHelper.swift */; };
+		C330B4A81FDE93AC005AEECC /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C330B4C41FDE94E9005AEECC /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
+		C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
+		C330B4CB1FDE94E9005AEECC /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = C356175C1FDD7C9B005316BF /* core.c */; };
+		C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
+		C330B4CF1FDE94E9005AEECC /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
+		C330B4D11FDE94E9005AEECC /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
+		C330B4D41FDE94E9005AEECC /* CatArgon2Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617431FDD765D005316BF /* CatArgon2Context.swift */; };
+		C330B4D51FDE94E9005AEECC /* CatArgon2Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C356173E1FDD765D005316BF /* CatArgon2Crypto.swift */; };
+		C330B4D61FDE94E9005AEECC /* CatUnsymmetricCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617441FDD765D005316BF /* CatUnsymmetricCrypto.swift */; };
+		C330B4D71FDE94E9005AEECC /* CatCryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617711FDD7F96005316BF /* CatCryptoHelper.swift */; };
+		C330B4D91FDE9C4F005AEECC /* CatArgon2CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C35617211FDD74A6005316BF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C35617041FDD74A5005316BF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C356170B1FDD74A5005316BF;
-			remoteInfo = CatCrypto;
-		};
-		C356172C1FDD74A6005316BF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C35617041FDD74A5005316BF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C356170B1FDD74A5005316BF;
-			remoteInfo = CatCrypto;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		C356170C1FDD74A5005316BF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C356170F1FDD74A5005316BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C35617111FDD74A5005316BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C35617141FDD74A5005316BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C35617161FDD74A5005316BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C35617191FDD74A5005316BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C356171B1FDD74A5005316BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C35617201FDD74A6005316BF /* CatCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C35617241FDD74A6005316BF /* CatCryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoTests.swift; sourceTree = "<group>"; };
-		C35617261FDD74A6005316BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C356172B1FDD74A6005316BF /* CatCryptoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCryptoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C356172F1FDD74A6005316BF /* CatCryptoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoUITests.swift; sourceTree = "<group>"; };
-		C35617311FDD74A6005316BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C330B4961FDE93AB005AEECC /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C330B4981FDE93AC005AEECC /* CatCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatCrypto.h; sourceTree = "<group>"; };
+		C330B4991FDE93AC005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C330B4BB1FDE944F005AEECC /* CatCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C330B4BF1FDE944F005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatArgon2CryptoTests.swift; sourceTree = "<group>"; };
 		C356173E1FDD765D005316BF /* CatArgon2Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatArgon2Crypto.swift; sourceTree = "<group>"; };
 		C35617411FDD765D005316BF /* argon2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = argon2.h; sourceTree = "<group>"; };
 		C35617421FDD765D005316BF /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -80,21 +51,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C35617091FDD74A5005316BF /* Frameworks */ = {
+		C330B4921FDE93AB005AEECC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C356171D1FDD74A6005316BF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C35617281FDD74A6005316BF /* Frameworks */ = {
+		C330B4B81FDE944F005AEECC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -104,59 +68,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C35617031FDD74A5005316BF = {
-			isa = PBXGroup;
-			children = (
-				C356173D1FDD7592005316BF /* Sources */,
-				C356170E1FDD74A5005316BF /* Example */,
-				C35617231FDD74A6005316BF /* CatCryptoTests */,
-				C356172E1FDD74A6005316BF /* CatCryptoUITests */,
-				C356170D1FDD74A5005316BF /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		C356170D1FDD74A5005316BF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C356170C1FDD74A5005316BF /* Example.app */,
-				C35617201FDD74A6005316BF /* CatCryptoTests.xctest */,
-				C356172B1FDD74A6005316BF /* CatCryptoUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C356170E1FDD74A5005316BF /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				C356170F1FDD74A5005316BF /* AppDelegate.swift */,
-				C35617111FDD74A5005316BF /* ViewController.swift */,
-				C35617131FDD74A5005316BF /* Main.storyboard */,
-				C35617161FDD74A5005316BF /* Assets.xcassets */,
-				C35617181FDD74A5005316BF /* LaunchScreen.storyboard */,
-				C356171B1FDD74A5005316BF /* Info.plist */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		C35617231FDD74A6005316BF /* CatCryptoTests */ = {
-			isa = PBXGroup;
-			children = (
-				C35617241FDD74A6005316BF /* CatCryptoTests.swift */,
-				C35617261FDD74A6005316BF /* Info.plist */,
-			);
-			path = CatCryptoTests;
-			sourceTree = "<group>";
-		};
-		C356172E1FDD74A6005316BF /* CatCryptoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C356172F1FDD74A6005316BF /* CatCryptoUITests.swift */,
-				C35617311FDD74A6005316BF /* Info.plist */,
-			);
-			path = CatCryptoUITests;
-			sourceTree = "<group>";
-		};
-		C356173D1FDD7592005316BF /* Sources */ = {
+		C330B4971FDE93AC005AEECC /* CatCrypto */ = {
 			isa = PBXGroup;
 			children = (
 				C356173F1FDD765D005316BF /* Argon2 */,
@@ -164,8 +76,37 @@
 				C356173E1FDD765D005316BF /* CatArgon2Crypto.swift */,
 				C35617441FDD765D005316BF /* CatUnsymmetricCrypto.swift */,
 				C35617711FDD7F96005316BF /* CatCryptoHelper.swift */,
+				C330B4981FDE93AC005AEECC /* CatCrypto.h */,
+				C330B4991FDE93AC005AEECC /* Info.plist */,
 			);
-			path = Sources;
+			path = CatCrypto;
+			sourceTree = "<group>";
+		};
+		C330B4BC1FDE944F005AEECC /* CatCryptoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C330B4BF1FDE944F005AEECC /* Info.plist */,
+				C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */,
+			);
+			path = CatCryptoTests;
+			sourceTree = "<group>";
+		};
+		C35617031FDD74A5005316BF = {
+			isa = PBXGroup;
+			children = (
+				C330B4971FDE93AC005AEECC /* CatCrypto */,
+				C330B4BC1FDE944F005AEECC /* CatCryptoTests */,
+				C356170D1FDD74A5005316BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C356170D1FDD74A5005316BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C330B4961FDE93AB005AEECC /* CatCrypto.framework */,
+				C330B4BB1FDE944F005AEECC /* CatCryptoTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C356173F1FDD765D005316BF /* Argon2 */ = {
@@ -193,59 +134,52 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		C356170B1FDD74A5005316BF /* Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C35617341FDD74A6005316BF /* Build configuration list for PBXNativeTarget "Example" */;
-			buildPhases = (
-				C35617081FDD74A5005316BF /* Sources */,
-				C35617091FDD74A5005316BF /* Frameworks */,
-				C356170A1FDD74A5005316BF /* Resources */,
+/* Begin PBXHeadersBuildPhase section */
+		C330B4931FDE93AB005AEECC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C330B4A81FDE93AC005AEECC /* CatCrypto.h in Headers */,
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Example;
-			productName = CatCrypto;
-			productReference = C356170C1FDD74A5005316BF /* Example.app */;
-			productType = "com.apple.product-type.application";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C356171F1FDD74A6005316BF /* CatCryptoTests */ = {
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C330B4951FDE93AB005AEECC /* CatCrypto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C35617371FDD74A6005316BF /* Build configuration list for PBXNativeTarget "CatCryptoTests" */;
+			buildConfigurationList = C330B4B11FDE93AC005AEECC /* Build configuration list for PBXNativeTarget "CatCrypto" */;
 			buildPhases = (
-				C356171C1FDD74A6005316BF /* Sources */,
-				C356171D1FDD74A6005316BF /* Frameworks */,
-				C356171E1FDD74A6005316BF /* Resources */,
+				C330B4911FDE93AB005AEECC /* Sources */,
+				C330B4921FDE93AB005AEECC /* Frameworks */,
+				C330B4931FDE93AB005AEECC /* Headers */,
+				C330B4941FDE93AB005AEECC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C35617221FDD74A6005316BF /* PBXTargetDependency */,
+			);
+			name = CatCrypto;
+			productName = CatCrypto;
+			productReference = C330B4961FDE93AB005AEECC /* CatCrypto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C330B4BA1FDE944F005AEECC /* CatCryptoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C330B4C01FDE944F005AEECC /* Build configuration list for PBXNativeTarget "CatCryptoTests" */;
+			buildPhases = (
+				C330B4B71FDE944F005AEECC /* Sources */,
+				C330B4B81FDE944F005AEECC /* Frameworks */,
+				C330B4B91FDE944F005AEECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
 			);
 			name = CatCryptoTests;
 			productName = CatCryptoTests;
-			productReference = C35617201FDD74A6005316BF /* CatCryptoTests.xctest */;
+			productReference = C330B4BB1FDE944F005AEECC /* CatCryptoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C356172A1FDD74A6005316BF /* CatCryptoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C356173A1FDD74A6005316BF /* Build configuration list for PBXNativeTarget "CatCryptoUITests" */;
-			buildPhases = (
-				C35617271FDD74A6005316BF /* Sources */,
-				C35617281FDD74A6005316BF /* Frameworks */,
-				C35617291FDD74A6005316BF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C356172D1FDD74A6005316BF /* PBXTargetDependency */,
-			);
-			name = CatCryptoUITests;
-			productName = CatCryptoUITests;
-			productReference = C356172B1FDD74A6005316BF /* CatCryptoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -257,20 +191,13 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = imkcat;
 				TargetAttributes = {
-					C356170B1FDD74A5005316BF = {
+					C330B4951FDE93AB005AEECC = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
-					C356171F1FDD74A6005316BF = {
+					C330B4BA1FDE944F005AEECC = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = C356170B1FDD74A5005316BF;
-					};
-					C356172A1FDD74A6005316BF = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C356170B1FDD74A5005316BF;
 					};
 				};
 			};
@@ -287,32 +214,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C356170B1FDD74A5005316BF /* Example */,
-				C356171F1FDD74A6005316BF /* CatCryptoTests */,
-				C356172A1FDD74A6005316BF /* CatCryptoUITests */,
+				C330B4951FDE93AB005AEECC /* CatCrypto */,
+				C330B4BA1FDE944F005AEECC /* CatCryptoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C356170A1FDD74A5005316BF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C356171A1FDD74A5005316BF /* LaunchScreen.storyboard in Resources */,
-				C35617171FDD74A5005316BF /* Assets.xcassets in Resources */,
-				C35617151FDD74A5005316BF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C356171E1FDD74A6005316BF /* Resources */ = {
+		C330B4941FDE93AB005AEECC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C35617291FDD74A6005316BF /* Resources */ = {
+		C330B4B91FDE944F005AEECC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,76 +238,112 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C35617081FDD74A5005316BF /* Sources */ = {
+		C330B4911FDE93AB005AEECC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C35617701FDD7E5B005316BF /* ref.c in Sources */,
-				C35617721FDD7F96005316BF /* CatCryptoHelper.swift in Sources */,
-				C35617691FDD7C9C005316BF /* core.c in Sources */,
-				C35617121FDD74A5005316BF /* ViewController.swift in Sources */,
-				C35617451FDD765D005316BF /* CatArgon2Crypto.swift in Sources */,
-				C35617481FDD765D005316BF /* CatUnsymmetricCrypto.swift in Sources */,
-				C35617601FDD7C9C005316BF /* argon2.c in Sources */,
-				C35617631FDD7C9C005316BF /* encoding.c in Sources */,
-				C35617101FDD74A5005316BF /* AppDelegate.swift in Sources */,
-				C35617641FDD7C9C005316BF /* blake2b.c in Sources */,
-				C35617471FDD765D005316BF /* CatArgon2Context.swift in Sources */,
-				C356176D1FDD7E45005316BF /* thread.c in Sources */,
+				C330B4C41FDE94E9005AEECC /* argon2.c in Sources */,
+				C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */,
+				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
+				C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */,
+				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
+				C330B4D11FDE94E9005AEECC /* thread.c in Sources */,
+				C330B4D41FDE94E9005AEECC /* CatArgon2Context.swift in Sources */,
+				C330B4D51FDE94E9005AEECC /* CatArgon2Crypto.swift in Sources */,
+				C330B4D61FDE94E9005AEECC /* CatUnsymmetricCrypto.swift in Sources */,
+				C330B4D71FDE94E9005AEECC /* CatCryptoHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C356171C1FDD74A6005316BF /* Sources */ = {
+		C330B4B71FDE944F005AEECC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C35617251FDD74A6005316BF /* CatCryptoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C35617271FDD74A6005316BF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C35617301FDD74A6005316BF /* CatCryptoUITests.swift in Sources */,
+				C330B4D91FDE9C4F005AEECC /* CatArgon2CryptoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C35617221FDD74A6005316BF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C356170B1FDD74A5005316BF /* Example */;
-			targetProxy = C35617211FDD74A6005316BF /* PBXContainerItemProxy */;
-		};
-		C356172D1FDD74A6005316BF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C356170B1FDD74A5005316BF /* Example */;
-			targetProxy = C356172C1FDD74A6005316BF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C35617131FDD74A5005316BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C35617141FDD74A5005316BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C35617181FDD74A5005316BF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C35617191FDD74A5005316BF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		C330B4AD1FDE93AC005AEECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3H8XCVJ8HH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CatCrypto/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CatCrypto/Argon2";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C330B4AE1FDE93AC005AEECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3H8XCVJ8HH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CatCrypto/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CatCrypto/Argon2";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C330B4C11FDE944F005AEECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatCryptoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C330B4C21FDE944F005AEECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CatCryptoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C35617321FDD74A6005316BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -499,148 +451,32 @@
 			};
 			name = Release;
 		};
-		C35617351FDD74A6005316BF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3H8XCVJ8HH;
-				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sources/Argon2",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/Sources/Argon2";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C35617361FDD74A6005316BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3H8XCVJ8HH;
-				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sources/Argon2",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/Sources/Argon2";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		C35617381FDD74A6005316BF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CatCryptoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatCrypto.app/CatCrypto";
-			};
-			name = Debug;
-		};
-		C35617391FDD74A6005316BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CatCryptoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatCrypto.app/CatCrypto";
-			};
-			name = Release;
-		};
-		C356173B1FDD74A6005316BF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CatCryptoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CatCrypto;
-			};
-			name = Debug;
-		};
-		C356173C1FDD74A6005316BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CatCryptoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CatCrypto;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C330B4B11FDE93AC005AEECC /* Build configuration list for PBXNativeTarget "CatCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C330B4AD1FDE93AC005AEECC /* Debug */,
+				C330B4AE1FDE93AC005AEECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C330B4C01FDE944F005AEECC /* Build configuration list for PBXNativeTarget "CatCryptoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C330B4C11FDE944F005AEECC /* Debug */,
+				C330B4C21FDE944F005AEECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C35617071FDD74A5005316BF /* Build configuration list for PBXProject "CatCrypto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C35617321FDD74A6005316BF /* Debug */,
 				C35617331FDD74A6005316BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C35617341FDD74A6005316BF /* Build configuration list for PBXNativeTarget "Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C35617351FDD74A6005316BF /* Debug */,
-				C35617361FDD74A6005316BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C35617371FDD74A6005316BF /* Build configuration list for PBXNativeTarget "CatCryptoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C35617381FDD74A6005316BF /* Debug */,
-				C35617391FDD74A6005316BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C356173A1FDD74A6005316BF /* Build configuration list for PBXNativeTarget "CatCryptoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C356173B1FDD74A6005316BF /* Debug */,
-				C356173C1FDD74A6005316BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
