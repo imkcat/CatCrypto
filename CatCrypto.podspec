@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CatCrypto'
   s.version          = '0.1.0'
-  s.summary          = 'An easy way for crypto '
+  s.summary          = 'An easy way for crypto.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -22,7 +22,6 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/ImKcat/CatCrypto'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kcat' => 'kcatdeveloper@icloud.com' }
   s.source           = { :git => 'https://github.com/ImKcat/CatCrypto.git', :tag => s.version.to_s }
@@ -36,12 +35,5 @@ TODO: Add long description of the pod here.
   s.pod_target_xcconfig= {
     'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/Sources/Argon2'
   }
-  
-  # s.resource_bundles = {
-  #   'CatCrypto' => ['CatCrypto/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.requires_arc = true
 end

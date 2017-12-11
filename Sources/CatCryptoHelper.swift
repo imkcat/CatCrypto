@@ -8,19 +8,19 @@
 
 import Foundation
 
-class CatCryptoResult {
-    var error: CatCryptoError? = nil
+public class CatCryptoResult {
+    public var error: CatCryptoError? = nil
 }
 
-class CatCryptoHashResult: CatCryptoResult {
-    var value: String? = nil
+public class CatCryptoHashResult: CatCryptoResult {
+    public var value: String? = nil
 }
 
-class CatCryptoVerifyResult: CatCryptoResult {
-    var value: Bool = false
+public class CatCryptoVerifyResult: CatCryptoResult {
+    public var value: Bool = false
 }
 
-class CatCryptoError: LocalizedError {
-    var errorCode: Int = 0
-    var errorDescription: String?
+public class CatCryptoError: LocalizedError {
+    public var errorCode: Int = 0
+    public var errorDescription: String?
 }

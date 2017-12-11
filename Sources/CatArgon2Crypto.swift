@@ -9,7 +9,7 @@
 import Foundation
 import argon2
 
-enum CatArgon2Error: Int {
+public enum CatArgon2Error: Int {
     case ARGON2_OK = 0
     case ARGON2_OUTPUT_PTR_NULL = -1
     case ARGON2_OUTPUT_TOO_SHORT = -2
@@ -49,7 +49,7 @@ enum CatArgon2Error: Int {
 }
 
 class CatArgon2Crypto: CatUnsymmetricCrypto {
-    var context: CatArgon2Context = CatArgon2Context()
+    public var context: CatArgon2Context = CatArgon2Context()
     
     override func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {
         let pwd = UnsafeRawPointer(strdup(NSString(string: password).utf8String))

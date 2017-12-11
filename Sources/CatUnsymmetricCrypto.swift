@@ -8,8 +8,8 @@
 
 import Foundation
 
-class CatUnsymmetricCrypto {
-    func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {}
+public class CatUnsymmetricCrypto {
+    public func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {}
     
-    func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {}
+    public func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {}
 }

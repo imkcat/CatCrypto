@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum CatArgon2ContextMode: Int {
+public enum CatArgon2ContextMode: Int {
     case Argon2d = 0
     case Argon2i = 1
     case Argon2id = 2
 }
 
-class CatArgon2Context {
-    var iterations: Int = 3
-    var memory: Int = 1 << 12
-    var parallelism: Int = 1
-    var mode: CatArgon2ContextMode = CatArgon2ContextMode.Argon2i
-    var salt: String = UUID().uuidString
-    var hashlen: Int = 32
+public class CatArgon2Context {
+    public var iterations: Int = 3
+    public var memory: Int = 1 << 12
+    public var parallelism: Int = 1
+    public var mode: CatArgon2ContextMode = CatArgon2ContextMode.Argon2i
+    public var salt: String = UUID().uuidString
+    public var hashlen: Int = 32
 }
