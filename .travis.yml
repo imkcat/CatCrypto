@@ -3,7 +3,7 @@ os: osx
 osx_image: xcode9
 xcode_workspace: CatCrypto.xcworkspace
 xcode_scheme: CatCrypto
-xcode_sdk: iphonesimulator8.0
+xcode_sdk: iphonesimulator10.0
 env:
   global:
     - FRAMEWORK_NAME=CatCrypto
@@ -20,5 +20,5 @@ deploy:
   file: CatCrypto.framework.zip
   skip_cleanup: true
 on:
-  repo: repo/repo
+  repo: ImKcat/CatCrypto
   tags: true
