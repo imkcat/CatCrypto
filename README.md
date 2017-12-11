@@ -51,6 +51,8 @@ argon2Crypto.context.mode = .Argon2id
 
 ## Installation
 
+### CocoaPods
+
 CatCrypto is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
