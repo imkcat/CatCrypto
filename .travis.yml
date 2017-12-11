@@ -1,0 +1,24 @@
+language: objective-c
+os: osx
+osx_image: xcode9
+xcode_workspace: CatCrypto.xcworkspace
+xcode_scheme: CatCrypto
+xcode_sdk: iphonesimulator8.0
+env:
+  global:
+    - FRAMEWORK_NAME=CatCrypto
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: 72a40e0f59c210a64cae7273204972fa4e3752ac
+  file: CatCrypto.framework.zip
+  skip_cleanup: true
+on:
+  repo: repo/repo
+  tags: true
