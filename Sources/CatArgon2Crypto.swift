@@ -48,10 +48,10 @@ public enum CatArgon2Error: Int {
     case ARGON2_VERIFY_MISMATCH = -35
 }
 
-class CatArgon2Crypto: CatUnsymmetricCrypto {
+public class CatArgon2Crypto: CatUnsymmetricCrypto {
     public var context: CatArgon2Context = CatArgon2Context()
     
-    override func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {
+    override public func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {
         let pwd = UnsafeRawPointer(strdup(NSString(string: password).utf8String))
         let pwdlen = strlen(NSString(string: password).utf8String)
         let salt = UnsafeRawPointer(strdup(NSString(string: context.salt).utf8String))
@@ -116,7 +116,7 @@ class CatArgon2Crypto: CatUnsymmetricCrypto {
         }
     }
     
-    override func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {
+    override public func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {
         let pwd = UnsafeRawPointer(strdup(NSString(string: password).utf8String))
         let pwdlen = strlen(NSString(string: password).utf8String)
         let encoded = strdup(NSString(string: hash).utf8String)
