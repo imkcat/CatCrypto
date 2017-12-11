@@ -1,6 +1,6 @@
 # CatCrypto
 
-[![CI Status](http://img.shields.io/travis/Kcat/CatCrypto.svg?style=flat)](https://travis-ci.org/Kcat/CatCrypto)
+[![CI Status](http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat)](https://travis-ci.org/ImKcat/CatCrypto)
 [![Version](https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat)](http://cocoapods.org/pods/CatCrypto)
 [![License](https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat)](http://cocoapods.org/pods/CatCrypto)
 [![Platform](https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat&colorB=7c3636)](http://cocoapods.org/pods/CatCrypto)
