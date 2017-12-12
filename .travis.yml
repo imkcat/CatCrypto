@@ -7,7 +7,7 @@ env:
 before_install:
   - brew update
   - brew outdated carthage || brew upgrade carthage
-script: xcodebuild clean & xcodebuild build -sdk iphonesimulator11.0 -workspace CatCrypto.xcworkspace -scheme CatCrypto CODE_SIGNING_REQUIRED=NO
+script: xcodebuild clean build -sdk iphonesimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto CODE_SIGNING_REQUIRED=NO
 before_deploy:
   - carthage build --no-skip-current
   - carthage archive $FRAMEWORK_NAME
