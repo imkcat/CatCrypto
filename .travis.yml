@@ -1,15 +1,13 @@
 language: objective-c
 os: osx
 osx_image: xcode9
-xcode_workspace: CatCrypto.xcworkspace
-xcode_scheme: CatCrypto
-xcode_sdk: iphonesimulator11.0
 env:
   global:
     - FRAMEWORK_NAME=CatCrypto
 before_install:
   - brew update
   - brew outdated carthage || brew upgrade carthage
+script: xcodebuild clean & xcodebuild build -sdk iphonesimulator11.0 -workspace CatCrypto.xcworkspace -scheme CatCrypto CODE_SIGNING_REQUIRED=NO
 before_deploy:
   - carthage build --no-skip-current
   - carthage archive $FRAMEWORK_NAME
