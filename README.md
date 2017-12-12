@@ -1,9 +1,11 @@
 # CatCrypto
 
-[![CI Status](http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat)](https://travis-ci.org/ImKcat/CatCrypto)
-[![Version](https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat)](http://cocoapods.org/pods/CatCrypto)
+[![Language](https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat)](http://cocoapods.org/pods/CatCrypto)
+[![Travis CI Status](http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat)](https://travis-ci.org/ImKcat/CatCrypto)
 [![License](https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat)](http://cocoapods.org/pods/CatCrypto)
-[![Platform](https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat&colorB=7c3636)](http://cocoapods.org/pods/CatCrypto)
+[![Support Platform](https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat&colorB=7c3636)](http://cocoapods.org/pods/CatCrypto)
 
 ## Requirements
 - Xcode 9+
@@ -50,15 +52,26 @@ argon2Crypto.context.mode = .Argon2id
 ```
 
 ## Installation
+CatCrypto is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage)
 
 ### CocoaPods
 
-CatCrypto is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Add the following line to your Podfile:
 
 ```ruby
+use_frameworks!
+
 pod 'CatCrypto'
 ```
+
+### Carthage
+
+Add the following line to your Cartfile:
+
+```ruby
+github "ImKcat/CatCrypto"
+```
+
 
 ## License
 
