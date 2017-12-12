@@ -19,4 +19,4 @@ deploy:
   skip_cleanup: true
 on:
   repo: ImKcat/CatCrypto
-  tags: false
+  tags: true
