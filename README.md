@@ -1,4 +1,4 @@
-# CatCrypto
+![CatCrypto Logo](https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto.png)
 
 [![Language](https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -10,6 +10,7 @@
 ## Requirements
 - Xcode 9+
 - Swift 4
+- iOS 8.0+
 
 ## Usage
 
