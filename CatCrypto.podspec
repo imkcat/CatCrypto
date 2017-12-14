@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CatCrypto'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'An easy way for hashing, support Argon2 currently.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
