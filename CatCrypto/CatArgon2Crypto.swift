@@ -9,45 +9,6 @@
 import Foundation
 import argon2
 
-public enum CatArgon2Error: Int {
-    case ARGON2_OK = 0
-    case ARGON2_OUTPUT_PTR_NULL = -1
-    case ARGON2_OUTPUT_TOO_SHORT = -2
-    case ARGON2_OUTPUT_TOO_LONG = -3
-    case ARGON2_PWD_TOO_SHORT = -4
-    case ARGON2_PWD_TOO_LONG = -5
-    case ARGON2_SALT_TOO_SHORT = -6
-    case ARGON2_SALT_TOO_LONG = -7
-    case ARGON2_AD_TOO_SHORT = -8
-    case ARGON2_AD_TOO_LONG = -9
-    case ARGON2_SECRET_TOO_SHORT = -10
-    case ARGON2_SECRET_TOO_LONG = -11
-    case ARGON2_TIME_TOO_SMALL = -12
-    case ARGON2_TIME_TOO_LARGE = -13
-    case ARGON2_MEMORY_TOO_LITTLE = -14
-    case ARGON2_MEMORY_TOO_MUCH = -15
-    case ARGON2_LANES_TOO_FEW = -16
-    case ARGON2_LANES_TOO_MANY = -17
-    case ARGON2_PWD_PTR_MISMATCH = -18    /* NULL ptr with non-zero length */
-    case ARGON2_SALT_PTR_MISMATCH = -19   /* NULL ptr with non-zero length */
-    case ARGON2_SECRET_PTR_MISMATCH = -20 /* NULL ptr with non-zero length */
-    case ARGON2_AD_PTR_MISMATCH = -21     /* NULL ptr with non-zero length */
-    case ARGON2_MEMORY_ALLOCATION_ERROR = -22
-    case ARGON2_FREE_MEMORY_CBK_NULL = -23
-    case ARGON2_ALLOCATE_MEMORY_CBK_NULL = -24
-    case ARGON2_INCORRECT_PARAMETER = -25
-    case ARGON2_INCORRECT_TYPE = -26
-    case ARGON2_OUT_PTR_MISMATCH = -27
-    case ARGON2_THREADS_TOO_FEW = -28
-    case ARGON2_THREADS_TOO_MANY = -29
-    case ARGON2_MISSING_ARGS = -30
-    case ARGON2_ENCODING_FAIL = -31
-    case ARGON2_DECODING_FAIL = -32
-    case ARGON2_THREAD_FAIL = -33
-    case ARGON2_DECODING_LENGTH_FAIL = -34
-    case ARGON2_VERIFY_MISMATCH = -35
-}
-
 /// CatArgon2Crypto is the crypto for Argon2
 ///
 /// [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing function that won the [Password Hashing Competition (PHC)](https://password-hashing.net/).
@@ -120,7 +81,7 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
             } else {
                 cryptoResult.error = CatCryptoError()
                 cryptoResult.error?.errorCode = Int(resultCode)
-                cryptoResult.error?.errorDescription = String(describing: CatArgon2Error(rawValue: Int(resultCode))!)
+                cryptoResult.error?.errorDescription = String(cString: argon2_error_message(resultCode))
                 completeHandler!(cryptoResult)
             }
         }
@@ -149,7 +110,7 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
             } else {
                 cryptoResult.error = CatCryptoError()
                 cryptoResult.error?.errorCode = Int(resultCode)
-                cryptoResult.error?.errorDescription = String(describing: CatArgon2Error(rawValue: Int(resultCode))!)
+                cryptoResult.error?.errorDescription = String(cString: argon2_error_message(resultCode))
                 completeHandler!(cryptoResult)
             }
         }
