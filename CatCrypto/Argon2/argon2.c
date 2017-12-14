@@ -268,7 +268,7 @@ int argon2_verify(const char *encoded, const void *pwd, const size_t pwdlen,
     }
 
     ctx.pwd = (uint8_t *)pwd;
-    ctx.pwdlen = pwdlen;
+    ctx.pwdlen = (uint32_t)pwdlen;
 
     ret = decode_string(&ctx, encoded, type);
     if (ret != ARGON2_OK) {

@@ -285,7 +285,7 @@ int decode_string(argon2_context *ctx, const char *str, argon2_type type) {
         if (str == NULL) {                                                     \
             return ARGON2_DECODING_FAIL;                                       \
         }                                                                      \
-        (x) = dec_x;                                                           \
+        (x) = (uint32_t)dec_x;                                                           \
     } while ((void)0, 0)
 
 /* Decoding base64 into a binary buffer */
