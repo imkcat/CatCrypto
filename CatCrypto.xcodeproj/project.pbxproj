@@ -19,6 +19,7 @@
 		C330B4D61FDE94E9005AEECC /* CatUnsymmetricCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617441FDD765D005316BF /* CatUnsymmetricCrypto.swift */; };
 		C330B4D71FDE94E9005AEECC /* CatCryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617711FDD7F96005316BF /* CatCryptoHelper.swift */; };
 		C330B4D91FDE9C4F005AEECC /* CatArgon2CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */; };
+		C358E78F1FE2318C00A352D0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C358E78E1FE2318C00A352D0 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C356176E1FDD7E5A005316BF /* ref.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ref.c; sourceTree = "<group>"; };
 		C356176F1FDD7E5B005316BF /* ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ref.h; sourceTree = "<group>"; };
 		C35617711FDD7F96005316BF /* CatCryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoHelper.swift; sourceTree = "<group>"; };
+		C358E78E1FE2318C00A352D0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				C356176B1FDD7E44005316BF /* thread.c */,
 				C356176C1FDD7E44005316BF /* thread.h */,
 				C35617421FDD765D005316BF /* module.modulemap */,
+				C358E78E1FE2318C00A352D0 /* LICENSE */,
 			);
 			path = Argon2;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C358E78F1FE2318C00A352D0 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
