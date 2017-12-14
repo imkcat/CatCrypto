@@ -10,9 +10,8 @@ Pod::Spec.new do |s|
   s.name             = 'CatCrypto'
   s.version          = '0.1.2'
   s.summary          = 'An easy way for hashing, support Argon2 currently.'
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+#  s.description      = <<-DESC
+#                       DESC
   s.homepage         = 'https://github.com/ImKcat/CatCrypto'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kcat' => 'kcatdeveloper@icloud.com' }
@@ -20,9 +19,8 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://imkcat.com'
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'CatCrypto/**/*.{h,c,modulemap,swift}'
+  s.source_files = 'CatCrypto/**/*.{h,c,swift}'
   s.private_header_files = 'CatCrypto/Argon2/*.h'
-
   s.preserve_paths = 'CatCrypto/Argon2/module.modulemap'
   s.pod_target_xcconfig= {
     'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/CatCrypto/Argon2'
