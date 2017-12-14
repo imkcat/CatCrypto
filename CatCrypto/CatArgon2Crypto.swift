@@ -23,9 +23,11 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
     }
     
     override public func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {
-        let pwd = UnsafeRawPointer(strdup(NSString(string: password).utf8String))
+        let pwdutf8 = strdup(NSString(string: password).utf8String)
+        let pwd = UnsafeRawPointer(pwdutf8)
         let pwdlen = strlen(NSString(string: password).utf8String)
-        let salt = UnsafeRawPointer(strdup(NSString(string: context.salt).utf8String))
+        let saltutf8 = strdup(NSString(string: context.salt).utf8String)
+        let salt = UnsafeRawPointer(saltutf8)
         let saltlen = strlen(NSString(string: context.salt).utf8String)
         let encodedlen = argon2_encodedlen(UInt32(context.iterations),
                                            UInt32(context.memory),
@@ -85,10 +87,15 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
                 completeHandler!(cryptoResult)
             }
         }
+        
+        free(pwdutf8)
+        free(saltutf8)
+        encoded.deallocate(capacity: encodedlen)
     }
     
     override public func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {
-        let pwd = UnsafeRawPointer(strdup(NSString(string: password).utf8String))
+        let pwdutf8 = strdup(NSString(string: password).utf8String)
+        let pwd = UnsafeRawPointer(pwdutf8)
         let pwdlen = strlen(NSString(string: password).utf8String)
         let encoded = strdup(NSString(string: hash).utf8String)
         var resultCode: Int32
@@ -114,5 +121,8 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
                 completeHandler!(cryptoResult)
             }
         }
+        
+        free(pwdutf8)
+        free(encoded)
     }
 }
