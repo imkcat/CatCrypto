@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
-               BuildableName = "CatCrypto_macOS.framework"
+               BuildableName = "CatCrypto.framework"
                BlueprintName = "CatCrypto-macOS"
                ReferencedContainer = "container:CatCrypto.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
-            BuildableName = "CatCrypto_macOS.framework"
+            BuildableName = "CatCrypto.framework"
             BlueprintName = "CatCrypto-macOS"
             ReferencedContainer = "container:CatCrypto.xcodeproj">
          </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
-            BuildableName = "CatCrypto_macOS.framework"
+            BuildableName = "CatCrypto.framework"
             BlueprintName = "CatCrypto-macOS"
             ReferencedContainer = "container:CatCrypto.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
-            BuildableName = "CatCrypto_macOS.framework"
+            BuildableName = "CatCrypto.framework"
             BlueprintName = "CatCrypto-macOS"
             ReferencedContainer = "container:CatCrypto.xcodeproj">
          </BuildableReference>

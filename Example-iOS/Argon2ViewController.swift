@@ -30,7 +30,6 @@ class Argon2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         argon2Mode = .Argon2i
     }
     
