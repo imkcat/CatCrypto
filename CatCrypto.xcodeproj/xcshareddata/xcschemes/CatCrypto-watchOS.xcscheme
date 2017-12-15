@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C330B4951FDE93AB005AEECC"
-               BuildableName = "CatCrypto.framework"
-               BlueprintName = "CatCrypto"
+               BlueprintIdentifier = "C3945EAC1FE3CE48009A203D"
+               BuildableName = "CatCrypto-watchOS.framework"
+               BlueprintName = "CatCrypto-watchOS"
                ReferencedContainer = "container:CatCrypto.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C330B4BA1FDE944F005AEECC"
-               BuildableName = "CatCryptoTests.xctest"
-               BlueprintName = "CatCryptoTests"
-               ReferencedContainer = "container:CatCrypto.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C330B4951FDE93AB005AEECC"
-            BuildableName = "CatCrypto.framework"
-            BlueprintName = "CatCrypto"
-            ReferencedContainer = "container:CatCrypto.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -66,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C330B4951FDE93AB005AEECC"
-            BuildableName = "CatCrypto.framework"
-            BlueprintName = "CatCrypto"
+            BlueprintIdentifier = "C3945EAC1FE3CE48009A203D"
+            BuildableName = "CatCrypto-watchOS.framework"
+            BlueprintName = "CatCrypto-watchOS"
             ReferencedContainer = "container:CatCrypto.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C330B4951FDE93AB005AEECC"
-            BuildableName = "CatCrypto.framework"
-            BlueprintName = "CatCrypto"
+            BlueprintIdentifier = "C3945EAC1FE3CE48009A203D"
+            BuildableName = "CatCrypto-watchOS.framework"
+            BlueprintName = "CatCrypto-watchOS"
             ReferencedContainer = "container:CatCrypto.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

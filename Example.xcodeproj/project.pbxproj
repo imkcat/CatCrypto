@@ -11,12 +11,83 @@
 		C330B4EA1FDEBC99005AEECC /* Argon2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */; };
 		C330B4ED1FDEBC99005AEECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C330B4EB1FDEBC99005AEECC /* Main.storyboard */; };
 		C330B4EF1FDEBC99005AEECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C330B4EE1FDEBC99005AEECC /* Assets.xcassets */; };
-		C3A43C741FDEBE1B004E32E6 /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; };
-		C3A43C751FDEBE1B004E32E6 /* CatCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C3945EB81FE3CEB2009A203D /* CatCrypto_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto_iOS.framework */; };
+		C3945EB91FE3CEB2009A203D /* CatCrypto_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C3945EC41FE3CFF0009A203D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3945EC31FE3CFF0009A203D /* AppDelegate.swift */; };
+		C3945EC81FE3CFF0009A203D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3945EC71FE3CFF0009A203D /* Assets.xcassets */; };
+		C3945ECB1FE3CFF0009A203D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3945EC91FE3CFF0009A203D /* Main.storyboard */; };
+		C3945ED71FE3CFF0009A203D /* Example_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3945ED61FE3CFF0009A203D /* Example_macOSTests.swift */; };
+		C3945EE21FE3CFF0009A203D /* Example_macOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3945EE11FE3CFF0009A203D /* Example_macOSUITests.swift */; };
+		C3945EED1FE3D01A009A203D /* CatCrypto_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3945EA11FE3CD51009A203D /* CatCrypto_macOS.framework */; };
+		C3945EEE1FE3D01A009A203D /* CatCrypto_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3945EA11FE3CD51009A203D /* CatCrypto_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C3945F3E1FE3EC9A009A203D /* Argon2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3945F3D1FE3EC9A009A203D /* Argon2ViewController.swift */; };
 		C3AA15461FDEC6430047CE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C3945EA01FE3CD51009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3945E691FE3C8D3009A203D;
+			remoteInfo = "CatCrypto-macOS";
+		};
+		C3945EA21FE3CD51009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3945E851FE3CBAE009A203D;
+			remoteInfo = "CatCrypto-tvOS";
+		};
+		C3945EA41FE3CD51009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3945E711FE3C8D4009A203D;
+			remoteInfo = "CatCrypto-macOSTests";
+		};
+		C3945EA61FE3CD51009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3945E8D1FE3CBAE009A203D;
+			remoteInfo = "CatCrypto-tvOSTests";
+		};
+		C3945EB61FE3CE8B009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3945EAD1FE3CE48009A203D;
+			remoteInfo = "CatCrypto-watchOS";
+		};
+		C3945EBA1FE3CEB2009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C330B4951FDE93AB005AEECC;
+			remoteInfo = "CatCrypto-iOS";
+		};
+		C3945ED31FE3CFF0009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C330B4DC1FDEBC98005AEECC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3945EC01FE3CFF0009A203D;
+			remoteInfo = "Example-macOS";
+		};
+		C3945EDE1FE3CFF0009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C330B4DC1FDEBC98005AEECC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3945EC01FE3CFF0009A203D;
+			remoteInfo = "Example-macOS";
+		};
+		C3945EEF1FE3D01A009A203D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C3945E681FE3C8D3009A203D;
+			remoteInfo = "CatCrypto-macOS";
+		};
 		C3A43C6D1FDEBDB3004E32E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
@@ -31,23 +102,27 @@
 			remoteGlobalIDString = C330B4961FDE93AB005AEECC;
 			remoteInfo = CatCrypto;
 		};
-		C3A43C761FDEBE1B004E32E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C330B4951FDE93AB005AEECC;
-			remoteInfo = CatCrypto;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C3A43C781FDEBE1C004E32E6 /* Embed Frameworks */ = {
+		C3945EBC1FE3CEB2009A203D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C3A43C751FDEBE1B004E32E6 /* CatCrypto.framework in Embed Frameworks */,
+				C3945EB91FE3CEB2009A203D /* CatCrypto_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945EF11FE3D01A009A203D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C3945EEE1FE3D01A009A203D /* CatCrypto_macOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,12 +130,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C330B4E41FDEBC99005AEECC /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C330B4E41FDEBC99005AEECC /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C330B4E71FDEBC99005AEECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argon2ViewController.swift; sourceTree = "<group>"; };
 		C330B4EC1FDEBC99005AEECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C330B4EE1FDEBC99005AEECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C330B4F31FDEBC99005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3945EC11FE3CFF0009A203D /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3945EC31FE3CFF0009A203D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3945EC71FE3CFF0009A203D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3945ECA1FE3CFF0009A203D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3945ECC1FE3CFF0009A203D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3945ECD1FE3CFF0009A203D /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
+		C3945ED21FE3CFF0009A203D /* Example-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3945ED61FE3CFF0009A203D /* Example_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_macOSTests.swift; sourceTree = "<group>"; };
+		C3945ED81FE3CFF0009A203D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3945EDD1FE3CFF0009A203D /* Example-macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-macOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3945EE11FE3CFF0009A203D /* Example_macOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_macOSUITests.swift; sourceTree = "<group>"; };
+		C3945EE31FE3CFF0009A203D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3945F3D1FE3EC9A009A203D /* Argon2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argon2ViewController.swift; sourceTree = "<group>"; };
 		C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
 		C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +158,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3A43C741FDEBE1B004E32E6 /* CatCrypto.framework in Frameworks */,
+				C3945EB81FE3CEB2009A203D /* CatCrypto_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945EBE1FE3CFF0009A203D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3945EED1FE3D01A009A203D /* CatCrypto_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945ECF1FE3CFF0009A203D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945EDA1FE3CFF0009A203D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +190,11 @@
 		C330B4DB1FDEBC98005AEECC = {
 			isa = PBXGroup;
 			children = (
-				C330B4E61FDEBC99005AEECC /* Example */,
+				C330B4E61FDEBC99005AEECC /* Example-iOS */,
+				C3945EC21FE3CFF0009A203D /* Example-macOS */,
+				C3945ED51FE3CFF0009A203D /* Example-macOSTests */,
+				C3945EE01FE3CFF0009A203D /* Example-macOSUITests */,
+				C3945F3C1FE3EAF9009A203D /* Frameworks */,
 				C330B4E51FDEBC99005AEECC /* Products */,
 				C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */,
 			);
@@ -89,12 +203,15 @@
 		C330B4E51FDEBC99005AEECC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C330B4E41FDEBC99005AEECC /* Example.app */,
+				C330B4E41FDEBC99005AEECC /* Example-iOS.app */,
+				C3945EC11FE3CFF0009A203D /* Example-macOS.app */,
+				C3945ED21FE3CFF0009A203D /* Example-macOSTests.xctest */,
+				C3945EDD1FE3CFF0009A203D /* Example-macOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C330B4E61FDEBC99005AEECC /* Example */ = {
+		C330B4E61FDEBC99005AEECC /* Example-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				C330B4E71FDEBC99005AEECC /* AppDelegate.swift */,
@@ -104,14 +221,57 @@
 				C330B4F31FDEBC99005AEECC /* Info.plist */,
 				C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */,
 			);
-			path = Example;
+			path = "Example-iOS";
+			sourceTree = "<group>";
+		};
+		C3945EC21FE3CFF0009A203D /* Example-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C3945EC31FE3CFF0009A203D /* AppDelegate.swift */,
+				C3945F3D1FE3EC9A009A203D /* Argon2ViewController.swift */,
+				C3945EC71FE3CFF0009A203D /* Assets.xcassets */,
+				C3945EC91FE3CFF0009A203D /* Main.storyboard */,
+				C3945ECC1FE3CFF0009A203D /* Info.plist */,
+				C3945ECD1FE3CFF0009A203D /* Example_macOS.entitlements */,
+			);
+			path = "Example-macOS";
+			sourceTree = "<group>";
+		};
+		C3945ED51FE3CFF0009A203D /* Example-macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3945ED61FE3CFF0009A203D /* Example_macOSTests.swift */,
+				C3945ED81FE3CFF0009A203D /* Info.plist */,
+			);
+			path = "Example-macOSTests";
+			sourceTree = "<group>";
+		};
+		C3945EE01FE3CFF0009A203D /* Example-macOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3945EE11FE3CFF0009A203D /* Example_macOSUITests.swift */,
+				C3945EE31FE3CFF0009A203D /* Info.plist */,
+			);
+			path = "Example-macOSUITests";
+			sourceTree = "<group>";
+		};
+		C3945F3C1FE3EAF9009A203D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		C3A43C681FDEBDB3004E32E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */,
+				C3A43C721FDEBDB3004E32E6 /* CatCrypto_iOS.framework */,
+				C3945EA11FE3CD51009A203D /* CatCrypto_macOS.framework */,
+				C3945EA31FE3CD51009A203D /* CatCrypto_tvOS.framework */,
+				C3945EB71FE3CE8B009A203D /* CatCrypto-watchOS.framework */,
 				C3A43C6E1FDEBDB3004E32E6 /* CatCryptoTests.xctest */,
+				C3945EA51FE3CD51009A203D /* CatCrypto-macOSTests.xctest */,
+				C3945EA71FE3CD51009A203D /* CatCrypto-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,24 +279,79 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C330B4E31FDEBC99005AEECC /* Example */ = {
+		C330B4E31FDEBC99005AEECC /* Example-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C330B50C1FDEBC99005AEECC /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = C330B50C1FDEBC99005AEECC /* Build configuration list for PBXNativeTarget "Example-iOS" */;
 			buildPhases = (
 				C330B4E01FDEBC99005AEECC /* Sources */,
 				C330B4E11FDEBC99005AEECC /* Frameworks */,
 				C330B4E21FDEBC99005AEECC /* Resources */,
-				C3A43C781FDEBE1C004E32E6 /* Embed Frameworks */,
+				C3945EBC1FE3CEB2009A203D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C3A43C771FDEBE1B004E32E6 /* PBXTargetDependency */,
+				C3945EBB1FE3CEB2009A203D /* PBXTargetDependency */,
 			);
-			name = Example;
+			name = "Example-iOS";
 			productName = Example;
-			productReference = C330B4E41FDEBC99005AEECC /* Example.app */;
+			productReference = C330B4E41FDEBC99005AEECC /* Example-iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C3945EC01FE3CFF0009A203D /* Example-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3945EE41FE3CFF0009A203D /* Build configuration list for PBXNativeTarget "Example-macOS" */;
+			buildPhases = (
+				C3945EBD1FE3CFF0009A203D /* Sources */,
+				C3945EBE1FE3CFF0009A203D /* Frameworks */,
+				C3945EBF1FE3CFF0009A203D /* Resources */,
+				C3945EF11FE3D01A009A203D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3945EF01FE3D01A009A203D /* PBXTargetDependency */,
+			);
+			name = "Example-macOS";
+			productName = "Example-macOS";
+			productReference = C3945EC11FE3CFF0009A203D /* Example-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3945ED11FE3CFF0009A203D /* Example-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3945EE71FE3CFF0009A203D /* Build configuration list for PBXNativeTarget "Example-macOSTests" */;
+			buildPhases = (
+				C3945ECE1FE3CFF0009A203D /* Sources */,
+				C3945ECF1FE3CFF0009A203D /* Frameworks */,
+				C3945ED01FE3CFF0009A203D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3945ED41FE3CFF0009A203D /* PBXTargetDependency */,
+			);
+			name = "Example-macOSTests";
+			productName = "Example-macOSTests";
+			productReference = C3945ED21FE3CFF0009A203D /* Example-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3945EDC1FE3CFF0009A203D /* Example-macOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3945EEA1FE3CFF0009A203D /* Build configuration list for PBXNativeTarget "Example-macOSUITests" */;
+			buildPhases = (
+				C3945ED91FE3CFF0009A203D /* Sources */,
+				C3945EDA1FE3CFF0009A203D /* Frameworks */,
+				C3945EDB1FE3CFF0009A203D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3945EDF1FE3CFF0009A203D /* PBXTargetDependency */,
+			);
+			name = "Example-macOSUITests";
+			productName = "Example-macOSUITests";
+			productReference = C3945EDD1FE3CFF0009A203D /* Example-macOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -150,7 +365,21 @@
 				TargetAttributes = {
 					C330B4E31FDEBC99005AEECC = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+					};
+					C3945EC01FE3CFF0009A203D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+					};
+					C3945ED11FE3CFF0009A203D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+						TestTargetID = C3945EC01FE3CFF0009A203D;
+					};
+					C3945EDC1FE3CFF0009A203D = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+						TestTargetID = C3945EC01FE3CFF0009A203D;
 					};
 				};
 			};
@@ -173,12 +402,50 @@
 			);
 			projectRoot = "";
 			targets = (
-				C330B4E31FDEBC99005AEECC /* Example */,
+				C330B4E31FDEBC99005AEECC /* Example-iOS */,
+				C3945EC01FE3CFF0009A203D /* Example-macOS */,
+				C3945ED11FE3CFF0009A203D /* Example-macOSTests */,
+				C3945EDC1FE3CFF0009A203D /* Example-macOSUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C3945EA11FE3CD51009A203D /* CatCrypto_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CatCrypto_macOS.framework;
+			remoteRef = C3945EA01FE3CD51009A203D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3945EA31FE3CD51009A203D /* CatCrypto_tvOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CatCrypto_tvOS.framework;
+			remoteRef = C3945EA21FE3CD51009A203D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3945EA51FE3CD51009A203D /* CatCrypto-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CatCrypto-macOSTests.xctest";
+			remoteRef = C3945EA41FE3CD51009A203D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3945EA71FE3CD51009A203D /* CatCrypto-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CatCrypto-tvOSTests.xctest";
+			remoteRef = C3945EA61FE3CD51009A203D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3945EB71FE3CE8B009A203D /* CatCrypto-watchOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "CatCrypto-watchOS.framework";
+			remoteRef = C3945EB61FE3CE8B009A203D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C3A43C6E1FDEBDB3004E32E6 /* CatCryptoTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -186,10 +453,10 @@
 			remoteRef = C3A43C6D1FDEBDB3004E32E6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */ = {
+		C3A43C721FDEBDB3004E32E6 /* CatCrypto_iOS.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = CatCrypto.framework;
+			path = CatCrypto_iOS.framework;
 			remoteRef = C3A43C711FDEBDB3004E32E6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -206,6 +473,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3945EBF1FE3CFF0009A203D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3945EC81FE3CFF0009A203D /* Assets.xcassets in Resources */,
+				C3945ECB1FE3CFF0009A203D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945ED01FE3CFF0009A203D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945EDB1FE3CFF0009A203D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -218,13 +508,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3945EBD1FE3CFF0009A203D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3945EC41FE3CFF0009A203D /* AppDelegate.swift in Sources */,
+				C3945F3E1FE3EC9A009A203D /* Argon2ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945ECE1FE3CFF0009A203D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3945ED71FE3CFF0009A203D /* Example_macOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3945ED91FE3CFF0009A203D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3945EE21FE3CFF0009A203D /* Example_macOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C3A43C771FDEBE1B004E32E6 /* PBXTargetDependency */ = {
+		C3945EBB1FE3CEB2009A203D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = CatCrypto;
-			targetProxy = C3A43C761FDEBE1B004E32E6 /* PBXContainerItemProxy */;
+			name = "CatCrypto-iOS";
+			targetProxy = C3945EBA1FE3CEB2009A203D /* PBXContainerItemProxy */;
+		};
+		C3945ED41FE3CFF0009A203D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3945EC01FE3CFF0009A203D /* Example-macOS */;
+			targetProxy = C3945ED31FE3CFF0009A203D /* PBXContainerItemProxy */;
+		};
+		C3945EDF1FE3CFF0009A203D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3945EC01FE3CFF0009A203D /* Example-macOS */;
+			targetProxy = C3945EDE1FE3CFF0009A203D /* PBXContainerItemProxy */;
+		};
+		C3945EF01FE3D01A009A203D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CatCrypto-macOS";
+			targetProxy = C3945EEF1FE3D01A009A203D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -233,6 +563,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				C330B4EC1FDEBC99005AEECC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3945EC91FE3CFF0009A203D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3945ECA1FE3CFF0009A203D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -352,12 +690,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Example/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Example-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,14 +708,138 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Example/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Example-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3945EE51FE3CFF0009A203D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example-macOS/Example_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Example-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-macOS";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C3945EE61FE3CFF0009A203D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example-macOS/Example_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Example-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-macOS";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C3945EE81FE3CFF0009A203D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Example-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-macOS.app/Contents/MacOS/Example-macOS";
+			};
+			name = Debug;
+		};
+		C3945EE91FE3CFF0009A203D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Example-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-macOS.app/Contents/MacOS/Example-macOS";
+			};
+			name = Release;
+		};
+		C3945EEB1FE3CFF0009A203D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Example-macOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-macOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Example-macOS";
+			};
+			name = Debug;
+		};
+		C3945EEC1FE3CFF0009A203D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Example-macOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-macOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Example-macOS";
 			};
 			name = Release;
 		};
@@ -391,11 +855,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C330B50C1FDEBC99005AEECC /* Build configuration list for PBXNativeTarget "Example" */ = {
+		C330B50C1FDEBC99005AEECC /* Build configuration list for PBXNativeTarget "Example-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C330B50D1FDEBC99005AEECC /* Debug */,
 				C330B50E1FDEBC99005AEECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3945EE41FE3CFF0009A203D /* Build configuration list for PBXNativeTarget "Example-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3945EE51FE3CFF0009A203D /* Debug */,
+				C3945EE61FE3CFF0009A203D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3945EE71FE3CFF0009A203D /* Build configuration list for PBXNativeTarget "Example-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3945EE81FE3CFF0009A203D /* Debug */,
+				C3945EE91FE3CFF0009A203D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3945EEA1FE3CFF0009A203D /* Build configuration list for PBXNativeTarget "Example-macOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3945EEB1FE3CFF0009A203D /* Debug */,
+				C3945EEC1FE3CFF0009A203D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
