@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
+               BlueprintIdentifier = "C3E273721FE4259D0026655E"
                BuildableName = "CatCrypto.framework"
                BlueprintName = "CatCrypto-macOS"
                ReferencedContainer = "container:CatCrypto.xcodeproj">
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3945E701FE3C8D4009A203D"
-               BuildableName = "CatCrypto-macOSTests.xctest"
-               BlueprintName = "CatCrypto-macOSTests"
-               ReferencedContainer = "container:CatCrypto.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
-            BuildableName = "CatCrypto.framework"
-            BlueprintName = "CatCrypto-macOS"
-            ReferencedContainer = "container:CatCrypto.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -66,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
+            BlueprintIdentifier = "C3E273721FE4259D0026655E"
             BuildableName = "CatCrypto.framework"
             BlueprintName = "CatCrypto-macOS"
             ReferencedContainer = "container:CatCrypto.xcodeproj">
@@ -84,7 +65,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3945E681FE3C8D3009A203D"
+            BlueprintIdentifier = "C3E273721FE4259D0026655E"
             BuildableName = "CatCrypto.framework"
             BlueprintName = "CatCrypto-macOS"
             ReferencedContainer = "container:CatCrypto.xcodeproj">
