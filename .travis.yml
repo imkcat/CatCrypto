@@ -1,3 +1,11 @@
 language: objective-c
 osx_image: xcode9
-script: xcodebuild clean build -sdk iphonesimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto CODE_SIGNING_REQUIRED=NO
+script: 
+- |
+  xcodebuild clean build -sdk iphonesimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto-iOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -sdk iphoneos -workspace CatCrypto.xcworkspace -scheme CatCrypto-iOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -sdk macosx -workspace CatCrypto.xcworkspace -scheme CatCrypto-macOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -sdk appletvos -workspace CatCrypto.xcworkspace -scheme CatCrypto-tvOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -sdk appletvsimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto-tvOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -sdk watchos -workspace CatCrypto.xcworkspace -scheme CatCrypto-watchOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -sdk watchsimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto-watchOS CODE_SIGNING_REQUIRED=NO
