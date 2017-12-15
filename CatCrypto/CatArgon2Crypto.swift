@@ -43,53 +43,54 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
     }
     
     override public func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {
-        let pwdutf8 = strdup(NSString(string: password).utf8String)
-        let pwd = UnsafeRawPointer(pwdutf8)
-        let pwdlen = strlen(NSString(string: password).utf8String)
-        let saltutf8 = strdup(NSString(string: context.salt).utf8String)
-        let salt = UnsafeRawPointer(saltutf8)
-        let saltlen = strlen(NSString(string: context.salt).utf8String)
-        let encodedlen = argon2_encodedlen(UInt32(context.iterations),
-                                           UInt32(context.memory),
-                                           UInt32(context.parallelism),
-                                           UInt32(saltlen),
-                                           UInt32(context.hashlen),
-                                           argon2_type(rawValue: UInt32(context.mode.rawValue)))
+        let passwordCString = password.cString(using: .utf8)
+        let passwordLength = password.lengthOfBytes(using: .utf8)
+        let saltCString = context.salt.cString(using: .utf8)
+        let saltLength = context.salt.lengthOfBytes(using: .utf8)
+        let encodedlen = argon2_encodedlen(CUnsignedInt(context.iterations),
+                                           CUnsignedInt(context.memory),
+                                           CUnsignedInt(context.parallelism),
+                                           CUnsignedInt(saltLength),
+                                           CUnsignedInt(context.hashlen),
+                                           argon2_type(rawValue: CUnsignedInt(context.mode.rawValue)))
         
-        var resultCode: Int32
-        let encoded = UnsafeMutablePointer<Int8>.allocate(capacity: encodedlen)
+        var resultCode: CInt
+        let encoded = UnsafeMutablePointer<CChar>.allocate(capacity: encodedlen)
+        defer {
+            encoded.deallocate(capacity: encodedlen)
+        }
         
         switch context.mode {
         case .Argon2d:
-            resultCode = argon2d_hash_encoded(UInt32(context.iterations),
-                                              UInt32(context.memory),
-                                              UInt32(context.parallelism),
-                                              pwd,
-                                              pwdlen,
-                                              salt,
-                                              saltlen,
+            resultCode = argon2d_hash_encoded(CUnsignedInt(context.iterations),
+                                              CUnsignedInt(context.memory),
+                                              CUnsignedInt(context.parallelism),
+                                              passwordCString,
+                                              passwordLength,
+                                              saltCString,
+                                              saltLength,
                                               context.hashlen,
                                               encoded,
                                               encodedlen)
         case .Argon2i:
-            resultCode = argon2i_hash_encoded(UInt32(context.iterations),
-                                              UInt32(context.memory),
-                                              UInt32(context.parallelism),
-                                              pwd,
-                                              pwdlen,
-                                              salt,
-                                              saltlen,
+            resultCode = argon2i_hash_encoded(CUnsignedInt(context.iterations),
+                                              CUnsignedInt(context.memory),
+                                              CUnsignedInt(context.parallelism),
+                                              passwordCString,
+                                              passwordLength,
+                                              saltCString,
+                                              saltLength,
                                               context.hashlen,
                                               encoded,
                                               encodedlen)
         case .Argon2id:
-            resultCode = argon2id_hash_encoded(UInt32(context.iterations),
-                                               UInt32(context.memory),
-                                               UInt32(context.parallelism),
-                                               pwd,
-                                               pwdlen,
-                                               salt,
-                                               saltlen,
+            resultCode = argon2id_hash_encoded(CUnsignedInt(context.iterations),
+                                               CUnsignedInt(context.memory),
+                                               CUnsignedInt(context.parallelism),
+                                               passwordCString,
+                                               passwordLength,
+                                               saltCString,
+                                               saltLength,
                                                context.hashlen,
                                                encoded,
                                                encodedlen)
@@ -107,26 +108,21 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
                 completeHandler!(cryptoResult)
             }
         }
-        
-        free(pwdutf8)
-        free(saltutf8)
-        encoded.deallocate(capacity: encodedlen)
     }
     
     override public func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {
-        let pwdutf8 = strdup(NSString(string: password).utf8String)
-        let pwd = UnsafeRawPointer(pwdutf8)
-        let pwdlen = strlen(NSString(string: password).utf8String)
-        let encoded = strdup(NSString(string: hash).utf8String)
-        var resultCode: Int32
+        let encodedCString = hash.cString(using: .utf8)
+        let passwordCString = password.cString(using: .utf8)
+        let passwordLength = password.lengthOfBytes(using: .utf8)
+        var resultCode: CInt
         
         switch context.mode {
         case .Argon2d:
-            resultCode = argon2d_verify(encoded, pwd, pwdlen)
+            resultCode = argon2d_verify(encodedCString, passwordCString, passwordLength)
         case .Argon2i:
-            resultCode = argon2i_verify(encoded, pwd, pwdlen)
+            resultCode = argon2i_verify(encodedCString, passwordCString, passwordLength)
         case .Argon2id:
-            resultCode = argon2id_verify(encoded, pwd, pwdlen)
+            resultCode = argon2id_verify(encodedCString, passwordCString, passwordLength)
         }
         
         if completeHandler != nil {
@@ -141,8 +137,5 @@ public class CatArgon2Crypto: CatUnsymmetricCrypto {
                 completeHandler!(cryptoResult)
             }
         }
-        
-        free(pwdutf8)
-        free(encoded)
     }
 }
