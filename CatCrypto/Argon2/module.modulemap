@@ -1,5 +1,4 @@
-module argon2 {
+module Argon2 {
     header "argon2.h"
     export *
 }
-
