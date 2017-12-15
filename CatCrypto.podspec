@@ -19,11 +19,21 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://imkcat.com'
 
   s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
+  
+  s.requires_arc = true
   s.source_files = 'CatCrypto/**/*.{h,c,swift}'
   s.private_header_files = 'CatCrypto/Argon2/*.h'
-  s.preserve_paths = 'CatCrypto/Argon2/module.modulemap'
-  s.pod_target_xcconfig= {
-    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/CatCrypto/Argon2'
+  s.preserve_paths = ['CatCrypto/Argon2', 'CatCrypto/CommonCrypto']
+  s.pod_target_xcconfig = {
+    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'          => '$(PODS_TARGET_SRCROOT)/CatCrypto/CommonCrypto/iPhoneOS $(PODS_TARGET_SRCROOT)/CatCrypto/Argon2',
+    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'   => '$(PODS_TARGET_SRCROOT)/CatCrypto/CommonCrypto/iPhoneSimulator $(PODS_TARGET_SRCROOT)/CatCrypto/Argon2', 
+    'SWIFT_INCLUDE_PATHS[sdk=appletvos*]'         => '$(PODS_TARGET_SRCROOT)/CatCrypto/CommonCrypto/AppleTVOS $(PODS_TARGET_SRCROOT)/CatCrypto/Argon2',
+    'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]'  => '$(PODS_TARGET_SRCROOT)/CatCrypto/CommonCrypto/AppleTVSimulator $(PODS_TARGET_SRCROOT)/CatCrypto/Argon2',
+    'SWIFT_INCLUDE_PATHS[sdk=macosx*]'            => '$(PODS_TARGET_SRCROOT)/CatCrypto/CommonCrypto/MacOSX $(PODS_TARGET_SRCROOT)/CatCrypto/Argon2',
+    'SWIFT_INCLUDE_PATHS[sdk=watchos*]'           => '$(PODS_TARGET_SRCROOT)/CatCrypto/CommonCrypto/WatchOS $(PODS_TARGET_SRCROOT)/CatCrypto/Argon2',
+    'SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]'    => '$(PODS_TARGET_SRCROOT)/CatCrypto/CommonCrypto/WatchSimulator $(PODS_TARGET_SRCROOT)/CatCrypto/Argon2'
   }
-  s.requires_arc = true
 end
