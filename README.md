@@ -8,10 +8,9 @@
 [![Travis CI Status](http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat)](https://travis-ci.org/ImKcat/CatCrypto)
 
 ## Requirements
-- Xcode 9+
 - Swift 4+
 - iOS 8.0+
-- macOS 10.9+
+- macOS 10.10+
 - tvOS 9.0+
 - watchOS 2.0+
 
