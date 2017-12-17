@@ -33,7 +33,7 @@ import Argon2
 ///
 /// [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing function that won the [Password Hashing Competition (PHC)](https://password-hashing.net/).
 ///
-public class CatArgon2Crypto: CatUnsymmetricCrypto {
+public class CatArgon2Crypto: CatAsymmetricCrypto {
     
     /// Context for the crypto
     public var context: CatArgon2Context = CatArgon2Context()

@@ -1,5 +1,5 @@
 //
-//  CatUnsymmetricCrypto.swift
+//  CatAsymmetricCrypto.swift
 //  CatCrypto
 //
 //  Created by Kcat on 2017/12/10.
@@ -28,7 +28,7 @@
 
 import Foundation
 
-public class CatUnsymmetricCrypto {
+public class CatAsymmetricCrypto {
     
     /// Hash password string with unsymmetric password-hashing function
     ///
