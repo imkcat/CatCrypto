@@ -10,10 +10,10 @@ import UIKit
 import CatCrypto
 
 class Argon2ViewController: UIViewController {
-
     @IBOutlet weak var saltTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var hashTextView: UITextView!
+    
     let argon2Crypto = CatArgon2Crypto()
     var argon2Mode: CatArgon2ContextMode = .Argon2i {
         didSet {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="g78-gQ-IIY">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -835,7 +836,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="hashTextView" destination="slr-h2-Uiv" id="Pf4-wS-mdy"/>
+                        <outlet property="hashTextView" destination="slr-h2-Uiv" id="Yey-sg-tkO"/>
                         <outlet property="modeComboBox" destination="iM1-dF-zj9" id="XaB-PX-uof"/>
                         <outlet property="passwordTextField" destination="m2d-Dj-ikx" id="8Ht-xO-41h"/>
                         <outlet property="saltTextField" destination="EUa-0d-ZAf" id="Tee-yK-sbj"/>
