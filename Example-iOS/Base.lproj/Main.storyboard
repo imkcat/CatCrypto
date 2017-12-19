@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Argon2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jXS-os-2Hk">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="MessageDigest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jXS-os-2Hk">
                                                     <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -38,7 +38,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="2gi-Ai-Mma"/>
+                                            <segue destination="gXU-6H-4lv" kind="show" id="XG8-o0-9tD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="YTL-9S-KrJ" style="IBUITableViewCellStyleDefault" id="hIf-TS-84E">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hIf-TS-84E" id="LV6-Hq-Oli">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Argon2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YTL-9S-KrJ">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="RPL-M3-HUp"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -54,6 +74,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzh-1L-gww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-226.875" y="136.26760563380282"/>
+        </scene>
+        <!--MD5-->
+        <scene sceneID="gLH-Bl-l1K">
+            <objects>
+                <viewController title="MD5" id="gXU-6H-4lv" customClass="MessageDigestViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5T8-bA-STO"/>
+                        <viewControllerLayoutGuide type="bottom" id="sMU-u0-Efk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lkc-2z-D6u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-X1-htP">
+                                <rect key="frame" x="112" y="28" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndi-oC-LFz">
+                                <rect key="frame" x="16" y="72" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-Vc-3lJ">
+                                <rect key="frame" x="16" y="110" width="288" height="30"/>
+                                <state key="normal" title="Hash"/>
+                                <connections>
+                                    <action selector="hashAction:" destination="gXU-6H-4lv" eventType="touchUpInside" id="3ai-db-bXQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mET-o0-5Gp">
+                                <rect key="frame" x="16" y="148" width="288" height="412"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ndi-oC-LFz" firstAttribute="leading" secondItem="lkc-2z-D6u" secondAttribute="leadingMargin" id="1FZ-cm-ba0"/>
+                            <constraint firstItem="mET-o0-5Gp" firstAttribute="leading" secondItem="lkc-2z-D6u" secondAttribute="leadingMargin" id="5nQ-Or-zi5"/>
+                            <constraint firstItem="Rf2-Vc-3lJ" firstAttribute="top" secondItem="ndi-oC-LFz" secondAttribute="bottom" constant="8" id="8f5-iZ-dMH"/>
+                            <constraint firstItem="mET-o0-5Gp" firstAttribute="top" secondItem="Rf2-Vc-3lJ" secondAttribute="bottom" constant="8" id="TS4-WX-89e"/>
+                            <constraint firstItem="ndi-oC-LFz" firstAttribute="top" secondItem="5T8-bA-STO" secondAttribute="bottom" constant="8" id="Vju-cT-7iQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rf2-Vc-3lJ" secondAttribute="trailing" id="bgr-1e-fo2"/>
+                            <constraint firstItem="Rf2-Vc-3lJ" firstAttribute="leading" secondItem="lkc-2z-D6u" secondAttribute="leadingMargin" id="jf6-M4-36u"/>
+                            <constraint firstItem="sMU-u0-Efk" firstAttribute="top" secondItem="mET-o0-5Gp" secondAttribute="bottom" constant="8" id="kid-9E-0JR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mET-o0-5Gp" secondAttribute="trailing" id="mtZ-N8-iXJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ndi-oC-LFz" secondAttribute="trailing" id="yzf-cc-1Aq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gHr-BD-yaT">
+                        <barButtonItem key="rightBarButtonItem" title="Switch" id="hfQ-Ge-8ns">
+                            <connections>
+                                <action selector="switchMode:" destination="gXU-6H-4lv" id="eZq-4c-ew0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hashTextView" destination="mET-o0-5Gp" id="dfv-vn-8zI"/>
+                        <outlet property="passwordTextField" destination="ndi-oC-LFz" id="Aqy-Nf-fSM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="euU-XI-14u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823.125" y="-167.95774647887325"/>
         </scene>
         <!--Argon2 View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -141,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="134.1549295774648"/>
+            <point key="canvasLocation" x="819" y="522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NoV-eH-NCz">

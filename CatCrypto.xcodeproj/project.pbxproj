@@ -23,9 +23,6 @@
 		C335AFE81FE67EF900BBF32D /* CatMessageDigestCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335AFE51FE67EF900BBF32D /* CatMessageDigestCrypto.swift */; };
 		C335AFE91FE67EF900BBF32D /* CatMessageDigestCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335AFE51FE67EF900BBF32D /* CatMessageDigestCrypto.swift */; };
 		C358E78F1FE2318C00A352D0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C358E78E1FE2318C00A352D0 /* LICENSE */; };
-		C3945E771FE3C8D4009A203D /* CatCrypto_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3945E761FE3C8D4009A203D /* CatCrypto_macOSTests.swift */; };
-		C3945E8E1FE3CBAE009A203D /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3945E851FE3CBAE009A203D /* CatCrypto.framework */; };
-		C3945E931FE3CBAE009A203D /* CatCrypto_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3945E921FE3CBAE009A203D /* CatCrypto_tvOSTests.swift */; };
 		C3945F1E1FE3D57D009A203D /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3945F1F1FE3D57D009A203D /* CatCryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617711FDD7F96005316BF /* CatCryptoHelper.swift */; };
 		C3945F201FE3D57D009A203D /* CatAsymmetricCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35617441FDD765D005316BF /* CatAsymmetricCrypto.swift */; };
@@ -58,16 +55,6 @@
 		C3E273971FE42B020026655E /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C3945E8F1FE3CBAE009A203D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C35617041FDD74A5005316BF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3945E841FE3CBAE009A203D;
-			remoteInfo = "CatCrypto-tvOS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		C330B4961FDE93AB005AEECC /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C330B4981FDE93AC005AEECC /* CatCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatCrypto.h; sourceTree = "<group>"; };
@@ -96,13 +83,7 @@
 		C356176F1FDD7E5B005316BF /* ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ref.h; sourceTree = "<group>"; };
 		C35617711FDD7F96005316BF /* CatCryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCryptoHelper.swift; sourceTree = "<group>"; };
 		C358E78E1FE2318C00A352D0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C3945E711FE3C8D4009A203D /* CatCrypto-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CatCrypto-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3945E761FE3C8D4009A203D /* CatCrypto_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCrypto_macOSTests.swift; sourceTree = "<group>"; };
-		C3945E781FE3C8D4009A203D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3945E851FE3CBAE009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3945E8D1FE3CBAE009A203D /* CatCrypto-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CatCrypto-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3945E921FE3CBAE009A203D /* CatCrypto_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCrypto_tvOSTests.swift; sourceTree = "<group>"; };
-		C3945E941FE3CBAE009A203D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3945EAD1FE3CE48009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A12E961FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12E981FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -129,25 +110,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3945E6E1FE3C8D4009A203D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3945E811FE3CBAE009A203D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3945E8A1FE3CBAE009A203D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C3945E8E1FE3CBAE009A203D /* CatCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +163,6 @@
 			children = (
 				C330B4971FDE93AC005AEECC /* CatCrypto */,
 				C330B4BC1FDE944F005AEECC /* CatCrypto-iOSTests */,
-				C3945E751FE3C8D4009A203D /* CatCrypto-macOSTests */,
-				C3945E911FE3CBAE009A203D /* CatCrypto-tvOSTests */,
 				C356170D1FDD74A5005316BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -208,9 +172,7 @@
 			children = (
 				C330B4961FDE93AB005AEECC /* CatCrypto.framework */,
 				C330B4BB1FDE944F005AEECC /* CatCrypto-iOSTests.xctest */,
-				C3945E711FE3C8D4009A203D /* CatCrypto-macOSTests.xctest */,
 				C3945E851FE3CBAE009A203D /* CatCrypto.framework */,
-				C3945E8D1FE3CBAE009A203D /* CatCrypto-tvOSTests.xctest */,
 				C3945EAD1FE3CE48009A203D /* CatCrypto.framework */,
 				C3E273731FE4259D0026655E /* CatCrypto.framework */,
 			);
@@ -253,24 +215,6 @@
 				C3A12E971FE3A3D2007BA5FA /* WatchSimulator */,
 			);
 			path = CommonCrypto;
-			sourceTree = "<group>";
-		};
-		C3945E751FE3C8D4009A203D /* CatCrypto-macOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				C3945E761FE3C8D4009A203D /* CatCrypto_macOSTests.swift */,
-				C3945E781FE3C8D4009A203D /* Info.plist */,
-			);
-			path = "CatCrypto-macOSTests";
-			sourceTree = "<group>";
-		};
-		C3945E911FE3CBAE009A203D /* CatCrypto-tvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				C3945E921FE3CBAE009A203D /* CatCrypto_tvOSTests.swift */,
-				C3945E941FE3CBAE009A203D /* Info.plist */,
-			);
-			path = "CatCrypto-tvOSTests";
 			sourceTree = "<group>";
 		};
 		C3A12E951FE3A3D2007BA5FA /* AppleTVSimulator */ = {
@@ -402,23 +346,6 @@
 			productReference = C330B4BB1FDE944F005AEECC /* CatCrypto-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C3945E701FE3C8D4009A203D /* CatCrypto-macOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C3945E7D1FE3C8D4009A203D /* Build configuration list for PBXNativeTarget "CatCrypto-macOSTests" */;
-			buildPhases = (
-				C3945E6D1FE3C8D4009A203D /* Sources */,
-				C3945E6E1FE3C8D4009A203D /* Frameworks */,
-				C3945E6F1FE3C8D4009A203D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CatCrypto-macOSTests";
-			productName = "CatCrypto-macOSTests";
-			productReference = C3945E711FE3C8D4009A203D /* CatCrypto-macOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C3945E841FE3CBAE009A203D /* CatCrypto-tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3945E961FE3CBAE009A203D /* Build configuration list for PBXNativeTarget "CatCrypto-tvOS" */;
@@ -436,24 +363,6 @@
 			productName = "CatCrypto-tvOS";
 			productReference = C3945E851FE3CBAE009A203D /* CatCrypto.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		C3945E8C1FE3CBAE009A203D /* CatCrypto-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C3945E991FE3CBAE009A203D /* Build configuration list for PBXNativeTarget "CatCrypto-tvOSTests" */;
-			buildPhases = (
-				C3945E891FE3CBAE009A203D /* Sources */,
-				C3945E8A1FE3CBAE009A203D /* Frameworks */,
-				C3945E8B1FE3CBAE009A203D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C3945E901FE3CBAE009A203D /* PBXTargetDependency */,
-			);
-			name = "CatCrypto-tvOSTests";
-			productName = "CatCrypto-tvOSTests";
-			productReference = C3945E8D1FE3CBAE009A203D /* CatCrypto-tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C3945EAC1FE3CE48009A203D /* CatCrypto-watchOS */ = {
 			isa = PBXNativeTarget;
@@ -509,15 +418,7 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
 					};
-					C3945E701FE3C8D4009A203D = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
-					};
 					C3945E841FE3CBAE009A203D = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
-					};
-					C3945E8C1FE3CBAE009A203D = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
 					};
@@ -549,8 +450,6 @@
 				C3945E841FE3CBAE009A203D /* CatCrypto-tvOS */,
 				C3945EAC1FE3CE48009A203D /* CatCrypto-watchOS */,
 				C330B4BA1FDE944F005AEECC /* CatCrypto-iOSTests */,
-				C3945E701FE3C8D4009A203D /* CatCrypto-macOSTests */,
-				C3945E8C1FE3CBAE009A203D /* CatCrypto-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -571,21 +470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3945E6F1FE3C8D4009A203D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3945E831FE3CBAE009A203D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3945E8B1FE3CBAE009A203D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -634,14 +519,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3945E6D1FE3C8D4009A203D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C3945E771FE3C8D4009A203D /* CatCrypto_macOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3945E801FE3CBAE009A203D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -656,14 +533,6 @@
 				C3E273911FE42B010026655E /* thread.c in Sources */,
 				C3945F1F1FE3D57D009A203D /* CatCryptoHelper.swift in Sources */,
 				C3E2738D1FE42B010026655E /* blake2b.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3945E891FE3CBAE009A203D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C3945E931FE3CBAE009A203D /* CatCrypto_tvOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,14 +571,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C3945E901FE3CBAE009A203D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C3945E841FE3CBAE009A203D /* CatCrypto-tvOS */;
-			targetProxy = C3945E8F1FE3CBAE009A203D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C330B4AD1FDE93AC005AEECC /* Debug */ = {
@@ -913,46 +774,6 @@
 			};
 			name = Release;
 		};
-		C3945E7E1FE3C8D4009A203D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "CatCrypto-macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		C3945E7F1FE3C8D4009A203D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "CatCrypto-macOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 		C3945E971FE3CBAE009A203D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1012,42 +833,6 @@
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C3945E9A1FE3CBAE009A203D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "CatCrypto-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.1;
-			};
-			name = Debug;
-		};
-		C3945E9B1FE3CBAE009A203D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "CatCrypto-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.1;
 			};
 			name = Release;
 		};
@@ -1201,29 +986,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3945E7D1FE3C8D4009A203D /* Build configuration list for PBXNativeTarget "CatCrypto-macOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C3945E7E1FE3C8D4009A203D /* Debug */,
-				C3945E7F1FE3C8D4009A203D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C3945E961FE3CBAE009A203D /* Build configuration list for PBXNativeTarget "CatCrypto-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3945E971FE3CBAE009A203D /* Debug */,
 				C3945E981FE3CBAE009A203D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C3945E991FE3CBAE009A203D /* Build configuration list for PBXNativeTarget "CatCrypto-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C3945E9A1FE3CBAE009A203D /* Debug */,
-				C3945E9B1FE3CBAE009A203D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
