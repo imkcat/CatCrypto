@@ -17,7 +17,7 @@
 
 ## Usage
 
-CatCrypto include a series of Asymmetric hashing functions and more functions in progress!
+CatCrypto include a series of hashing functions and more functions in progress!
 
 ## Asymmetric hashing function
 
