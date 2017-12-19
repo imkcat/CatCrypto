@@ -8,10 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CatCrypto'
-  s.version          = '0.1.3'
-  s.summary          = 'An easy way for hashing, support Argon2 currently.'
-#  s.description      = <<-DESC
-#                       DESC
+  s.version          = '0.1.4'
+  s.summary          = 'An easy way for hashing.'
+ s.description      = <<-DESC
+ CatCrypto include a series of hashing functions.
+                      DESC
   s.homepage         = 'https://github.com/ImKcat/CatCrypto'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kcat' => 'kcatdeveloper@icloud.com' }
