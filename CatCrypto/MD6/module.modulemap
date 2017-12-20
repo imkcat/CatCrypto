@@ -1,0 +1,4 @@
+module MD6 {
+    header "md6.h"
+    export *
+}
