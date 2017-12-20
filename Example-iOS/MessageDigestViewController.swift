@@ -23,6 +23,8 @@ class MessageDigestViewController: UIViewController {
                 title = "MD4"
             case .MD5:
                 title = "MD5"
+            case .MD6:
+                title = "MD6"
             }
         }
     }
@@ -47,6 +49,9 @@ class MessageDigestViewController: UIViewController {
         }))
         alertController.addAction(UIAlertAction(title: "MD5", style: .default, handler: { (alertAction) in
             self.messageDigestMode = .MD5
+        }))
+        alertController.addAction(UIAlertAction(title: "MD6", style: .default, handler: { (alertAction) in
+            self.messageDigestMode = .MD6
         }))
         self.present(alertController, animated: true, completion: nil)
     }
