@@ -11,10 +11,6 @@
 		C31E52FD1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
 		C31E52FE1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
 		C31E52FF1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
-		C31E53001FE906B2004C1F12 /* md6.h in Headers */ = {isa = PBXBuildFile; fileRef = C31E52EC1FE906B2004C1F12 /* md6.h */; };
-		C31E53011FE906B2004C1F12 /* md6.h in Headers */ = {isa = PBXBuildFile; fileRef = C31E52EC1FE906B2004C1F12 /* md6.h */; };
-		C31E53021FE906B2004C1F12 /* md6.h in Headers */ = {isa = PBXBuildFile; fileRef = C31E52EC1FE906B2004C1F12 /* md6.h */; };
-		C31E53031FE906B2004C1F12 /* md6.h in Headers */ = {isa = PBXBuildFile; fileRef = C31E52EC1FE906B2004C1F12 /* md6.h */; };
 		C31E53041FE906B2004C1F12 /* md6_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52ED1FE906B2004C1F12 /* md6_compress.c */; };
 		C31E53051FE906B2004C1F12 /* md6_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52ED1FE906B2004C1F12 /* md6_compress.c */; };
 		C31E53061FE906B2004C1F12 /* md6_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52ED1FE906B2004C1F12 /* md6_compress.c */; };
@@ -308,7 +304,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31E53001FE906B2004C1F12 /* md6.h in Headers */,
 				C330B4A81FDE93AC005AEECC /* CatCrypto.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +312,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31E53021FE906B2004C1F12 /* md6.h in Headers */,
 				C3945F1E1FE3D57D009A203D /* CatCrypto.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +320,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31E53031FE906B2004C1F12 /* md6.h in Headers */,
 				C3945F241FE3D57D009A203D /* CatCrypto.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +328,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31E53011FE906B2004C1F12 /* md6.h in Headers */,
 				C3E273851FE4267D0026655E /* CatCrypto.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

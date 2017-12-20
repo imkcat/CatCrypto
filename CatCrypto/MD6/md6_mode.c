@@ -555,7 +555,7 @@ int md6_compress_block( md6_word *C,
       C,                                      /* C    */
       Q,                                      /* Q    */
       st->K,                                  /* K    */
-      ell, st->i_for_level[ell],              /* -> U */
+      ell, (int)st->i_for_level[ell],              /* -> U */
       st->r, st->L, z, p, st->keylen, st->d,  /* -> V */
       st->B[ell]                              /* B    */
 			   );                         
@@ -682,7 +682,7 @@ int md6_update( md6_state *st,
     { /* handle input string in portions (portion_size in bits)
       ** portion_size may be zero (level 1 data block might be full, 
       ** having size b*w bits) */
-      portion_size = min(databitlen-j,
+      portion_size = (unsigned int)min(databitlen-j,
 			 (unsigned int)(b*w-(st->bits[1]))); 
 
       if ((portion_size % 8 == 0) && 
