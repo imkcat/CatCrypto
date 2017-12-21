@@ -25,7 +25,7 @@ Because the nature of asymmetric hashing function, asymmetric hashing function a
 
 ### Message-Digest
 
-CatCrypto support `MD2`, `MD4` and `MD5` Message-Digest functions.
+CatCrypto support `MD2`, `MD4`, `MD5` and `MD6` Message-Digest functions.
 
 Simply use Message-Digest function with `CatMessageDigestCrypto`:
 
@@ -35,6 +35,7 @@ let messageDigestCrypto = CatMessageDigestCrypto()
 messageDigestCrypto.context.mode = .MD2
 messageDigestCrypto.context.mode = .MD4
 messageDigestCrypto.context.mode = .MD5
+messageDigestCrypto.context.mode = .MD6
 
 // 13b86760bd1e322de76fc9035b848029
 ```
