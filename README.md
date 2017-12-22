@@ -19,11 +19,7 @@
 
 CatCrypto include a series of hashing functions and more functions in progress!
 
-## Asymmetric hashing function
-
-Because the nature of asymmetric hashing function, asymmetric hashing function always has two functions 'hash' and 'verify'.
-
-### Message-Digest
+### Message-Digest `Hash`
 
 CatCrypto support `MD2`, `MD4`, `MD5` and `MD6` Message-Digest functions.
 
@@ -40,7 +36,7 @@ messageDigestCrypto.context.mode = .MD6
 // 13b86760bd1e322de76fc9035b848029
 ```
 
-### Argon2
+### Argon2 `Hash` `Verify`
 
 [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing function that won the [Password Hashing Competition (PHC)](https://password-hashing.net/).
 
