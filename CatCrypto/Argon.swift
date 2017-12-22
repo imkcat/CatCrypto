@@ -1,8 +1,8 @@
 //
-//  CatArgon2Crypto.swift
+//  Argon.swift
 //  CatCrypto
 //
-//  Created by Kcat on 2017/12/10.
+//  Created by Kcat on 2017/12/22.
 //  Copyright © 2017年 imkcat. All rights reserved.
 //
 // https://github.com/ImKcat/CatCrypto
@@ -80,7 +80,7 @@ public class CatArgon2Context {
 ///
 /// [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing function that won the [Password Hashing Competition (PHC)](https://password-hashing.net/).
 ///
-public class CatArgon2Crypto: CatAsymmetricCrypto {
+public class CatArgon2Crypto: Hashing, Verification {
     
     /// Context for the crypto
     public var context: CatArgon2Context = CatArgon2Context()
@@ -89,7 +89,7 @@ public class CatArgon2Crypto: CatAsymmetricCrypto {
         self.context = context
     }
     
-    override public func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {
+    public func hash(password: String) -> CatCryptoHashResult {
         let passwordCString = password.cString(using: .utf8)
         let passwordLength = password.lengthOfBytes(using: .utf8)
         let saltCString = context.salt.cString(using: .utf8)
@@ -143,21 +143,18 @@ public class CatArgon2Crypto: CatAsymmetricCrypto {
                                                encodedlen)
         }
         
-        if completeHandler != nil {
-            let cryptoResult = CatCryptoHashResult()
-            if resultCode == 0 {
-                cryptoResult.value = String(cString: encoded)
-                completeHandler!(cryptoResult)
-            } else {
-                cryptoResult.error = CatCryptoError()
-                cryptoResult.error?.errorCode = Int(resultCode)
-                cryptoResult.error?.errorDescription = String(cString: argon2_error_message(resultCode))
-                completeHandler!(cryptoResult)
-            }
+        let hashResult = CatCryptoHashResult()
+        if resultCode == 0 {
+            hashResult.value = String(cString: encoded)
+        } else {
+            hashResult.error = CatCryptoError()
+            hashResult.error?.errorCode = Int(resultCode)
+            hashResult.error?.errorDescription = String(cString: argon2_error_message(resultCode))
         }
+        return hashResult
     }
     
-    override public func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {
+    public func verify(hash: String, password: String) -> CatCryptoVerifyResult {
         let encodedCString = hash.cString(using: .utf8)
         let passwordCString = password.cString(using: .utf8)
         let passwordLength = password.lengthOfBytes(using: .utf8)
@@ -172,17 +169,14 @@ public class CatArgon2Crypto: CatAsymmetricCrypto {
             resultCode = argon2id_verify(encodedCString, passwordCString, passwordLength)
         }
         
-        if completeHandler != nil {
-            let cryptoResult = CatCryptoVerifyResult()
-            if resultCode == 0 {
-                cryptoResult.value = true
-                completeHandler!(cryptoResult)
-            } else {
-                cryptoResult.error = CatCryptoError()
-                cryptoResult.error?.errorCode = Int(resultCode)
-                cryptoResult.error?.errorDescription = String(cString: argon2_error_message(resultCode))
-                completeHandler!(cryptoResult)
-            }
+        let verifyResult = CatCryptoVerifyResult()
+        if resultCode == 0 {
+            verifyResult.value = true
+        } else {
+            verifyResult.error = CatCryptoError()
+            verifyResult.error?.errorCode = Int(resultCode)
+            verifyResult.error?.errorDescription = String(cString: argon2_error_message(resultCode))
         }
+        return verifyResult
     }
 }

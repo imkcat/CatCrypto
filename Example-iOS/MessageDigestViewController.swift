@@ -53,14 +53,16 @@ class MessageDigestViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "MD6", style: .default, handler: { (alertAction) in
             self.messageDigestMode = .MD6
         }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+        }))
         self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func hashAction(_ sender: Any) {
         messageDigestCrypto.context.mode = messageDigestMode
-        messageDigestCrypto.hash(password: passwordTextField.text ?? "") { (hashResult) in
-            self.hashTextView.text = hashResult.value
-        }
+        let hashResult = messageDigestCrypto.hash(password: passwordTextField.text ?? "")
+        self.hashTextView.text = hashResult.value
     }
 
 }

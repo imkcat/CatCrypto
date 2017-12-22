@@ -44,6 +44,9 @@ class Argon2ViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Argon2id", style: .default, handler: { (alertAction) in
             self.argon2Mode = .Argon2id
         }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+        }))
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -52,13 +55,12 @@ class Argon2ViewController: UIViewController {
         
         argon2Crypto.context.salt = saltTextField.text ?? ""
         argon2Crypto.context.mode = argon2Mode
-        argon2Crypto.hash(password: passwordTextField.text ?? "", completeHandler: { (hashResult) in
-            if hashResult.error == nil {
-                self.hashTextView.text = hashResult.value!
-            } else {
-                self.hashTextView.text = hashResult.error!.errorDescription!
-            }
-        })
+        let hashResult = argon2Crypto.hash(password: passwordTextField.text ?? "")
+        if hashResult.error == nil {
+            self.hashTextView.text = hashResult.value!
+        } else {
+            self.hashTextView.text = hashResult.error!.errorDescription!
+        }
     }
     
     override func didReceiveMemoryWarning() {

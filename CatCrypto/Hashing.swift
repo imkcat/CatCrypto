@@ -1,8 +1,8 @@
 //
-//  CatCryptoHelper.swift
+//  Hashing.swift
 //  CatCrypto
 //
-//  Created by Kcat on 2017/12/10.
+//  Created by Kcat on 2017/12/22.
 //  Copyright © 2017年 imkcat. All rights reserved.
 //
 // https://github.com/ImKcat/CatCrypto
@@ -28,33 +28,10 @@
 
 import Foundation
 
-/// Base result class for encrypt, decrypt, hash or verify
-public class CatCryptoResult {
-    
-    /// Error for result
-    public var error: CatCryptoError? = nil
-}
-
-/// Hash result class, include a string value
-public class CatCryptoHashResult: CatCryptoResult {
-    
-    /// Hashed string commonly
-    public var value: String? = nil
-}
-
-/// Verify result class, include a boolean value
-public class CatCryptoVerifyResult: CatCryptoResult {
-    
-    /// Verification result
-    public var value: Bool = false
-}
-
-/// Error for descript result
-public class CatCryptoError: LocalizedError {
-    
-    /// Code number for error condition
-    public var errorCode: Int = 0
-    
-    /// The description string for error
-    public var errorDescription: String?
+protocol Hashing {
+    /// Hash password string with unsymmetric password-hashing function
+    ///
+    /// - Parameter password: Password string for hash
+    /// - Returns: Return a hash result when hashing task finish
+    func hash(password: String) -> CatCryptoHashResult
 }

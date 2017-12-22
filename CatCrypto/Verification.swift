@@ -1,8 +1,8 @@
 //
-//  CatAsymmetricCrypto.swift
+//  Verification.swift
 //  CatCrypto
 //
-//  Created by Kcat on 2017/12/10.
+//  Created by Kcat on 2017/12/22.
 //  Copyright © 2017年 imkcat. All rights reserved.
 //
 // https://github.com/ImKcat/CatCrypto
@@ -28,20 +28,12 @@
 
 import Foundation
 
-public class CatAsymmetricCrypto {
-    
-    /// Hash password string with unsymmetric password-hashing function
-    ///
-    /// - Parameters:
-    ///   - password: Password string for hash
-    ///   - completeHandler: Return a hash result when hashing task finish
-    public func hash(password: String, completeHandler: ((CatCryptoHashResult) -> Void)?) {}
-    
+protocol Verification {
     /// Verify hashed string and original password string
     ///
     /// - Parameters:
     ///   - hash: Hashed string
     ///   - password: Original password string
-    ///   - completeHandler: Return a verify result when verifying task finish
-    public func verify(hash: String, password: String, completeHandler: ((CatCryptoVerifyResult) -> Void)?) {}
+    /// - Returns: Return a verify result when verifying task finish
+    func verify(hash: String, password: String) -> CatCryptoVerifyResult
 }
