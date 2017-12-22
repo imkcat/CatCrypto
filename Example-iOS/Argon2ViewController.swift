@@ -12,7 +12,6 @@ import CatCrypto
 class Argon2ViewController: UIViewController {
     @IBOutlet weak var saltTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var hashTextView: UITextView!
     
     let argon2Crypto = CatArgon2Crypto()
     var argon2Mode: CatArgon2ContextMode = .Argon2i {
@@ -57,9 +56,13 @@ class Argon2ViewController: UIViewController {
         argon2Crypto.context.mode = argon2Mode
         let hashResult = argon2Crypto.hash(password: passwordTextField.text ?? "")
         if hashResult.error == nil {
-            self.hashTextView.text = hashResult.value!
+            let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+            resultViewController.result = hashResult.value
+            self.navigationController?.pushViewController(resultViewController, animated: true)
         } else {
-            self.hashTextView.text = hashResult.error!.errorDescription!
+            let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+            resultViewController.result = hashResult.error?.errorDescription
+            self.navigationController?.pushViewController(resultViewController, animated: true)
         }
     }
     

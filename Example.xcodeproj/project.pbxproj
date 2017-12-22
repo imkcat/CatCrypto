@@ -14,6 +14,7 @@
 		C35FF82E1FE68A91005513B8 /* MessageDigestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF82D1FE68A91005513B8 /* MessageDigestViewController.swift */; };
 		C3945EB81FE3CEB2009A203D /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; };
 		C3945EB91FE3CEB2009A203D /* CatCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C39EDD821FED0A130081108F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD811FED0A130081108F /* ResultViewController.swift */; };
 		C3AA15461FDEC6430047CE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -31,20 +32,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = C3945E851FE3CBAE009A203D;
 			remoteInfo = "CatCrypto-tvOS";
-		};
-		C3945EA41FE3CD51009A203D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C3945E711FE3C8D4009A203D;
-			remoteInfo = "CatCrypto-macOSTests";
-		};
-		C3945EA61FE3CD51009A203D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C3945E8D1FE3CBAE009A203D;
-			remoteInfo = "CatCrypto-tvOSTests";
 		};
 		C3945EB61FE3CE8B009A203D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -108,6 +95,7 @@
 		C330B4EE1FDEBC99005AEECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C330B4F31FDEBC99005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35FF82D1FE68A91005513B8 /* MessageDigestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDigestViewController.swift; sourceTree = "<group>"; };
+		C39EDD811FED0A130081108F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
 		C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +136,7 @@
 				C330B4E71FDEBC99005AEECC /* AppDelegate.swift */,
 				C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */,
 				C35FF82D1FE68A91005513B8 /* MessageDigestViewController.swift */,
+				C39EDD811FED0A130081108F /* ResultViewController.swift */,
 				C330B4EB1FDEBC99005AEECC /* Main.storyboard */,
 				C330B4EE1FDEBC99005AEECC /* Assets.xcassets */,
 				C330B4F31FDEBC99005AEECC /* Info.plist */,
@@ -171,8 +160,6 @@
 				C3945EA31FE3CD51009A203D /* CatCrypto.framework */,
 				C3945EB71FE3CE8B009A203D /* CatCrypto.framework */,
 				C3A43C6E1FDEBDB3004E32E6 /* CatCrypto-iOSTests.xctest */,
-				C3945EA51FE3CD51009A203D /* CatCrypto-macOSTests.xctest */,
-				C3945EA71FE3CD51009A203D /* CatCrypto-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,20 +242,6 @@
 			remoteRef = C3945EA21FE3CD51009A203D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C3945EA51FE3CD51009A203D /* CatCrypto-macOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CatCrypto-macOSTests.xctest";
-			remoteRef = C3945EA41FE3CD51009A203D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C3945EA71FE3CD51009A203D /* CatCrypto-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CatCrypto-tvOSTests.xctest";
-			remoteRef = C3945EA61FE3CD51009A203D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		C3945EB71FE3CE8B009A203D /* CatCrypto.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -313,6 +286,7 @@
 				C35FF82E1FE68A91005513B8 /* MessageDigestViewController.swift in Sources */,
 				C330B4EA1FDEBC99005AEECC /* Argon2ViewController.swift in Sources */,
 				C330B4E81FDEBC99005AEECC /* AppDelegate.swift in Sources */,
+				C39EDD821FED0A130081108F /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

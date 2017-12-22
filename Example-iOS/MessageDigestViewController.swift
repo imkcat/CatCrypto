@@ -12,7 +12,6 @@ import CatCrypto
 class MessageDigestViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var hashTextView: UITextView!
     let messageDigestCrypto = CatMessageDigestCrypto()
     var messageDigestMode: CatMessageDigestContextMode = .MD5 {
         didSet {
@@ -62,7 +61,9 @@ class MessageDigestViewController: UIViewController {
     @IBAction func hashAction(_ sender: Any) {
         messageDigestCrypto.context.mode = messageDigestMode
         let hashResult = messageDigestCrypto.hash(password: passwordTextField.text ?? "")
-        self.hashTextView.text = hashResult.value
+        let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        resultViewController.result = hashResult.value
+        self.navigationController?.pushViewController(resultViewController, animated: true)
     }
 
 }
