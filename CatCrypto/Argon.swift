@@ -128,15 +128,15 @@ public class CatArgon2Crypto: Hashing, Verification {
             encoded.deallocate(capacity: encodedlen)
         }
         let resultCode = argon2d_hash_encoded(CUnsignedInt(context.iterations),
-                                          CUnsignedInt(context.memory),
-                                          CUnsignedInt(context.parallelism),
-                                          passwordCString,
-                                          passwordLength,
-                                          saltCString,
-                                          saltLength,
-                                          context.hashlen,
-                                          encoded,
-                                          encodedlen)
+                                              CUnsignedInt(context.memory),
+                                              CUnsignedInt(context.parallelism),
+                                              passwordCString,
+                                              passwordLength,
+                                              saltCString,
+                                              saltLength,
+                                              context.hashlen,
+                                              encoded,
+                                              encodedlen)
         let hashResult = CatCryptoHashResult()
         if resultCode == 0 {
             hashResult.value = String(cString: encoded)
@@ -198,15 +198,15 @@ public class CatArgon2Crypto: Hashing, Verification {
             encoded.deallocate(capacity: encodedlen)
         }
         let resultCode = argon2id_hash_encoded(CUnsignedInt(context.iterations),
-                                              CUnsignedInt(context.memory),
-                                              CUnsignedInt(context.parallelism),
-                                              passwordCString,
-                                              passwordLength,
-                                              saltCString,
-                                              saltLength,
-                                              context.hashlen,
-                                              encoded,
-                                              encodedlen)
+                                               CUnsignedInt(context.memory),
+                                               CUnsignedInt(context.parallelism),
+                                               passwordCString,
+                                               passwordLength,
+                                               saltCString,
+                                               saltLength,
+                                               context.hashlen,
+                                               encoded,
+                                               encodedlen)
         let hashResult = CatCryptoHashResult()
         if resultCode == 0 {
             hashResult.value = String(cString: encoded)
