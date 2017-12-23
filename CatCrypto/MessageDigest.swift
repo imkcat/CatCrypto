@@ -30,83 +30,102 @@ import Foundation
 import CommonCrypto
 import MD6
 
-let MD6_DIGEST_LENGTH = CInt(512)
-
-/// CatMessageDigestContextMode has three mode to use: MD2, MD4, and MD5. MD5 is recommend
-///
-/// - MD2: The MD2 Message-Digest algorithm
-/// - MD4: The MD4 Message-Digest algorithm
-/// - MD5: The MD5 Message-Digest algorithm
-/// - MD6: The MD6 Message-Digest algorithm
-public enum CatMessageDigestContextMode: Int {
-    case MD2 = 0
-    case MD4 = 1
-    case MD5 = 2
-    case MD6 = 3
-}
-
-/// CatMessageDigestContext is the context and it descript what you want to hash with Message-Digest function
-public class CatMessageDigestContext {
-    /// The mode of Message-Digest function
-    public var mode: CatMessageDigestContextMode = .MD5
-    
-    public init(mode: CatMessageDigestContextMode = .MD5) {
-        self.mode = mode
-    }
-}
-
-/// CatMessageDigestCrypto is the crypto for Message-Digest function
-public class CatMessageDigestCrypto: Hashing {
-    /// Context for the crypto
-    public var context: CatMessageDigestContext = CatMessageDigestContext()
-    
-    public init(context: CatMessageDigestContext = CatMessageDigestContext()) {
-        self.context = context
-    }
+/// CatMD2Crypto is the crypto for [MD2](https://tools.ietf.org/html/rfc1319)
+/// function.
+public class CatMD2Crypto: Hashing {
+    public init() {}
     
     public func hash(password: String) -> CatCryptoHashResult {
         let passwordCString = password.cString(using: .utf8)
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        var digestLength: Int
-        var result: UnsafeMutablePointer<CUnsignedChar>
+        var digestLength = Int(CC_MD2_DIGEST_LENGTH)
+        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
         defer {
             result.deallocate(capacity: digestLength)
         }
         var hashString = String()
-        switch context.mode {
-        case .MD2:
-            digestLength = Int(CC_MD2_DIGEST_LENGTH)
-            result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
-            CC_MD2(passwordCString, CUnsignedInt(passwordLength), result)
-            for index in 0 ..< digestLength {
-                hashString = hashString.appendingFormat("%02x", result[index])
-            }
-        case .MD4:
-            digestLength = Int(CC_MD4_DIGEST_LENGTH)
-            result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
-            CC_MD4(passwordCString, CUnsignedInt(passwordLength), result)
-            for index in 0 ..< digestLength {
-                hashString = hashString.appendingFormat("%02x", result[index])
-            }
-        case .MD5:
-            digestLength = Int(CC_MD5_DIGEST_LENGTH)
-            result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
-            CC_MD5(passwordCString, CUnsignedInt(passwordLength), result)
-            for index in 0 ..< digestLength {
-                hashString = hashString.appendingFormat("%02x", result[index])
-            }
-        case .MD6:
-            digestLength = Int(MD6_DIGEST_LENGTH)
-            result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
-            let data = UnsafeMutablePointer<CChar>(mutating: passwordCString)?.withMemoryRebound(to: CUnsignedChar.self, capacity: passwordLength, { point in
-                return point
-            })
-            md6_hash(MD6_DIGEST_LENGTH, data, CUnsignedLongLong(passwordLength), result)
-            for index in 0 ..< digestLength/8 {
-                hashString = hashString.appendingFormat("%02x", result[index])
-            }
+        CC_MD2(passwordCString, CUnsignedInt(passwordLength), result)
+        for index in 0 ..< digestLength {
+            hashString = hashString.appendingFormat("%02x", result[index])
         }
-        
+        let hashResult = CatCryptoHashResult()
+        hashResult.value = hashString
+        return hashResult
+    }
+}
+
+/// CatMD4Crypto is the crypto for [MD4](https://tools.ietf.org/html/rfc1320)
+/// function.
+public class CatMD4Crypto: Hashing {
+    public init() {}
+    
+    public func hash(password: String) -> CatCryptoHashResult {
+        let passwordCString = password.cString(using: .utf8)
+        let passwordLength = password.lengthOfBytes(using: .utf8)
+        var digestLength = Int(CC_MD4_DIGEST_LENGTH)
+        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
+        defer {
+            result.deallocate(capacity: digestLength)
+        }
+        var hashString = String()
+        CC_MD4(passwordCString, CUnsignedInt(passwordLength), result)
+        for index in 0 ..< digestLength {
+            hashString = hashString.appendingFormat("%02x", result[index])
+        }
+        let hashResult = CatCryptoHashResult()
+        hashResult.value = hashString
+        return hashResult
+    }
+}
+
+/// CatMD5Crypto is the crypto for [MD5](https://tools.ietf.org/html/rfc1321)
+/// function.
+public class CatMD5Crypto: Hashing {
+    public init() {}
+    
+    public func hash(password: String) -> CatCryptoHashResult {
+        let passwordCString = password.cString(using: .utf8)
+        let passwordLength = password.lengthOfBytes(using: .utf8)
+        var digestLength = Int(CC_MD5_DIGEST_LENGTH)
+        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
+        defer {
+            result.deallocate(capacity: digestLength)
+        }
+        var hashString = String()
+        CC_MD5(passwordCString, CUnsignedInt(passwordLength), result)
+        for index in 0 ..< digestLength {
+            hashString = hashString.appendingFormat("%02x", result[index])
+        }
+        let hashResult = CatCryptoHashResult()
+        hashResult.value = hashString
+        return hashResult
+    }
+}
+
+/// Message digest length for MD6 function output.
+let MD6_DIGEST_LENGTH = CInt(512)
+
+/// CatMD6Crypto is the crypto for [MD6](http://groups.csail.mit.edu/cis/md6/)
+/// function.
+public class CatMD6Crypto: Hashing {
+    public init() {}
+    
+    public func hash(password: String) -> CatCryptoHashResult {
+        let passwordCString = password.cString(using: .utf8)
+        let passwordLength = password.lengthOfBytes(using: .utf8)
+        var digestLength = Int(MD6_DIGEST_LENGTH)
+        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
+        defer {
+            result.deallocate(capacity: digestLength)
+        }
+        var hashString = String()
+        let data = UnsafeMutablePointer<CChar>(mutating: passwordCString)?.withMemoryRebound(to: CUnsignedChar.self, capacity: passwordLength, { point in
+            return point
+        })
+        md6_hash(MD6_DIGEST_LENGTH, data, CUnsignedLongLong(passwordLength), result)
+        for index in 0 ..< digestLength/8 {
+            hashString = hashString.appendingFormat("%02x", result[index])
+        }
         let hashResult = CatCryptoHashResult()
         hashResult.value = hashString
         return hashResult

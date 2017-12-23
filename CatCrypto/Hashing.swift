@@ -29,9 +29,9 @@
 import Foundation
 
 protocol Hashing {
-    /// Hash password string with unsymmetric password-hashing function
+    /// Hash password string with hashing function.
     ///
-    /// - Parameter password: Password string for hash
-    /// - Returns: Return a hash result when hashing task finish
+    /// - Parameter password: Password string for hash.
+    /// - Returns: Return a hash result when hashing task finish.
     func hash(password: String) -> CatCryptoHashResult
 }

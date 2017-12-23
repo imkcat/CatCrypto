@@ -29,11 +29,11 @@
 import Foundation
 
 protocol Verification {
-    /// Verify hashed string and original password string
+    /// Verify hashed string and original password string.
     ///
     /// - Parameters:
-    ///   - hash: Hashed string
-    ///   - password: Original password string
-    /// - Returns: Return a verify result when verifying task finish
+    ///   - hash: Hashed string.
+    ///   - password: Original password string.
+    /// - Returns: Return a verify result when verifying task finish.
     func verify(hash: String, password: String) -> CatCryptoVerifyResult
 }
