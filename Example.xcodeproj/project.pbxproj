@@ -11,11 +11,14 @@
 		C330B4EA1FDEBC99005AEECC /* Argon2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */; };
 		C330B4ED1FDEBC99005AEECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C330B4EB1FDEBC99005AEECC /* Main.storyboard */; };
 		C330B4EF1FDEBC99005AEECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C330B4EE1FDEBC99005AEECC /* Assets.xcassets */; };
-		C35FF82E1FE68A91005513B8 /* MessageDigestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF82D1FE68A91005513B8 /* MessageDigestViewController.swift */; };
 		C3945EB81FE3CEB2009A203D /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; };
 		C3945EB91FE3CEB2009A203D /* CatCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C39EDD821FED0A130081108F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD811FED0A130081108F /* ResultViewController.swift */; };
 		C3AA15461FDEC6430047CE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */; };
+		C3C189781FEEABE800942C06 /* MD2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C189771FEEABE800942C06 /* MD2ViewController.swift */; };
+		C3C189841FEEB0C600942C06 /* MD4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C189831FEEB0C600942C06 /* MD4ViewController.swift */; };
+		C3C189861FEEB0CD00942C06 /* MD5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C189851FEEB0CD00942C06 /* MD5ViewController.swift */; };
+		C3C189881FEEB0D600942C06 /* MD6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C189871FEEB0D600942C06 /* MD6ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,10 +97,13 @@
 		C330B4EC1FDEBC99005AEECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C330B4EE1FDEBC99005AEECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C330B4F31FDEBC99005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C35FF82D1FE68A91005513B8 /* MessageDigestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDigestViewController.swift; sourceTree = "<group>"; };
 		C39EDD811FED0A130081108F /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CatCrypto.xcodeproj; sourceTree = "<group>"; };
 		C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3C189771FEEABE800942C06 /* MD2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD2ViewController.swift; sourceTree = "<group>"; };
+		C3C189831FEEB0C600942C06 /* MD4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD4ViewController.swift; sourceTree = "<group>"; };
+		C3C189851FEEB0CD00942C06 /* MD5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5ViewController.swift; sourceTree = "<group>"; };
+		C3C189871FEEB0D600942C06 /* MD6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD6ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +141,11 @@
 			children = (
 				C330B4E71FDEBC99005AEECC /* AppDelegate.swift */,
 				C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */,
-				C35FF82D1FE68A91005513B8 /* MessageDigestViewController.swift */,
 				C39EDD811FED0A130081108F /* ResultViewController.swift */,
+				C3C189771FEEABE800942C06 /* MD2ViewController.swift */,
+				C3C189831FEEB0C600942C06 /* MD4ViewController.swift */,
+				C3C189851FEEB0CD00942C06 /* MD5ViewController.swift */,
+				C3C189871FEEB0D600942C06 /* MD6ViewController.swift */,
 				C330B4EB1FDEBC99005AEECC /* Main.storyboard */,
 				C330B4EE1FDEBC99005AEECC /* Assets.xcassets */,
 				C330B4F31FDEBC99005AEECC /* Info.plist */,
@@ -283,9 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C35FF82E1FE68A91005513B8 /* MessageDigestViewController.swift in Sources */,
+				C3C189881FEEB0D600942C06 /* MD6ViewController.swift in Sources */,
+				C3C189781FEEABE800942C06 /* MD2ViewController.swift in Sources */,
+				C3C189841FEEB0C600942C06 /* MD4ViewController.swift in Sources */,
 				C330B4EA1FDEBC99005AEECC /* Argon2ViewController.swift in Sources */,
 				C330B4E81FDEBC99005AEECC /* AppDelegate.swift in Sources */,
+				C3C189861FEEB0CD00942C06 /* MD5ViewController.swift in Sources */,
 				C39EDD821FED0A130081108F /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
