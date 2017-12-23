@@ -1,11 +1,22 @@
-![CatCrypto Logo](https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png)
+<p align="center">
+	<img src="https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png" alt="Logo">
+</p>
 
-[![License](https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat)](http://cocoapods.org/pods/CatCrypto)
-[![Support Platform](https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat&colorB=7c3636)](http://cocoapods.org/pods/CatCrypto)
-[![Language](https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods Version](https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat)](http://cocoapods.org/pods/CatCrypto)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Travis CI Status](http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat)](https://travis-ci.org/ImKcat/CatCrypto)
+<p align="center">
+	<img src="https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat" alt="Language">
+	<a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat" alt="Support Platform"></a>
+	<a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat" alt="License"></a>
+</p>
+
+<p align="center">
+	<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+	<a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat" alt="CocoaPods Version"></a>
+</p>
+
+<p align="center">
+	<a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
+	<a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
+</p>
 
 ## Requirements
 
