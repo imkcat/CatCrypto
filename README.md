@@ -28,7 +28,7 @@
 
 ## Usage
 
-CatCrypto include a series of hashing functions and more functions in progress!
+CatCrypto include a series of hashing and encryption functions and more functions in progress!
 
 ### Message-Digest `Hash`
 
