@@ -32,6 +32,11 @@ class Argon2ViewController: UIViewController {
         argon2Mode = .Argon2i
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func modeAction(_ sender: Any) {
         let alertController = UIAlertController(title: "Mode switch", message: nil, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Argon2d", style: .default, handler: { (alertAction) in
@@ -56,21 +61,15 @@ class Argon2ViewController: UIViewController {
         argon2Crypto.context.mode = argon2Mode
         let hashResult = argon2Crypto.hash(password: passwordTextField.text ?? "")
         if hashResult.error == nil {
-            let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-            resultViewController.result = hashResult.value
-            self.navigationController?.pushViewController(resultViewController, animated: true)
+            let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController
+            resultViewController?.result = hashResult.value
+            self.navigationController?.pushViewController(resultViewController!, animated: true)
         } else {
-            let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-            resultViewController.result = hashResult.error?.errorDescription
-            self.navigationController?.pushViewController(resultViewController, animated: true)
+            let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController
+            resultViewController?.result = hashResult.error?.errorDescription
+            self.navigationController?.pushViewController(resultViewController!, animated: true)
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

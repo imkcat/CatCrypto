@@ -141,11 +141,11 @@
 			children = (
 				C330B4E71FDEBC99005AEECC /* AppDelegate.swift */,
 				C330B4E91FDEBC99005AEECC /* Argon2ViewController.swift */,
-				C39EDD811FED0A130081108F /* ResultViewController.swift */,
 				C3C189771FEEABE800942C06 /* MD2ViewController.swift */,
 				C3C189831FEEB0C600942C06 /* MD4ViewController.swift */,
 				C3C189851FEEB0CD00942C06 /* MD5ViewController.swift */,
 				C3C189871FEEB0D600942C06 /* MD6ViewController.swift */,
+				C39EDD811FED0A130081108F /* ResultViewController.swift */,
 				C330B4EB1FDEBC99005AEECC /* Main.storyboard */,
 				C330B4EE1FDEBC99005AEECC /* Assets.xcassets */,
 				C330B4F31FDEBC99005AEECC /* Info.plist */,

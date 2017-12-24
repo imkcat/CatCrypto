@@ -28,20 +28,9 @@ class MD4ViewController: UIViewController {
     
     @IBAction func hashAction(_ sender: Any) {
         let hashResult = md4Crypto.hash(password: passwordTextField.text ?? "")
-        let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-        resultViewController.result = hashResult.value
-        self.navigationController?.pushViewController(resultViewController, animated: true)
+        let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController
+        resultViewController?.result = hashResult.value
+        self.navigationController?.pushViewController(resultViewController!, animated: true)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
