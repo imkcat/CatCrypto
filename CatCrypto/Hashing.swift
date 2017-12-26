@@ -28,10 +28,12 @@
 
 import Foundation
 
-protocol Hashing {
+public protocol Hashing {
+    
     /// Hash password string with hashing function.
     ///
     /// - Parameter password: Password string for hash.
     /// - Returns: Return a hash result when hashing task finish.
     func hash(password: String) -> CatCryptoHashResult
+    
 }
