@@ -112,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				C330B4E61FDEBC99005AEECC /* Example-iOS */,
-				C3945F3C1FE3EAF9009A203D /* Frameworks */,
 				C330B4E51FDEBC99005AEECC /* Products */,
 				C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */,
 			);
@@ -137,13 +136,6 @@
 				C3AA15451FDEC6430047CE81 /* LaunchScreen.storyboard */,
 			);
 			path = "Example-iOS";
-			sourceTree = "<group>";
-		};
-		C3945F3C1FE3EAF9009A203D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		C3A43C681FDEBDB3004E32E6 /* Products */ = {
