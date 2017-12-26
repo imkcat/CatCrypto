@@ -24,6 +24,10 @@
 		C330B4D11FDE94E9005AEECC /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
 		C330B4D91FDE9C4F005AEECC /* CatArgon2CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */; };
 		C358E78F1FE2318C00A352D0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C358E78E1FE2318C00A352D0 /* LICENSE */; };
+		C393A5BA1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
+		C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
+		C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
+		C393A5BD1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
 		C3945F1E1FE3D57D009A203D /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3945F241FE3D57D009A203D /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C39EDD681FECF6440081108F /* Hashing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD671FECF6440081108F /* Hashing.swift */; };
@@ -95,6 +99,7 @@
 		C356176E1FDD7E5A005316BF /* ref.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ref.c; sourceTree = "<group>"; };
 		C356176F1FDD7E5B005316BF /* ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ref.h; sourceTree = "<group>"; };
 		C358E78E1FE2318C00A352D0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C393A5B91FF0F85600B69167 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C3945E851FE3CBAE009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3945EAD1FE3CE48009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39EDD671FECF6440081108F /* Hashing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashing.swift; sourceTree = "<group>"; };
@@ -174,6 +179,7 @@
 				C39EDD711FECF95C0081108F /* Verification.swift */,
 				C39EDD761FECF9D00081108F /* Argon.swift */,
 				C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */,
+				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
 				C330B4991FDE93AC005AEECC /* Info.plist */,
 			);
 			path = CatCrypto;
@@ -538,6 +544,7 @@
 				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
 				C39EDD7C1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */,
+				C393A5BA1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
 				C330B4D11FDE94E9005AEECC /* thread.c in Sources */,
 				C31E53041FE906B2004C1F12 /* md6_compress.c in Sources */,
@@ -566,6 +573,7 @@
 				C3E2738F1FE42B010026655E /* encoding.c in Sources */,
 				C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E2738E1FE42B010026655E /* core.c in Sources */,
+				C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273911FE42B010026655E /* thread.c in Sources */,
 				C31E53061FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3E2738D1FE42B010026655E /* blake2b.c in Sources */,
@@ -586,6 +594,7 @@
 				C3E273951FE42B020026655E /* encoding.c in Sources */,
 				C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E273941FE42B020026655E /* core.c in Sources */,
+				C393A5BD1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273971FE42B020026655E /* thread.c in Sources */,
 				C31E53071FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3E273931FE42B020026655E /* blake2b.c in Sources */,
@@ -606,6 +615,7 @@
 				C3E273891FE42B000026655E /* encoding.c in Sources */,
 				C39EDD7D1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E273881FE42B000026655E /* core.c in Sources */,
+				C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E2738B1FE42B000026655E /* thread.c in Sources */,
 				C31E53051FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3E273871FE42B000026655E /* blake2b.c in Sources */,
