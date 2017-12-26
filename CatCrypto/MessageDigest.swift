@@ -35,7 +35,7 @@ import MD6
 /// - ccMD2: MD2 function.
 /// - ccMD4: MD4 function.
 /// - ccMD5: MD5 function.
-fileprivate enum CCMessageDigestMode {
+private enum CCMessageDigestMode {
     case ccMD2
     case ccMD4
     case ccMD5
