@@ -29,6 +29,7 @@
 import Foundation
 
 extension String {
+    
     /// Process a hex string from an unsigned char array point.
     ///
     /// - Parameters:
@@ -42,4 +43,5 @@ extension String {
         }
         return hexString
     }
+    
 }
