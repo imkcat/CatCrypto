@@ -132,9 +132,6 @@ public class CatMD5Crypto: CatCCMessageDigestCrypto, Hashing {
     
 }
 
-/// Message digest length for MD6 function output.
-let MD6_DIGEST_LENGTH = CInt(512)
-
 /// Desired bit-length of the hash function output.
 ///
 /// - Bit224: 224 bits.
