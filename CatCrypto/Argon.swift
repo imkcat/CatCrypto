@@ -29,7 +29,7 @@
 import Foundation
 import Argon2
 
-/// CatArgon2ContextMode has three mode to use: Argon2i, Argon2d, and Argon2id.
+/// `CatArgon2Mode` has three mode to use: Argon2i, Argon2d, and Argon2id.
 /// Argon2i is recommend.
 ///
 /// - Argon2d: Argon2d is faster and uses data-depending memory access, which
@@ -43,15 +43,13 @@ import Argon2
 /// of data-depending and data-independent memory accesses, which gives some of
 /// Argon2i's resistance to side-channel cache timing attacks and much of
 /// Argon2d's resistance to GPU cracking attacks.
-public enum CatArgon2ContextMode: Int {
+public enum CatArgon2Mode: Int {
     case Argon2d = 0
     case Argon2i = 1
     case Argon2id = 2
 }
 
-/// CatArgon2Context is the context and it descript what you want to hash with
-/// Argon2 function.
-public class CatArgon2Context {
+public class CatArgon2Context: CatCryptoContext {
     
     /// Number of iterations.
     public var iterations: Int = 3
@@ -63,7 +61,7 @@ public class CatArgon2Context {
     public var parallelism: Int = 1
     
     /// The mode of Argon2.
-    public var mode: CatArgon2ContextMode = CatArgon2ContextMode.Argon2i
+    public var mode: CatArgon2Mode = CatArgon2Mode.Argon2i
     
     /// String to salt.
     public var salt: String = UUID().uuidString
@@ -74,7 +72,7 @@ public class CatArgon2Context {
     public init(iterations: Int = 3,
                 memory: Int = 1 << 12,
                 parallelism: Int = 1,
-                mode: CatArgon2ContextMode = .Argon2i,
+                mode: CatArgon2Mode = .Argon2i,
                 salt: String = UUID().uuidString,
                 hashLength: Int = 32) {
         self.iterations = iterations
@@ -84,6 +82,7 @@ public class CatArgon2Context {
         self.salt = salt
         self.hashLength = hashLength
     }
+    
 }
 
 /// CatArgon2Crypto is the crypto for Argon2 function.
@@ -122,7 +121,7 @@ public class CatArgon2Crypto: Hashing, Verification {
     ///   - iterations: Number of iterations.
     ///   - memory: Sets memory usage to m_cost kibibytes.
     ///   - parallelism: Number of threads and compute lanes.
-    ///   - password: String to password.
+    ///   - password: Password data to hasing.
     ///   - passwordLength: Password size in bytes.
     ///   - salt: String to salt.
     ///   - saltLength: Salt size in bytes.
@@ -130,7 +129,7 @@ public class CatArgon2Crypto: Hashing, Verification {
     ///   - encoded: Encoded output.
     ///   - encodedLength: Encoded output length.
     /// - Returns: Result code for hasing.
-    func argon2Hash(mode: CatArgon2ContextMode,
+    func argon2Hash(mode: CatArgon2Mode,
                     iterations: CUnsignedInt,
                     memory: CUnsignedInt,
                     parallelism: CUnsignedInt,
@@ -216,7 +215,7 @@ public class CatArgon2Crypto: Hashing, Verification {
     ///   - password: Password string.
     ///   - passwordLength: Length of the password.
     /// - Returns: Result code for verification.
-    func argon2Verify(mode: CatArgon2ContextMode,
+    func argon2Verify(mode: CatArgon2Mode,
                       encoded: [CChar],
                       password: [CChar],
                       passwordLength: Int) -> CInt {
@@ -245,4 +244,5 @@ public class CatArgon2Crypto: Hashing, Verification {
         }
         return verifyResult
     }
+    
 }
