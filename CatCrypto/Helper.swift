@@ -35,7 +35,7 @@ public class CatCryptoContext {}
 public class CatCryptoResult {
     
     /// Error for result
-    public var error: CatCryptoError? = nil
+    public var error: CatCryptoError?
     
 }
 
@@ -43,7 +43,7 @@ public class CatCryptoResult {
 public class CatCryptoHashResult: CatCryptoResult {
     
     /// Hashed string commonly
-    public var value: String? = nil
+    public var value: String?
     
 }
 
