@@ -32,21 +32,21 @@ import Argon2
 /// `CatArgon2Mode` has three mode to use: Argon2i, Argon2d, and Argon2id.
 /// Argon2i is recommend.
 ///
-/// - Argon2d: Argon2d is faster and uses data-depending memory access, which
+/// - argon2d: Argon2d is faster and uses data-depending memory access, which
 /// makes it highly resistant against GPU cracking attacks and suitable for
 /// applications with no threats from side-channel timing attacks.
-/// - Argon2i: Argon2i instead uses data-independent memory access, which is
+/// - argon2i: Argon2i instead uses data-independent memory access, which is
 /// preferred for password hashing and password-based key derivation, but it is
 /// slower as it makes more passes over the memory to protect from tradeoff
 /// attacks.
-/// - Argon2id: Argon2id is a hybrid of Argon2i and Argon2d, using a combination
+/// - argon2id: Argon2id is a hybrid of Argon2i and Argon2d, using a combination
 /// of data-depending and data-independent memory accesses, which gives some of
 /// Argon2i's resistance to side-channel cache timing attacks and much of
 /// Argon2d's resistance to GPU cracking attacks.
 public enum CatArgon2Mode: Int {
-    case Argon2d = 0
-    case Argon2i = 1
-    case Argon2id = 2
+    case argon2d = 0
+    case argon2i = 1
+    case argon2id = 2
 }
 
 public class CatArgon2Context: CatCryptoContext {
@@ -61,7 +61,7 @@ public class CatArgon2Context: CatCryptoContext {
     public var parallelism: Int = 1
     
     /// The mode of Argon2.
-    public var mode: CatArgon2Mode = CatArgon2Mode.Argon2i
+    public var mode: CatArgon2Mode = .argon2i
     
     /// String to salt.
     public var salt: String = UUID().uuidString
@@ -72,7 +72,7 @@ public class CatArgon2Context: CatCryptoContext {
     public init(iterations: Int = 3,
                 memory: Int = 1 << 12,
                 parallelism: Int = 1,
-                mode: CatArgon2Mode = .Argon2i,
+                mode: CatArgon2Mode = .argon2i,
                 salt: String = UUID().uuidString,
                 hashLength: Int = 32) {
         self.iterations = iterations
@@ -141,7 +141,7 @@ public class CatArgon2Crypto: Hashing, Verification {
                     encoded: UnsafeMutablePointer<CChar>,
                     encodedLength: Int) -> CInt {
         switch mode {
-        case .Argon2d:
+        case .argon2d:
             return argon2d_hash_encoded(iterations,
                                         memory,
                                         parallelism,
@@ -152,7 +152,7 @@ public class CatArgon2Crypto: Hashing, Verification {
                                         hashLength,
                                         encoded,
                                         encodedLength)
-        case .Argon2i:
+        case .argon2i:
             return argon2i_hash_encoded(iterations,
                                         memory,
                                         parallelism,
@@ -163,7 +163,7 @@ public class CatArgon2Crypto: Hashing, Verification {
                                         hashLength,
                                         encoded,
                                         encodedLength)
-        case .Argon2id:
+        case .argon2id:
             return argon2id_hash_encoded(iterations,
                                          memory,
                                          parallelism,
@@ -220,11 +220,11 @@ public class CatArgon2Crypto: Hashing, Verification {
                       password: [CChar],
                       passwordLength: Int) -> CInt {
         switch mode {
-        case .Argon2d:
+        case .argon2d:
             return argon2d_verify(encoded, password, passwordLength)
-        case .Argon2i:
+        case .argon2i:
             return argon2i_verify(encoded, password, passwordLength)
-        case .Argon2id:
+        case .argon2id:
             return argon2id_verify(encoded, password, passwordLength)
         }
     }

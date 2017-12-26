@@ -32,13 +32,13 @@ import MD6
 
 /// Message-Digest function mode from CommonCrypto.
 ///
-/// - CCMD2: MD2 function.
-/// - CCMD4: MD4 function.
-/// - CCMD5: MD5 function.
+/// - ccMD2: MD2 function.
+/// - ccMD4: MD4 function.
+/// - ccMD5: MD5 function.
 fileprivate enum CCMessageDigestMode {
-    case CCMD2
-    case CCMD4
-    case CCMD5
+    case ccMD2
+    case ccMD4
+    case ccMD5
 }
 
 /// `CatCCMessageDigestCrypto` just for code convenient and coupling, and it just
@@ -65,11 +65,11 @@ public class CatCCMessageDigestCrypto {
             result.deallocate(capacity: digestLength)
         }
         switch mode {
-        case .CCMD2:
+        case .ccMD2:
             CC_MD2(password, passwordLength, result)
-        case .CCMD4:
+        case .ccMD4:
             CC_MD4(password, passwordLength, result)
-        case .CCMD5:
+        case .ccMD5:
             CC_MD5(password, passwordLength, result)
         }
         let hashResult = CatCryptoHashResult()
@@ -84,7 +84,7 @@ public class CatCCMessageDigestCrypto {
 public class CatMD2Crypto: CatCCMessageDigestCrypto, Hashing {
     
     public func hash(password: String) -> CatCryptoHashResult {
-        return messageDigestHash(mode: .CCMD2,
+        return messageDigestHash(mode: .ccMD2,
                                  password: password.cString(using: .utf8)!,
                                  passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
                                  digestLength: Int(CC_MD2_DIGEST_LENGTH))
@@ -97,7 +97,7 @@ public class CatMD2Crypto: CatCCMessageDigestCrypto, Hashing {
 public class CatMD4Crypto: CatCCMessageDigestCrypto, Hashing {
     
     public func hash(password: String) -> CatCryptoHashResult {
-        return messageDigestHash(mode: .CCMD4,
+        return messageDigestHash(mode: .ccMD4,
                                  password: password.cString(using: .utf8)!,
                                  passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
                                  digestLength: Int(CC_MD4_DIGEST_LENGTH))
@@ -110,7 +110,7 @@ public class CatMD4Crypto: CatCCMessageDigestCrypto, Hashing {
 public class CatMD5Crypto: CatCCMessageDigestCrypto, Hashing {
     
     public func hash(password: String) -> CatCryptoHashResult {
-        return messageDigestHash(mode: .CCMD5,
+        return messageDigestHash(mode: .ccMD5,
                                  password: password.cString(using: .utf8)!,
                                  passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
                                  digestLength: Int(CC_MD5_DIGEST_LENGTH))
@@ -120,23 +120,23 @@ public class CatMD5Crypto: CatCCMessageDigestCrypto, Hashing {
 
 /// Desired bit-length of the hash function output.
 ///
-/// - Bit224: 224 bits.
-/// - Bit256: 256 bits.
-/// - Bit384: 384 bits.
-/// - Bit512: 512 bits.
+/// - bit224: 224 bits.
+/// - bit256: 256 bits.
+/// - bit384: 384 bits.
+/// - bit512: 512 bits.
 public enum CatMD6HashLength: CInt {
-    case Bit224 = 224
-    case Bit256 = 256
-    case Bit384 = 384
-    case Bit512 = 512
+    case bit224 = 224
+    case bit256 = 256
+    case bit384 = 384
+    case bit512 = 512
 }
 
 public class CatMD6Context: CatCryptoContext {
     
     /// Desired bit-length of the hash function output.
-    public var hashLength: CatMD6HashLength = .Bit512
+    public var hashLength: CatMD6HashLength = .bit512
 
-    public init(hashLength: CatMD6HashLength = .Bit512) {
+    public init(hashLength: CatMD6HashLength = .bit512) {
         self.hashLength = hashLength
     }
     
