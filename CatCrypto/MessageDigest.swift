@@ -77,20 +77,6 @@ public class CatCCMessageDigestCrypto {
         return hashResult
     }
     
-    /// Process a hex string from an unsigned char array point.
-    ///
-    /// - Parameters:
-    ///   - source: Unsigned char array point to process.
-    ///   - length: Array length.
-    /// - Returns: Desired hex string.
-    private func hexString(source: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
-        var hexString = String()
-        for index in 0 ..< length {
-            hexString = hexString.appendingFormat("%02x", source[index])
-        }
-        return hexString
-    }
-    
 }
 
 /// CatMD2Crypto is the crypto for [MD2](https://tools.ietf.org/html/rfc1319)
