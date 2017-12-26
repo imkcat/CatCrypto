@@ -56,7 +56,7 @@ Simply use Argon2 function with `CatArgon2Crypto`:
 let argon2Crypto = CatArgon2Crypto()
 
 argon2Crypto.context.salt = "CatCrypto"
-argon2Crypto.context.mode = .Argon2i
+argon2Crypto.context.mode = .argon2i
 
 print(argon2Crypto.hash(password: "CatCrypto").value!)
 
