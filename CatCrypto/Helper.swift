@@ -28,11 +28,15 @@
 
 import Foundation
 
+/// Context class is describe for crypto inputs and others configuration.
+public class CatCryptoContext {}
+
 /// Base result class for encrypt, decrypt, hash or verify
 public class CatCryptoResult {
     
     /// Error for result
     public var error: CatCryptoError? = nil
+    
 }
 
 /// Hash result class, include a string value
@@ -40,6 +44,7 @@ public class CatCryptoHashResult: CatCryptoResult {
     
     /// Hashed string commonly
     public var value: String? = nil
+    
 }
 
 /// Verify result class, include a boolean value
@@ -47,6 +52,7 @@ public class CatCryptoVerifyResult: CatCryptoResult {
     
     /// Verification result
     public var value: Bool = false
+    
 }
 
 /// Error for descript result
@@ -57,4 +63,5 @@ public class CatCryptoError: LocalizedError {
     
     /// The description string for error
     public var errorDescription: String?
+    
 }
