@@ -14,7 +14,7 @@
     <a title="CatArgon2Crypto Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CatCrypto Docs</a> (86% documented)</p>
+        <p><a href="../index.html">CatCrypto Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -42,7 +42,7 @@
                 <a href="../Classes/CatCCMessageDigestCrypto.html">CatCCMessageDigestCrypto</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes.html#/s:9CatCrypto0aB7ContextC">CatCryptoContext</a>
+                <a href="../Classes/CatCryptoContext.html">CatCryptoContext</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatCryptoError.html">CatCryptoError</a>
@@ -88,6 +88,9 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/Contextual.html">Contextual</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/Hashing.html">Hashing</a>
               </li>
               <li class="nav-group-task">
@@ -103,7 +106,7 @@
             <h1>CatArgon2Crypto</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatArgon2Crypto</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Hashing.html">Hashing</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/Verification.html">Verification</a></span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatArgon2Crypto</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/Hashing.html">Hashing</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/Verification.html">Verification</a></span></code></pre>
 
                 </div>
               </div>
@@ -117,6 +120,32 @@ function that won the
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto10ContextualPx7ContextQz7context_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto10ContextualPx7ContextQz7context_tcfc">init(context:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -138,33 +167,6 @@ function that won the
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0a6Argon2B0CAcA0aC7ContextC7context_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(context:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a6Argon2B0CAcA0aC7ContextC7context_tcfc">init(context:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span><span class="p">())</span></code></pre>
 
                         </div>
                       </div>
