@@ -15,6 +15,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">CatCrypto Docs</a> (86% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -130,46 +131,23 @@
 <h2 id='usage' class='heading'>Usage</h2>
 
 <p>CatCrypto include a series of hashing and encryption functions and more functions in progress!</p>
-<h2 id='support-crypto' class='heading'>Support crypto</h2>
+<h2 id='support-functions' class='heading'>Support functions</h2>
+
+<ul>
+<li>Hashing
 
 <ul>
 <li>Message-Digest
 
 <ul>
-<li>MD2</li>
-<li>MD4</li>
-<li>MD5</li>
-<li>MD6</li>
+<li><a href="https://tools.ietf.org/html/rfc1319">MD2</a></li>
+<li><a href="https://tools.ietf.org/html/rfc1320">MD4</a></li>
+<li><a href="https://tools.ietf.org/html/rfc1321">MD5</a></li>
+<li><a href="http://groups.csail.mit.edu/cis/md6/">MD6</a></li>
 </ul></li>
-<li>Argon2</li>
+<li><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a></li>
+</ul></li>
 </ul>
-<h3 id='message-digest' class='heading'>Message-Digest</h3>
-
-<p>CatCrypto support <a href="https://tools.ietf.org/html/rfc1319">MD2</a>, <a href="https://tools.ietf.org/html/rfc1320">MD4</a>, <a href="https://tools.ietf.org/html/rfc1321">MD5</a> and <a href="http://groups.csail.mit.edu/cis/md6/">MD6</a> Message-Digest functions.</p>
-
-<p>Simply use <code>MD5</code> function with <code><a href="Classes/CatMD5Crypto.html">CatMD5Crypto</a></code>:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">md5Crypto</span> <span class="o">=</span> <span class="kt">CatMD5Crypto</span><span class="p">()</span>
-
-<span class="nf">print</span><span class="p">(</span><span class="n">md5Crypto</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">!</span><span class="p">)</span>
-
-<span class="c1">// 13b86760bd1e322de76fc9035b848029</span>
-</code></pre>
-<h3 id='argon2-code-hash-code-code-verify-code' class='heading'>Argon2 <code>Hash</code> <code>Verify</code></h3>
-
-<p><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a> is the password-hashing function that won the <a href="https://password-hashing.net/">Password Hashing Competition (PHC)</a>.</p>
-
-<p>CatCrypto support <code>Argon2i</code>, <code>Argon2d</code>, and <code>Argon2id</code> three different modes, <code>Argon2i</code> is default mode and it is recommend.</p>
-
-<p>Simply use Argon2 function with <code><a href="Classes/CatArgon2Crypto.html">CatArgon2Crypto</a></code>:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">argon2Crypto</span> <span class="o">=</span> <span class="kt">CatArgon2Crypto</span><span class="p">()</span>
-
-<span class="n">argon2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">salt</span> <span class="o">=</span> <span class="s">"CatCrypto"</span>
-<span class="n">argon2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="o">.</span><span class="n">argon2i</span>
-
-<span class="nf">print</span><span class="p">(</span><span class="n">argon2Crypto</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">!</span><span class="p">)</span>
-
-<span class="c1">// $argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2/nPDfPD5B3yyebv8k</span>
-</code></pre>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>CatCrypto is available through <a href="http://cocoapods.org">CocoaPods</a> and <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
