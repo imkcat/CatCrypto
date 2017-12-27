@@ -45,6 +45,38 @@ CatCrypto include a series of hashing and encryption functions and more function
 
 CatCrypto is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage).
 
+## Usage
+
+### Hash
+
+[Hash function](https://en.wikipedia.org/wiki/Hash_function) used to map data of arbitrary size to data of fixed size.
+
+Simply hash string with `MD5` function:
+
+``` swift
+let md6Crypto = CatMD6Crypto()
+md6Crypto.context.hashLength = .bit512
+print(md6Crypto.hash(password: "CatCrypto").value!)
+
+// 3ad3003383633c40281bb5185424ee56a5a1c6dfa3a0e7c3a9e381c58d253323e146feb3f04cb9ebcde47186e042ce63109b8d19f3ca760ea00c90654eb2b272
+```
+
+### Verify
+
+Some hash function support to verify their hashed value.
+
+Verify with `Argon2` function:
+
+``` swift
+let hash = "$argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2/nPDfPD5B3yyebv8k"
+let argon2Crypto = CatArgon2Crypto()
+argon2Crypto.context.mode = .argon2i
+argon2Crypto.context.salt = "CatCrypto"
+print(argon2Crypto.verify(hash: hash, password: "CatCrypto").value)
+
+// true
+```
+
 ### CocoaPods
 
 Add the following line to your Podfile:
