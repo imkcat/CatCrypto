@@ -159,12 +159,14 @@ public class CatMD6Context: CatCryptoContext {
 
 /// CatMD6Crypto is the crypto for [MD6](http://groups.csail.mit.edu/cis/md6/)
 /// function.
-public class CatMD6Crypto: Hashing {
+public class CatMD6Crypto: Contextual, Hashing {
+    
+    public typealias Context = CatMD6Context
     
     /// Context for the crypto.
     public var context: CatMD6Context = CatMD6Context()
     
-    public init(context: CatMD6Context = CatMD6Context()) {
+    public required init(context: Context = CatMD6Context()) {
         self.context = context
     }
     

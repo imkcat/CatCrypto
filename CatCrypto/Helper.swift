@@ -29,7 +29,12 @@
 import Foundation
 
 /// Context class is describe for crypto inputs and others configuration.
-public class CatCryptoContext {}
+public class CatCryptoContext {
+    
+    /// Initialize crypto context.
+    public init() {}
+    
+}
 
 /// Base result class for encrypt, decrypt, hash or verify
 public class CatCryptoResult {

@@ -81,14 +81,16 @@ public class CatArgon2Context: CatCryptoContext {
 /// [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing
 /// function that won the
 /// [Password Hashing Competition (PHC)](https://password-hashing.net/).
-public class CatArgon2Crypto: Hashing, Verification {
+public class CatArgon2Crypto: Contextual, Hashing, Verification {
+    
+    public typealias Context = CatArgon2Context
+    
+    public required init(context: Context = CatArgon2Context()) {
+        self.context = context
+    }
     
     /// Context for the crypto.
     public var context: CatArgon2Context = CatArgon2Context()
-    
-    public init(context: CatArgon2Context = CatArgon2Context()) {
-        self.context = context
-    }
     
     /// Returns the encoded hash length.
     ///
