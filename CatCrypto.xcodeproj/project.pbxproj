@@ -50,6 +50,10 @@
 		C39EDD7D1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
 		C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
 		C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
+		C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
+		C3D6DD2B1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
+		C3D6DD2C1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
+		C3D6DD2D1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
 		C3E273851FE4267D0026655E /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3E273861FE42B000026655E /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
 		C3E273871FE42B000026655E /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
@@ -114,6 +118,7 @@
 		C3A12E9E1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12EA01FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12EA21FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contextual.swift; sourceTree = "<group>"; };
 		C3E273731FE4259D0026655E /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,6 +181,7 @@
 				C330B4981FDE93AC005AEECC /* CatCrypto.h */,
 				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
 				C39EDD6C1FECF6F80081108F /* Helper.swift */,
+				C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */,
 				C39EDD671FECF6440081108F /* Hashing.swift */,
 				C39EDD711FECF95C0081108F /* Verification.swift */,
 				C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */,
@@ -540,6 +546,7 @@
 				C39EDD771FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD721FECF95C0081108F /* Verification.swift in Sources */,
 				C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */,
+				C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD681FECF6440081108F /* Hashing.swift in Sources */,
 				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
 				C39EDD7C1FECFB0B0081108F /* MessageDigest.swift in Sources */,
@@ -569,6 +576,7 @@
 				C39EDD791FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD741FECF95C0081108F /* Verification.swift in Sources */,
 				C3E2738C1FE42B010026655E /* argon2.c in Sources */,
+				C3D6DD2C1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6A1FECF6440081108F /* Hashing.swift in Sources */,
 				C3E2738F1FE42B010026655E /* encoding.c in Sources */,
 				C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */,
@@ -590,6 +598,7 @@
 				C39EDD7A1FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD751FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273921FE42B020026655E /* argon2.c in Sources */,
+				C3D6DD2D1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6B1FECF6440081108F /* Hashing.swift in Sources */,
 				C3E273951FE42B020026655E /* encoding.c in Sources */,
 				C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */,
@@ -611,6 +620,7 @@
 				C39EDD781FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD731FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273861FE42B000026655E /* argon2.c in Sources */,
+				C3D6DD2B1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD691FECF6440081108F /* Hashing.swift in Sources */,
 				C3E273891FE42B000026655E /* encoding.c in Sources */,
 				C39EDD7D1FECFB0B0081108F /* MessageDigest.swift in Sources */,
