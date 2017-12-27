@@ -16,8 +16,16 @@
 <p align="center">
 	<a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
 	<a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
-	<a href="https://imkcat.github.io/CatCrypto/"><img src="https://github.com/ImKcat/CatCrypto/raw/master/docs/badge.svg" alt="Document"></a>
 </p>
+
+- [Requirements](#requirements)
+- [Support Functions](#support-functions)
+- [Usage](#usage)
+	- [Hash](#hash)
+	- [Verify](#verify)
+- [Installation](#installation)
+- [Documentation](#documentation)
+- [License](#license)
 
 ## Requirements
 
@@ -27,11 +35,7 @@
 - tvOS 9.0+
 - watchOS 2.0+
 
-## Usage
-
-CatCrypto include a series of hashing and encryption functions and more functions in progress!
-
-## Support functions
+## Support Functions
 
 - Hashing
 	- Message-Digest
@@ -41,11 +45,9 @@ CatCrypto include a series of hashing and encryption functions and more function
   		- [MD6](http://groups.csail.mit.edu/cis/md6/)
 	- [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
-## Installation
-
-CatCrypto is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage).
-
 ## Usage
+
+CatCrypto include a series of hashing and encryption functions and more functions in progress!
 
 ### Hash
 
@@ -77,6 +79,10 @@ print(argon2Crypto.verify(hash: hash, password: "CatCrypto").value)
 // true
 ```
 
+## Installation
+
+CatCrypto is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage).
+
 ### CocoaPods
 
 Add the following line to your Podfile:
@@ -97,7 +103,7 @@ github "ImKcat/CatCrypto"
 
 ## Documentation
 
-[API Reference](https://imkcat.github.io/CatCrypto/)
+- [API Reference](https://imkcat.github.io/CatCrypto/)
 
 ## License
 
