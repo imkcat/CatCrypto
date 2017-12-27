@@ -174,12 +174,12 @@
 				C358E7921FE2700600A352D0 /* CommonCrypto */,
 				C356173F1FDD765D005316BF /* Argon2 */,
 				C330B4981FDE93AC005AEECC /* CatCrypto.h */,
+				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
 				C39EDD6C1FECF6F80081108F /* Helper.swift */,
 				C39EDD671FECF6440081108F /* Hashing.swift */,
 				C39EDD711FECF95C0081108F /* Verification.swift */,
-				C39EDD761FECF9D00081108F /* Argon.swift */,
 				C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */,
-				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
+				C39EDD761FECF9D00081108F /* Argon.swift */,
 				C330B4991FDE93AC005AEECC /* Info.plist */,
 			);
 			path = CatCrypto;

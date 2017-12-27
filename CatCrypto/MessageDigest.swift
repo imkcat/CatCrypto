@@ -46,9 +46,22 @@ private enum CCMessageDigestMode {
 /// `CatCCMessageDigestCrypto` just for code convenient and coupling, and it just
 /// as father class for `CatMD2Crypto`, `CatMD4Crypto` and `CatMD5Crypto`
 /// classes.
-public class CatCCMessageDigestCrypto {
+public class CatCCMessageDigestCrypto: Hashing {
+    
+    /// Mode to switch Message-Digest function from CommonCrypto.
+    fileprivate var mode: CCMessageDigestMode = .ccMD5
+    
+    /// Digest length in bytes to Message-Digest function.
+    fileprivate var digestLength: Int = Int(CC_MD5_DIGEST_LENGTH)
     
     public init() {}
+    
+    public func hash(password: String) -> CatCryptoHashResult {
+        return messageDigestHash(mode: mode,
+                                 password: password.cString(using: .utf8)!,
+                                 passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
+                                 digestLength: digestLength)
+    }
     
     /// Hash password string with desire Message-Digest function.
     ///
@@ -83,39 +96,36 @@ public class CatCCMessageDigestCrypto {
 
 /// CatMD2Crypto is the crypto for [MD2](https://tools.ietf.org/html/rfc1319)
 /// function.
-public class CatMD2Crypto: CatCCMessageDigestCrypto, Hashing {
+public class CatMD2Crypto: CatCCMessageDigestCrypto {
     
-    public func hash(password: String) -> CatCryptoHashResult {
-        return messageDigestHash(mode: .ccMD2,
-                                 password: password.cString(using: .utf8)!,
-                                 passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
-                                 digestLength: Int(CC_MD2_DIGEST_LENGTH))
+    public override init() {
+        super.init()
+        mode = .ccMD2
+        digestLength = Int(CC_MD2_DIGEST_LENGTH)
     }
     
 }
 
 /// CatMD4Crypto is the crypto for [MD4](https://tools.ietf.org/html/rfc1320)
 /// function.
-public class CatMD4Crypto: CatCCMessageDigestCrypto, Hashing {
+public class CatMD4Crypto: CatCCMessageDigestCrypto {
     
-    public func hash(password: String) -> CatCryptoHashResult {
-        return messageDigestHash(mode: .ccMD4,
-                                 password: password.cString(using: .utf8)!,
-                                 passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
-                                 digestLength: Int(CC_MD4_DIGEST_LENGTH))
+    public override init() {
+        super.init()
+        mode = .ccMD4
+        digestLength = Int(CC_MD4_DIGEST_LENGTH)
     }
     
 }
 
 /// CatMD5Crypto is the crypto for [MD5](https://tools.ietf.org/html/rfc1321)
 /// function.
-public class CatMD5Crypto: CatCCMessageDigestCrypto, Hashing {
+public class CatMD5Crypto: CatCCMessageDigestCrypto {
     
-    public func hash(password: String) -> CatCryptoHashResult {
-        return messageDigestHash(mode: .ccMD5,
-                                 password: password.cString(using: .utf8)!,
-                                 passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
-                                 digestLength: Int(CC_MD5_DIGEST_LENGTH))
+    public override init() {
+        super.init()
+        mode = .ccMD5
+        digestLength = Int(CC_MD5_DIGEST_LENGTH)
     }
     
 }
