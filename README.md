@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png" alt="Logo">
+	<img src="CatCrypto-Logo.png" alt="Logo">
 </p>
 
 <p align="center">
@@ -16,6 +16,7 @@
 <p align="center">
 	<a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
 	<a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
+	<a href="https://imkcat.github.io/CatCrypto/"><img src="./docs/badge.svg" alt="Document"></a>
 </p>
 
 ## Requirements
@@ -61,6 +62,10 @@ Add the following line to your Cartfile:
 ```ruby
 github "ImKcat/CatCrypto"
 ```
+
+## Documentation
+
+[API Reference](https://imkcat.github.io/CatCrypto/)
 
 ## License
 
