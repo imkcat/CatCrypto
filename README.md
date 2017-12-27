@@ -30,38 +30,15 @@
 
 CatCrypto include a series of hashing and encryption functions and more functions in progress!
 
-### Message-Digest `Hash`
+## Support functions
 
-CatCrypto support [MD2](https://tools.ietf.org/html/rfc1319), [MD4](https://tools.ietf.org/html/rfc1320), [MD5](https://tools.ietf.org/html/rfc1321) and [MD6](http://groups.csail.mit.edu/cis/md6/) Message-Digest functions.
-
-Simply use `MD5` function with `CatMD5Crypto`:
-
-``` swift
-let md5Crypto = CatMD5Crypto()
-
-print(md5Crypto.hash(password: "CatCrypto").value!)
-
-// 13b86760bd1e322de76fc9035b848029
-```
-
-### Argon2 `Hash` `Verify`
-
-[Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing function that won the [Password Hashing Competition (PHC)](https://password-hashing.net/).
-
-CatCrypto support `Argon2i`, `Argon2d`, and `Argon2id` three different modes, `Argon2i` is default mode and it is recommend.
-
-Simply use Argon2 function with `CatArgon2Crypto`:
-
-``` swift
-let argon2Crypto = CatArgon2Crypto()
-
-argon2Crypto.context.salt = "CatCrypto"
-argon2Crypto.context.mode = .argon2i
-
-print(argon2Crypto.hash(password: "CatCrypto").value!)
-
-// $argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2/nPDfPD5B3yyebv8k
-```
+- Hashing
+	- Message-Digest
+  		- [MD2](https://tools.ietf.org/html/rfc1319)
+  		- [MD4](https://tools.ietf.org/html/rfc1320)
+  		- [MD5](https://tools.ietf.org/html/rfc1321)
+  		- [MD6](http://groups.csail.mit.edu/cis/md6/)
+	- [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
 ## Installation
 
