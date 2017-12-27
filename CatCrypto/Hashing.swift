@@ -28,6 +28,7 @@
 
 import Foundation
 
+/// `Hashing` protocol defines the interface about hashing.
 public protocol Hashing {
     
     /// Hash password string with hashing function.

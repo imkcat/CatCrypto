@@ -28,6 +28,7 @@
 
 import Foundation
 
+/// `Verification` protocol defines the interface about verification.
 public protocol Verification {
     
     /// Verify hashed string and original password string.

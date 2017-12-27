@@ -31,13 +31,15 @@ import CommonCrypto
 import MD6
 
 /// Message-Digest function mode from CommonCrypto.
-///
-/// - ccMD2: MD2 function.
-/// - ccMD4: MD4 function.
-/// - ccMD5: MD5 function.
 private enum CCMessageDigestMode {
+    
+    /// MD2 function.
     case ccMD2
+    
+    /// MD4 function.
     case ccMD4
+    
+    /// MD5 function.
     case ccMD5
 }
 
@@ -119,15 +121,18 @@ public class CatMD5Crypto: CatCCMessageDigestCrypto, Hashing {
 }
 
 /// Desired bit-length of the hash function output.
-///
-/// - bit224: 224 bits.
-/// - bit256: 256 bits.
-/// - bit384: 384 bits.
-/// - bit512: 512 bits.
 public enum CatMD6HashLength: CInt {
+    
+    /// 224 bits.
     case bit224 = 224
+    
+    /// 256 bits.
     case bit256 = 256
+    
+    /// 384 bits.
     case bit384 = 384
+    
+    /// 512 bits.
     case bit512 = 512
 }
 
