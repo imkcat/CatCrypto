@@ -151,8 +151,8 @@ public class CatMD6Context: CatCryptoContext {
     /// Desired bit-length of the hash function output.
     public var hashLength: CatMD6HashLength = .bit512
 
-    public init(hashLength: CatMD6HashLength = .bit512) {
-        self.hashLength = hashLength
+    public override init() {
+        super.init()
     }
     
 }

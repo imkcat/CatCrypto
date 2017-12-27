@@ -70,18 +70,8 @@ public class CatArgon2Context: CatCryptoContext {
     /// Desired length of the hash.
     public var hashLength: Int = 32
     
-    public init(iterations: Int = 3,
-                memory: Int = 1 << 12,
-                parallelism: Int = 1,
-                mode: CatArgon2Mode = .argon2i,
-                salt: String = UUID().uuidString,
-                hashLength: Int = 32) {
-        self.iterations = iterations
-        self.memory = memory
-        self.parallelism = parallelism
-        self.mode = mode
-        self.salt = salt
-        self.hashLength = hashLength
+    public override init() {
+        super.init()
     }
     
 }
