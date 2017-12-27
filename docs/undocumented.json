@@ -1,0 +1,54 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/Argon.swift",
+      "line": 53,
+      "symbol": "CatArgon2Context",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/Argon.swift",
+      "line": 73,
+      "symbol": "CatArgon2Context.init(iterations:memory:parallelism:mode:salt:hashLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/Argon.swift",
+      "line": 99,
+      "symbol": "CatArgon2Crypto.init(context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/MessageDigest.swift",
+      "line": 51,
+      "symbol": "CatCCMessageDigestCrypto.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/MessageDigest.swift",
+      "line": 139,
+      "symbol": "CatMD6Context",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/MessageDigest.swift",
+      "line": 144,
+      "symbol": "CatMD6Context.init(hashLength:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/MessageDigest.swift",
+      "line": 157,
+      "symbol": "CatMD6Crypto.init(context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kcat/Developer/Git/CatCrypto"
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CatCrypto  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="CatCrypto  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">CatCrypto Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">CatCrypto Reference</a>
+        <img id="carat" src="img/carat.png" />
+        CatCrypto  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/CatArgon2Context.html">CatArgon2Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatCCMessageDigestCrypto.html">CatCCMessageDigestCrypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:9CatCrypto0aB7ContextC">CatCryptoContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatCryptoError.html">CatCryptoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatCryptoHashResult.html">CatCryptoHashResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatCryptoResult.html">CatCryptoResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatCryptoVerifyResult.html">CatCryptoVerifyResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatMD2Crypto.html">CatMD2Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatMD4Crypto.html">CatMD4Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatMD5Crypto.html">CatMD5Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatMD6Context.html">CatMD6Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatMD6Crypto.html">CatMD6Crypto</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/CatArgon2Mode.html">CatArgon2Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CatMD6HashLength.html">CatMD6HashLength</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Hashing.html">Hashing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Verification.html">Verification</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p align="center">
+    <img src="https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png" alt="Logo">
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat" alt="Language">
+    <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat" alt="Support Platform"></a>
+    <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat" alt="License"></a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+    <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat" alt="CocoaPods Version"></a>
+</p>
+
+<p align="center">
+    <a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
+    <a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
+</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>Swift 4+</li>
+<li>iOS 8.0+</li>
+<li>macOS 10.10+</li>
+<li>tvOS 9.0+</li>
+<li>watchOS 2.0+</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>CatCrypto include a series of hashing and encryption functions and more functions in progress!</p>
+<h2 id='support-crypto' class='heading'>Support crypto</h2>
+
+<ul>
+<li>Message-Digest
+
+<ul>
+<li>MD2</li>
+<li>MD4</li>
+<li>MD5</li>
+<li>MD6</li>
+</ul></li>
+<li>Argon2</li>
+</ul>
+<h3 id='message-digest' class='heading'>Message-Digest</h3>
+
+<p>CatCrypto support <a href="https://tools.ietf.org/html/rfc1319">MD2</a>, <a href="https://tools.ietf.org/html/rfc1320">MD4</a>, <a href="https://tools.ietf.org/html/rfc1321">MD5</a> and <a href="http://groups.csail.mit.edu/cis/md6/">MD6</a> Message-Digest functions.</p>
+
+<p>Simply use <code>MD5</code> function with <code><a href="Classes/CatMD5Crypto.html">CatMD5Crypto</a></code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">md5Crypto</span> <span class="o">=</span> <span class="kt">CatMD5Crypto</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">md5Crypto</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">!</span><span class="p">)</span>
+
+<span class="c1">// 13b86760bd1e322de76fc9035b848029</span>
+</code></pre>
+<h3 id='argon2-code-hash-code-code-verify-code' class='heading'>Argon2 <code>Hash</code> <code>Verify</code></h3>
+
+<p><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a> is the password-hashing function that won the <a href="https://password-hashing.net/">Password Hashing Competition (PHC)</a>.</p>
+
+<p>CatCrypto support <code>Argon2i</code>, <code>Argon2d</code>, and <code>Argon2id</code> three different modes, <code>Argon2i</code> is default mode and it is recommend.</p>
+
+<p>Simply use Argon2 function with <code><a href="Classes/CatArgon2Crypto.html">CatArgon2Crypto</a></code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">argon2Crypto</span> <span class="o">=</span> <span class="kt">CatArgon2Crypto</span><span class="p">()</span>
+
+<span class="n">argon2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">salt</span> <span class="o">=</span> <span class="s">"CatCrypto"</span>
+<span class="n">argon2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="o">.</span><span class="n">argon2i</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">argon2Crypto</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">!</span><span class="p">)</span>
+
+<span class="c1">// $argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2/nPDfPD5B3yyebv8k</span>
+</code></pre>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>CatCrypto is available through <a href="http://cocoapods.org">CocoaPods</a> and <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>Add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
+
+<span class="n">pod</span> <span class="s1">'CatCrypto'</span>
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p>Add the following line to your Cartfile:</p>
+<pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"ImKcat/CatCrypto"</span>
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p>CatCrypto is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2017-12-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
