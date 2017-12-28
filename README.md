@@ -18,6 +18,12 @@
 	<a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
 </p>
 
+CatCrypto include a series of hashing and encryption functions and more functions in progress!
+
+CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-winner-argon2), the password-hashing function that won the Password Hashing Competition (PHC).
+
+## Content
+
 - [Requirements](#requirements)
 - [Support Functions](#support-functions)
 - [Usage](#usage)
@@ -46,8 +52,6 @@
 	- [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
 ## Usage
-
-CatCrypto include a series of hashing and encryption functions and more functions in progress!
 
 ### Hash
 
