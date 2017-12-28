@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CatCCMessageDigestCrypto Class Reference</title>
+    <title>CatSHA1Crypto Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,11 +10,11 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/CatCCMessageDigestCrypto" class="dashAnchor"></a>
-    <a title="CatCCMessageDigestCrypto Class Reference"></a>
+    <a name="//apple_ref/swift/Class/CatSHA1Crypto" class="dashAnchor"></a>
+    <a title="CatSHA1Crypto Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CatCrypto Docs</a> (89% documented)</p>
+        <p><a href="../index.html">CatCrypto Docs</a> (95% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">CatCrypto Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CatCCMessageDigestCrypto Class Reference
+        CatSHA1Crypto Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -39,7 +39,7 @@
                 <a href="../Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CatCCMessageDigestCrypto.html">CatCCMessageDigestCrypto</a>
+                <a href="../Classes/CatCCHashCrypto.html">CatCCHashCrypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatCryptoContext.html">CatCryptoContext</a>
@@ -71,6 +71,15 @@
               <li class="nav-group-task">
                 <a href="../Classes/CatMD6Crypto.html">CatMD6Crypto</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA1Crypto.html">CatSHA1Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Context.html">CatSHA2Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -81,6 +90,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CatMD6HashLength.html">CatMD6HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CatSHA2HashLength.html">CatSHA2HashLength</a>
               </li>
             </ul>
           </li>
@@ -103,16 +115,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CatCCMessageDigestCrypto</h1>
+            <h1>CatSHA1Crypto</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCCMessageDigestCrypto</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Hashing.html">Hashing</a></span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA1Crypto</span><span class="p">:</span> <span class="kt"><a href="../Classes/CatCCHashCrypto.html">CatCCHashCrypto</a></span></code></pre>
 
                 </div>
               </div>
-            <p><code>CatCCMessageDigestCrypto</code> just for code convenient and coupling, and it just
-as father class for <code><a href="../Classes/CatMD2Crypto.html">CatMD2Crypto</a></code>, <code><a href="../Classes/CatMD4Crypto.html">CatMD4Crypto</a></code> and <code><a href="../Classes/CatMD5Crypto.html">CatMD5Crypto</a></code>
-classes.</p>
+            <p><code>CatSHA1Crypto</code> is the crypto for
+<a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-1</a>
+function.</p>
 
           </section>
           <section class="section task-group-section">
@@ -121,36 +133,9 @@ classes.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0a15CCMessageDigestB0CACycfc"></a>
+                    <a name="/s:9CatCrypto0a4SHA1B0CACycfc"></a>
                     <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a15CCMessageDigestB0CACycfc">init()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto7HashingP4hashAA0aB10HashResultCSS8password_tF"></a>
-                    <a name="//apple_ref/swift/Method/hash(password:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto7HashingP4hashAA0aB10HashResultCSS8password_tF">hash(password:)</a>
+                    <a class="token" href="#/s:9CatCrypto0a4SHA1B0CACycfc">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -164,7 +149,7 @@ classes.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CatCryptoHashResult.html">CatCryptoHashResult</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -176,7 +161,7 @@ classes.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2017-12-27)</p>
+          <p>&copy; 2017 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2017-12-28)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

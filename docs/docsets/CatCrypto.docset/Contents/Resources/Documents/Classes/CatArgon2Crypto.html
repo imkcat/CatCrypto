@@ -14,7 +14,7 @@
     <a title="CatArgon2Crypto Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CatCrypto Docs</a> (89% documented)</p>
+        <p><a href="../index.html">CatCrypto Docs</a> (95% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -39,7 +39,7 @@
                 <a href="../Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CatCCMessageDigestCrypto.html">CatCCMessageDigestCrypto</a>
+                <a href="../Classes/CatCCHashCrypto.html">CatCCHashCrypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatCryptoContext.html">CatCryptoContext</a>
@@ -71,6 +71,15 @@
               <li class="nav-group-task">
                 <a href="../Classes/CatMD6Crypto.html">CatMD6Crypto</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA1Crypto.html">CatSHA1Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Context.html">CatSHA2Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -81,6 +90,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CatMD6HashLength.html">CatMD6HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CatSHA2HashLength.html">CatSHA2HashLength</a>
               </li>
             </ul>
           </li>
@@ -110,7 +122,7 @@
 
                 </div>
               </div>
-            <p>CatArgon2Crypto is the crypto for Argon2 function.</p>
+            <p><code>CatArgon2Crypto</code> is the crypto for Argon2 function.</p>
 
 <p><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a> is the password-hashing
 function that won the
@@ -120,32 +132,6 @@ function that won the
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto10ContextualPx7ContextQz7context_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(context:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto10ContextualPx7ContextQz7context_tcfc">init(context:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span><span class="p">())</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -167,6 +153,32 @@ function that won the
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto10ContextualPx7ContextQz7context_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto10ContextualPx7ContextQz7context_tcfc">init(context:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatArgon2Context.html">CatArgon2Context</a></span><span class="p">())</span></code></pre>
 
                         </div>
                       </div>
@@ -252,7 +264,7 @@ function that won the
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2017-12-27)</p>
+          <p>&copy; 2017 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2017-12-28)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
