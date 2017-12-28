@@ -6,5 +6,5 @@ jazzy -c \
 -g https://github.com/ImKcat/CatCrypto \
 -r https://imkcat.github.io/CatCrypto/ \
 -m CatCrypto \
---module-version 0.2.1.2 \
+--module-version 0.2.2 \
 -x -workspace,CatCrypto.xcworkspace,-scheme,CatCrypto-iOS
