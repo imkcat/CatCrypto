@@ -34,9 +34,13 @@ public protocol Contextual {
     /// `Context` type is the context class that for use.
     associatedtype Context
     
+    /// Context for the crypto.
+    var context: Context {get set}
+    
     /// Initialize with a context object.
     ///
     /// - Parameter context: Context object that subclass from
     /// `CatCryptoContext`.
     init(context: Context)
+    
 }

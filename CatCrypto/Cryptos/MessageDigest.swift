@@ -30,73 +30,9 @@ import Foundation
 import CommonCrypto
 import MD6
 
-/// Message-Digest function mode from CommonCrypto.
-private enum CCMessageDigestMode {
-    
-    /// MD2 function.
-    case ccMD2
-    
-    /// MD4 function.
-    case ccMD4
-    
-    /// MD5 function.
-    case ccMD5
-}
-
-/// `CatCCMessageDigestCrypto` just for code convenient and coupling, and it just
-/// as father class for `CatMD2Crypto`, `CatMD4Crypto` and `CatMD5Crypto`
-/// classes.
-public class CatCCMessageDigestCrypto: Hashing {
-    
-    /// Mode to switch Message-Digest function from CommonCrypto.
-    fileprivate var mode: CCMessageDigestMode = .ccMD5
-    
-    /// Digest length in bytes to Message-Digest function.
-    fileprivate var digestLength: Int = Int(CC_MD5_DIGEST_LENGTH)
-    
-    public init() {}
-    
-    public func hash(password: String) -> CatCryptoHashResult {
-        return messageDigestHash(mode: mode,
-                                 password: password.cString(using: .utf8)!,
-                                 passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
-                                 digestLength: digestLength)
-    }
-    
-    /// Hash password string with desire Message-Digest function.
-    ///
-    /// - Parameters:
-    ///   - mode: Function mode.
-    ///   - password: Password data to hasing.
-    ///   - passwordLength: Password size in bytes.
-    ///   - digestLength: Digest length in bytes.
-    /// - Returns: Return a hash result when hashing task finish.
-    fileprivate func messageDigestHash(mode: CCMessageDigestMode,
-                                       password: [CChar],
-                                       passwordLength: CC_LONG,
-                                       digestLength: Int) -> CatCryptoHashResult {
-        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
-        defer {
-            result.deallocate(capacity: digestLength)
-        }
-        switch mode {
-        case .ccMD2:
-            CC_MD2(password, passwordLength, result)
-        case .ccMD4:
-            CC_MD4(password, passwordLength, result)
-        case .ccMD5:
-            CC_MD5(password, passwordLength, result)
-        }
-        let hashResult = CatCryptoHashResult()
-        hashResult.value = String.hexString(source: result, length: digestLength)
-        return hashResult
-    }
-    
-}
-
-/// CatMD2Crypto is the crypto for [MD2](https://tools.ietf.org/html/rfc1319)
+/// `CatMD2Crypto` is the crypto for [MD2](https://tools.ietf.org/html/rfc1319)
 /// function.
-public class CatMD2Crypto: CatCCMessageDigestCrypto {
+public class CatMD2Crypto: CatCCHashCrypto {
     
     public override init() {
         super.init()
@@ -106,9 +42,9 @@ public class CatMD2Crypto: CatCCMessageDigestCrypto {
     
 }
 
-/// CatMD4Crypto is the crypto for [MD4](https://tools.ietf.org/html/rfc1320)
+/// `CatMD4Crypto` is the crypto for [MD4](https://tools.ietf.org/html/rfc1320)
 /// function.
-public class CatMD4Crypto: CatCCMessageDigestCrypto {
+public class CatMD4Crypto: CatCCHashCrypto {
     
     public override init() {
         super.init()
@@ -118,9 +54,9 @@ public class CatMD4Crypto: CatCCMessageDigestCrypto {
     
 }
 
-/// CatMD5Crypto is the crypto for [MD5](https://tools.ietf.org/html/rfc1321)
+/// `CatMD5Crypto` is the crypto for [MD5](https://tools.ietf.org/html/rfc1321)
 /// function.
-public class CatMD5Crypto: CatCCMessageDigestCrypto {
+public class CatMD5Crypto: CatCCHashCrypto {
     
     public override init() {
         super.init()
@@ -157,14 +93,13 @@ public class CatMD6Context: CatCryptoContext {
     
 }
 
-/// CatMD6Crypto is the crypto for [MD6](http://groups.csail.mit.edu/cis/md6/)
+/// `CatMD6Crypto` is the crypto for [MD6](http://groups.csail.mit.edu/cis/md6/)
 /// function.
 public class CatMD6Crypto: Contextual, Hashing {
     
     public typealias Context = CatMD6Context
     
-    /// Context for the crypto.
-    public var context: CatMD6Context = CatMD6Context()
+    public var context: CatMD6Context
     
     public required init(context: Context = CatMD6Context()) {
         self.context = context

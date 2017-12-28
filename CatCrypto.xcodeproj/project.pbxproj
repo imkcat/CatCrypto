@@ -24,6 +24,14 @@
 		C330B4D11FDE94E9005AEECC /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
 		C330B4D91FDE9C4F005AEECC /* CatArgon2CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */; };
 		C358E78F1FE2318C00A352D0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C358E78E1FE2318C00A352D0 /* LICENSE */; };
+		C367290C1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
+		C367290D1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
+		C367290E1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
+		C367290F1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
+		C36729111FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
+		C36729121FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
+		C36729131FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
+		C36729141FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
 		C393A5BA1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
 		C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
 		C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
@@ -103,6 +111,8 @@
 		C356176E1FDD7E5A005316BF /* ref.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ref.c; sourceTree = "<group>"; };
 		C356176F1FDD7E5B005316BF /* ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ref.h; sourceTree = "<group>"; };
 		C358E78E1FE2318C00A352D0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C367290B1FF4920E005BE1A8 /* SHA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA.swift; sourceTree = "<group>"; };
+		C36729101FF496D4005BE1A8 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		C393A5B91FF0F85600B69167 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C3945E851FE3CBAE009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3945EAD1FE3CE48009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,17 +185,11 @@
 		C330B4971FDE93AC005AEECC /* CatCrypto */ = {
 			isa = PBXGroup;
 			children = (
-				C31E52E71FE90668004C1F12 /* MD6 */,
-				C358E7921FE2700600A352D0 /* CommonCrypto */,
-				C356173F1FDD765D005316BF /* Argon2 */,
+				C36729181FF498A6005BE1A8 /* Core */,
+				C36729171FF49763005BE1A8 /* ModuleMaps */,
+				C36729161FF49724005BE1A8 /* Cryptos */,
+				C36729151FF4970C005BE1A8 /* Protocols */,
 				C330B4981FDE93AC005AEECC /* CatCrypto.h */,
-				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
-				C39EDD6C1FECF6F80081108F /* Helper.swift */,
-				C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */,
-				C39EDD671FECF6440081108F /* Hashing.swift */,
-				C39EDD711FECF95C0081108F /* Verification.swift */,
-				C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */,
-				C39EDD761FECF9D00081108F /* Argon.swift */,
 				C330B4991FDE93AC005AEECC /* Info.plist */,
 			);
 			path = CatCrypto;
@@ -257,6 +261,46 @@
 				C3A12E971FE3A3D2007BA5FA /* WatchSimulator */,
 			);
 			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
+		C36729151FF4970C005BE1A8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */,
+				C39EDD671FECF6440081108F /* Hashing.swift */,
+				C39EDD711FECF95C0081108F /* Verification.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C36729161FF49724005BE1A8 /* Cryptos */ = {
+			isa = PBXGroup;
+			children = (
+				C39EDD761FECF9D00081108F /* Argon.swift */,
+				C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */,
+				C367290B1FF4920E005BE1A8 /* SHA.swift */,
+			);
+			path = Cryptos;
+			sourceTree = "<group>";
+		};
+		C36729171FF49763005BE1A8 /* ModuleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				C356173F1FDD765D005316BF /* Argon2 */,
+				C358E7921FE2700600A352D0 /* CommonCrypto */,
+				C31E52E71FE90668004C1F12 /* MD6 */,
+			);
+			path = ModuleMaps;
+			sourceTree = "<group>";
+		};
+		C36729181FF498A6005BE1A8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
+				C39EDD6C1FECF6F80081108F /* Helper.swift */,
+				C36729101FF496D4005BE1A8 /* Crypto.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		C3A12E951FE3A3D2007BA5FA /* AppleTVSimulator */ = {
@@ -540,9 +584,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C367290C1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C330B4C41FDE94E9005AEECC /* argon2.c in Sources */,
 				C39EDD6D1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FC1FE906B2004C1F12 /* md6_mode.c in Sources */,
+				C36729111FF496D4005BE1A8 /* Crypto.swift in Sources */,
 				C39EDD771FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD721FECF95C0081108F /* Verification.swift in Sources */,
 				C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */,
@@ -570,9 +616,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C367290E1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C3E273901FE42B010026655E /* ref.c in Sources */,
 				C39EDD6F1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FE1FE906B2004C1F12 /* md6_mode.c in Sources */,
+				C36729131FF496D4005BE1A8 /* Crypto.swift in Sources */,
 				C39EDD791FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD741FECF95C0081108F /* Verification.swift in Sources */,
 				C3E2738C1FE42B010026655E /* argon2.c in Sources */,
@@ -592,9 +640,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C367290F1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C3E273961FE42B020026655E /* ref.c in Sources */,
 				C39EDD701FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FF1FE906B2004C1F12 /* md6_mode.c in Sources */,
+				C36729141FF496D4005BE1A8 /* Crypto.swift in Sources */,
 				C39EDD7A1FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD751FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273921FE42B020026655E /* argon2.c in Sources */,
@@ -614,9 +664,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C367290D1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C3E2738A1FE42B000026655E /* ref.c in Sources */,
 				C39EDD6E1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FD1FE906B2004C1F12 /* md6_mode.c in Sources */,
+				C36729121FF496D4005BE1A8 /* Crypto.swift in Sources */,
 				C39EDD781FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD731FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273861FE42B000026655E /* argon2.c in Sources */,
@@ -657,8 +709,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/iPhoneOS";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/iPhoneSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/iPhoneOS";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/iPhoneSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -688,8 +740,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/iPhoneOS";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/iPhoneSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/iPhoneOS";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/iPhoneSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -857,8 +909,8 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/AppleTVOS";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/AppleTVSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/AppleTVOS";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/AppleTVSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -888,8 +940,8 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/AppleTVOS";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/AppleTVSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/AppleTVOS";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/AppleTVSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -919,8 +971,8 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/WatchOS";
-				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/WatchSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/WatchOS";
+				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/WatchSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -950,8 +1002,8 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/WatchOS";
-				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/WatchSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/WatchOS";
+				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/WatchSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -982,7 +1034,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/MacOSX";
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/MacOSX";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1011,7 +1063,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CatCrypto/MD6 ${PROJECT_DIR}/CatCrypto/Argon2 ${PROJECT_DIR}/CatCrypto/CommonCrypto/MacOSX";
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CatCrypto/ModuleMaps/MD6 ${PROJECT_DIR}/CatCrypto/ModuleMaps/Argon2 ${PROJECT_DIR}/CatCrypto/ModuleMaps/CommonCrypto/MacOSX";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

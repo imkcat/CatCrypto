@@ -70,13 +70,9 @@ public class CatArgon2Context: CatCryptoContext {
     /// Desired length of the hash.
     public var hashLength: Int = 32
     
-    public override init() {
-        super.init()
-    }
-    
 }
 
-/// CatArgon2Crypto is the crypto for Argon2 function.
+/// `CatArgon2Crypto` is the crypto for Argon2 function.
 ///
 /// [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing
 /// function that won the
@@ -85,12 +81,12 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     
     public typealias Context = CatArgon2Context
     
+    /// Context for the crypto.
+    public var context: CatArgon2Context = CatArgon2Context()
+    
     public required init(context: Context = CatArgon2Context()) {
         self.context = context
     }
-    
-    /// Context for the crypto.
-    public var context: CatArgon2Context = CatArgon2Context()
     
     /// Returns the encoded hash length.
     ///
