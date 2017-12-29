@@ -2,12 +2,9 @@ language: swift
 osx_image: xcode9
 script: 
 - |
-  xcodebuild clean build test -sdk iphonesimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto-iOS CODE_SIGNING_REQUIRED=NO
-  xcodebuild clean build test -sdk iphoneos -workspace CatCrypto.xcworkspace -scheme CatCrypto-iOS CODE_SIGNING_REQUIRED=NO
-  xcodebuild clean build -sdk macosx -workspace CatCrypto.xcworkspace -scheme CatCrypto-macOS CODE_SIGNING_REQUIRED=NO
-  xcodebuild clean build -sdk appletvos -workspace CatCrypto.xcworkspace -scheme CatCrypto-tvOS CODE_SIGNING_REQUIRED=NO
-  xcodebuild clean build -sdk appletvsimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto-tvOS CODE_SIGNING_REQUIRED=NO
-  xcodebuild clean build -sdk watchos -workspace CatCrypto.xcworkspace -scheme CatCrypto-watchOS CODE_SIGNING_REQUIRED=NO
-  xcodebuild clean build -sdk watchsimulator -workspace CatCrypto.xcworkspace -scheme CatCrypto-watchOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean test build -destination 'platform=iOS Simulator,name=iPhone X' -workspace CatCrypto.xcworkspace -scheme CatCrypto-iOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -destination 'platform=macOS' -workspace CatCrypto.xcworkspace -scheme CatCrypto-macOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -destination 'platform=tvOS Simulator,name=Apple TV 4K' -workspace CatCrypto.xcworkspace -scheme CatCrypto-tvOS CODE_SIGNING_REQUIRED=NO
+  xcodebuild clean build -destination 'platform=watchOS Simulator,name=Apple Watch Series 3 - 42mm' -workspace CatCrypto.xcworkspace -scheme CatCrypto-watchOS CODE_SIGNING_REQUIRED=NO
 after_success:
   - bash <(curl -s https://codecov.io/bash)
