@@ -56,4 +56,25 @@ class MessageDigestCryptoTests: XCTestCase {
         XCTAssertEqual(md6Crypto.hash(password: password).value, md6Hash)
     }
     
+    func testMD6HashLength() {
+        let password = "Hi CatCrypto!"
+        let bit224Hash = "1e9fff946e2d35d551bd3927a71233cecc769e263435085dfda" +
+        "d79bc"
+        let bit256Hash = "5402a99f803be2f12d7e7675affcea14ac26af0a84c565ae631" +
+        "de93add884d43"
+        let bit384Hash = "8c0202be3d8190dc1ad232dd340ded9b76446365c4834e68ab8" +
+        "1e710f751631e67becb848e264b55bd244014d3ed5b04"
+        let bit512Hash = "377f5f2f9372341b15e9a2e54c4034b7f8161d4a9907c3c8bdb" +
+        "37208369cc2446ef7382928e432a9bd58177a54ef7bd53f27f35d80006167b17248c" +
+        "5fa3df1b3"
+        md6Crypto.context.hashLength = .bit224
+        XCTAssertEqual(md6Crypto.hash(password: password).value, bit224Hash)
+        md6Crypto.context.hashLength = .bit256
+        XCTAssertEqual(md6Crypto.hash(password: password).value, bit256Hash)
+        md6Crypto.context.hashLength = .bit384
+        XCTAssertEqual(md6Crypto.hash(password: password).value, bit384Hash)
+        md6Crypto.context.hashLength = .bit512
+        XCTAssertEqual(md6Crypto.hash(password: password).value, bit512Hash)
+    }
+    
 }
