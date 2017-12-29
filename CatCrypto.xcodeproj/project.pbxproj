@@ -15,6 +15,8 @@
 		C31E53051FE906B2004C1F12 /* md6_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52ED1FE906B2004C1F12 /* md6_compress.c */; };
 		C31E53061FE906B2004C1F12 /* md6_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52ED1FE906B2004C1F12 /* md6_compress.c */; };
 		C31E53071FE906B2004C1F12 /* md6_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52ED1FE906B2004C1F12 /* md6_compress.c */; };
+		C328B7971FF4DC4900943D75 /* CatCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C330B4961FDE93AB005AEECC /* CatCrypto.framework */; };
+		C328B79E1FF4DCC400943D75 /* MessageDigestCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328B79D1FF4DCC400943D75 /* MessageDigestCryptoTests.swift */; };
 		C330B4A81FDE93AC005AEECC /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C330B4C41FDE94E9005AEECC /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
 		C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
@@ -22,7 +24,6 @@
 		C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
 		C330B4CF1FDE94E9005AEECC /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
 		C330B4D11FDE94E9005AEECC /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
-		C330B4D91FDE9C4F005AEECC /* CatArgon2CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */; };
 		C358E78F1FE2318C00A352D0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C358E78E1FE2318C00A352D0 /* LICENSE */; };
 		C367290C1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
 		C367290D1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
@@ -83,17 +84,27 @@
 		C3E273971FE42B020026655E /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C328B7981FF4DC4900943D75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C35617041FDD74A5005316BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C330B4951FDE93AB005AEECC;
+			remoteInfo = "CatCrypto-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C31E52EB1FE906B2004C1F12 /* md6_mode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md6_mode.c; sourceTree = "<group>"; };
 		C31E52EC1FE906B2004C1F12 /* md6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md6.h; sourceTree = "<group>"; };
 		C31E52ED1FE906B2004C1F12 /* md6_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md6_compress.c; sourceTree = "<group>"; };
 		C31E53151FE9097E004C1F12 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		C328B7921FF4DC4900943D75 /* CatCrypto-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CatCrypto-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C328B7961FF4DC4900943D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C328B79D1FF4DCC400943D75 /* MessageDigestCryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDigestCryptoTests.swift; sourceTree = "<group>"; };
 		C330B4961FDE93AB005AEECC /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C330B4981FDE93AC005AEECC /* CatCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatCrypto.h; sourceTree = "<group>"; };
 		C330B4991FDE93AC005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C330B4BB1FDE944F005AEECC /* CatCrypto-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CatCrypto-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C330B4BF1FDE944F005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatArgon2CryptoTests.swift; sourceTree = "<group>"; };
 		C35617411FDD765D005316BF /* argon2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = argon2.h; sourceTree = "<group>"; };
 		C35617421FDD765D005316BF /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C356174B1FDD7C9A005316BF /* argon2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = argon2.c; sourceTree = "<group>"; };
@@ -133,14 +144,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C330B4921FDE93AB005AEECC /* Frameworks */ = {
+		C328B78F1FF4DC4900943D75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C328B7971FF4DC4900943D75 /* CatCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C330B4B81FDE944F005AEECC /* Frameworks */ = {
+		C330B4921FDE93AB005AEECC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,6 +194,15 @@
 			path = MD6;
 			sourceTree = "<group>";
 		};
+		C328B7931FF4DC4900943D75 /* CatCrypto-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C328B79D1FF4DCC400943D75 /* MessageDigestCryptoTests.swift */,
+				C328B7961FF4DC4900943D75 /* Info.plist */,
+			);
+			path = "CatCrypto-iOSTests";
+			sourceTree = "<group>";
+		};
 		C330B4971FDE93AC005AEECC /* CatCrypto */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,20 +216,11 @@
 			path = CatCrypto;
 			sourceTree = "<group>";
 		};
-		C330B4BC1FDE944F005AEECC /* CatCrypto-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				C330B4BF1FDE944F005AEECC /* Info.plist */,
-				C330B4D81FDE9C4F005AEECC /* CatArgon2CryptoTests.swift */,
-			);
-			path = "CatCrypto-iOSTests";
-			sourceTree = "<group>";
-		};
 		C35617031FDD74A5005316BF = {
 			isa = PBXGroup;
 			children = (
 				C330B4971FDE93AC005AEECC /* CatCrypto */,
-				C330B4BC1FDE944F005AEECC /* CatCrypto-iOSTests */,
+				C328B7931FF4DC4900943D75 /* CatCrypto-iOSTests */,
 				C356170D1FDD74A5005316BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -217,10 +229,10 @@
 			isa = PBXGroup;
 			children = (
 				C330B4961FDE93AB005AEECC /* CatCrypto.framework */,
-				C330B4BB1FDE944F005AEECC /* CatCrypto-iOSTests.xctest */,
 				C3945E851FE3CBAE009A203D /* CatCrypto.framework */,
 				C3945EAD1FE3CE48009A203D /* CatCrypto.framework */,
 				C3E273731FE4259D0026655E /* CatCrypto.framework */,
+				C328B7921FF4DC4900943D75 /* CatCrypto-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -397,6 +409,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C328B7911FF4DC4900943D75 /* CatCrypto-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C328B79A1FF4DC4900943D75 /* Build configuration list for PBXNativeTarget "CatCrypto-iOSTests" */;
+			buildPhases = (
+				C328B78E1FF4DC4900943D75 /* Sources */,
+				C328B78F1FF4DC4900943D75 /* Frameworks */,
+				C328B7901FF4DC4900943D75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C328B7991FF4DC4900943D75 /* PBXTargetDependency */,
+			);
+			name = "CatCrypto-iOSTests";
+			productName = "CatCrypto-iOSTests";
+			productReference = C328B7921FF4DC4900943D75 /* CatCrypto-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C330B4951FDE93AB005AEECC /* CatCrypto-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C330B4B11FDE93AC005AEECC /* Build configuration list for PBXNativeTarget "CatCrypto-iOS" */;
@@ -414,23 +444,6 @@
 			productName = CatCrypto;
 			productReference = C330B4961FDE93AB005AEECC /* CatCrypto.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		C330B4BA1FDE944F005AEECC /* CatCrypto-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C330B4C01FDE944F005AEECC /* Build configuration list for PBXNativeTarget "CatCrypto-iOSTests" */;
-			buildPhases = (
-				C330B4B71FDE944F005AEECC /* Sources */,
-				C330B4B81FDE944F005AEECC /* Frameworks */,
-				C330B4B91FDE944F005AEECC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CatCrypto-iOSTests";
-			productName = CatCryptoTests;
-			productReference = C330B4BB1FDE944F005AEECC /* CatCrypto-iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C3945E841FE3CBAE009A203D /* CatCrypto-tvOS */ = {
 			isa = PBXNativeTarget;
@@ -496,11 +509,11 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = imkcat;
 				TargetAttributes = {
-					C330B4951FDE93AB005AEECC = {
+					C328B7911FF4DC4900943D75 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
-					C330B4BA1FDE944F005AEECC = {
+					C330B4951FDE93AB005AEECC = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
 					};
@@ -535,24 +548,24 @@
 				C3E273721FE4259D0026655E /* CatCrypto-macOS */,
 				C3945E841FE3CBAE009A203D /* CatCrypto-tvOS */,
 				C3945EAC1FE3CE48009A203D /* CatCrypto-watchOS */,
-				C330B4BA1FDE944F005AEECC /* CatCrypto-iOSTests */,
+				C328B7911FF4DC4900943D75 /* CatCrypto-iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C328B7901FF4DC4900943D75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C330B4941FDE93AB005AEECC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C358E78F1FE2318C00A352D0 /* LICENSE in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C330B4B91FDE944F005AEECC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +593,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C328B78E1FF4DC4900943D75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C328B79E1FF4DCC400943D75 /* MessageDigestCryptoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C330B4911FDE93AB005AEECC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,14 +622,6 @@
 				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
 				C330B4D11FDE94E9005AEECC /* thread.c in Sources */,
 				C31E53041FE906B2004C1F12 /* md6_compress.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C330B4B71FDE944F005AEECC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C330B4D91FDE9C4F005AEECC /* CatArgon2CryptoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +699,41 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C328B7991FF4DC4900943D75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C330B4951FDE93AB005AEECC /* CatCrypto-iOS */;
+			targetProxy = C328B7981FF4DC4900943D75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C328B79B1FF4DC4900943D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CatCrypto-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C328B79C1FF4DC4900943D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CatCrypto-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C330B4AD1FDE93AC005AEECC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -746,36 +793,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C330B4C11FDE944F005AEECC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CatCryptoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C330B4C21FDE944F005AEECC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CatCryptoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.imkcat.CatCryptoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1073,20 +1090,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C328B79A1FF4DC4900943D75 /* Build configuration list for PBXNativeTarget "CatCrypto-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C328B79B1FF4DC4900943D75 /* Debug */,
+				C328B79C1FF4DC4900943D75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C330B4B11FDE93AC005AEECC /* Build configuration list for PBXNativeTarget "CatCrypto-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C330B4AD1FDE93AC005AEECC /* Debug */,
 				C330B4AE1FDE93AC005AEECC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C330B4C01FDE944F005AEECC /* Build configuration list for PBXNativeTarget "CatCrypto-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C330B4C11FDE944F005AEECC /* Debug */,
-				C330B4C21FDE944F005AEECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

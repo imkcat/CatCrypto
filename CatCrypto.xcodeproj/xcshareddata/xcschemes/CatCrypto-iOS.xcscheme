@@ -27,13 +27,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       language = ""
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C330B4BA1FDE944F005AEECC"
+               BlueprintIdentifier = "C328B7911FF4DC4900943D75"
                BuildableName = "CatCrypto-iOSTests.xctest"
                BlueprintName = "CatCrypto-iOSTests"
                ReferencedContainer = "container:CatCrypto.xcodeproj">
