@@ -16,6 +16,7 @@
 <p align="center">
 	<a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
 	<a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
+    <a href="https://codecov.io/gh/ImKcat/CatCrypto"><img src="https://codecov.io/gh/ImKcat/CatCrypto/branch/master/graph/badge.svg" /></a>
 </p>
 
 CatCrypto include a series of hashing and encryption functions and more functions in progress!
