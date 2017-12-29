@@ -9,15 +9,8 @@
     },
     {
       "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/Cryptos/MessageDigest.swift",
-      "line": 85,
+      "line": 82,
       "symbol": "CatMD6Context",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/Cryptos/SHA.swift",
-      "line": 60,
-      "symbol": "CatSHA2Context",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     }
