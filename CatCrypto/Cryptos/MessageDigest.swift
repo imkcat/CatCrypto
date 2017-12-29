@@ -37,7 +37,6 @@ public class CatMD2Crypto: CatCCHashCrypto {
     public override init() {
         super.init()
         mode = .ccMD2
-        digestLength = Int(CC_MD2_DIGEST_LENGTH)
     }
     
 }
@@ -49,7 +48,6 @@ public class CatMD4Crypto: CatCCHashCrypto {
     public override init() {
         super.init()
         mode = .ccMD4
-        digestLength = Int(CC_MD4_DIGEST_LENGTH)
     }
     
 }
@@ -61,7 +59,6 @@ public class CatMD5Crypto: CatCCHashCrypto {
     public override init() {
         super.init()
         mode = .ccMD5
-        digestLength = Int(CC_MD5_DIGEST_LENGTH)
     }
     
 }

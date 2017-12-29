@@ -59,6 +59,7 @@
 		C39EDD7D1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
 		C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
 		C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
+		C3B0F84D1FF6024300FB4DC8 /* SHATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */; };
 		C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
 		C3D6DD2B1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
 		C3D6DD2C1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
@@ -139,6 +140,7 @@
 		C3A12E9E1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12EA01FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12EA21FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHATests.swift; sourceTree = "<group>"; };
 		C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contextual.swift; sourceTree = "<group>"; };
 		C3E273731FE4259D0026655E /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C328B79D1FF4DCC400943D75 /* MessageDigestCryptoTests.swift */,
+				C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */,
 				C328B7961FF4DC4900943D75 /* Info.plist */,
 			);
 			path = "CatCrypto-iOSTests";
@@ -597,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B0F84D1FF6024300FB4DC8 /* SHATests.swift in Sources */,
 				C328B79E1FF4DCC400943D75 /* MessageDigestCryptoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

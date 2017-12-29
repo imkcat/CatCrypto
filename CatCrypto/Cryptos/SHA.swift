@@ -37,7 +37,6 @@ public class CatSHA1Crypto: CatCCHashCrypto {
     public override init() {
         super.init()
         mode = .ccSHA1
-        digestLength = Int(CC_SHA1_DIGEST_LENGTH)
     }
 }
 
@@ -57,10 +56,14 @@ public enum CatSHA2HashLength {
     case bit512
 }
 
-public class CatSHA2Context: CatCryptoContext {
+/// Context for SHA-2 crypto.
+public struct CatSHA2Context {
     
     /// Desired bit-length of the hash function output.
     public var hashLength: CatSHA2HashLength = .bit512
+    
+    /// Initialize context.
+    public init() {}
     
 }
 
@@ -71,25 +74,25 @@ public class CatSHA2Crypto: CatCCHashCrypto, Contextual {
     
     public typealias Context = CatSHA2Context
     
-    public var context: CatSHA2Context
+    public var context: CatSHA2Context {
+        didSet {
+            switch context.hashLength {
+            case .bit224:
+                mode = .ccSHA224
+            case .bit256:
+                mode = .ccSHA256
+            case .bit384:
+                mode = .ccSHA384
+            case .bit512:
+                mode = .ccSHA512
+            }
+        }
+    }
     
     public required init(context: Context = CatSHA2Context()) {
         self.context = context
         super.init()
-        switch context.hashLength {
-        case .bit224:
-            mode = .ccSHA224
-            digestLength = Int(CC_SHA224_DIGEST_LENGTH)
-        case .bit256:
-            mode = .ccSHA256
-            digestLength = Int(CC_SHA256_DIGEST_LENGTH)
-        case .bit384:
-            mode = .ccSHA384
-            digestLength = Int(CC_SHA384_DIGEST_LENGTH)
-        case .bit512:
-            mode = .ccSHA512
-            digestLength = Int(CC_SHA512_DIGEST_LENGTH)
-        }
+        mode = .ccSHA512
     }
     
 }

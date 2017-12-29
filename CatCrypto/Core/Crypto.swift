@@ -62,10 +62,31 @@ internal enum CatCCHashMode {
 public class CatCCHashCrypto: Hashing {
     
     /// Mode to switch function from CommonCrypto.
-    internal var mode: CatCCHashMode = .ccMD5
+    internal var mode: CatCCHashMode = .ccMD5 {
+        didSet {
+            switch mode {
+            case .ccMD2:
+                digestLength = Int(CC_MD2_DIGEST_LENGTH)
+            case .ccMD4:
+                digestLength = Int(CC_MD4_DIGEST_LENGTH)
+            case .ccMD5:
+                digestLength = Int(CC_MD5_DIGEST_LENGTH)
+            case .ccSHA1:
+                digestLength = Int(CC_SHA1_DIGEST_LENGTH)
+            case .ccSHA224:
+                digestLength = Int(CC_SHA224_DIGEST_LENGTH)
+            case .ccSHA256:
+                digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+            case .ccSHA384:
+                digestLength = Int(CC_SHA384_DIGEST_LENGTH)
+            case .ccSHA512:
+                digestLength = Int(CC_SHA512_DIGEST_LENGTH)
+            }
+        }
+    }
     
     /// Digest length in bytes to hash function.
-    internal var digestLength: Int = Int(CC_MD5_DIGEST_LENGTH)
+    internal private(set) var digestLength: Int = Int(CC_MD5_DIGEST_LENGTH)
     
     /// Initialize the crypto.
     internal init() {}
