@@ -50,25 +50,68 @@ public enum CatArgon2Mode: Int {
     case argon2id = 2
 }
 
-public class CatArgon2Context: CatCryptoContext {
+private let Argon2DefaultIterations = 3
+private let Argon2MinIterations = 1
+private let Argon2MaxIterations = 2 << 32 - 1
+
+private let Argon2DefaultMemory = 1 << 12
+private let Argon2MinMemory = 8
+private let Argon2MaxMemory = 2 << 32 - 1
+
+private let Argon2DefaultParallelism = 1
+private let Argon2MinParallelism = 1
+private let Argon2MaxParallelism = 2 << 32 - 1
+
+private let Argon2DefaultHashLength = 32
+private let Argon2MinHashLength = 4
+private let Argon2MaxHashLength = Int(CUnsignedInt.max)
+
+/// Context for Argon2 crypto.
+public struct CatArgon2Context {
     
     /// Number of iterations.
-    public var iterations: Int = 3
+    public var iterations: Int = Argon2DefaultIterations {
+        didSet {
+            if !(Argon2MinIterations...Argon2MaxIterations).contains(iterations) {
+                iterations = Argon2DefaultIterations
+            }
+        }
+    }
     
     /// Memory usage.
-    public var memory: Int = 1 << 12
+    public var memory: Int = Argon2DefaultMemory {
+        didSet {
+            if !(Argon2MinMemory...Argon2MaxMemory).contains(memory) {
+                memory = Argon2DefaultMemory
+            }
+        }
+    }
     
     /// Number of threads and compute lanes.
-    public var parallelism: Int = 1
+    public var parallelism: Int = Argon2DefaultParallelism {
+        didSet {
+            if !(Argon2MinParallelism...Argon2MaxIterations).contains(parallelism) {
+                parallelism = Argon2DefaultParallelism
+            }
+        }
+    }
     
     /// The mode of Argon2.
     public var mode: CatArgon2Mode = .argon2i
     
     /// String to salt.
-    public var salt: String = UUID().uuidString
+    public var salt: String = "somesalt"
     
     /// Desired length of the hash.
-    public var hashLength: Int = 32
+    public var hashLength: Int = Argon2DefaultHashLength {
+        didSet {
+            if !(Argon2MinHashLength...Argon2MaxHashLength).contains(hashLength) {
+                hashLength = Argon2DefaultHashLength
+            }
+        }
+    }
+    
+    public init() {}
     
 }
 
