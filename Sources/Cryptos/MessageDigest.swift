@@ -79,14 +79,14 @@ public enum CatMD6HashLength: CInt {
     case bit512 = 512
 }
 
-public class CatMD6Context: CatCryptoContext {
+/// Context for MD6 crypto.
+public struct CatMD6Context {
     
     /// Desired bit-length of the hash function output.
     public var hashLength: CatMD6HashLength = .bit512
 
-    public override init() {
-        super.init()
-    }
+    /// Initialize the context.
+    public init() {}
     
 }
 

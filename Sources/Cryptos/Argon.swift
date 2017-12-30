@@ -111,6 +111,7 @@ public struct CatArgon2Context {
         }
     }
     
+    /// Initialize the context.
     public init() {}
     
 }

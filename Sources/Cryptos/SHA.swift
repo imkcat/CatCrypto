@@ -62,7 +62,7 @@ public struct CatSHA2Context {
     /// Desired bit-length of the hash function output.
     public var hashLength: CatSHA2HashLength = .bit512
     
-    /// Initialize context.
+    /// Initialize the context.
     public init() {}
     
 }
