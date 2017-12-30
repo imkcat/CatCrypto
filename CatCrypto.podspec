@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CatCrypto'
-  s.version          = '0.2.2.1'
+  s.version          = '0.2.2.2'
   s.summary          = 'An easy way for hashing and encryption.'
  s.description      = <<-DESC
  CatCrypto include a series of hashing and encryption functions.
@@ -25,16 +25,16 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
   
   s.requires_arc = true
-  s.source_files = 'CatCrypto/**/*.{h,c,swift}'
-  s.private_header_files = ['CatCrypto/ModuleMaps/MD6/*.h', 'CatCrypto/ModuleMaps/Argon2/*.h']
-  s.preserve_paths = ['CatCrypto/ModuleMaps/MD6', 'CatCrypto/ModuleMaps/Argon2', 'CatCrypto/ModuleMaps/CommonCrypto']
+  s.source_files = 'Sources/**/*.{h,c,swift}'
+  s.private_header_files = ['Sources/ModuleMaps/MD6/*.h', 'Sources/ModuleMaps/Argon2/*.h']
+  s.preserve_paths = ['Sources/ModuleMaps/MD6', 'Sources/ModuleMaps/Argon2', 'Sources/ModuleMaps/CommonCrypto']
   s.pod_target_xcconfig = {
-    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'          => '$(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/CommonCrypto/iPhoneOS $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/MD6',
-    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'   => '$(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/CommonCrypto/iPhoneSimulator $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/MD6', 
-    'SWIFT_INCLUDE_PATHS[sdk=appletvos*]'         => '$(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/CommonCrypto/AppleTVOS $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/MD6',
-    'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]'  => '$(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/CommonCrypto/AppleTVSimulator $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/MD6',
-    'SWIFT_INCLUDE_PATHS[sdk=macosx*]'            => '$(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/CommonCrypto/MacOSX $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/MD6',
-    'SWIFT_INCLUDE_PATHS[sdk=watchos*]'           => '$(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/CommonCrypto/WatchOS $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/MD6',
-    'SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]'    => '$(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/CommonCrypto/WatchSimulator $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/CatCrypto/ModuleMaps/MD6'
+    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'          => '$(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/CommonCrypto/iPhoneOS $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/MD6',
+    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'   => '$(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/CommonCrypto/iPhoneSimulator $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/MD6', 
+    'SWIFT_INCLUDE_PATHS[sdk=appletvos*]'         => '$(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/CommonCrypto/AppleTVOS $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/MD6',
+    'SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]'  => '$(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/CommonCrypto/AppleTVSimulator $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/MD6',
+    'SWIFT_INCLUDE_PATHS[sdk=macosx*]'            => '$(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/CommonCrypto/MacOSX $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/MD6',
+    'SWIFT_INCLUDE_PATHS[sdk=watchos*]'           => '$(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/CommonCrypto/WatchOS $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/MD6',
+    'SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]'    => '$(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/CommonCrypto/WatchSimulator $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/Argon2 $(PODS_TARGET_SRCROOT)/Sources/ModuleMaps/MD6'
   }
 end

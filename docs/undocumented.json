@@ -1,19 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/Cryptos/Argon.swift",
-      "line": 53,
-      "symbol": "CatArgon2Context",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kcat/Developer/Git/CatCrypto/CatCrypto/Cryptos/MessageDigest.swift",
-      "line": 82,
-      "symbol": "CatMD6Context",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/kcat/Developer/Git/CatCrypto"
 }
