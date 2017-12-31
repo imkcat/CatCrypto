@@ -28,8 +28,9 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
 - [Requirements](#requirements)
 - [Support Functions](#support-functions)
 - [Usage](#usage)
-	- [Hash](#hash)
-	- [Verify](#verify)
+    + [Context](#context)
+    + [Hashing](#hashing)
+    + [Verification](#verification)
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [License](#license)
@@ -57,11 +58,22 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
 
 ## Usage
 
-### Hash
+### Context
+
+Context contains inputs and configures for crypto function.
+
+Change hash length with `SHA-2` function:
+
+``` swift
+let sha2Crypto = CatSHA2Crypto()
+sha2Crypto.context.hashLength = .bit384
+```
+
+### Hashing
 
 [Hash function](https://en.wikipedia.org/wiki/Hash_function) used to map data of arbitrary size to data of fixed size.
 
-Simply hash string with `MD5` function:
+Simply hashing string with `MD6` function:
 
 ``` swift
 let md6Crypto = CatMD6Crypto()
@@ -71,11 +83,11 @@ print(md6Crypto.hash(password: "CatCrypto").value!)
 // 3ad3003383633c40281bb5185424ee56a5a1c6dfa3a0e7c3a9e381c58d253323e146feb3f04cb9ebcde47186e042ce63109b8d19f3ca760ea00c90654eb2b272
 ```
 
-### Verify
+### Verification
 
 Some hash function support to verify their hashed value.
 
-Verify with `Argon2` function:
+Verifing with `Argon2` function:
 
 ``` swift
 let hash = "$argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2/nPDfPD5B3yyebv8k"
