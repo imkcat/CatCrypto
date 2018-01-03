@@ -125,6 +125,10 @@ github "ImKcat/CatCrypto"
 
 - [API Reference](https://imkcat.github.io/CatCrypto/)
 
+## Features
+
+- [ ] SHA-3
+
 ## License
 
 CatCrypto is available under the MIT license. See the LICENSE file for more info.
