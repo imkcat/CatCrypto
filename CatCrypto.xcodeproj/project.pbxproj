@@ -60,6 +60,18 @@
 		C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
 		C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */; };
 		C3B0F84D1FF6024300FB4DC8 /* SHATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */; };
+		C3BDFE121FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE051FFE6C9400E060F6 /* SimpleFIPS202.c */; };
+		C3BDFE131FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE051FFE6C9400E060F6 /* SimpleFIPS202.c */; };
+		C3BDFE141FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE051FFE6C9400E060F6 /* SimpleFIPS202.c */; };
+		C3BDFE151FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE051FFE6C9400E060F6 /* SimpleFIPS202.c */; };
+		C3BDFE181FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE161FFE6D6300E060F6 /* KeccakSpongeWidth1600.c */; };
+		C3BDFE191FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE161FFE6D6300E060F6 /* KeccakSpongeWidth1600.c */; };
+		C3BDFE1A1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE161FFE6D6300E060F6 /* KeccakSpongeWidth1600.c */; };
+		C3BDFE1B1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE161FFE6D6300E060F6 /* KeccakSpongeWidth1600.c */; };
+		C3BDFE2A1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE281FFE715F00E060F6 /* KeccakP-1600-reference.c */; };
+		C3BDFE2B1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE281FFE715F00E060F6 /* KeccakP-1600-reference.c */; };
+		C3BDFE2C1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE281FFE715F00E060F6 /* KeccakP-1600-reference.c */; };
+		C3BDFE2D1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */ = {isa = PBXBuildFile; fileRef = C3BDFE281FFE715F00E060F6 /* KeccakP-1600-reference.c */; };
 		C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
 		C3D6DD2B1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
 		C3D6DD2C1FF39FFE0005C3D1 /* Contextual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */; };
@@ -142,6 +154,19 @@
 		C3A12EA01FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12EA21FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHATests.swift; sourceTree = "<group>"; };
+		C3BDFE011FFE6C3100E060F6 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		C3BDFE031FFE6C9400E060F6 /* SimpleFIPS202.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFIPS202.h; sourceTree = "<group>"; };
+		C3BDFE051FFE6C9400E060F6 /* SimpleFIPS202.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SimpleFIPS202.c; sourceTree = "<group>"; };
+		C3BDFE161FFE6D6300E060F6 /* KeccakSpongeWidth1600.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KeccakSpongeWidth1600.c; sourceTree = "<group>"; };
+		C3BDFE171FFE6D6300E060F6 /* KeccakSpongeWidth1600.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeccakSpongeWidth1600.h; sourceTree = "<group>"; };
+		C3BDFE201FFE6D7B00E060F6 /* KeccakSponge-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeccakSponge-common.h"; sourceTree = "<group>"; };
+		C3BDFE251FFE6D9F00E060F6 /* align.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = align.h; sourceTree = "<group>"; };
+		C3BDFE261FFE6F8500E060F6 /* KeccakP-1600-SnP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeccakP-1600-SnP.h"; sourceTree = "<group>"; };
+		C3BDFE271FFE6FB200E060F6 /* KeccakSponge.inc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.pascal; path = KeccakSponge.inc; sourceTree = "<group>"; };
+		C3BDFE281FFE715F00E060F6 /* KeccakP-1600-reference.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "KeccakP-1600-reference.c"; sourceTree = "<group>"; };
+		C3BDFE291FFE716000E060F6 /* KeccakP-1600-reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeccakP-1600-reference.h"; sourceTree = "<group>"; };
+		C3BDFE321FFE718800E060F6 /* brg_endian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		C3BDFE331FFE71C900E060F6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contextual.swift; sourceTree = "<group>"; };
 		C3DF7A301FF73BB4007BDC59 /* ArgonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonTests.swift; sourceTree = "<group>"; };
 		C3E273731FE4259D0026655E /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +329,7 @@
 		C36729171FF49763005BE1A8 /* ModuleMaps */ = {
 			isa = PBXGroup;
 			children = (
+				C3BDFE001FFE6BDB00E060F6 /* SHA3 */,
 				C356173F1FDD765D005316BF /* Argon2 */,
 				C358E7921FE2700600A352D0 /* CommonCrypto */,
 				C31E52E71FE90668004C1F12 /* MD6 */,
@@ -375,6 +401,26 @@
 				C3A12EA21FE3A3D2007BA5FA /* module.modulemap */,
 			);
 			path = iPhoneSimulator;
+			sourceTree = "<group>";
+		};
+		C3BDFE001FFE6BDB00E060F6 /* SHA3 */ = {
+			isa = PBXGroup;
+			children = (
+				C3BDFE251FFE6D9F00E060F6 /* align.h */,
+				C3BDFE321FFE718800E060F6 /* brg_endian.h */,
+				C3BDFE261FFE6F8500E060F6 /* KeccakP-1600-SnP.h */,
+				C3BDFE281FFE715F00E060F6 /* KeccakP-1600-reference.c */,
+				C3BDFE291FFE716000E060F6 /* KeccakP-1600-reference.h */,
+				C3BDFE271FFE6FB200E060F6 /* KeccakSponge.inc */,
+				C3BDFE201FFE6D7B00E060F6 /* KeccakSponge-common.h */,
+				C3BDFE161FFE6D6300E060F6 /* KeccakSpongeWidth1600.c */,
+				C3BDFE171FFE6D6300E060F6 /* KeccakSpongeWidth1600.h */,
+				C3BDFE051FFE6C9400E060F6 /* SimpleFIPS202.c */,
+				C3BDFE031FFE6C9400E060F6 /* SimpleFIPS202.h */,
+				C3BDFE011FFE6C3100E060F6 /* module.modulemap */,
+				C3BDFE331FFE71C900E060F6 /* LICENSE */,
+			);
+			path = SHA3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -618,14 +664,17 @@
 				C39EDD6D1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FC1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729111FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3BDFE181FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD771FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD721FECF95C0081108F /* Verification.swift in Sources */,
 				C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */,
+				C3BDFE121FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD681FECF6440081108F /* Hashing.swift in Sources */,
 				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
 				C39EDD7C1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */,
+				C3BDFE2A1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BA1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
 				C330B4D11FDE94E9005AEECC /* thread.c in Sources */,
@@ -642,14 +691,17 @@
 				C39EDD6F1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FE1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729131FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3BDFE1A1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD791FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD741FECF95C0081108F /* Verification.swift in Sources */,
 				C3E2738C1FE42B010026655E /* argon2.c in Sources */,
+				C3BDFE141FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C3D6DD2C1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6A1FECF6440081108F /* Hashing.swift in Sources */,
 				C3E2738F1FE42B010026655E /* encoding.c in Sources */,
 				C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E2738E1FE42B010026655E /* core.c in Sources */,
+				C3BDFE2C1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273911FE42B010026655E /* thread.c in Sources */,
 				C31E53061FE906B2004C1F12 /* md6_compress.c in Sources */,
@@ -666,14 +718,17 @@
 				C39EDD701FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FF1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729141FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3BDFE1B1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD7A1FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD751FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273921FE42B020026655E /* argon2.c in Sources */,
+				C3BDFE151FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C3D6DD2D1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6B1FECF6440081108F /* Hashing.swift in Sources */,
 				C3E273951FE42B020026655E /* encoding.c in Sources */,
 				C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E273941FE42B020026655E /* core.c in Sources */,
+				C3BDFE2D1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BD1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273971FE42B020026655E /* thread.c in Sources */,
 				C31E53071FE906B2004C1F12 /* md6_compress.c in Sources */,
@@ -690,14 +745,17 @@
 				C39EDD6E1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FD1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729121FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3BDFE191FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD781FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD731FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273861FE42B000026655E /* argon2.c in Sources */,
+				C3BDFE131FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C3D6DD2B1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD691FECF6440081108F /* Hashing.swift in Sources */,
 				C3E273891FE42B000026655E /* encoding.c in Sources */,
 				C39EDD7D1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E273881FE42B000026655E /* core.c in Sources */,
+				C3BDFE2B1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E2738B1FE42B000026655E /* thread.c in Sources */,
 				C31E53051FE906B2004C1F12 /* md6_compress.c in Sources */,
@@ -764,8 +822,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneOS";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneOS";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -795,8 +853,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneOS";
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneOS";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -934,8 +992,8 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVOS";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVOS";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -965,8 +1023,8 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVOS";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVOS";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/AppleTVSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -996,8 +1054,8 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchOS";
-				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchOS";
+				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1027,8 +1085,8 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchOS";
-				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchSimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchOS";
+				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/WatchSimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1059,7 +1117,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/MacOSX";
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/MacOSX";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1088,7 +1146,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/MacOSX";
+				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/MacOSX";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

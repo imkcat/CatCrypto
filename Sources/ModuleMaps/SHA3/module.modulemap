@@ -1,0 +1,4 @@
+module SHA3 {
+    header "SimpleFIPS202.h"
+    export *
+}
