@@ -28,7 +28,7 @@
 
 import Foundation
 import CommonCrypto
-
+import SHA3
 
 ///  `CatSHA1Crypto` is the crypto for
 /// [SHA-1](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
@@ -93,6 +93,88 @@ public class CatSHA2Crypto: CatCCHashCrypto, Contextual {
         self.context = context
         super.init()
         mode = .ccSHA512
+    }
+    
+}
+
+/// Desired bit-length of the hash function output.
+public enum CatSHA3HashLength: Int {
+    
+    /// 224 bits.
+    case bit224 = 28
+    
+    /// 256 bits.
+    case bit256 = 32
+    
+    /// 384 bits.
+    case bit384 = 48
+    
+    /// 512 bits.
+    case bit512 = 64
+}
+
+/// Context for SHA-3 crypto.
+public struct CatSHA3Context {
+    
+    /// Desired bit-length of the hash function output.
+    public var hashLength: CatSHA3HashLength = .bit512
+    
+    /// Initialize the context.
+    public init() {}
+    
+}
+
+///  `CatSHA2Crypto` is the crypto for
+/// [SHA-3](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf) function.
+public class CatSHA3Crypto: Contextual, Hashing {
+    
+    public typealias Context = CatSHA3Context
+    
+    public var context: CatSHA3Context
+    
+    public required init(context: CatSHA3Context = CatSHA3Context()) {
+        self.context = context
+    }
+    
+    /// Hash with SHA-3 function.
+    ///
+    /// - Parameters:
+    ///   - output: Pointer to the output buffer.
+    ///   - input: Pointer to the input message.
+    ///   - inputByteLen: The length of the input message in bytes.
+    /// - Returns: Result code of hashing function, 0 if successful, 1 otherwise.
+    func sha3Hash(output: UnsafeMutablePointer<CUnsignedChar>,
+                  input: UnsafePointer<CUnsignedChar>,
+                  inputByteLen: Int) -> CInt {
+        switch context.hashLength {
+        case .bit224:
+            return SHA3_224(output, input, inputByteLen)
+        case .bit256:
+            return SHA3_256(output, input, inputByteLen)
+        case .bit384:
+            return SHA3_384(output, input, inputByteLen)
+        case .bit512:
+            return SHA3_512(output, input, inputByteLen)
+        }
+    }
+    
+    public func hash(password: String) -> CatCryptoHashResult {
+        let passwordLength = password.lengthOfBytes(using: .utf8)
+        let passwordCString = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?.withMemoryRebound(to: CUnsignedChar.self, capacity: passwordLength, { point in
+            return point
+        })
+        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: context.hashLength.rawValue)
+        defer {
+            result.deallocate(capacity: context.hashLength.rawValue)
+        }
+        let resultCode = sha3Hash(output: result, input: passwordCString!, inputByteLen: passwordLength)
+        let hashResult = CatCryptoHashResult()
+        if resultCode == 0 {
+            hashResult.value = String.hexString(source: result, length: context.hashLength.rawValue)
+        } else {
+            hashResult.error?.errorCode = Int(resultCode)
+        }
+        return hashResult
     }
     
 }
