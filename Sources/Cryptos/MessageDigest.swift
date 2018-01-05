@@ -64,19 +64,19 @@ public class CatMD5Crypto: CatCCHashCrypto {
 }
 
 /// Desired bit-length of the hash function output.
-public enum CatMD6HashLength: CInt {
+public enum CatMD6HashLength: Int {
     
     /// 224 bits.
-    case bit224 = 224
+    case bit224 = 28
     
     /// 256 bits.
-    case bit256 = 256
+    case bit256 = 32
     
     /// 384 bits.
-    case bit384 = 384
+    case bit384 = 48
     
     /// 512 bits.
-    case bit512 = 512
+    case bit512 = 64
 }
 
 /// Context for MD6 crypto.
@@ -104,16 +104,16 @@ public class CatMD6Crypto: Contextual, Hashing {
     
     public func hash(password: String) -> CatCryptoHashResult {
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: Int(self.context.hashLength.rawValue))
+        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: self.context.hashLength.rawValue)
         defer {
-            result.deallocate(capacity: Int(self.context.hashLength.rawValue))
+            result.deallocate(capacity: self.context.hashLength.rawValue)
         }
         let data = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?.withMemoryRebound(to: CUnsignedChar.self, capacity: passwordLength, { point in
             return point
         })
-        md6_hash(self.context.hashLength.rawValue, data, CUnsignedLongLong(passwordLength), result)
+        md6_hash(CInt(self.context.hashLength.rawValue * 8), data, CUnsignedLongLong(passwordLength), result)
         let hashResult = CatCryptoHashResult()
-        hashResult.value = String.hexString(source: result, length: Int(self.context.hashLength.rawValue / 8))
+        hashResult.value = String.hexString(source: result, length: self.context.hashLength.rawValue)
         return hashResult
     }
     
