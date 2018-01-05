@@ -30,7 +30,7 @@ import Foundation
 import CommonCrypto
 
 /// Function mode from CommonCrypto.
-internal enum CatCCHashMode {
+enum CatCCHashMode {
     
     /// MD2 function.
     case ccMD2
@@ -62,7 +62,7 @@ internal enum CatCCHashMode {
 public class CatCCHashCrypto: Hashing {
     
     /// Mode to switch function from CommonCrypto.
-    internal var mode: CatCCHashMode = .ccMD5 {
+    var mode: CatCCHashMode = .ccMD5 {
         didSet {
             switch mode {
             case .ccMD2:
@@ -86,10 +86,10 @@ public class CatCCHashCrypto: Hashing {
     }
     
     /// Digest length in bytes to hash function.
-    internal private(set) var digestLength: Int = Int(CC_MD5_DIGEST_LENGTH)
+    private(set) var digestLength: Int = Int(CC_MD5_DIGEST_LENGTH)
     
     /// Initialize the crypto.
-    internal init() {}
+    init() {}
     
     public func hash(password: String) -> CatCryptoHashResult {
         return commonCryptoHash(mode: mode,
@@ -106,7 +106,7 @@ public class CatCCHashCrypto: Hashing {
     ///   - passwordLength: Password size in bytes.
     ///   - digestLength: Digest length in bytes.
     /// - Returns: Return a hash result when hashing task finish.
-    internal func commonCryptoHash(mode: CatCCHashMode,
+    func commonCryptoHash(mode: CatCCHashMode,
                                    password: [CChar],
                                    passwordLength: CC_LONG,
                                    digestLength: Int) -> CatCryptoHashResult {
