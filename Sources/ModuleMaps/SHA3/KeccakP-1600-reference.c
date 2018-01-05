@@ -176,8 +176,8 @@ void KeccakP1600_OverwriteWithZeroes(void *state, unsigned int byteCount)
 
 /* ---------------------------------------------------------------- */
 
-static void fromBytesToWords(tKeccakLane *stateAsWords, const unsigned char *state);
-static void fromWordsToBytes(unsigned char *state, const tKeccakLane *stateAsWords);
+//static void fromBytesToWords(tKeccakLane *stateAsWords, const unsigned char *state);
+//static void fromWordsToBytes(unsigned char *state, const tKeccakLane *stateAsWords);
 void KeccakP1600OnWords(tKeccakLane *state, unsigned int nrRounds);
 void KeccakP1600Round(tKeccakLane *state, unsigned int indexRound);
 static void theta(tKeccakLane *A);
