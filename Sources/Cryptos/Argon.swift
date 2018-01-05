@@ -147,7 +147,7 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     
     // MARK: - Hashing
     
-    /// Hash with design argon2 function.
+    /// Hash with Argon2 function.
     ///
     /// - Parameters:
     ///   - mode: Mode of argon2.
@@ -212,9 +212,9 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     
     public func hash(password: String) -> CatCryptoHashResult {
         let encodedLength = argon2EncodedLength()
-        let encoded = UnsafeMutablePointer<CChar>.allocate(capacity: encodedLength)
+        let result = UnsafeMutablePointer<CChar>.allocate(capacity: encodedLength)
         defer {
-            encoded.deallocate(capacity: encodedLength)
+            result.deallocate(capacity: encodedLength)
         }
         let resultCode = argon2Hash(mode: context.mode,
                                     iterations: CUnsignedInt(context.iterations),
@@ -225,11 +225,11 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
                                     salt: context.salt.cString(using: .utf8)!,
                                     saltLength: context.salt.lengthOfBytes(using: .utf8),
                                     hashLength: context.hashLength,
-                                    encoded: encoded,
+                                    encoded: result,
                                     encodedLength: encodedLength)
         let hashResult = CatCryptoHashResult()
         if resultCode == 0 {
-            hashResult.value = String(cString: encoded)
+            hashResult.value = String(cString: result)
         } else {
             hashResult.error = CatCryptoError()
             hashResult.error?.errorCode = Int(resultCode)
@@ -240,7 +240,7 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     
     // MARK: - Verification
     
-    /// Verify with design argon2 function.
+    /// Verify with Argon2 function.
     ///
     /// - Parameters:
     ///   - mode: Mode of argon2
