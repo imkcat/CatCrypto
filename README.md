@@ -54,6 +54,7 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
     + Secure Hash Algorithm
         * [SHA-1](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
         * [SHA-2](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
+        * [SHA-3](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf)
 	+ [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
 ## Usage
@@ -124,10 +125,6 @@ github "ImKcat/CatCrypto"
 ## Documentation
 
 - [API Reference](https://imkcat.github.io/CatCrypto/)
-
-## Features
-
-- [ ] SHA-3
 
 ## License
 
