@@ -67,6 +67,9 @@
               <li class="nav-group-task">
                 <a href="Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatSHA3Crypto.html">CatSHA3Crypto</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -80,6 +83,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Enums/CatSHA2HashLength.html">CatSHA2HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CatSHA3HashLength.html">CatSHA3HashLength</a>
               </li>
             </ul>
           </li>
@@ -108,6 +114,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/CatSHA2Context.html">CatSHA2Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CatSHA3Context.html">CatSHA3Context</a>
               </li>
             </ul>
           </li>
@@ -149,8 +158,9 @@
 <li><a href="#usage">Usage</a>
 
 <ul>
-<li><a href="#hash">Hash</a></li>
-<li><a href="#verify">Verify</a></li>
+<li><a href="#context">Context</a></li>
+<li><a href="#hashing">Hashing</a></li>
+<li><a href="#verification">Verification</a></li>
 </ul></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#documentation">Documentation</a></li>
@@ -184,27 +194,36 @@
 <ul>
 <li><a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-1</a></li>
 <li><a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-2</a></li>
+<li><a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf">SHA-3</a></li>
 </ul></li>
 <li><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a></li>
 </ul></li>
 </ul>
 <h2 id='usage' class='heading'>Usage</h2>
-<h3 id='hash' class='heading'>Hash</h3>
+<h3 id='context' class='heading'>Context</h3>
+
+<p>Context contains inputs and configures for crypto function.</p>
+
+<p>Change hash length with <code>SHA-2</code> function:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sha2Crypto</span> <span class="o">=</span> <span class="kt">CatSHA2Crypto</span><span class="p">()</span>
+<span class="n">sha2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">hashLength</span> <span class="o">=</span> <span class="o">.</span><span class="n">bit384</span>
+</code></pre>
+<h3 id='hashing' class='heading'>Hashing</h3>
 
 <p><a href="https://en.wikipedia.org/wiki/Hash_function">Hash function</a> used to map data of arbitrary size to data of fixed size.</p>
 
-<p>Simply hash string with <code>MD5</code> function:</p>
+<p>Simply hashing string with <code>MD6</code> function:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">md6Crypto</span> <span class="o">=</span> <span class="kt">CatMD6Crypto</span><span class="p">()</span>
 <span class="n">md6Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">hashLength</span> <span class="o">=</span> <span class="o">.</span><span class="n">bit512</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">md6Crypto</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">!</span><span class="p">)</span>
 
 <span class="c1">// 3ad3003383633c40281bb5185424ee56a5a1c6dfa3a0e7c3a9e381c58d253323e146feb3f04cb9ebcde47186e042ce63109b8d19f3ca760ea00c90654eb2b272</span>
 </code></pre>
-<h3 id='verify' class='heading'>Verify</h3>
+<h3 id='verification' class='heading'>Verification</h3>
 
 <p>Some hash function support to verify their hashed value.</p>
 
-<p>Verify with <code>Argon2</code> function:</p>
+<p>Verifing with <code>Argon2</code> function:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">hash</span> <span class="o">=</span> <span class="s">"$argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2/nPDfPD5B3yyebv8k"</span>
 <span class="k">let</span> <span class="nv">argon2Crypto</span> <span class="o">=</span> <span class="kt">CatArgon2Crypto</span><span class="p">()</span>
 <span class="n">argon2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="o">.</span><span class="n">argon2i</span>
@@ -240,7 +259,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2017-12-30)</p>
+          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2018-01-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

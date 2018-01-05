@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CatSHA2Context Structure Reference</title>
+    <title>CatSHA3HashLength Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/CatSHA2Context" class="dashAnchor"></a>
-    <a title="CatSHA2Context Structure Reference"></a>
+    <a name="//apple_ref/swift/Enum/CatSHA3HashLength" class="dashAnchor"></a>
+    <a title="CatSHA3HashLength Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">CatCrypto Docs</a> (100% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">CatCrypto Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CatSHA2Context Structure Reference
+        CatSHA3HashLength Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -126,14 +126,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CatSHA2Context</h1>
+            <h1>CatSHA3HashLength</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CatSHA2Context</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CatSHA3HashLength</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                 </div>
               </div>
-            <p>Context for SHA-2 crypto.</p>
+            <p>Desired bit-length of the hash function output.</p>
 
           </section>
           <section class="section task-group-section">
@@ -142,9 +142,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A11SHA2ContextV10hashLengthAA0ac4HashF0Ov"></a>
-                    <a name="//apple_ref/swift/Property/hashLength" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A11SHA2ContextV10hashLengthAA0ac4HashF0Ov">hashLength</a>
+                    <a name="/s:9CatCrypto0A14SHA3HashLengthO6bit224A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/bit224" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A14SHA3HashLengthO6bit224A2CmF">bit224</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -152,26 +152,30 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Desired bit-length of the hash function output.</p>
+                        <p>224 bits.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashLength</span><span class="p">:</span> <span class="kt"><a href="../Enums/CatSHA2HashLength.html">CatSHA2HashLength</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">bit512</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit224</span> <span class="o">=</span> <span class="mi">28</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A11SHA2ContextVACycfc"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A11SHA2ContextVACycfc">init()</a>
+                    <a name="/s:9CatCrypto0A14SHA3HashLengthO6bit256A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/bit256" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A14SHA3HashLengthO6bit256A2CmF">bit256</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -179,14 +183,76 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize the context.</p>
+                        <p>256 bits.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit256</span> <span class="o">=</span> <span class="mi">32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0A14SHA3HashLengthO6bit384A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/bit384" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A14SHA3HashLengthO6bit384A2CmF">bit384</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>384 bits.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit384</span> <span class="o">=</span> <span class="mi">48</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0A14SHA3HashLengthO6bit512A2CmF"></a>
+                    <a name="//apple_ref/swift/Element/bit512" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A14SHA3HashLengthO6bit512A2CmF">bit512</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>512 bits.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit512</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
 
                         </div>
                       </div>
