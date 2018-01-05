@@ -20,7 +20,8 @@ class RootViewController: UIViewController {
                                        CatMD6Crypto(),
                                        CatSHA1Crypto(),
                                        CatSHA2Crypto(),
-                                       CatArgon2Crypto()]
+                                       CatArgon2Crypto(),
+                                       CatSHA3Crypto()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
