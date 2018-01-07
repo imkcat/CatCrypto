@@ -58,7 +58,7 @@ enum CatCCHashMode {
 }
 
 /// `CatCCHashCrypto` just for code convenient and coupling, and it just as
-/// father class for hash class depend on `CommonCrypto`.
+/// father class for hash function crypto class depend on `CommonCrypto`.
 public class CatCCHashCrypto: Hashing {
     
     /// Mode to switch function from CommonCrypto.

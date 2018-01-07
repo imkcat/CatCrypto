@@ -61,9 +61,9 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
 
 ### Context
 
-Context contains inputs and configures for crypto function.
+Context contains inputs and configures for function crypto.
 
-Change hash length with `SHA-2` function:
+Change hash length with `SHA-2` function crypto:
 
 ``` swift
 let sha2Crypto = CatSHA2Crypto()
@@ -74,7 +74,7 @@ sha2Crypto.context.hashLength = .bit384
 
 [Hash function](https://en.wikipedia.org/wiki/Hash_function) used to map data of arbitrary size to data of fixed size.
 
-Simply hashing string with `MD6` function:
+Simply hashing string with `MD6` function crypto:
 
 ``` swift
 let md6Crypto = CatMD6Crypto()
@@ -88,7 +88,7 @@ print(md6Crypto.hash(password: "CatCrypto").value!)
 
 Some hash function support to verify their hashed value.
 
-Verifing with `Argon2` function:
+Verifing with `Argon2` function crypto:
 
 ``` swift
 let hash = "$argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2/nPDfPD5B3yyebv8k"
@@ -125,6 +125,7 @@ github "ImKcat/CatCrypto"
 ## Documentation
 
 - [API Reference](https://imkcat.github.io/CatCrypto/)
+- [Change Logs](https://github.com/ImKcat/CatCrypto/blob/master/CHANGELOG.md)
 
 ## License
 
