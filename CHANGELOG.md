@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Added 
 
-- `SHA-3` crypto function
+- Add `SHA-3` function crypto: `CatSHA3Crypto`
 
 
 ## [0.2.2.2](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.2.2)
@@ -29,7 +29,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- Add `SHA-1` and `SHA-2` crypto functions
+- Add `SHA-1` and `SHA-2` function cryptos: `CatSHA1Crypto` and `CatSHA2Crypto`
 
 ### Changed
 
@@ -78,14 +78,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- Add `MD6` crypto function
+- Add `MD6` function crypto: `CatMD6Crypto`
 
 
 ## [0.1.4](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.4)
 
 ### Added
 
-- Add Message-Digest function `MD2`, `MD4` and `MD5`
+- Add Message-Digest function cryptos: `CatMD2Crypto`, `CatMD4Crypto` and `CatMD5Crypto`
 
 
 ## [0.1.3](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.3)
@@ -118,4 +118,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-- Add `Argon2` crypto function
+- Add `Argon2` function crypto: `CatArgon2Crypto`
