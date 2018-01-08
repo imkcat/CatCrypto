@@ -54,44 +54,25 @@ enum MD6ErrorCode: CInt, EnumDescription {
 
     var description: String? {
         switch self {
-        case .success:
-            return nil
-        case .fail:
-            return "Some other problem"
-        case .badHashLength:
-            return "Hashbitlen<1 or >512 bits"
-        case .nullState:
-            return "Null state passed to MD6"
-        case .badKeyLength:
-            return "Key length is <0 or >512 bits"
-        case .stateNotInitialize:
-            return "State was never initialized"
-        case .stackUnderFlow:
-            return "MD6 stack underflows (shouldn't happen)"
-        case .stackOverFlow:
-            return "MD6 stack overflow (message too long)"
-        case .nullData:
-            return "Null data pointer"
-        case .nullN:
-            return "Compress: N is null"
-        case .nullB:
-            return "Standard compress: null B pointer"
-        case .badEll:
-            return "Standard compress: ell not in {0,255}"
-        case .badP:
-            return "Standard compress: p<0 or p>b*w"
-        case .nullK:
-            return "Standard compress: K is null"
-        case .nullQ:
-            return "Standard compress: Q is null"
-        case .nullC:
-            return "Standard compress: C is null"
-        case .badL:
-            return "Standard compress: L <0 or > 255"
-        case .badR:
-            return "Compress: r<0 or r>255"
-        case .outOfMemory:
-            return "Compress: storage allocation failed"
+        case .success: return nil
+        case .fail: return "Some other problem"
+        case .badHashLength: return "Hashbitlen<1 or >512 bits"
+        case .nullState: return "Null state passed to MD6"
+        case .badKeyLength: return "Key length is <0 or >512 bits"
+        case .stateNotInitialize: return "State was never initialized"
+        case .stackUnderFlow: return "MD6 stack underflows (shouldn't happen)"
+        case .stackOverFlow: return "MD6 stack overflow (message too long)"
+        case .nullData: return "Null data pointer"
+        case .nullN: return "Compress: N is null"
+        case .nullB: return "Standard compress: null B pointer"
+        case .badEll: return "Standard compress: ell not in {0,255}"
+        case .badP: return "Standard compress: p<0 or p>b*w"
+        case .nullK: return "Standard compress: K is null"
+        case .nullQ: return "Standard compress: Q is null"
+        case .nullC: return "Standard compress: C is null"
+        case .badL: return "Standard compress: L <0 or > 255"
+        case .badR: return "Compress: r<0 or r>255"
+        case .outOfMemory: return "Compress: storage allocation failed"
         }
     }
 
