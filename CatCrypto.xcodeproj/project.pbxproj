@@ -33,6 +33,14 @@
 		C36729121FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
 		C36729131FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
 		C36729141FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
+		C38A78F42003C01C0028D981 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F32003C01C0028D981 /* Encryption.swift */; };
+		C38A78F52003C01C0028D981 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F32003C01C0028D981 /* Encryption.swift */; };
+		C38A78F62003C01C0028D981 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F32003C01C0028D981 /* Encryption.swift */; };
+		C38A78F72003C01C0028D981 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F32003C01C0028D981 /* Encryption.swift */; };
+		C38A78F92003C2260028D981 /* Decryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F82003C2260028D981 /* Decryption.swift */; };
+		C38A78FA2003C2260028D981 /* Decryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F82003C2260028D981 /* Decryption.swift */; };
+		C38A78FB2003C2260028D981 /* Decryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F82003C2260028D981 /* Decryption.swift */; };
+		C38A78FC2003C2260028D981 /* Decryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F82003C2260028D981 /* Decryption.swift */; };
 		C393A5BA1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
 		C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
 		C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393A5B91FF0F85600B69167 /* StringExtension.swift */; };
@@ -142,6 +150,8 @@
 		C358E78E1FE2318C00A352D0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C367290B1FF4920E005BE1A8 /* SHA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA.swift; sourceTree = "<group>"; };
 		C36729101FF496D4005BE1A8 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		C38A78F32003C01C0028D981 /* Encryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryption.swift; sourceTree = "<group>"; };
+		C38A78F82003C2260028D981 /* Decryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decryption.swift; sourceTree = "<group>"; };
 		C393A5B91FF0F85600B69167 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C3945E851FE3CBAE009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3945EAD1FE3CE48009A203D /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +327,8 @@
 				C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */,
 				C39EDD671FECF6440081108F /* Hashing.swift */,
 				C39EDD711FECF95C0081108F /* Verification.swift */,
+				C38A78F32003C01C0028D981 /* Encryption.swift */,
+				C38A78F82003C2260028D981 /* Decryption.swift */,
 				C3FD6D35200368BC001394CF /* EnumDescription.swift */,
 			);
 			path = Protocols;
@@ -692,11 +704,13 @@
 				C39EDD721FECF95C0081108F /* Verification.swift in Sources */,
 				C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */,
 				C3BDFE121FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
+				C38A78F42003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD681FECF6440081108F /* Hashing.swift in Sources */,
 				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
 				C39EDD7C1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */,
+				C38A78F92003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2A1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BA1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
@@ -720,11 +734,13 @@
 				C39EDD741FECF95C0081108F /* Verification.swift in Sources */,
 				C3E2738C1FE42B010026655E /* argon2.c in Sources */,
 				C3BDFE141FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
+				C38A78F62003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2C1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6A1FECF6440081108F /* Hashing.swift in Sources */,
 				C3E2738F1FE42B010026655E /* encoding.c in Sources */,
 				C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E2738E1FE42B010026655E /* core.c in Sources */,
+				C38A78FB2003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2C1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273911FE42B010026655E /* thread.c in Sources */,
@@ -748,11 +764,13 @@
 				C39EDD751FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273921FE42B020026655E /* argon2.c in Sources */,
 				C3BDFE151FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
+				C38A78F72003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2D1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6B1FECF6440081108F /* Hashing.swift in Sources */,
 				C3E273951FE42B020026655E /* encoding.c in Sources */,
 				C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E273941FE42B020026655E /* core.c in Sources */,
+				C38A78FC2003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2D1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BD1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273971FE42B020026655E /* thread.c in Sources */,
@@ -776,11 +794,13 @@
 				C39EDD731FECF95C0081108F /* Verification.swift in Sources */,
 				C3E273861FE42B000026655E /* argon2.c in Sources */,
 				C3BDFE131FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
+				C38A78F52003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2B1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD691FECF6440081108F /* Hashing.swift in Sources */,
 				C3E273891FE42B000026655E /* encoding.c in Sources */,
 				C39EDD7D1FECFB0B0081108F /* MessageDigest.swift in Sources */,
 				C3E273881FE42B000026655E /* core.c in Sources */,
+				C38A78FA2003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2B1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E2738B1FE42B000026655E /* thread.c in Sources */,
