@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CatMD6Context Structure Reference</title>
+    <title>Encryption Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/CatMD6Context" class="dashAnchor"></a>
-    <a title="CatMD6Context Structure Reference"></a>
+    <a name="//apple_ref/swift/Protocol/Encryption" class="dashAnchor"></a>
+    <a title="Encryption Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">CatCrypto Docs</a> (100% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">CatCrypto Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CatMD6Context Structure Reference
+        Encryption Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -138,14 +138,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CatMD6Context</h1>
+            <h1>Encryption</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CatMD6Context</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Encryption</span></code></pre>
 
                 </div>
               </div>
-            <p>Context for MD6 crypto.</p>
+            <p><code>Encryption</code> protocol defines the interface about encryption.</p>
 
           </section>
           <section class="section task-group-section">
@@ -154,9 +154,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A10MD6ContextV10hashLengthAA0ac4HashF0Ov"></a>
-                    <a name="//apple_ref/swift/Property/hashLength" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A10MD6ContextV10hashLengthAA0ac4HashF0Ov">hashLength</a>
+                    <a name="/s:9CatCrypto10EncryptionP7encryptAA0aB13EncryptResultCSS8password_tF"></a>
+                    <a name="//apple_ref/swift/Method/encrypt(password:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto10EncryptionP7encryptAA0aB13EncryptResultCSS8password_tF">encrypt(password:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -164,43 +164,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Desired bit-length of the hash function output.</p>
+                        <p>Encrypt password string with encryption function.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashLength</span><span class="p">:</span> <span class="kt"><a href="../Enums/CatMD6HashLength.html">CatMD6HashLength</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">bit512</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">encrypt</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CatCryptoEncryptResult.html">CatCryptoEncryptResult</a></span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0A10MD6ContextVACycfc"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A10MD6ContextVACycfc">init()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Initialize the context.</p>
-
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Password string for encrypt.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Return a encrypted result when encryption task finish.</p>
                       </div>
                     </section>
                   </div>
