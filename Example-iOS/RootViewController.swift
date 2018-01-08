@@ -10,19 +10,19 @@ import UIKit
 import CatCrypto
 
 class RootViewController: UIViewController {
-    
+
     let hashAndEncryptQueue = DispatchQueue(label: "com.CatCrypto.HashAndEncryptQueue")
+
     let sourceString: String = "CatCrypto"
-    
-    let hashCryptos: Array<Hashing> = [CatMD2Crypto(),
-                                       CatMD4Crypto(),
-                                       CatMD5Crypto(),
-                                       CatMD6Crypto(),
-                                       CatSHA1Crypto(),
-                                       CatSHA2Crypto(),
-                                       CatArgon2Crypto(),
-                                       CatSHA3Crypto()]
-    
+
+    let hashCryptos = [CatMD2Crypto(),
+                       CatMD4Crypto(),
+                       CatMD5Crypto(),
+                       CatMD6Crypto(),
+                       CatSHA1Crypto(),
+                       CatSHA2Crypto(),
+                       CatArgon2Crypto(),
+                       CatSHA3Crypto()]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -53,5 +53,5 @@ class RootViewController: UIViewController {
             hashAndEncryptQueue.async(execute: hashWorkItem)
         }
     }
-    
+
 }

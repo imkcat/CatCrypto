@@ -30,7 +30,7 @@ import Foundation
 
 /// `Verification` protocol defines the interface about verification.
 public protocol Verification {
-    
+
     /// Verify hashed string and original password string.
     ///
     /// - Parameters:
@@ -38,5 +38,5 @@ public protocol Verification {
     ///   - password: Original password string.
     /// - Returns: Return a verify result when verifying task finish.
     func verify(hash: String, password: String) -> CatCryptoVerifyResult
-    
+
 }

@@ -31,28 +31,28 @@ import CommonCrypto
 
 /// Function mode from CommonCrypto.
 enum CatCCHashMode {
-    
+
     /// MD2 function.
     case ccMD2
-    
+
     /// MD4 function.
     case ccMD4
-    
+
     /// MD5 function.
     case ccMD5
-    
+
     /// SHA1 function.
     case ccSHA1
-    
+
     /// SHA2 with 224 bit hash length.
     case ccSHA224
-    
+
     /// SHA2 with 256 bit hash length.
     case ccSHA256
-    
+
     /// SHA2 with 384 bit hash length.
     case ccSHA384
-    
+
     /// SHA2 with 512 bit hash length.
     case ccSHA512
 }
@@ -60,7 +60,7 @@ enum CatCCHashMode {
 /// `CatCCHashCrypto` just for code convenient and coupling, and it just as
 /// father class for hash function crypto class depend on `CommonCrypto`.
 public class CatCCHashCrypto: Hashing {
-    
+
     /// Mode to switch function from CommonCrypto.
     var mode: CatCCHashMode = .ccMD5 {
         didSet {
@@ -84,20 +84,13 @@ public class CatCCHashCrypto: Hashing {
             }
         }
     }
-    
+
     /// Digest length in bytes to hash function.
     private(set) var digestLength: Int = Int(CC_MD5_DIGEST_LENGTH)
-    
+
     /// Initialize the crypto.
     init() {}
-    
-    public func hash(password: String) -> CatCryptoHashResult {
-        return commonCryptoHash(mode: mode,
-                                password: password.cString(using: .utf8)!,
-                                passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
-                                digestLength: digestLength)
-    }
-    
+
     /// Hash password string with desire hash function from `CommonCrypto`.
     ///
     /// - Parameters:
@@ -107,9 +100,9 @@ public class CatCCHashCrypto: Hashing {
     ///   - digestLength: Digest length in bytes.
     /// - Returns: Return a hash result when hashing task finish.
     func commonCryptoHash(mode: CatCCHashMode,
-                                   password: [CChar],
-                                   passwordLength: CC_LONG,
-                                   digestLength: Int) -> CatCryptoHashResult {
+                          password: [CChar],
+                          passwordLength: CC_LONG,
+                          digestLength: Int) -> CatCryptoHashResult {
         var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
         defer {
             result.deallocate(capacity: digestLength)
@@ -136,5 +129,13 @@ public class CatCCHashCrypto: Hashing {
         hashResult.value = String.hexString(source: result, length: digestLength)
         return hashResult
     }
-    
+
+    // MARK: - Hashing
+    public func hash(password: String) -> CatCryptoHashResult {
+        return commonCryptoHash(mode: mode,
+                                password: password.cString(using: .utf8)!,
+                                passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
+                                digestLength: digestLength)
+    }
+
 }

@@ -10,22 +10,24 @@ import XCTest
 @testable import CatCrypto
 
 class SHATests: XCTestCase {
-    
+
     var sha1Crypto: CatSHA1Crypto!
+
     var sha2Crypto: CatSHA2Crypto!
+
     var sha3Crypto: CatSHA3Crypto!
-    
+
     override func setUp() {
         super.setUp()
         sha1Crypto = CatSHA1Crypto()
         sha2Crypto = CatSHA2Crypto()
         sha3Crypto = CatSHA3Crypto()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
+
     func testNormalHashing() {
         let password = "Hi CatCrypto!"
         let sha1Hash = "78fc7f3a35cec79fc7bb7ace4e90316c90a91eae"
@@ -35,7 +37,7 @@ class SHATests: XCTestCase {
         XCTAssertEqual(sha1Crypto.hash(password: password).value, sha1Hash)
         XCTAssertEqual(sha2Crypto.hash(password: password).value, sha2Hash)
     }
-    
+
     func testEmptyHashing() {
         let password = ""
         let sha1Hash = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
@@ -45,7 +47,7 @@ class SHATests: XCTestCase {
         XCTAssertEqual(sha1Crypto.hash(password: password).value, sha1Hash)
         XCTAssertEqual(sha2Crypto.hash(password: password).value, sha2Hash)
     }
-    
+
     func testSHA2HashLength() {
         let password = "Hi CatCrypto!"
         let bit224Hash = "2cbea89f84eaeb8411db4b5ea0cb06162e6286071959377171a" +
@@ -66,7 +68,7 @@ class SHATests: XCTestCase {
         sha2Crypto.context.hashLength = .bit512
         XCTAssertEqual(sha2Crypto.hash(password: password).value, bit512Hash)
     }
-    
+
     func testSHA3HashLength() {
         let password = "Hi CatCrypto!"
         let bit224Hash = "13ef53d3f57e6b69244cfd6faf67d0dfad70927725504870a56" +
@@ -87,5 +89,5 @@ class SHATests: XCTestCase {
         sha3Crypto.context.hashLength = .bit512
         XCTAssertEqual(sha3Crypto.hash(password: password).value, bit512Hash)
     }
-    
+
 }

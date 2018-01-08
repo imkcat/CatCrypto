@@ -30,91 +30,186 @@ import Foundation
 import CommonCrypto
 import MD6
 
+enum MD6ErrorCode: CInt, EnumDescription {
+
+    case success = 0
+    case fail = 1
+    case badHashLength = 2
+    case nullState = 3
+    case badKeyLength = 4
+    case stateNotInitialize = 5
+    case stackUnderFlow = 6
+    case stackOverFlow = 7
+    case nullData = 8
+    case nullN = 9
+    case nullB = 10
+    case badEll = 11
+    case badP = 12
+    case nullK = 13
+    case nullQ = 14
+    case nullC = 15
+    case badL = 16
+    case badR = 17
+    case outOfMemory = 18
+
+    var description: String? {
+        switch self {
+        case .success:
+            return nil
+        case .fail:
+            return "Some other problem"
+        case .badHashLength:
+            return "Hashbitlen<1 or >512 bits"
+        case .nullState:
+            return "Null state passed to MD6"
+        case .badKeyLength:
+            return "Key length is <0 or >512 bits"
+        case .stateNotInitialize:
+            return "State was never initialized"
+        case .stackUnderFlow:
+            return "MD6 stack underflows (shouldn't happen)"
+        case .stackOverFlow:
+            return "MD6 stack overflow (message too long)"
+        case .nullData:
+            return "Null data pointer"
+        case .nullN:
+            return "Compress: N is null"
+        case .nullB:
+            return "Standard compress: null B pointer"
+        case .badEll:
+            return "Standard compress: ell not in {0,255}"
+        case .badP:
+            return "Standard compress: p<0 or p>b*w"
+        case .nullK:
+            return "Standard compress: K is null"
+        case .nullQ:
+            return "Standard compress: Q is null"
+        case .nullC:
+            return "Standard compress: C is null"
+        case .badL:
+            return "Standard compress: L <0 or > 255"
+        case .badR:
+            return "Compress: r<0 or r>255"
+        case .outOfMemory:
+            return "Compress: storage allocation failed"
+        }
+    }
+
+}
+
 /// `CatMD2Crypto` is the crypto for [MD2](https://tools.ietf.org/html/rfc1319)
 /// function.
 public class CatMD2Crypto: CatCCHashCrypto {
-    
+
     public override init() {
         super.init()
         mode = .ccMD2
     }
-    
+
 }
 
 /// `CatMD4Crypto` is the crypto for [MD4](https://tools.ietf.org/html/rfc1320)
 /// function.
 public class CatMD4Crypto: CatCCHashCrypto {
-    
+
     public override init() {
         super.init()
         mode = .ccMD4
     }
-    
+
 }
 
 /// `CatMD5Crypto` is the crypto for [MD5](https://tools.ietf.org/html/rfc1321)
 /// function.
 public class CatMD5Crypto: CatCCHashCrypto {
-    
+
     public override init() {
         super.init()
         mode = .ccMD5
     }
-    
+
 }
 
 /// Desired bit-length of the hash function output.
 public enum CatMD6HashLength: Int {
-    
+
     /// 224 bits.
     case bit224 = 28
-    
+
     /// 256 bits.
     case bit256 = 32
-    
+
     /// 384 bits.
     case bit384 = 48
-    
+
     /// 512 bits.
     case bit512 = 64
+
 }
 
 /// Context for MD6 crypto.
 public struct CatMD6Context {
-    
+
     /// Desired bit-length of the hash function output.
     public var hashLength: CatMD6HashLength = .bit512
 
     /// Initialize the context.
     public init() {}
-    
+
 }
 
 /// `CatMD6Crypto` is the crypto for [MD6](http://groups.csail.mit.edu/cis/md6/)
 /// function.
 public class CatMD6Crypto: Contextual, Hashing {
-    
+
+    // MARK: - Contextual
     public typealias Context = CatMD6Context
-    
+
     public var context: CatMD6Context
-    
+
     public required init(context: Context = CatMD6Context()) {
         self.context = context
     }
-    
-    public func hash(password: String) -> CatCryptoHashResult {
+
+    // MARK: - Core
+    /// Hash with MD6 function.
+    ///
+    /// - Parameter password: Password string.
+    /// - Returns: Return a tuple that include error code and hashed string.
+    func md6Hash(password: String) -> (errorCode: MD6ErrorCode, hash: String) {
         let passwordLength = password.lengthOfBytes(using: .utf8)
         var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: self.context.hashLength.rawValue)
         defer {
             result.deallocate(capacity: self.context.hashLength.rawValue)
         }
-        let data = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?.withMemoryRebound(to: CUnsignedChar.self, capacity: passwordLength, { point in
-            return point
-        })
-        md6_hash(CInt(self.context.hashLength.rawValue * 8), data, CUnsignedLongLong(passwordLength), result)
+        let data = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?
+            .withMemoryRebound(to: CUnsignedChar.self,
+                               capacity: passwordLength, { point in
+                                return point
+            })
+        let rawErrorCode = md6_hash(CInt(self.context.hashLength.rawValue * 8),
+                                     data,
+                                     CUnsignedLongLong(passwordLength), result)
+        let errorCode = MD6ErrorCode(rawValue: rawErrorCode) ?? MD6ErrorCode.fail
+        let hash = String.hexString(source: result,
+                                    length: self.context.hashLength.rawValue)
+        return (errorCode, hash)
+    }
+
+    // MARK: - Hashing
+    public func hash(password: String) -> CatCryptoHashResult {
+        let result = md6Hash(password: password)
         let hashResult = CatCryptoHashResult()
-        hashResult.value = String.hexString(source: result, length: self.context.hashLength.rawValue)
+        switch result.errorCode {
+        case .success:
+            hashResult.value = result.hash
+        default:
+            let error = CatCryptoError()
+            error.errorCode = Int(result.errorCode.rawValue)
+            error.errorDescription = result.errorCode.description
+            hashResult.error = error
+        }
         return hashResult
     }
-    
+
 }

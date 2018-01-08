@@ -10,12 +10,15 @@ import XCTest
 @testable import CatCrypto
 
 class MessageDigestCryptoTests: XCTestCase {
-    
+
     var md2Crypto: CatMD2Crypto!
+
     var md4Crypto: CatMD4Crypto!
+
     var md5Crypto: CatMD5Crypto!
+
     var md6Crypto: CatMD6Crypto!
-    
+
     override func setUp() {
         super.setUp()
         md2Crypto = CatMD2Crypto()
@@ -23,11 +26,11 @@ class MessageDigestCryptoTests: XCTestCase {
         md5Crypto = CatMD5Crypto()
         md6Crypto = CatMD6Crypto()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
+
     func testNormalHashing() {
         let password = "Hi CatCrypto!"
         let md2Hash = "6ea4345a17562bf4703152aec8672d6d"
@@ -41,7 +44,7 @@ class MessageDigestCryptoTests: XCTestCase {
         XCTAssertEqual(md5Crypto.hash(password: password).value, md5Hash)
         XCTAssertEqual(md6Crypto.hash(password: password).value, md6Hash)
     }
-    
+
     func testEmptyHashing() {
         let password = ""
         let md2Hash = "8350e5a3e24c153df2275c9f80692773"
@@ -55,7 +58,7 @@ class MessageDigestCryptoTests: XCTestCase {
         XCTAssertEqual(md5Crypto.hash(password: password).value, md5Hash)
         XCTAssertEqual(md6Crypto.hash(password: password).value, md6Hash)
     }
-    
+
     func testMD6HashLength() {
         let password = "Hi CatCrypto!"
         let bit224Hash = "1e9fff946e2d35d551bd3927a71233cecc769e263435085dfda" +
@@ -76,5 +79,5 @@ class MessageDigestCryptoTests: XCTestCase {
         md6Crypto.context.hashLength = .bit512
         XCTAssertEqual(md6Crypto.hash(password: password).value, bit512Hash)
     }
-    
+
 }

@@ -96,6 +96,10 @@
 		C3E273951FE42B020026655E /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
 		C3E273961FE42B020026655E /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
 		C3E273971FE42B020026655E /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
+		C3FD6D36200368BC001394CF /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6D35200368BC001394CF /* EnumDescription.swift */; };
+		C3FD6D37200368BC001394CF /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6D35200368BC001394CF /* EnumDescription.swift */; };
+		C3FD6D38200368BC001394CF /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6D35200368BC001394CF /* EnumDescription.swift */; };
+		C3FD6D39200368BC001394CF /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FD6D35200368BC001394CF /* EnumDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +174,7 @@
 		C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contextual.swift; sourceTree = "<group>"; };
 		C3DF7A301FF73BB4007BDC59 /* ArgonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonTests.swift; sourceTree = "<group>"; };
 		C3E273731FE4259D0026655E /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FD6D35200368BC001394CF /* EnumDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +317,7 @@
 				C3D6DD291FF39FFE0005C3D1 /* Contextual.swift */,
 				C39EDD671FECF6440081108F /* Hashing.swift */,
 				C39EDD711FECF95C0081108F /* Verification.swift */,
+				C3FD6D35200368BC001394CF /* EnumDescription.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				C330B4921FDE93AB005AEECC /* Frameworks */,
 				C330B4931FDE93AB005AEECC /* Headers */,
 				C330B4941FDE93AB005AEECC /* Resources */,
+				C3FD6D3A20037B6D001394CF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -644,6 +651,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C3FD6D3A20037B6D001394CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C328B78E1FF4DC4900943D75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -679,6 +702,7 @@
 				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
 				C330B4D11FDE94E9005AEECC /* thread.c in Sources */,
 				C31E53041FE906B2004C1F12 /* md6_compress.c in Sources */,
+				C3FD6D36200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +730,7 @@
 				C3E273911FE42B010026655E /* thread.c in Sources */,
 				C31E53061FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3E2738D1FE42B010026655E /* blake2b.c in Sources */,
+				C3FD6D38200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +758,7 @@
 				C3E273971FE42B020026655E /* thread.c in Sources */,
 				C31E53071FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3E273931FE42B020026655E /* blake2b.c in Sources */,
+				C3FD6D39200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +786,7 @@
 				C3E2738B1FE42B000026655E /* thread.c in Sources */,
 				C31E53051FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3E273871FE42B000026655E /* blake2b.c in Sources */,
+				C3FD6D37200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
