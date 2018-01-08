@@ -23,6 +23,7 @@ CatCrypto include a series of hashing and encryption functions and more function
 
 CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-winner-argon2), the password-hashing function that won the Password Hashing Competition (PHC).
 
+
 ## Content
 
 - [Requirements](#requirements)
@@ -33,7 +34,9 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
     + [Verification](#verification)
 - [Installation](#installation)
 - [Documentation](#documentation)
+- [Interacting](#interacting)
 - [License](#license)
+
 
 ## Requirements
 
@@ -42,6 +45,7 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
 - macOS 10.10+
 - tvOS 9.0+
 - watchOS 2.0+
+
 
 ## Support Functions
 
@@ -57,6 +61,7 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
         * [SHA-3](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf)
 	+ [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
+
 ## Usage
 
 ### Context
@@ -69,6 +74,7 @@ Change hash length with `SHA-2` function crypto:
 let sha2Crypto = CatSHA2Crypto()
 sha2Crypto.context.hashLength = .bit384
 ```
+
 
 ### Hashing
 
@@ -83,6 +89,7 @@ print(md6Crypto.hash(password: "CatCrypto").value!)
 
 // 3ad3003383633c40281bb5185424ee56a5a1c6dfa3a0e7c3a9e381c58d253323e146feb3f04cb9ebcde47186e042ce63109b8d19f3ca760ea00c90654eb2b272
 ```
+
 
 ### Verification
 
@@ -100,9 +107,11 @@ print(argon2Crypto.verify(hash: hash, password: "CatCrypto").value)
 // true
 ```
 
+
 ## Installation
 
 CatCrypto is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage).
+
 
 ### CocoaPods
 
@@ -114,6 +123,7 @@ use_frameworks!
 pod 'CatCrypto'
 ```
 
+
 ### Carthage
 
 Add the following line to your Cartfile:
@@ -122,10 +132,30 @@ Add the following line to your Cartfile:
 github "ImKcat/CatCrypto"
 ```
 
+
 ## Documentation
 
 - [API Reference](https://imkcat.github.io/CatCrypto/)
 - [Change Logs](https://github.com/ImKcat/CatCrypto/blob/master/CHANGELOG.md)
+
+
+## Interacting
+
+CatCrypto is always trying to support more functions and keep itself easy to use, please reading down below to interacting with CatCrypto.
+
+#### Need Help?
+
+- Reading [usage](https://github.com/ImKcat/CatCrypto#usage) section and [API Reference](https://imkcat.github.io/CatCrypto/)
+- Searched in [issues](https://github.com/ImKcat/CatCrypto/issues) to find duplicated or related issues
+- Ask question? [Open a question type issue](https://github.com/ImKcat/CatCrypto/issues/new)
+- Report bug? [Open a bug type issue](https://github.com/ImKcat/CatCrypto/issues/new)
+- Need new feature? [Open a feature type issue](https://github.com/ImKcat/CatCrypto/issues/new)
+
+
+#### Contribute
+
+If you want to contribute with CatCrypto, please reading [Contribute](https://github.com/ImKcat/CatCrypto/blob/master/CONTRIBUTING.md) at first.
+
 
 ## License
 
