@@ -28,37 +28,53 @@
 
 import Foundation
 
-/// Base result class for encrypt, decrypt, hash or verify
+/// Base result class for encrypt, decrypt, hash or verify.
 public class CatCryptoResult {
 
-    /// Error for result
+    /// Error for result.
     public var error: CatCryptoError?
 
 }
 
-/// Hash result class, include a string value
+/// Hash result class, include a string value.
 public class CatCryptoHashResult: CatCryptoResult {
 
-    /// Hashed string commonly
+    /// Hashed value.
     public var value: String?
 
 }
 
-/// Verify result class, include a boolean value
+/// Verify result class, include a boolean value.
 public class CatCryptoVerifyResult: CatCryptoResult {
 
-    /// Verification result
+    /// Verification result.
     public var value: Bool = false
 
 }
 
-/// Error for descript result
+/// Encrypt result class, include a string value.
+public class CatCryptoEncryptResult: CatCryptoResult {
+
+    /// Encrypted value.
+    public var value: String?
+
+}
+
+/// Decrypt result class, include a string value.
+public class CatCryptoDecryptResult: CatCryptoResult {
+
+    /// Decrypted value.
+    public var value: String?
+
+}
+
+/// Error for descript result.
 public class CatCryptoError: LocalizedError {
 
-    /// Code number for error condition
+    /// Code number for error condition.
     public var errorCode: Int = 0
 
-    /// The description string for error
+    /// The description string for error.
     public var errorDescription: String?
 
 }
