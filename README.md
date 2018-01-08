@@ -154,7 +154,7 @@ CatCrypto is always trying to support more functions and keep itself easy to use
 
 #### Contribute
 
-If you want to contribute with CatCrypto, please reading [Contribute](https://github.com/ImKcat/CatCrypto/blob/master/CONTRIBUTING.md) at first.
+If you want to contribute with CatCrypto, please reading [Contribute Guidelines](https://github.com/ImKcat/CatCrypto/blob/master/CONTRIBUTING.md) at first.
 
 
 ## License
