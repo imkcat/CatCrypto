@@ -151,6 +151,10 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     /// - Parameter password: Password string.
     /// - Returns: Return a tuple that include error code and hashed string.
     func argon2Hash(password: String) -> (errorCode: CInt, hash: String) {
+        let passwordCString = password.cString(using: .utf8)
+        let passwordLength = password.lengthOfBytes(using: .utf8)
+        let saltCString = context.salt.cString(using: .utf8)
+        let saltLength = context.salt.lengthOfBytes(using: .utf8)
         let encodedLength = argon2EncodedLength()
         let result = UnsafeMutablePointer<CChar>.allocate(capacity: encodedLength)
         defer {
@@ -159,38 +163,23 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
         var errorCode: CInt
         switch context.mode {
         case .argon2d:
-            errorCode = argon2d_hash_encoded(CUnsignedInt(context.iterations),
-                                             CUnsignedInt(context.memory),
-                                             CUnsignedInt(context.parallelism),
-                                             password.cString(using: .utf8),
-                                             password.lengthOfBytes(using: .utf8),
-                                             context.salt.cString(using: .utf8),
-                                             context.salt.lengthOfBytes(using: .utf8),
-                                             context.hashLength,
-                                             result,
-                                             encodedLength)
+            errorCode = argon2d_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
+                                             CUnsignedInt(context.parallelism), passwordCString,
+                                             passwordLength, saltCString,
+                                             saltLength, context.hashLength,
+                                             result, encodedLength)
         case .argon2i:
-            errorCode = argon2i_hash_encoded(CUnsignedInt(context.iterations),
-                                             CUnsignedInt(context.memory),
-                                             CUnsignedInt(context.parallelism),
-                                             password.cString(using: .utf8),
-                                             password.lengthOfBytes(using: .utf8),
-                                             context.salt.cString(using: .utf8),
-                                             context.salt.lengthOfBytes(using: .utf8),
-                                             context.hashLength,
-                                             result,
-                                             encodedLength)
+            errorCode = argon2i_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
+                                             CUnsignedInt(context.parallelism), passwordCString,
+                                             passwordLength, saltCString,
+                                             saltLength, context.hashLength,
+                                             result, encodedLength)
         case .argon2id:
-            errorCode = argon2id_hash_encoded(CUnsignedInt(context.iterations),
-                                              CUnsignedInt(context.memory),
-                                              CUnsignedInt(context.parallelism),
-                                              password.cString(using: .utf8),
-                                              password.lengthOfBytes(using: .utf8),
-                                              context.salt.cString(using: .utf8),
-                                              context.salt.lengthOfBytes(using: .utf8),
-                                              context.hashLength,
-                                              result,
-                                              encodedLength)
+            errorCode = argon2id_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
+                                              CUnsignedInt(context.parallelism), passwordCString,
+                                              passwordLength, saltCString,
+                                              saltLength, context.hashLength,
+                                              result, encodedLength)
         }
         return (errorCode, String(cString: result))
     }
