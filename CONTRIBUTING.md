@@ -13,4 +13,5 @@
 
 ## Code Style
 
-- [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
+- [Apple Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
+- [Github Swift Style Guide](https://github.com/github/swift-style-guide)
