@@ -33,7 +33,7 @@ import SHA3
 ///  `CatSHA1Crypto` is the crypto for
 /// [SHA-1](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
 /// function.
-public class CatSHA1Crypto: CatCCHashCrypto {
+public class CatSHA1Crypto: CatCCHashingCrypto {
     public override init() {
         super.init()
         mode = .ccSHA1
@@ -70,7 +70,7 @@ public struct CatSHA2Context {
 ///  `CatSHA2Crypto` is the crypto for
 /// [SHA-2](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
 /// function.
-public class CatSHA2Crypto: CatCCHashCrypto, Contextual {
+public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
 
     public typealias Context = CatSHA2Context
 

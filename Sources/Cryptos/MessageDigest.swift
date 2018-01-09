@@ -80,7 +80,7 @@ enum MD6ErrorCode: CInt, EnumDescription {
 
 /// `CatMD2Crypto` is the crypto for [MD2](https://tools.ietf.org/html/rfc1319)
 /// function.
-public class CatMD2Crypto: CatCCHashCrypto {
+public class CatMD2Crypto: CatCCHashingCrypto {
 
     public override init() {
         super.init()
@@ -91,7 +91,7 @@ public class CatMD2Crypto: CatCCHashCrypto {
 
 /// `CatMD4Crypto` is the crypto for [MD4](https://tools.ietf.org/html/rfc1320)
 /// function.
-public class CatMD4Crypto: CatCCHashCrypto {
+public class CatMD4Crypto: CatCCHashingCrypto {
 
     public override init() {
         super.init()
@@ -102,7 +102,7 @@ public class CatMD4Crypto: CatCCHashCrypto {
 
 /// `CatMD5Crypto` is the crypto for [MD5](https://tools.ietf.org/html/rfc1321)
 /// function.
-public class CatMD5Crypto: CatCCHashCrypto {
+public class CatMD5Crypto: CatCCHashingCrypto {
 
     public override init() {
         super.init()
