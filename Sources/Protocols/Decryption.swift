@@ -31,11 +31,11 @@ import Foundation
 /// `Decryption` protocol defines the interface about decryption.
 public protocol Decryption {
 
-    /// Encrypt password string with decryption function.
+    /// Decrypt password string with decryption function.
     ///
     /// - Parameter password: Password string for decrypt.
     /// - Returns: Return a decrypted result when decryption task finish.
-    func encrypt(password: String) -> CatCryptoEncryptResult
+    func decrypt(password: String) -> CatCryptoDecryptResult
 
 }
 
