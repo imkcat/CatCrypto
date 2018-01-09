@@ -38,4 +38,3 @@ public protocol Decryption {
     func decrypt(password: String) -> CatCryptoDecryptResult
 
 }
-
