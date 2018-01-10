@@ -53,9 +53,10 @@ enum MD6ErrorCode: CInt, EnumDescription {
     case outOfMemory = 18
 
     var description: String? {
+
         switch self {
         case .success: return nil
-        case .fail: return "Some other problem"
+        case .fail: return "Fail"
         case .badHashLength: return "Hashbitlen<1 or >512 bits"
         case .nullState: return "Null state passed to MD6"
         case .badKeyLength: return "Key length is <0 or >512 bits"
@@ -74,6 +75,7 @@ enum MD6ErrorCode: CInt, EnumDescription {
         case .badR: return "Compress: r<0 or r>255"
         case .outOfMemory: return "Compress: storage allocation failed"
         }
+
     }
 
 }
@@ -84,7 +86,7 @@ public class CatMD2Crypto: CatCCHashingCrypto {
 
     public override init() {
         super.init()
-        mode = .ccMD2
+        algorithm = .md2
     }
 
 }
@@ -95,7 +97,7 @@ public class CatMD4Crypto: CatCCHashingCrypto {
 
     public override init() {
         super.init()
-        mode = .ccMD4
+        algorithm = .md4
     }
 
 }
@@ -106,7 +108,7 @@ public class CatMD5Crypto: CatCCHashingCrypto {
 
     public override init() {
         super.init()
-        mode = .ccMD5
+        algorithm = .md5
     }
 
 }

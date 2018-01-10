@@ -36,7 +36,7 @@ import SHA3
 public class CatSHA1Crypto: CatCCHashingCrypto {
     public override init() {
         super.init()
-        mode = .ccSHA1
+        algorithm = .sha1
     }
 }
 
@@ -78,13 +78,13 @@ public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
         didSet {
             switch context.hashLength {
             case .bit224:
-                mode = .ccSHA224
+                algorithm = .sha224
             case .bit256:
-                mode = .ccSHA256
+                algorithm = .sha256
             case .bit384:
-                mode = .ccSHA384
+                algorithm = .sha384
             case .bit512:
-                mode = .ccSHA512
+                algorithm = .sha512
             }
         }
     }
@@ -92,7 +92,7 @@ public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
     public required init(context: Context = CatSHA2Context()) {
         self.context = context
         super.init()
-        mode = .ccSHA512
+        algorithm = .sha512
     }
 
 }

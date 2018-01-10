@@ -29,58 +29,96 @@
 import Foundation
 import CommonCrypto
 
-/// Function mode from CommonCrypto.
-enum CatCCHashingMode {
+enum CatCCCryptoErrorCode: EnumDescription {
+
+    case success
+    case fail
+    case paramError
+    case bufferTooSmall
+    case memoryFailure
+    case alignmentError
+    case decodeError
+    case unimplemented
+
+    var description: String? {
+        switch self {
+        case .success: return nil
+        case .fail: return "Fail"
+        case .paramError: return "Illegal parameter value"
+        case .bufferTooSmall: return "Insufficent buffer provided for specified operation"
+        case .memoryFailure: return "Memory allocation failure"
+        case .alignmentError: return "Input size was not aligned properly"
+        case .decodeError: return "Input data did not decode or decrypt properly"
+        case .unimplemented: return "Function not implemented for the current algorithm"
+        }
+    }
+
+}
+
+extension CatCCCryptoErrorCode: ExpressibleByIntegerLiteral {
+
+    typealias IntegerLiteralType = Int
+
+    init(integerLiteral value: Int) {
+        switch value {
+        case kCCSuccess: self = .success
+        case kCCParamError: self = .paramError
+        case kCCBufferTooSmall: self = .bufferTooSmall
+        case kCCMemoryFailure: self = .memoryFailure
+        case kCCAlignmentError: self = .alignmentError
+        case kCCDecodeError: self = .decodeError
+        case kCCUnimplemented: self = .unimplemented
+        default: self = .fail
+        }
+    }
+
+}
+
+/// Hashing function algorithm from CommonCrypto.
+enum CatCCHashingAlgorithm {
 
     /// MD2 function.
-    case ccMD2
+    case md2
 
     /// MD4 function.
-    case ccMD4
+    case md4
 
     /// MD5 function.
-    case ccMD5
+    case md5
 
     /// SHA1 function.
-    case ccSHA1
+    case sha1
 
     /// SHA2 with 224 bit hash length.
-    case ccSHA224
+    case sha224
 
     /// SHA2 with 256 bit hash length.
-    case ccSHA256
+    case sha256
 
     /// SHA2 with 384 bit hash length.
-    case ccSHA384
+    case sha384
 
     /// SHA2 with 512 bit hash length.
-    case ccSHA512
+    case sha512
+
 }
 
 /// `CatCCHashingCrypto` just for code convenient and coupling, and it just as
 /// father class for hash function crypto class depend on `CommonCrypto`.
 public class CatCCHashingCrypto: Hashing {
 
-    /// Mode to switch function from CommonCrypto.
-    var mode: CatCCHashingMode = .ccMD5 {
+    /// Algorithm to switch function from CommonCrypto.
+    var algorithm: CatCCHashingAlgorithm = .md5 {
         didSet {
-            switch mode {
-            case .ccMD2:
-                digestLength = Int(CC_MD2_DIGEST_LENGTH)
-            case .ccMD4:
-                digestLength = Int(CC_MD4_DIGEST_LENGTH)
-            case .ccMD5:
-                digestLength = Int(CC_MD5_DIGEST_LENGTH)
-            case .ccSHA1:
-                digestLength = Int(CC_SHA1_DIGEST_LENGTH)
-            case .ccSHA224:
-                digestLength = Int(CC_SHA224_DIGEST_LENGTH)
-            case .ccSHA256:
-                digestLength = Int(CC_SHA256_DIGEST_LENGTH)
-            case .ccSHA384:
-                digestLength = Int(CC_SHA384_DIGEST_LENGTH)
-            case .ccSHA512:
-                digestLength = Int(CC_SHA512_DIGEST_LENGTH)
+            switch algorithm {
+            case .md2: digestLength = Int(CC_MD2_DIGEST_LENGTH)
+            case .md4: digestLength = Int(CC_MD4_DIGEST_LENGTH)
+            case .md5: digestLength = Int(CC_MD5_DIGEST_LENGTH)
+            case .sha1: digestLength = Int(CC_SHA1_DIGEST_LENGTH)
+            case .sha224: digestLength = Int(CC_SHA224_DIGEST_LENGTH)
+            case .sha256: digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+            case .sha384: digestLength = Int(CC_SHA384_DIGEST_LENGTH)
+            case .sha512: digestLength = Int(CC_SHA512_DIGEST_LENGTH)
             }
         }
     }
@@ -93,49 +131,34 @@ public class CatCCHashingCrypto: Hashing {
 
     /// Hash password string with desire hash function from `CommonCrypto`.
     ///
-    /// - Parameters:
-    ///   - mode: Function mode.
-    ///   - password: Password data to hasing.
-    ///   - passwordLength: Password size in bytes.
-    ///   - digestLength: Digest length in bytes.
-    /// - Returns: Return a hash result when hashing task finish.
-    func commonCryptoHash(mode: CatCCHashingMode,
-                          password: [CChar],
-                          passwordLength: CC_LONG,
-                          digestLength: Int) -> CatCryptoHashResult {
+    /// - Parameter password: Password string to hasing.
+    /// - Returns: Return a tuple that include error code and hashed string.
+    func commonCryptoHash(password: String) -> (errorCode: CatCCCryptoErrorCode, hash: String) {
+        let passwordCString = password.cString(using: .utf8)
+        let passwordLength = CC_LONG(password.lengthOfBytes(using: .utf8))
         var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
         defer {
             result.deallocate(capacity: digestLength)
         }
-        switch mode {
-        case .ccMD2:
-            CC_MD2(password, passwordLength, result)
-        case .ccMD4:
-            CC_MD4(password, passwordLength, result)
-        case .ccMD5:
-            CC_MD5(password, passwordLength, result)
-        case .ccSHA1:
-            CC_SHA1(password, passwordLength, result)
-        case .ccSHA224:
-            CC_SHA224(password, passwordLength, result)
-        case .ccSHA256:
-            CC_SHA256(password, passwordLength, result)
-        case .ccSHA384:
-            CC_SHA384(password, passwordLength, result)
-        case .ccSHA512:
-            CC_SHA512(password, passwordLength, result)
+        switch algorithm {
+        case .md2: CC_MD2(passwordCString, passwordLength, result)
+        case .md4: CC_MD4(passwordCString, passwordLength, result)
+        case .md5: CC_MD5(passwordCString, passwordLength, result)
+        case .sha1: CC_SHA1(passwordCString, passwordLength, result)
+        case .sha224: CC_SHA224(passwordCString, passwordLength, result)
+        case .sha256: CC_SHA256(passwordCString, passwordLength, result)
+        case .sha384: CC_SHA384(passwordCString, passwordLength, result)
+        case .sha512: CC_SHA512(passwordCString, passwordLength, result)
         }
-        let hashResult = CatCryptoHashResult()
-        hashResult.value = String.hexString(source: result, length: digestLength)
-        return hashResult
+        return (.success, String.hexString(source: result, length: digestLength))
     }
 
     // MARK: - Hashing
     public func hash(password: String) -> CatCryptoHashResult {
-        return commonCryptoHash(mode: mode,
-                                password: password.cString(using: .utf8)!,
-                                passwordLength: CC_LONG(password.lengthOfBytes(using: .utf8)),
-                                digestLength: digestLength)
+        let result = commonCryptoHash(password: password)
+        let hashResult = CatCryptoHashResult()
+        hashResult.value = result.hash
+        return hashResult
     }
 
 }
