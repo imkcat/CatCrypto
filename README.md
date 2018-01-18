@@ -28,6 +28,7 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
 
 - [Requirements](#requirements)
 - [Support Functions](#support-functions)
+- [Upcoming Functions](#upcoming-functions)
 - [Usage](#usage)
     + [Context](#context)
     + [Hashing](#hashing)
@@ -60,6 +61,12 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
         * [SHA-2](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
         * [SHA-3](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf)
 	+ [Argon2](https://github.com/P-H-C/phc-winner-argon2)
+
+## Upcoming Functions
+
+- Advanced Encryption Standard (AES)
+- Data Encryption Standard (DES)
+- Triple DES (3DES)
 
 
 ## Usage
