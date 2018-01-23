@@ -1,0 +1,2 @@
+cyclomatic_complexity:
+        warning: 25
