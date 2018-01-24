@@ -44,4 +44,16 @@ extension String {
         return hexString
     }
 
+    /// Generate an appoint length string fill by zero.
+    ///
+    /// - Parameter length: Zero count.
+    /// - Returns: Desired zero string.
+    static func zeroString(length: Int) -> String {
+        var zeroString = String()
+        for _ in 0 ..< length {
+            zeroString += "0"
+        }
+        return zeroString
+    }
+
 }
