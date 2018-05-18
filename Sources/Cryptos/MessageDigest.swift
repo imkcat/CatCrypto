@@ -163,7 +163,7 @@ public class CatMD6Crypto: Contextual, Hashing {
         let passwordLength = password.lengthOfBytes(using: .utf8)
         var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: self.context.hashLength.rawValue)
         defer {
-            result.deallocate(capacity: self.context.hashLength.rawValue)
+            result.deallocate()
         }
         let data = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?
             .withMemoryRebound(to: CUnsignedChar.self,

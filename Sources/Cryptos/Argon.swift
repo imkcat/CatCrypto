@@ -158,7 +158,7 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
         let encodedLength = argon2EncodedLength()
         let result = UnsafeMutablePointer<CChar>.allocate(capacity: encodedLength)
         defer {
-            result.deallocate(capacity: encodedLength)
+            result.deallocate()
         }
         var errorCode: CInt
         switch context.mode {

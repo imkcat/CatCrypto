@@ -151,7 +151,7 @@ public class CatSHA3Crypto: Contextual, Hashing {
             })
         var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: context.hashLength.rawValue)
         defer {
-            result.deallocate(capacity: context.hashLength.rawValue)
+            result.deallocate()
         }
         var errorCode: CInt
         switch context.hashLength {

@@ -138,7 +138,7 @@ public class CatCCHashingCrypto: Hashing {
         let passwordLength = CC_LONG(password.lengthOfBytes(using: .utf8))
         var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
         defer {
-            result.deallocate(capacity: digestLength)
+            result.deallocate()
         }
         switch algorithm {
         case .md2: CC_MD2(passwordCString, passwordLength, result)
