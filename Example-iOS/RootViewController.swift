@@ -15,14 +15,9 @@ class RootViewController: UIViewController {
 
     let sourceString: String = "CatCrypto"
 
-    let hashCryptos = [CatMD2Crypto(),
-                       CatMD4Crypto(),
-                       CatMD5Crypto(),
-                       CatMD6Crypto(),
-                       CatSHA1Crypto(),
-                       CatSHA2Crypto(),
-                       CatArgon2Crypto(),
-                       CatSHA3Crypto()]
+    let hashCryptos: [Hashing] = [CatMD2Crypto(), CatMD4Crypto(), CatMD5Crypto(), CatMD6Crypto(),
+                                  CatSHA1Crypto(), CatSHA2Crypto(), CatSHA3Crypto(),
+                                  CatArgon2Crypto()]
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,10 +26,16 @@ class RootViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func hashAndEncrypt(_ sender: Any) {
+    // MARK: - Actions
+    /// Printing CatCrypto infomations.
+    func showInfo() {
         let infoDict =  Bundle(identifier: "com.imkcat.CatCrypto-iOS")?.infoDictionary
         let version = infoDict!["CFBundleShortVersionString"] as? String
         print("CatCrypto, Version: " + version! + "\n")
+    }
+
+    @IBAction func hashAndEncrypt(_ sender: Any) {
+        showInfo()
         for hashCrypto in hashCryptos {
             let hashTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
             hashTimer.schedule(deadline: DispatchTime.now(), repeating: .milliseconds(1))
