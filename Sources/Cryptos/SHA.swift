@@ -77,14 +77,10 @@ public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
     public var context: CatSHA2Context {
         didSet {
             switch context.hashLength {
-            case .bit224:
-                algorithm = .sha224
-            case .bit256:
-                algorithm = .sha256
-            case .bit384:
-                algorithm = .sha384
-            case .bit512:
-                algorithm = .sha512
+            case .bit224: algorithm = .sha224
+            case .bit256: algorithm = .sha256
+            case .bit384: algorithm = .sha384
+            case .bit512: algorithm = .sha512
             }
         }
     }
@@ -155,14 +151,10 @@ public class CatSHA3Crypto: Contextual, Hashing {
         }
         var errorCode: CInt
         switch context.hashLength {
-        case .bit224:
-            errorCode = SHA3_224(result, passwordCString, passwordLength)
-        case .bit256:
-            errorCode = SHA3_256(result, passwordCString, passwordLength)
-        case .bit384:
-            errorCode = SHA3_384(result, passwordCString, passwordLength)
-        case .bit512:
-            errorCode = SHA3_512(result, passwordCString, passwordLength)
+        case .bit224: errorCode = SHA3_224(result, passwordCString, passwordLength)
+        case .bit256: errorCode = SHA3_256(result, passwordCString, passwordLength)
+        case .bit384: errorCode = SHA3_384(result, passwordCString, passwordLength)
+        case .bit512: errorCode = SHA3_512(result, passwordCString, passwordLength)
         }
         let hash = String.hexString(source: result,
                                     length: context.hashLength.rawValue)

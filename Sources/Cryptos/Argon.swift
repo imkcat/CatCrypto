@@ -163,23 +163,14 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
         var errorCode: CInt
         switch context.mode {
         case .argon2d:
-            errorCode = argon2d_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
-                                             CUnsignedInt(context.parallelism), passwordCString,
-                                             passwordLength, saltCString,
-                                             saltLength, context.hashLength,
-                                             result, encodedLength)
+            errorCode = argon2d_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory), CUnsignedInt(context.parallelism),
+                                             passwordCString, passwordLength, saltCString, saltLength, context.hashLength, result, encodedLength)
         case .argon2i:
-            errorCode = argon2i_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
-                                             CUnsignedInt(context.parallelism), passwordCString,
-                                             passwordLength, saltCString,
-                                             saltLength, context.hashLength,
-                                             result, encodedLength)
+            errorCode = argon2i_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory), CUnsignedInt(context.parallelism),
+                                             passwordCString, passwordLength, saltCString, saltLength, context.hashLength, result, encodedLength)
         case .argon2id:
-            errorCode = argon2id_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
-                                              CUnsignedInt(context.parallelism), passwordCString,
-                                              passwordLength, saltCString,
-                                              saltLength, context.hashLength,
-                                              result, encodedLength)
+            errorCode = argon2id_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory), CUnsignedInt(context.parallelism),
+                                              passwordCString, passwordLength, saltCString, saltLength, context.hashLength, result, encodedLength)
         }
         return (errorCode, String(cString: result))
     }
@@ -194,18 +185,9 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
                       password: String) -> CInt {
         let passwordLength = password.lengthOfBytes(using: .utf8)
         switch context.mode {
-        case .argon2d:
-            return argon2d_verify(hash.cString(using: .utf8),
-                                  password.cString(using: .utf8),
-                                  passwordLength)
-        case .argon2i:
-            return argon2i_verify(hash.cString(using: .utf8),
-                                  password.cString(using: .utf8),
-                                  passwordLength)
-        case .argon2id:
-            return argon2id_verify(hash.cString(using: .utf8),
-                                   password.cString(using: .utf8),
-                                   passwordLength)
+        case .argon2d: return argon2d_verify(hash.cString(using: .utf8), password.cString(using: .utf8), passwordLength)
+        case .argon2i: return argon2i_verify(hash.cString(using: .utf8), password.cString(using: .utf8), passwordLength)
+        case .argon2id: return argon2id_verify(hash.cString(using: .utf8), password.cString(using: .utf8), passwordLength)
         }
     }
 
