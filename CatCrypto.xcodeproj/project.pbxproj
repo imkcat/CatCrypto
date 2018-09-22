@@ -162,11 +162,9 @@
 		C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDigest.swift; sourceTree = "<group>"; };
 		C3A12E961FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12E981FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12E9A1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12E9C1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12E9E1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3A12EA01FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12EA21FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHATests.swift; sourceTree = "<group>"; };
 		C3BDFE011FFE6C3100E060F6 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3BDFE031FFE6C9400E060F6 /* SimpleFIPS202.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFIPS202.h; sourceTree = "<group>"; };
@@ -312,8 +310,6 @@
 			children = (
 				C3A12E9B1FE3A3D2007BA5FA /* AppleTVOS */,
 				C3A12E951FE3A3D2007BA5FA /* AppleTVSimulator */,
-				C3A12E991FE3A3D2007BA5FA /* iPhoneOS */,
-				C3A12EA11FE3A3D2007BA5FA /* iPhoneSimulator */,
 				C3A12E9F1FE3A3D2007BA5FA /* MacOSX */,
 				C3A12E9D1FE3A3D2007BA5FA /* WatchOS */,
 				C3A12E971FE3A3D2007BA5FA /* WatchSimulator */,
@@ -381,14 +377,6 @@
 			path = WatchSimulator;
 			sourceTree = "<group>";
 		};
-		C3A12E991FE3A3D2007BA5FA /* iPhoneOS */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12E9A1FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = iPhoneOS;
-			sourceTree = "<group>";
-		};
 		C3A12E9B1FE3A3D2007BA5FA /* AppleTVOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,14 +399,6 @@
 				C3A12EA01FE3A3D2007BA5FA /* module.modulemap */,
 			);
 			path = MacOSX;
-			sourceTree = "<group>";
-		};
-		C3A12EA11FE3A3D2007BA5FA /* iPhoneSimulator */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12EA21FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = iPhoneSimulator;
 			sourceTree = "<group>";
 		};
 		C3BDFE001FFE6BDB00E060F6 /* SHA3 */ = {
@@ -582,11 +562,13 @@
 				TargetAttributes = {
 					C328B7911FF4DC4900943D75 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					C330B4951FDE93AB005AEECC = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
 					};
 					C3945E841FE3CBAE009A203D = {
 						CreatedOnToolsVersion = 9.1;
@@ -829,7 +811,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -842,7 +824,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.CatCrypto-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -871,7 +853,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneOS";
 				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneSimulator";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -902,7 +884,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneOS";
 				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/iPhoneSimulator";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
