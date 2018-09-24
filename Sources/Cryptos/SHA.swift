@@ -15,8 +15,8 @@
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-// IN THE SOFTWARE.
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
 //
 
 import Foundation
@@ -24,8 +24,7 @@ import CommonCryptoFramework
 import SHA3
 
 ///  `CatSHA1Crypto` is the crypto for
-/// [SHA-1](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
-/// function.
+/// [SHA-1](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf) function.
 public class CatSHA1Crypto: CatCCHashingCrypto {
     public override init() {
         super.init()
@@ -61,8 +60,7 @@ public struct CatSHA2Context {
 }
 
 ///  `CatSHA2Crypto` is the crypto for
-/// [SHA-2](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
-/// function.
+/// [SHA-2](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf) function.
 public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
 
     public typealias Context = CatSHA2Context
@@ -70,14 +68,10 @@ public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
     public var context: CatSHA2Context {
         didSet {
             switch context.hashLength {
-            case .bit224:
-                algorithm = .sha224
-            case .bit256:
-                algorithm = .sha256
-            case .bit384:
-                algorithm = .sha384
-            case .bit512:
-                algorithm = .sha512
+            case .bit224: algorithm = .sha224
+            case .bit256: algorithm = .sha256
+            case .bit384: algorithm = .sha384
+            case .bit512: algorithm = .sha512
             }
         }
     }

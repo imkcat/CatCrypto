@@ -15,23 +15,21 @@
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-// IN THE SOFTWARE.
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
 //
 
 import Foundation
 
 extension UnicodeScalar {
 
-    var hexNibble:UInt8 {
+    var hexNibble: UInt8 {
         let value = self.value
         if 48 <= value && value <= 57 {
             return UInt8(value - 48)
-        }
-        else if 65 <= value && value <= 70 {
+        } else if 65 <= value && value <= 70 {
             return UInt8(value - 55)
-        }
-        else if 97 <= value && value <= 102 {
+        } else if 97 <= value && value <= 102 {
             return UInt8(value - 87)
         }
         fatalError("\(self) not a legal hex nibble")

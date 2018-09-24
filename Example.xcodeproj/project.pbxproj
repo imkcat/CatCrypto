@@ -17,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		92A6063520AE87C5001DF859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C328B7921FF4DC4900943D75;
+			remoteInfo = "CatCrypto-iOSTests";
+		};
 		C3945EA01FE3CD51009A203D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
@@ -38,19 +45,12 @@
 			remoteGlobalIDString = C3945EAD1FE3CE48009A203D;
 			remoteInfo = "CatCrypto-watchOS";
 		};
-		C3945EBA1FE3CEB2009A203D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C330B4951FDE93AB005AEECC;
-			remoteInfo = "CatCrypto-iOS";
-		};
 		C3A43C711FDEBDB3004E32E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C330B4961FDE93AB005AEECC;
-			remoteInfo = CatCrypto;
+			remoteInfo = "CatCrypto-iOS";
 		};
 		C3F453422157EB7300CFA3D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -214,6 +214,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		92A6063620AE87C5001DF859 /* CatCrypto-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CatCrypto-iOSTests.xctest";
+			remoteRef = 92A6063520AE87C5001DF859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C3945EA11FE3CD51009A203D /* CatCrypto.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;

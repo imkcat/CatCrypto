@@ -1,2 +1,4 @@
+line_length: 150
+
 cyclomatic_complexity:
         warning: 25

@@ -15,31 +15,26 @@
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-// IN THE SOFTWARE.
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
 //
 
 import Foundation
 import Argon2
 
-/// `CatArgon2Mode` has three mode to use: `Argon2i`, `Argon2d`, and `Argon2id`.
-/// `Argon2i` is recommend.
+/// `CatArgon2Mode` has three mode to use: `Argon2i`, `Argon2d`, and `Argon2id`. `Argon2i` is recommend.
 public enum CatArgon2Mode: Int {
 
-    /// Argon2d is faster and uses data-depending memory access, which makes it
-    /// highly resistant against GPU cracking attacks and suitable for
+    /// Argon2d is faster and uses data-depending memory access, which makes it highly resistant against GPU cracking attacks and suitable for
     /// applications with no threats from side-channel timing attacks.
     case argon2d = 0
 
-    /// Argon2i instead uses data-independent memory access, which is preferred
-    /// for password hashing and password-based key derivation, but it is slower
-    /// as it makes more passes over the memory to protect from tradeoff attacks.
+    /// Argon2i instead uses data-independent memory access, which is preferred for password hashing and password-based key derivation, but it is
+    /// slower as it makes more passes over the memory to protect from tradeoff attacks.
     case argon2i = 1
 
-    /// Argon2id is a hybrid of Argon2i and Argon2d, using a combination of
-    /// data-depending and data-independent memory accesses, which gives some of
-    /// Argon2i's resistance to side-channel cache timing attacks and much of
-    /// Argon2d's resistance to GPU cracking attacks.
+    /// Argon2id is a hybrid of Argon2i and Argon2d, using a combination of data-depending and data-independent memory accesses, which gives some of
+    /// Argon2i's resistance to side-channel cache timing attacks and much of Argon2d's resistance to GPU cracking attacks.
     case argon2id = 2
 }
 
@@ -110,8 +105,7 @@ public struct CatArgon2Context {
 
 /// `CatArgon2Crypto` is the crypto for Argon2 function.
 ///
-/// [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing
-/// function that won the
+/// [Argon2](https://github.com/P-H-C/phc-winner-argon2) is the password-hashing function that won the
 /// [Password Hashing Competition (PHC)](https://password-hashing.net/).
 public class CatArgon2Crypto: Contextual, Hashing, Verification {
 
@@ -184,18 +178,9 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
                       password: String) -> CInt {
         let passwordLength = password.lengthOfBytes(using: .utf8)
         switch context.mode {
-        case .argon2d:
-            return argon2d_verify(hash.cString(using: .utf8),
-                                  password.cString(using: .utf8),
-                                  passwordLength)
-        case .argon2i:
-            return argon2i_verify(hash.cString(using: .utf8),
-                                  password.cString(using: .utf8),
-                                  passwordLength)
-        case .argon2id:
-            return argon2id_verify(hash.cString(using: .utf8),
-                                   password.cString(using: .utf8),
-                                   passwordLength)
+        case .argon2d: return argon2d_verify(hash.cString(using: .utf8), password.cString(using: .utf8), passwordLength)
+        case .argon2i: return argon2i_verify(hash.cString(using: .utf8), password.cString(using: .utf8), passwordLength)
+        case .argon2id: return argon2id_verify(hash.cString(using: .utf8), password.cString(using: .utf8), passwordLength)
         }
     }
 
