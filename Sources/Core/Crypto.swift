@@ -27,7 +27,7 @@
 //
 
 import Foundation
-import CommonCrypto
+import CommonCryptoFramework
 
 enum CatCCCryptoErrorCode: EnumDescription {
 
