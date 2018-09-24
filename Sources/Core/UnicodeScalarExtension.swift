@@ -1,9 +1,9 @@
 //
-//  Hashing.swift
-//  CatCrypto
+//  UnicodeScalarExtension.swift
+//  CatCrypto-iOS
 //
-//  Created by Kcat on 2017/12/22.
-//  Copyright © 2017年 imkcat. All rights reserved.
+//  Created by Kcat on 2018/9/24.
+//  Copyright © 2018年 imkcat. All rights reserved.
 //
 // https://github.com/ImKcat/CatCrypto
 //
@@ -21,13 +21,20 @@
 
 import Foundation
 
-/// `Hashing` protocol defines the interface about hashing.
-public protocol Hashing {
+extension UnicodeScalar {
 
-    /// Hash password string with hashing function.
-    ///
-    /// - Parameter password: Password string for hash.
-    /// - Returns: Return a result when hashing task finish.
-    func hash(password: String) -> CatCryptoResult
+    var hexNibble:UInt8 {
+        let value = self.value
+        if 48 <= value && value <= 57 {
+            return UInt8(value - 48)
+        }
+        else if 65 <= value && value <= 70 {
+            return UInt8(value - 55)
+        }
+        else if 97 <= value && value <= 102 {
+            return UInt8(value - 87)
+        }
+        fatalError("\(self) not a legal hex nibble")
+    }
 
 }

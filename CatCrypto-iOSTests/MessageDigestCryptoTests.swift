@@ -39,10 +39,10 @@ class MessageDigestCryptoTests: XCTestCase {
         let md6Hash = "377f5f2f9372341b15e9a2e54c4034b7f8161d4a9907c3c8bdb372" +
         "08369cc2446ef7382928e432a9bd58177a54ef7bd53f27f35d80006167b17248c5fa" +
         "3df1b3"
-        XCTAssertEqual(md2Crypto.hash(password: password).value, md2Hash)
-        XCTAssertEqual(md4Crypto.hash(password: password).value, md4Hash)
-        XCTAssertEqual(md5Crypto.hash(password: password).value, md5Hash)
-        XCTAssertEqual(md6Crypto.hash(password: password).value, md6Hash)
+        XCTAssertEqual(md2Crypto.hash(password: password).hexStringValue(), md2Hash)
+        XCTAssertEqual(md4Crypto.hash(password: password).hexStringValue(), md4Hash)
+        XCTAssertEqual(md5Crypto.hash(password: password).hexStringValue(), md5Hash)
+        XCTAssertEqual(md6Crypto.hash(password: password).hexStringValue(), md6Hash)
     }
 
     func testEmptyHashing() {
@@ -53,10 +53,10 @@ class MessageDigestCryptoTests: XCTestCase {
         let md6Hash = "6b7f33821a2c060ecdd81aefddea2fd3c4720270e18654f4cb08ec" +
         "e49ccb469f8beeee7c831206bd577f9f2630d9177979203a9489e47e04df4e6deaa0" +
         "f8e0c0"
-        XCTAssertEqual(md2Crypto.hash(password: password).value, md2Hash)
-        XCTAssertEqual(md4Crypto.hash(password: password).value, md4Hash)
-        XCTAssertEqual(md5Crypto.hash(password: password).value, md5Hash)
-        XCTAssertEqual(md6Crypto.hash(password: password).value, md6Hash)
+        XCTAssertEqual(md2Crypto.hash(password: password).hexStringValue(), md2Hash)
+        XCTAssertEqual(md4Crypto.hash(password: password).hexStringValue(), md4Hash)
+        XCTAssertEqual(md5Crypto.hash(password: password).hexStringValue(), md5Hash)
+        XCTAssertEqual(md6Crypto.hash(password: password).hexStringValue(), md6Hash)
     }
 
     func testMD6HashLength() {
@@ -71,13 +71,13 @@ class MessageDigestCryptoTests: XCTestCase {
         "37208369cc2446ef7382928e432a9bd58177a54ef7bd53f27f35d80006167b17248c" +
         "5fa3df1b3"
         md6Crypto.context.hashLength = .bit224
-        XCTAssertEqual(md6Crypto.hash(password: password).value, bit224Hash)
+        XCTAssertEqual(md6Crypto.hash(password: password).hexStringValue(), bit224Hash)
         md6Crypto.context.hashLength = .bit256
-        XCTAssertEqual(md6Crypto.hash(password: password).value, bit256Hash)
+        XCTAssertEqual(md6Crypto.hash(password: password).hexStringValue(), bit256Hash)
         md6Crypto.context.hashLength = .bit384
-        XCTAssertEqual(md6Crypto.hash(password: password).value, bit384Hash)
+        XCTAssertEqual(md6Crypto.hash(password: password).hexStringValue(), bit384Hash)
         md6Crypto.context.hashLength = .bit512
-        XCTAssertEqual(md6Crypto.hash(password: password).value, bit512Hash)
+        XCTAssertEqual(md6Crypto.hash(password: password).hexStringValue(), bit512Hash)
     }
 
 }

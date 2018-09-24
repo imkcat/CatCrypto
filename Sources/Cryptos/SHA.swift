@@ -134,47 +134,38 @@ public class CatSHA3Crypto: Contextual, Hashing {
     /// Hash with SHA-3 function.
     ///
     /// - Parameter password: Password string.
-    /// - Returns: Result code of hashing function, 0 if successful, 1 otherwise.
-    func sha3Hash(password: String) -> (errorCode: CInt, hash: String) {
+    /// - Returns: Return a tuple that include error code and raw output.
+    func sha3Hash(password: String) -> (errorCode: CInt, output: [CUnsignedChar]) {
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        let passwordCString = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?
-            .withMemoryRebound(to: CUnsignedChar.self,
-                               capacity: passwordLength, { point in
-                                return point
-            })
-        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: context.hashLength.rawValue)
-        defer {
-            result.deallocate(capacity: context.hashLength.rawValue)
-        }
+        let input: [CUnsignedChar] = (password.cString(using: .utf8)?.map { CUnsignedChar($0) })!
+        var result: [CUnsignedChar] = Array(repeating: 0, count: context.hashLength.rawValue)
         var errorCode: CInt
         switch context.hashLength {
         case .bit224:
-            errorCode = SHA3_224(result, passwordCString, passwordLength)
+            errorCode = SHA3_224(&result, input, passwordLength)
         case .bit256:
-            errorCode = SHA3_256(result, passwordCString, passwordLength)
+            errorCode = SHA3_256(&result, input, passwordLength)
         case .bit384:
-            errorCode = SHA3_384(result, passwordCString, passwordLength)
+            errorCode = SHA3_384(&result, input, passwordLength)
         case .bit512:
-            errorCode = SHA3_512(result, passwordCString, passwordLength)
+            errorCode = SHA3_512(&result, input, passwordLength)
         }
-        let hash = String.hexString(source: result,
-                                    length: context.hashLength.rawValue)
-        return (errorCode, hash)
+        return (errorCode, result)
     }
 
     // MARK: - Hashing
-    public func hash(password: String) -> CatCryptoHashResult {
+    public func hash(password: String) -> CatCryptoResult {
         let result = sha3Hash(password: password)
-        let hashResult = CatCryptoHashResult()
+        let cryptoResult = CatCryptoResult()
         if result.errorCode == 0 {
-            hashResult.value = result.hash
+            cryptoResult.raw = result.output
         } else {
             let error = CatCryptoError()
             error.errorCode = Int(result.errorCode)
             error.errorDescription = "Fail"
-            hashResult.error = error
+            cryptoResult.error = error
         }
-        return hashResult
+        return cryptoResult
     }
 
 }

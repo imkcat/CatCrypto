@@ -29,7 +29,7 @@ public protocol Verification {
     /// - Parameters:
     ///   - hash: Hashed string.
     ///   - password: Original password string.
-    /// - Returns: Return a verified result when verifying task finish.
-    func verify(hash: String, password: String) -> CatCryptoVerifyResult
+    /// - Returns: Return a result when verifying task finish.
+    func verify(hash: String, password: String) -> CatCryptoResult
 
 }

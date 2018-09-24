@@ -24,40 +24,31 @@ import Foundation
 /// Base result class for encrypt, decrypt, hash or verify.
 public class CatCryptoResult {
 
+    public var raw: Any?
+
+    public func boolValue() -> Bool {
+        if raw is Bool {
+            return (raw as? Bool)!
+        }
+        return false
+    }
+
+    public func stringValue() -> String? {
+        if raw is [CUnsignedChar] {
+            return String(cString: (raw as? [CUnsignedChar])!)
+        }
+        return nil
+    }
+
+    public func hexStringValue() -> String? {
+        if raw is [CUnsignedChar] {
+            return (raw as? [CUnsignedChar])?.hexString()
+        }
+        return nil
+    }
+
     /// Error for result.
     public var error: CatCryptoError?
-
-}
-
-/// Hash result class, include a string value.
-public class CatCryptoHashResult: CatCryptoResult {
-
-    /// Hashed value.
-    public var value: String?
-
-}
-
-/// Verify result class, include a boolean value.
-public class CatCryptoVerifyResult: CatCryptoResult {
-
-    /// Verification result.
-    public var value: Bool = false
-
-}
-
-/// Encrypt result class, include a string value.
-public class CatCryptoEncryptResult: CatCryptoResult {
-
-    /// Encrypted value.
-    public var value: String?
-
-}
-
-/// Decrypt result class, include a string value.
-public class CatCryptoDecryptResult: CatCryptoResult {
-
-    /// Decrypted value.
-    public var value: String?
 
 }
 

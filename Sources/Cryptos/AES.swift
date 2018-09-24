@@ -1,9 +1,9 @@
 //
-//  Hashing.swift
+//  AES.swift
 //  CatCrypto
 //
-//  Created by Kcat on 2017/12/22.
-//  Copyright © 2017年 imkcat. All rights reserved.
+//  Created by Kcat on 2018/1/9.
+//  Copyright © 2018年 imkcat. All rights reserved.
 //
 // https://github.com/ImKcat/CatCrypto
 //
@@ -20,14 +20,33 @@
 //
 
 import Foundation
+import CommonCryptoFramework
 
-/// `Hashing` protocol defines the interface about hashing.
-public protocol Hashing {
+public struct CatAESContext {
 
-    /// Hash password string with hashing function.
-    ///
-    /// - Parameter password: Password string for hash.
-    /// - Returns: Return a result when hashing task finish.
-    func hash(password: String) -> CatCryptoResult
+    public init() {}
+
+}
+
+public class CatAESCrypto: Contextual, Encryption, Decryption {
+
+    // MARK: - Contextual
+    public typealias Context = CatAESContext
+
+    public var context: CatAESContext
+
+    public required init(context: CatAESContext = CatAESContext()) {
+        self.context = context
+    }
+
+    // MARK: - Encryption
+    public func encrypt(password: String) -> CatCryptoResult {
+        return CatCryptoResult()
+    }
+
+    // MARK: - Decryption
+    public func decrypt(encryptedPassword: String, encodeMode: StringEncodeMode) -> CatCryptoResult {
+        return CatCryptoResult()
+    }
 
 }

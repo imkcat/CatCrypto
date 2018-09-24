@@ -21,13 +21,13 @@ class ArgonTests: XCTestCase {
     func testNormalHashing() {
         let password = "Hi CatCrypto!"
         argon2Crypto.context = CatArgon2Context()
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
     func testEmptyHashing() {
         let password = ""
         argon2Crypto.context = CatArgon2Context()
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
     func testNormalVerification() {
@@ -36,35 +36,35 @@ class ArgonTests: XCTestCase {
         let password = "Hi CatCrypto!"
         let wrongPassword = "CatCrypto"
         argon2Crypto.context = CatArgon2Context()
-        XCTAssertTrue(argon2Crypto.verify(hash: hash, password: password).value)
-        XCTAssertFalse(argon2Crypto.verify(hash: hash, password: wrongPassword).value)
+        XCTAssertTrue(argon2Crypto.verify(hash: hash, password: password).boolValue())
+        XCTAssertFalse(argon2Crypto.verify(hash: hash, password: wrongPassword).boolValue())
     }
 
     func testIterations() {
         let password = "Hi CatCrypto!"
         argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.iterations = 0
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.iterations = 2 << 33
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
     func testMemery() {
         let password = "Hi CatCrypto!"
         argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.memory = 0
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.memory = 2 << 33
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
     func testParallelism() {
         let password = "Hi CatCrypto!"
         argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.parallelism = 0
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.parallelism = 2 << 32
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
     func testMode() {
@@ -81,33 +81,33 @@ class ArgonTests: XCTestCase {
         argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.salt = UUID().uuidString
         argon2Crypto.context.mode = .argon2d
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
-        XCTAssertTrue(argon2Crypto.verify(hash: argon2dHash, password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
+        XCTAssertTrue(argon2Crypto.verify(hash: argon2dHash, password: password).boolValue())
         argon2Crypto.context.mode = .argon2i
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
-        XCTAssertTrue(argon2Crypto.verify(hash: argon2iHash, password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
+        XCTAssertTrue(argon2Crypto.verify(hash: argon2iHash, password: password).boolValue())
         argon2Crypto.context.mode = .argon2id
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
-        XCTAssertTrue(argon2Crypto.verify(hash: argon2idHash, password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
+        XCTAssertTrue(argon2Crypto.verify(hash: argon2idHash, password: password).boolValue())
     }
 
     func testSalt() {
         let password = "Hi CatCrypto!"
         argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.salt = ""
-        XCTAssertNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.salt = UUID().uuidString
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
     func testHashLength() {
         let password = "Hi CatCrypto!"
         argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.hashLength = 0
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.hashLength = -1
         argon2Crypto.context.hashLength = Int(CUnsignedInt.max) + 1
-        XCTAssertNotNil(argon2Crypto.hash(password: password).value)
+        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
 }

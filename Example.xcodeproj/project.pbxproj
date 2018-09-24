@@ -45,19 +45,19 @@
 			remoteGlobalIDString = C330B4951FDE93AB005AEECC;
 			remoteInfo = "CatCrypto-iOS";
 		};
-		C3A43C6D1FDEBDB3004E32E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C330B4BB1FDE944F005AEECC;
-			remoteInfo = CatCryptoTests;
-		};
 		C3A43C711FDEBDB3004E32E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C330B4961FDE93AB005AEECC;
 			remoteInfo = CatCrypto;
+		};
+		C3F453422157EB7300CFA3D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C328B7921FF4DC4900943D75;
+			remoteInfo = "CatCrypto-iOSTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -145,7 +145,7 @@
 				C3945EA11FE3CD51009A203D /* CatCrypto.framework */,
 				C3945EA31FE3CD51009A203D /* CatCrypto.framework */,
 				C3945EB71FE3CE8B009A203D /* CatCrypto.framework */,
-				C3A43C6E1FDEBDB3004E32E6 /* CatCrypto-iOSTests.xctest */,
+				C3F453432157EB7300CFA3D8 /* CatCrypto-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = imkcat;
 				TargetAttributes = {
 					C330B4E31FDEBC99005AEECC = {
@@ -235,18 +235,18 @@
 			remoteRef = C3945EB61FE3CE8B009A203D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C3A43C6E1FDEBDB3004E32E6 /* CatCrypto-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CatCrypto-iOSTests.xctest";
-			remoteRef = C3A43C6D1FDEBDB3004E32E6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		C3A43C721FDEBDB3004E32E6 /* CatCrypto.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CatCrypto.framework;
 			remoteRef = C3A43C711FDEBDB3004E32E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3F453432157EB7300CFA3D8 /* CatCrypto-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CatCrypto-iOSTests.xctest";
+			remoteRef = C3F453422157EB7300CFA3D8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -310,6 +310,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -317,6 +318,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -367,6 +369,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -374,6 +377,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

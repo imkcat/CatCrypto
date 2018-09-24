@@ -34,8 +34,8 @@ class SHATests: XCTestCase {
         let sha2Hash = "c9fd74f142910d835c22dff40cc943de3e3a8c364c752a488e0e6" +
         "6e0e17f7fea9f5c0e4b8f5f1e64d8e8ec96e97ef4a011704fec3c742d105299ce4ec" +
         "1c30976"
-        XCTAssertEqual(sha1Crypto.hash(password: password).value, sha1Hash)
-        XCTAssertEqual(sha2Crypto.hash(password: password).value, sha2Hash)
+        XCTAssertEqual(sha1Crypto.hash(password: password).hexStringValue(), sha1Hash)
+        XCTAssertEqual(sha2Crypto.hash(password: password).hexStringValue(), sha2Hash)
     }
 
     func testEmptyHashing() {
@@ -44,8 +44,8 @@ class SHATests: XCTestCase {
         let sha2Hash = "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a" +
         "921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af" +
         "927da3e"
-        XCTAssertEqual(sha1Crypto.hash(password: password).value, sha1Hash)
-        XCTAssertEqual(sha2Crypto.hash(password: password).value, sha2Hash)
+        XCTAssertEqual(sha1Crypto.hash(password: password).hexStringValue(), sha1Hash)
+        XCTAssertEqual(sha2Crypto.hash(password: password).hexStringValue(), sha2Hash)
     }
 
     func testSHA2HashLength() {
@@ -60,13 +60,13 @@ class SHATests: XCTestCase {
         "e66e0e17f7fea9f5c0e4b8f5f1e64d8e8ec96e97ef4a011704fec3c742d105299ce4" +
         "ec1c30976"
         sha2Crypto.context.hashLength = .bit224
-        XCTAssertEqual(sha2Crypto.hash(password: password).value, bit224Hash)
+        XCTAssertEqual(sha2Crypto.hash(password: password).hexStringValue(), bit224Hash)
         sha2Crypto.context.hashLength = .bit256
-        XCTAssertEqual(sha2Crypto.hash(password: password).value, bit256Hash)
+        XCTAssertEqual(sha2Crypto.hash(password: password).hexStringValue(), bit256Hash)
         sha2Crypto.context.hashLength = .bit384
-        XCTAssertEqual(sha2Crypto.hash(password: password).value, bit384Hash)
+        XCTAssertEqual(sha2Crypto.hash(password: password).hexStringValue(), bit384Hash)
         sha2Crypto.context.hashLength = .bit512
-        XCTAssertEqual(sha2Crypto.hash(password: password).value, bit512Hash)
+        XCTAssertEqual(sha2Crypto.hash(password: password).hexStringValue(), bit512Hash)
     }
 
     func testSHA3HashLength() {
@@ -81,13 +81,13 @@ class SHATests: XCTestCase {
         "b12a41f195000eff6a127ca66f19aa78754abea079157397d4a85e0e1c3c60f3f894" +
         "80b0159c6"
         sha3Crypto.context.hashLength = .bit224
-        XCTAssertEqual(sha3Crypto.hash(password: password).value, bit224Hash)
+        XCTAssertEqual(sha3Crypto.hash(password: password).hexStringValue(), bit224Hash)
         sha3Crypto.context.hashLength = .bit256
-        XCTAssertEqual(sha3Crypto.hash(password: password).value, bit256Hash)
+        XCTAssertEqual(sha3Crypto.hash(password: password).hexStringValue(), bit256Hash)
         sha3Crypto.context.hashLength = .bit384
-        XCTAssertEqual(sha3Crypto.hash(password: password).value, bit384Hash)
+        XCTAssertEqual(sha3Crypto.hash(password: password).hexStringValue(), bit384Hash)
         sha3Crypto.context.hashLength = .bit512
-        XCTAssertEqual(sha3Crypto.hash(password: password).value, bit512Hash)
+        XCTAssertEqual(sha3Crypto.hash(password: password).hexStringValue(), bit512Hash)
     }
 
 }

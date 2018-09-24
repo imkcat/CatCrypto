@@ -151,41 +151,31 @@ public class CatMD6Crypto: Contextual, Hashing {
     /// Hash with MD6 function.
     ///
     /// - Parameter password: Password string.
-    /// - Returns: Return a tuple that include error code and hashed string.
-    func md6Hash(password: String) -> (errorCode: MD6ErrorCode, hash: String) {
+    /// - Returns: Return a tuple that include error code and raw output.
+    func md6Hash(password: String) -> (errorCode: MD6ErrorCode, output: [CUnsignedChar]) {
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: self.context.hashLength.rawValue)
-        defer {
-            result.deallocate(capacity: self.context.hashLength.rawValue)
-        }
-        let data = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?
-            .withMemoryRebound(to: CUnsignedChar.self,
-                               capacity: passwordLength, { point in
-                                return point
-            })
-        let rawErrorCode = md6_hash(CInt(self.context.hashLength.rawValue * 8),
-                                     data,
-                                     CUnsignedLongLong(passwordLength), result)
+        var result: [CUnsignedChar] = Array(repeating: 0, count: self.context.hashLength.rawValue)
+        var data: [CUnsignedChar] = (password.cString(using: .utf8)?.map { CUnsignedChar($0) })!
+        let rawErrorCode = md6_hash(CInt(self.context.hashLength.rawValue * 8), &data,
+                                    CUnsignedLongLong(passwordLength), &result)
         let errorCode = MD6ErrorCode(rawValue: rawErrorCode) ?? MD6ErrorCode.fail
-        let hash = String.hexString(source: result,
-                                    length: self.context.hashLength.rawValue)
-        return (errorCode, hash)
+        return (errorCode, result)
     }
 
     // MARK: - Hashing
-    public func hash(password: String) -> CatCryptoHashResult {
+    public func hash(password: String) -> CatCryptoResult {
         let result = md6Hash(password: password)
-        let hashResult = CatCryptoHashResult()
+        let cryptoResult = CatCryptoResult()
         switch result.errorCode {
         case .success:
-            hashResult.value = result.hash
+            cryptoResult.raw = result.output
         default:
             let error = CatCryptoError()
             error.errorCode = Int(result.errorCode.rawValue)
             error.errorDescription = result.errorCode.description
-            hashResult.error = error
+            cryptoResult.error = error
         }
-        return hashResult
+        return cryptoResult
     }
 
 }

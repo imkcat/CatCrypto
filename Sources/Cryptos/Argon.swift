@@ -142,17 +142,14 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     /// Hash with Argon2 function.
     ///
     /// - Parameter password: Password string.
-    /// - Returns: Return a tuple that include error code and hashed string.
-    func argon2Hash(password: String) -> (errorCode: CInt, hash: String) {
+    /// - Returns: Return a tuple that include error code and raw output.
+    func argon2Hash(password: String) -> (errorCode: CInt, output: [CUnsignedChar]) {
         let passwordCString = password.cString(using: .utf8)
         let passwordLength = password.lengthOfBytes(using: .utf8)
         let saltCString = context.salt.cString(using: .utf8)
         let saltLength = context.salt.lengthOfBytes(using: .utf8)
         let encodedLength = argon2EncodedLength()
-        let result = UnsafeMutablePointer<CChar>.allocate(capacity: encodedLength)
-        defer {
-            result.deallocate(capacity: encodedLength)
-        }
+        var result: [CChar] = Array(repeating: 0, count: encodedLength)
         var errorCode: CInt
         switch context.mode {
         case .argon2d:
@@ -160,21 +157,21 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
                                              CUnsignedInt(context.parallelism), passwordCString,
                                              passwordLength, saltCString,
                                              saltLength, context.hashLength,
-                                             result, encodedLength)
+                                             &result, encodedLength)
         case .argon2i:
             errorCode = argon2i_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
                                              CUnsignedInt(context.parallelism), passwordCString,
                                              passwordLength, saltCString,
                                              saltLength, context.hashLength,
-                                             result, encodedLength)
+                                             &result, encodedLength)
         case .argon2id:
             errorCode = argon2id_hash_encoded(CUnsignedInt(context.iterations), CUnsignedInt(context.memory),
                                               CUnsignedInt(context.parallelism), passwordCString,
                                               passwordLength, saltCString,
                                               saltLength, context.hashLength,
-                                              result, encodedLength)
+                                              &result, encodedLength)
         }
-        return (errorCode, String(cString: result))
+        return (errorCode, result.map { CUnsignedChar($0) })
     }
 
     /// Verify with Argon2 function.
@@ -203,11 +200,11 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     }
 
     // MARK: - Hashing
-    public func hash(password: String) -> CatCryptoHashResult {
+    public func hash(password: String) -> CatCryptoResult {
         let result = argon2Hash(password: password)
-        let hashResult = CatCryptoHashResult()
+        let hashResult = CatCryptoResult()
         if result.errorCode == 0 {
-            hashResult.value = result.hash
+            hashResult.raw = result.output
         } else {
             let error = CatCryptoError()
             error.errorCode = Int(result.errorCode)
@@ -218,18 +215,18 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     }
 
     // MARK: - Verification
-    public func verify(hash: String, password: String) -> CatCryptoVerifyResult {
+    public func verify(hash: String, password: String) -> CatCryptoResult {
         let errorCode = argon2Verify(hash: hash, password: password)
-        let verifyResult = CatCryptoVerifyResult()
+        let cryptoResult = CatCryptoResult()
         if errorCode == 0 {
-            verifyResult.value = true
+            cryptoResult.raw = true
         } else {
             let error = CatCryptoError()
             error.errorCode = Int(errorCode)
             error.errorDescription = String(cString: argon2_error_message(errorCode))
-            verifyResult.error = error
+            cryptoResult.error = error
         }
-        return verifyResult
+        return cryptoResult
     }
 
 }

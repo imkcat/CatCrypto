@@ -21,20 +21,43 @@
 
 import Foundation
 
+public enum StringEncodeMode {
+    case hex
+    case base64
+}
+
 extension String {
 
-    /// Process a hex string from an unsigned char array point.
+    /// Process a hex string.
     ///
-    /// - Parameters:
-    ///   - source: Unsigned char array point to process.
-    ///   - length: Array length.
     /// - Returns: Desired hex string.
-    static func hexString(source: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
+    func hex() -> String {
+        let source = self.cString(using: .utf8) ?? []
         var hexString = String()
-        for index in 0 ..< length {
+        for index in 0 ..< source.count {
             hexString = hexString.appendingFormat("%02x", source[index])
         }
         return hexString
+    }
+
+    func raw(encodeMode: StringEncodeMode = .hex) -> String {
+        switch encodeMode {
+        case .hex: return self.rawFromHex()
+        default: return ""
+        }
+    }
+
+    func rawFromHex() -> String {
+        let scalars = self.unicodeScalars
+        var bytes = [UInt8](repeating: 0, count: (scalars.count + 1) >> 1)
+        for (index, scalar) in scalars.enumerated() {
+            var nibble = scalar.hexNibble
+            if index & 1 == 0 {
+                nibble <<= 4
+            }
+            bytes[index >> 1] |= nibble
+        }
+        return String(cString: bytes)
     }
 
     /// Generate an appoint length string fill by zero.
