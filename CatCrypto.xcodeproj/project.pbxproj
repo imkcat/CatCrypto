@@ -41,7 +41,7 @@
 		C36729121FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
 		C36729131FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
 		C36729141FF496D4005BE1A8 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36729101FF496D4005BE1A8 /* Crypto.swift */; };
-		C37D7F8820085AAE009997C9 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D7F8720085AAE009997C9 /* AES.swift */; };
+		C37D7F8820085AAE009997C9 /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D7F8720085AAE009997C9 /* AESTests.swift */; };
 		C38A78F42003C01C0028D981 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F32003C01C0028D981 /* Encryption.swift */; };
 		C38A78F52003C01C0028D981 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F32003C01C0028D981 /* Encryption.swift */; };
 		C38A78F62003C01C0028D981 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38A78F32003C01C0028D981 /* Encryption.swift */; };
@@ -161,7 +161,7 @@
 		C358E78E1FE2318C00A352D0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C367290B1FF4920E005BE1A8 /* SHA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA.swift; sourceTree = "<group>"; };
 		C36729101FF496D4005BE1A8 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		C37D7F8720085AAE009997C9 /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		C37D7F8720085AAE009997C9 /* AESTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESTests.swift; sourceTree = "<group>"; };
 		C38A78F32003C01C0028D981 /* Encryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryption.swift; sourceTree = "<group>"; };
 		C38A78F82003C2260028D981 /* Decryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decryption.swift; sourceTree = "<group>"; };
 		C393A5B91FF0F85600B69167 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 		C328B7931FF4DC4900943D75 /* CatCrypto-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				C37D7F8720085AAE009997C9 /* AES.swift */,
+				C37D7F8720085AAE009997C9 /* AESTests.swift */,
 				C3DF7A301FF73BB4007BDC59 /* ArgonTests.swift */,
 				C328B79D1FF4DCC400943D75 /* MessageDigestCryptoTests.swift */,
 				C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */,
@@ -702,7 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B0F84D1FF6024300FB4DC8 /* SHATests.swift in Sources */,
-				C37D7F8820085AAE009997C9 /* AES.swift in Sources */,
+				C37D7F8820085AAE009997C9 /* AESTests.swift in Sources */,
 				C328B79E1FF4DCC400943D75 /* MessageDigestCryptoTests.swift in Sources */,
 				C3DF7A311FF73BB4007BDC59 /* ArgonTests.swift in Sources */,
 			);
