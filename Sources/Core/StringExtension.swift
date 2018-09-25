@@ -21,17 +21,24 @@
 
 import Foundation
 
+/// Encode modes.
 public enum StringEncodeMode {
+
+    /// Hexadecimal.
     case hex
+
+    // TODO: Base64 encode
+    /// Base64.
     case base64
+
 }
 
 extension String {
 
-    /// Process a hex string.
+    /// Encode to hexadecimal string.
     ///
-    /// - Returns: Desired hex string.
-    func hex() -> String {
+    /// - Returns: Encoded string.
+    func hexEncode() -> String {
         let source = self.cString(using: .utf8) ?? []
         var hexString = String()
         for index in 0 ..< source.count {
@@ -40,24 +47,27 @@ extension String {
         return hexString
     }
 
-    func raw(encodeMode: StringEncodeMode = .hex) -> String {
+    /// Decode string with desire encode mode.
+    ///
+    /// - Parameter encodeMode: Mode for encode.
+    /// - Returns: Bytes array.
+    func decode(encodeMode: StringEncodeMode = .hex) -> [UInt8] {
         switch encodeMode {
-        case .hex: return self.rawFromHex()
-        default: return ""
+        case .hex: return self.hexDecode()
+        default: return []
         }
     }
 
-    func rawFromHex() -> String {
-        let scalars = self.unicodeScalars
-        var bytes = [UInt8](repeating: 0, count: (scalars.count + 1) >> 1)
-        for (index, scalar) in scalars.enumerated() {
-            var nibble = scalar.hexNibble
-            if index & 1 == 0 {
-                nibble <<= 4
-            }
-            bytes[index >> 1] |= nibble
+    /// Decode to bytes array.
+    ///
+    /// - Returns: Decoded bytes array.
+    func hexDecode() -> [UInt8] {
+        var start = startIndex
+        return (0...count/2).compactMap {  _ in
+            let end = index(start, offsetBy: 2, limitedBy: endIndex) ?? endIndex
+            defer { start = end }
+            return UInt8(String(self[start..<end]), radix: 16)
         }
-        return String(cString: bytes)
     }
 
     /// Generate an appoint length string fill by zero.

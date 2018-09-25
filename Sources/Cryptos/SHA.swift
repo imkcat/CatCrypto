@@ -129,11 +129,11 @@ public class CatSHA3Crypto: Contextual, Hashing {
     ///
     /// - Parameter password: Password string.
     /// - Returns: Return a tuple that include error code and raw output.
-    func sha3Hash(password: String) -> (errorCode: CInt, output: [CUnsignedChar]) {
+    func sha3Hash(password: String) -> (errorCode: Int32, output: [UInt8]) {
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        let input: [CUnsignedChar] = (password.cString(using: .utf8)?.map { CUnsignedChar($0) })!
-        var result: [CUnsignedChar] = Array(repeating: 0, count: context.hashLength.rawValue)
-        var errorCode: CInt
+        let input: [UInt8] = [UInt8](password.utf8)
+        var result: [UInt8] = Array(repeating: 0, count: context.hashLength.rawValue)
+        var errorCode: Int32
         switch context.hashLength {
         case .bit224:
             errorCode = SHA3_224(&result, input, passwordLength)
@@ -150,16 +150,11 @@ public class CatSHA3Crypto: Contextual, Hashing {
     // MARK: - Hashing
     public func hash(password: String) -> CatCryptoResult {
         let result = sha3Hash(password: password)
-        let cryptoResult = CatCryptoResult()
         if result.errorCode == 0 {
-            cryptoResult.raw = result.output
+            return CatCryptoResult(raw: result.output)
         } else {
-            let error = CatCryptoError()
-            error.errorCode = Int(result.errorCode)
-            error.errorDescription = "Fail"
-            cryptoResult.error = error
+            return CatCryptoResult(error: CatCryptoError(errorCode: Int(result.errorCode), errorDescription: "Fail"))
         }
-        return cryptoResult
     }
 
 }

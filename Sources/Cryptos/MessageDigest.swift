@@ -23,7 +23,7 @@ import Foundation
 import CommonCryptoFramework
 import MD6
 
-enum MD6ErrorCode: CInt, EnumDescription {
+enum MD6ErrorCode: Int32, EnumDescription {
 
     case success = 0
     case fail = 1
@@ -148,12 +148,12 @@ public class CatMD6Crypto: Contextual, Hashing {
     ///
     /// - Parameter password: Password string.
     /// - Returns: Return a tuple that include error code and raw output.
-    func md6Hash(password: String) -> (errorCode: MD6ErrorCode, output: [CUnsignedChar]) {
+    func md6Hash(password: String) -> (errorCode: MD6ErrorCode, output: [UInt8]) {
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        var result: [CUnsignedChar] = Array(repeating: 0, count: self.context.hashLength.rawValue)
-        var data: [CUnsignedChar] = (password.cString(using: .utf8)?.map { CUnsignedChar($0) })!
-        let rawErrorCode = md6_hash(CInt(self.context.hashLength.rawValue * 8), &data,
-                                    CUnsignedLongLong(passwordLength), &result)
+        var result: [UInt8] = Array(repeating: 0, count: self.context.hashLength.rawValue)
+        var data: [UInt8] = [UInt8](password.utf8)
+        let rawErrorCode = md6_hash(Int32(self.context.hashLength.rawValue * 8), &data,
+                                    UInt64(passwordLength), &result)
         let errorCode = MD6ErrorCode(rawValue: rawErrorCode) ?? MD6ErrorCode.fail
         return (errorCode, result)
     }
@@ -161,17 +161,12 @@ public class CatMD6Crypto: Contextual, Hashing {
     // MARK: - Hashing
     public func hash(password: String) -> CatCryptoResult {
         let result = md6Hash(password: password)
-        let cryptoResult = CatCryptoResult()
         switch result.errorCode {
         case .success:
-            cryptoResult.raw = result.output
+            return CatCryptoResult(raw: result.output)
         default:
-            let error = CatCryptoError()
-            error.errorCode = Int(result.errorCode.rawValue)
-            error.errorDescription = result.errorCode.description
-            cryptoResult.error = error
+            return CatCryptoResult(error: CatCryptoError(errorCode: Int(result.errorCode.rawValue), errorDescription: result.errorCode.description))
         }
-        return cryptoResult
     }
 
 }

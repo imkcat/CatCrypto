@@ -11,7 +11,6 @@
 		C3077C552010408F00407FDF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3077C532010408F00407FDF /* ArrayExtension.swift */; };
 		C3077C562010408F00407FDF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3077C532010408F00407FDF /* ArrayExtension.swift */; };
 		C3077C572010408F00407FDF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3077C532010408F00407FDF /* ArrayExtension.swift */; };
-		C3111FD82158DC2100E0A909 /* UnicodeScalarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3111FD72158DC2100E0A909 /* UnicodeScalarExtension.swift */; };
 		C31E52FC1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
 		C31E52FD1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
 		C31E52FE1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
@@ -132,7 +131,6 @@
 
 /* Begin PBXFileReference section */
 		C3077C532010408F00407FDF /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		C3111FD72158DC2100E0A909 /* UnicodeScalarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeScalarExtension.swift; sourceTree = "<group>"; };
 		C31E52EB1FE906B2004C1F12 /* md6_mode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md6_mode.c; sourceTree = "<group>"; };
 		C31E52EC1FE906B2004C1F12 /* md6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md6.h; sourceTree = "<group>"; };
 		C31E52ED1FE906B2004C1F12 /* md6_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md6_compress.c; sourceTree = "<group>"; };
@@ -374,7 +372,6 @@
 		C36729181FF498A6005BE1A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C3111FD72158DC2100E0A909 /* UnicodeScalarExtension.swift */,
 				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
 				C3077C532010408F00407FDF /* ArrayExtension.swift */,
 				C39EDD6C1FECF6F80081108F /* Helper.swift */,
@@ -695,7 +692,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -720,7 +717,6 @@
 				C39EDD6D1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FC1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729111FF496D4005BE1A8 /* Crypto.swift in Sources */,
-				C3111FD82158DC2100E0A909 /* UnicodeScalarExtension.swift in Sources */,
 				C3077C542010408F00407FDF /* ArrayExtension.swift in Sources */,
 				C3BDFE181FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD771FECF9D00081108F /* Argon.swift in Sources */,

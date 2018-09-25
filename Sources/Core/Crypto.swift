@@ -76,6 +76,7 @@ enum CatCCCryptoErrorCode: Int, EnumDescription {
 
 }
 
+/// Operation for CommonCrypto.
 enum CatCCOperation {
 
     case encrypt
@@ -119,10 +120,10 @@ enum CatCCHashingAlgorithm {
 
 }
 
-/// `CatCCHashingCrypto` just for code convenient and coupling, and it just as father class for hash function crypto class depend on `CommonCrypto`.
+/// `CatCCHashingCrypto` just for code convenient and coupling, and it just as super class for hash function crypto class depend on `CommonCrypto`.
 public class CatCCHashingCrypto: Hashing {
 
-    /// Algorithm to switch function from CommonCrypto.
+    /// Algorithm to switch function for CommonCrypto.
     var algorithm: CatCCHashingAlgorithm = .md5 {
         didSet {
             switch algorithm {
@@ -148,10 +149,10 @@ public class CatCCHashingCrypto: Hashing {
     ///
     /// - Parameter password: Password string to hasing.
     /// - Returns: Return a tuple that include error code and raw output.
-    func commonCryptoHash(password: String) -> (errorCode: CatCCCryptoErrorCode, output: [CUnsignedChar]) {
+    func commonCryptoHash(password: String) -> (errorCode: CatCCCryptoErrorCode, output: [UInt8]) {
         let passwordCString = password.cString(using: .utf8)
-        let passwordLength = CC_LONG(password.lengthOfBytes(using: .utf8))
-        var result: [CUnsignedChar] = Array(repeating: 0, count: digestLength)
+        let passwordLength = UInt32(password.lengthOfBytes(using: .utf8))
+        var result: [UInt8] = Array(repeating: 0, count: digestLength)
         switch algorithm {
         case .md2: CC_MD2(passwordCString, passwordLength, &result)
         case .md4: CC_MD4(passwordCString, passwordLength, &result)
@@ -168,9 +169,7 @@ public class CatCCHashingCrypto: Hashing {
     // MARK: - Hashing
     public func hash(password: String) -> CatCryptoResult {
         let result = commonCryptoHash(password: password)
-        let cryptoResult = CatCryptoResult()
-        cryptoResult.raw = result.output
-        return cryptoResult
+        return CatCryptoResult(raw: result.output)
     }
 
 }
@@ -181,6 +180,7 @@ enum CatCCEncryptionAlgorithm: Int {
     /// AES function.
     case aes
 
+    // TODO: Upcoming function
     /// DES function.
     case des
 
@@ -202,17 +202,20 @@ enum CatCCEncryptionAlgorithm: Int {
     var ccValue: CCAlgorithm {
         switch self {
         case .aes: return CCAlgorithm(kCCAlgorithmAES128)
-        case .des: return CCAlgorithm(kCCAlgorithmDES)
-        case .tdes: return CCAlgorithm(kCCAlgorithm3DES)
-        case .rc2: return CCAlgorithm(kCCAlgorithmRC2)
-        case .rc4: return CCAlgorithm(kCCAlgorithmRC4)
-        case .cast: return CCAlgorithm(kCCAlgorithmCAST)
-        case .blowfish: return CCAlgorithm(kCCAlgorithmBlowfish)
+        default: return CCAlgorithm(kCCAlgorithmAES128)
+            // TODO: Upcoming function
+            //        case .des: return CCAlgorithm(kCCAlgorithmDES)
+            //        case .tdes: return CCAlgorithm(kCCAlgorithm3DES)
+            //        case .rc2: return CCAlgorithm(kCCAlgorithmRC2)
+            //        case .rc4: return CCAlgorithm(kCCAlgorithmRC4)
+            //        case .cast: return CCAlgorithm(kCCAlgorithmCAST)
+            //        case .blowfish: return CCAlgorithm(kCCAlgorithmBlowfish)
         }
     }
 
 }
 
+/// Cipher modes for CommonCrypto.
 enum CatCCEncryptionMode {
 
     case ecb
@@ -237,9 +240,13 @@ enum CatCCEncryptionMode {
 
 }
 
+/// Block ciphers padding for CommonCrypto.
 enum CatCCEncryptionPadding {
 
+    /// No padding.
     case noPadding
+
+    /// PKCS7 Padding.
     case pkcs7Padding
 
     var ccValue: CCPadding {
@@ -251,37 +258,29 @@ enum CatCCEncryptionPadding {
 
 }
 
-/// `CatCCEncryptionCrypto` just for code convenient and coupling, and it just as
-/// father class for hash function crypto class depend on `CommonCrypto`.
+/// `CatCCEncryptionCrypto` just for code convenient and coupling, and it just as super class for hash function crypto class depend on
+/// `CommonCrypto`.
 public class CatCCEncryptionCrypto: Encryption, Decryption {
 
-    /// Algorithm to switch function from CommonCrypto.
-    var algorithm: CatCCEncryptionAlgorithm = .aes {
-        didSet {
-            switch algorithm {
-            case .aes: blockSize = kCCBlockSizeAES128
-            case .des: blockSize = kCCBlockSizeDES
-            case .tdes: blockSize = kCCBlockSize3DES
-            case .rc2: blockSize = kCCBlockSizeRC2
-            case .rc4: blockSize = 0
-            case .cast: blockSize = kCCBlockSizeCAST
-            case .blowfish: blockSize = kCCBlockSizeBlowfish
-            }
-        }
-    }
+    /// Algorithm to switch function for CommonCrypto.
+    var algorithm: CatCCEncryptionAlgorithm = .aes
 
+    /// Cipher modes.
     var mode: CatCCEncryptionMode = .ecb
 
-    var padding: CatCCEncryptionPadding = .pkcs7Padding
+    /// Block ciphers padding.
+    var padding: CatCCEncryptionPadding = .noPadding
 
+    /// Initialization vector.
     var initializationVector: String = String.zeroString(length: 32)
 
-    private var blockSize: Int = kCCBlockSizeAES128
-
+    /// String to key.
     var key: String = String.zeroString(length: 32)
 
+    /// String to tweak, only use in XEX-based Tweaked CodeBook (XTS) mode.
     var tweak: String = "tweak"
 
+    /// The number of rounds of the cipher.
     var numberOfRounds: Int = 0
 
     /// Digest length in bytes to hash function.
@@ -295,9 +294,9 @@ public class CatCCEncryptionCrypto: Encryption, Decryption {
     ///
     /// - Parameters:
     ///   - operation: Operation for `CommonCrypto` to process.
-    ///   - password: Password for encrypt or decrypt.
+    ///   - raw: Raw for encrypt or decrypt.
     /// - Returns: Return a crypto result.
-    func commonCryptoOperation(operation: CatCCOperation, raw: [CChar]) -> CatCryptoResult {
+    func commonCryptoOperation(operation: CatCCOperation, raw: [UInt8]) -> CatCryptoResult {
         let rawLength = raw.count
         let ivCString = initializationVector.cString(using: .utf8)
         let keyCString = key.cString(using: .utf8)
@@ -305,55 +304,51 @@ public class CatCCEncryptionCrypto: Encryption, Decryption {
         let tweakCString = tweak.cString(using: .utf8)
         let tweakLength = tweak.lengthOfBytes(using: .utf8)
         var cryptorRef: CCCryptorRef?
-        let cryptorCreateState = CCCryptorCreateWithMode(operation.ccValue, mode.ccValue, algorithm.ccValue,
-                                                         padding.ccValue, ivCString, keyCString, keyLength,
-                                                         tweakCString, tweakLength, Int32(numberOfRounds),
+        let cryptorCreateState = CCCryptorCreateWithMode(operation.ccValue, mode.ccValue, algorithm.ccValue, padding.ccValue, ivCString, keyCString,
+                                                         keyLength, tweakCString, tweakLength, Int32(numberOfRounds),
                                                          CCModeOptions(kCCModeOptionCTR_BE), &cryptorRef)
-        let resultLength = CCCryptorGetOutputLength(cryptorRef, rawLength, true)
-        var result: [CUnsignedChar] = Array(repeating: 0, count: resultLength)
-        var dataOutMoved: Int = 0
-        let cryptorUpdateState = CCCryptorUpdate(cryptorRef, raw, rawLength,
-                                                 &result, resultLength, &dataOutMoved)
-        let cryptorFinalState = CCCryptorFinal(cryptorRef, &result, resultLength, &dataOutMoved)
-        let cryptoResult = CatCryptoResult()
         let createErrorCode = CatCCCryptoErrorCode(errorCode: Int(cryptorCreateState))
-        let updateErrorCode = CatCCCryptoErrorCode(errorCode: Int(cryptorUpdateState))
-        let finalErrorCode = CatCCCryptoErrorCode(errorCode: Int(cryptorFinalState))
         guard createErrorCode == .success else {
-            let error = CatCryptoError()
-            error.errorCode = createErrorCode.rawValue
-            error.errorDescription = createErrorCode.description
-            cryptoResult.error = error
-            return cryptoResult
+            return CatCryptoResult(error: CatCryptoError(errorCode: createErrorCode.rawValue, errorDescription: createErrorCode.description))
         }
+        var result: [CUnsignedChar] = []
+        let bufferLength = CCCryptorGetOutputLength(cryptorRef, rawLength, true)
+        var buffer: [CUnsignedChar] = Array(repeating: 0, count: bufferLength)
+        var dataOutLength: Int = 0
+        let cryptorUpdateState = CCCryptorUpdate(cryptorRef, raw, rawLength, &buffer, bufferLength, &dataOutLength)
+        let updateErrorCode = CatCCCryptoErrorCode(errorCode: Int(cryptorUpdateState))
         guard updateErrorCode == .success else {
-            let error = CatCryptoError()
-            error.errorCode = updateErrorCode.rawValue
-            error.errorDescription = updateErrorCode.description
-            cryptoResult.error = error
-            return cryptoResult
+            return CatCryptoResult(error: CatCryptoError(errorCode: updateErrorCode.rawValue, errorDescription: updateErrorCode.description))
         }
+        if dataOutLength != 0 {
+            result.append(contentsOf: buffer[0..<dataOutLength])
+        }
+        let cryptorFinalState = CCCryptorFinal(cryptorRef, &buffer, bufferLength, &dataOutLength)
+        let finalErrorCode = CatCCCryptoErrorCode(errorCode: Int(cryptorFinalState))
         guard finalErrorCode == .success else {
-            let error = CatCryptoError()
-            error.errorCode = finalErrorCode.rawValue
-            error.errorDescription = finalErrorCode.description
-            cryptoResult.error = error
-            return cryptoResult
+            return CatCryptoResult(error: CatCryptoError(errorCode: finalErrorCode.rawValue, errorDescription: finalErrorCode.description))
         }
-        cryptoResult.raw = Array(result[0 ..< resultLength])
-        return cryptoResult
+        if dataOutLength != 0 {
+            result.append(contentsOf: buffer[0..<dataOutLength])
+        }
+        let cryptorReleaseState = CCCryptorRelease(cryptorRef)
+        let releaseErrorCode = CatCCCryptoErrorCode(errorCode: Int(cryptorReleaseState))
+        guard releaseErrorCode == .success else {
+            return CatCryptoResult(error: CatCryptoError(errorCode: releaseErrorCode.rawValue, errorDescription: releaseErrorCode.description))
+        }
+        return CatCryptoResult(raw: result, error: nil)
     }
 
     // MARK: - Encryption
     public func encrypt(password: String) -> CatCryptoResult {
-        return commonCryptoOperation(operation: .encrypt, raw: password.cString(using: .utf8) ?? [])
+        return commonCryptoOperation(operation: .encrypt, raw: [UInt8](password.utf8))
     }
 
     // MARK: - Decryption
     public func decrypt(encryptedPassword: String, encodeMode: StringEncodeMode) -> CatCryptoResult {
         switch encodeMode {
-        case .hex: return commonCryptoOperation(operation: .decrypt, raw: encryptedPassword.raw(encodeMode: .hex).cString(using: .utf8) ?? [])
-        case .base64: return commonCryptoOperation(operation: .decrypt, raw: encryptedPassword.raw(encodeMode: .hex).cString(using: .utf8) ?? [])
+        case .hex: return commonCryptoOperation(operation: .decrypt, raw: encryptedPassword.decode(encodeMode: .hex))
+        default: return CatCryptoResult()
         }
     }
 

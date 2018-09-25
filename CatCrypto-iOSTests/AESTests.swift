@@ -26,10 +26,12 @@ class AES: XCTestCase {
     func testNormalEncrypt() {
         aesCrypto.algorithm = .aes
         aesCrypto.mode = .ecb
-        let encryptedResult = aesCrypto.encrypt(password: "CatCrypto")
-        let hexString = encryptedResult.hexStringValue()
-        print(hexString)
-        print(aesCrypto.decrypt(encryptedPassword: hexString ?? "", encodeMode: .hex).stringValue())
+        print([UInt8]("CatCrypt".utf8))
+        let encryptedResult = aesCrypto.encrypt(password: "CatCry")
+        let encryptedRaw = encryptedResult.raw as? [UInt8] ?? []
+        let decryptedResult = aesCrypto.commonCryptoOperation(operation: .decrypt, raw: encryptedRaw)
+        print(decryptedResult.raw)
+        print(decryptedResult.stringValue())
 //        print(encryptedResult.hexStringValue())
 //        print(aesCrypto.decrypt(encryptedPassword: encryptedResult.stringValue()!).stringValue())
 //        let decryptedString = aesCrypto.decrypt(encryptedPassword: encryptedString!).stringValue()

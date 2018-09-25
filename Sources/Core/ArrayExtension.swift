@@ -23,15 +23,18 @@ import Foundation
 
 extension Array {
 
-    func hexString() -> String? {
-        if self is [CUnsignedChar] {
+    /// Encode to hexadecimal string.
+    ///
+    /// - Returns: Encoded string.
+    func hexEncode() -> String {
+        if self is [UInt8] {
             var hexString = String()
             for element in self {
-                hexString = hexString.appendingFormat("%02x", (element as? CUnsignedChar)!)
+                hexString = hexString.appendingFormat("%02x", (element as? UInt8)!)
             }
             return hexString
         }
-        return nil
+        return ""
     }
 
 }

@@ -22,7 +22,7 @@
 import Foundation
 
 /// Base result class for encrypt, decrypt, hash or verify.
-public class CatCryptoResult {
+public struct CatCryptoResult {
 
     public var raw: Any?
 
@@ -34,15 +34,15 @@ public class CatCryptoResult {
     }
 
     public func stringValue() -> String? {
-        if raw is [CUnsignedChar] {
-            return String(cString: (raw as? [CUnsignedChar])!)
+        if raw is [UInt8] {
+            return String(bytes: raw as? [UInt8] ?? [], encoding: .utf8)
         }
         return nil
     }
 
     public func hexStringValue() -> String? {
-        if raw is [CUnsignedChar] {
-            return (raw as? [CUnsignedChar])?.hexString()
+        if raw is [UInt8] {
+            return (raw as? [UInt8])?.hexEncode()
         }
         return nil
     }
@@ -52,8 +52,20 @@ public class CatCryptoResult {
 
 }
 
+extension CatCryptoResult {
+
+    init(raw: Any?) {
+        self.raw = raw
+    }
+
+    init(error: CatCryptoError?) {
+        self.error = error
+    }
+
+}
+
 /// Error for descript result.
-public class CatCryptoError: LocalizedError {
+public struct CatCryptoError: LocalizedError {
 
     /// Code number for error condition.
     public var errorCode: Int = 0
