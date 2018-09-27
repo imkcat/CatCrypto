@@ -24,8 +24,12 @@ import Foundation
 /// Base result class for encrypt, decrypt, hash or verify.
 public struct CatCryptoResult {
 
+    /// Raw object.
     public var raw: Any?
 
+    /// Process to bool value.
+    ///
+    /// - Returns: Bool value.
     public func boolValue() -> Bool {
         if raw is Bool {
             return (raw as? Bool)!
@@ -33,18 +37,24 @@ public struct CatCryptoResult {
         return false
     }
 
-    public func stringValue() -> String? {
+    /// Process to string value.
+    ///
+    /// - Returns: String value.
+    public func stringValue() -> String {
         if raw is [UInt8] {
-            return String(bytes: raw as? [UInt8] ?? [], encoding: .utf8)
+            return String(bytes: raw as? [UInt8] ?? [], encoding: .utf8) ?? ""
         }
-        return nil
+        return ""
     }
 
-    public func hexStringValue() -> String? {
+    /// Process to hex string value.
+    ///
+    /// - Returns: Hex string value.
+    public func hexStringValue() -> String {
         if raw is [UInt8] {
-            return (raw as? [UInt8])?.hexEncode()
+            return (raw as? [UInt8])?.hexEncode() ?? ""
         }
-        return nil
+        return ""
     }
 
     /// Error for result.
