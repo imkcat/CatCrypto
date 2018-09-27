@@ -121,7 +121,7 @@ public enum CatMD6HashLength: Int {
 }
 
 /// Context for MD6 crypto.
-public struct CatMD6Context {
+public class CatMD6Context {
 
     /// Desired bit-length of the hash function output.
     public var hashLength: CatMD6HashLength = .bit512

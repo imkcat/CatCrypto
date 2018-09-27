@@ -21,20 +21,50 @@
 
 import Foundation
 
+/// Encode modes.
+public enum EncodeMode {
+
+    /// Hexadecimal.
+    case hex
+
+    /// Base64.
+    case base64
+
+}
+
 extension Array {
+
+    /// Encode bytes with desire mode.
+    ///
+    /// - Parameter encodeMode: Mode for encode.
+    /// - Returns: Encoded string.
+    func encode(encodeMode: EncodeMode = .hex) -> String {
+        if self is [UInt8] {
+            switch encodeMode {
+            case .hex: return self.hexEncode()
+            case .base64: return self.base64Encode()
+            }
+        }
+        return ""
+    }
 
     /// Encode to hexadecimal string.
     ///
     /// - Returns: Encoded string.
     func hexEncode() -> String {
-        if self is [UInt8] {
-            var hexString = String()
-            for element in self {
-                hexString = hexString.appendingFormat("%02x", (element as? UInt8)!)
-            }
-            return hexString
+        var hexString = String()
+        for element in self {
+            hexString = hexString.appendingFormat("%02x", (element as? UInt8)!)
         }
-        return ""
+        return hexString
+    }
+
+    /// Encode to base64 string.
+    ///
+    /// - Returns: Encoded string.
+    func base64Encode() -> String {
+        let base64Data = Data(bytes: self, count: self.count)
+        return base64Data.base64EncodedString()
     }
 
 }

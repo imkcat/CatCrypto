@@ -49,7 +49,7 @@ public enum CatSHA2HashLength {
 }
 
 /// Context for SHA-2 crypto.
-public struct CatSHA2Context {
+public class CatSHA2Context {
 
     /// Desired bit-length of the hash function output.
     public var hashLength: CatSHA2HashLength = .bit512
@@ -65,21 +65,22 @@ public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
 
     public typealias Context = CatSHA2Context
 
-    public var context: CatSHA2Context {
-        didSet {
-            switch context.hashLength {
-            case .bit224: algorithm = .sha224
-            case .bit256: algorithm = .sha256
-            case .bit384: algorithm = .sha384
-            case .bit512: algorithm = .sha512
-            }
-        }
-    }
+    public var context: CatSHA2Context
 
     public required init(context: Context = CatSHA2Context()) {
         self.context = context
         super.init()
-        algorithm = .sha512
+    }
+
+    // MARK: - Hashing
+    public override func hash(password: String) -> CatCryptoResult {
+        switch context.hashLength {
+        case .bit224: algorithm = .sha224
+        case .bit256: algorithm = .sha256
+        case .bit384: algorithm = .sha384
+        case .bit512: algorithm = .sha512
+        }
+        return super.hash(password: password)
     }
 
 }

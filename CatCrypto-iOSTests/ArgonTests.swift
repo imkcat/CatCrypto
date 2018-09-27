@@ -20,29 +20,26 @@ class ArgonTests: XCTestCase {
 
     func testNormalHashing() {
         let password = "Hi CatCrypto!"
-        argon2Crypto.context = CatArgon2Context()
-        XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
+        let result = argon2Crypto.hash(password: password)
+        XCTAssertNotNil(result.raw)
+        print(result.stringValue())
     }
 
     func testEmptyHashing() {
         let password = ""
-        argon2Crypto.context = CatArgon2Context()
         XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
     }
 
     func testNormalVerification() {
-        let hash = "$argon2i$v=19$m=4096,t=3,p=1$c29tZXNhbHQ$fBDUF2J/v69XKO" +
-        "d9wyDQp1l5Vb97caIrGIvJ7HR2Kk8"
+        let hash = "$argon2i$v=19$m=4096,t=3,p=1$c29tZXNhbHQ$fBDUF2J/v69XKOd9wyDQp1l5Vb97caIrGIvJ7HR2Kk8"
         let password = "Hi CatCrypto!"
         let wrongPassword = "CatCrypto"
-        argon2Crypto.context = CatArgon2Context()
         XCTAssertTrue(argon2Crypto.verify(hash: hash, password: password).boolValue())
         XCTAssertFalse(argon2Crypto.verify(hash: hash, password: wrongPassword).boolValue())
     }
 
     func testIterations() {
         let password = "Hi CatCrypto!"
-        argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.iterations = 0
         XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.iterations = 2 << 33
@@ -51,7 +48,6 @@ class ArgonTests: XCTestCase {
 
     func testMemery() {
         let password = "Hi CatCrypto!"
-        argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.memory = 0
         XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.memory = 2 << 33
@@ -60,7 +56,6 @@ class ArgonTests: XCTestCase {
 
     func testParallelism() {
         let password = "Hi CatCrypto!"
-        argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.parallelism = 0
         XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.parallelism = 2 << 32
@@ -68,17 +63,11 @@ class ArgonTests: XCTestCase {
     }
 
     func testMode() {
-        let argon2dHash = "$argon2d$v=19$m=4096,t=3,p=1$MzA0RkU2NkUtMDQ3Mi00N" +
-        "kU0LTkwQzMtQUU0NzYyOURDMjVB$olTMaUSUINprvqhNoOPCR9ScpnAb4tlGYRYs2r8Z" +
-        "k2E"
-        let argon2iHash = "$argon2i$v=19$m=4096,t=3,p=1$MzA0RkU2NkUtMDQ3Mi00N" +
-        "kU0LTkwQzMtQUU0NzYyOURDMjVB$xTosSgQwcRnXH2F8JtH/55gS2bM9aOFlc3LGZyzp" +
-        "0lk"
-        let argon2idHash = "$argon2id$v=19$m=4096,t=3,p=1$MzA0RkU2NkUtMDQ3Mi0" +
-        "0NkU0LTkwQzMtQUU0NzYyOURDMjVB$ZcJqwaBXemTn3+Uxenc0fda9ISSArJANUJhpzK" +
-        "iOxdY"
+        let argon2dHash = "$argon2d$v=19$m=4096,t=3,p=1$MzA0RkU2NkUtMDQ3Mi00NkU0LTkwQzMtQUU0NzYyOURDMjVB$olTMaUSUINprvqhNoOPCR9ScpnAb4tlGYRYs2r8Zk2E"
+        let argon2iHash = "$argon2i$v=19$m=4096,t=3,p=1$MzA0RkU2NkUtMDQ3Mi00NkU0LTkwQzMtQUU0NzYyOURDMjVB$xTosSgQwcRnXH2F8JtH/55gS2bM9aOFlc3LGZyzp0lk"
+        let argon2idHash = "$argon2id$v=19$m=4096,t=3,p=1$MzA0RkU2NkUtMDQ3Mi00NkU0LTkwQzMtQUU0NzYyOURDMjVB$ZcJqwaBXemTn3+Uxenc0fda9ISSArJANUJhpzKiO" +
+        "xdY"
         let password = "Hi CatCrypto!"
-        argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.salt = UUID().uuidString
         argon2Crypto.context.mode = .argon2d
         XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
@@ -93,7 +82,6 @@ class ArgonTests: XCTestCase {
 
     func testSalt() {
         let password = "Hi CatCrypto!"
-        argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.salt = ""
         XCTAssertNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.salt = UUID().uuidString
@@ -102,7 +90,6 @@ class ArgonTests: XCTestCase {
 
     func testHashLength() {
         let password = "Hi CatCrypto!"
-        argon2Crypto.context = CatArgon2Context()
         argon2Crypto.context.hashLength = 0
         XCTAssertNotNil(argon2Crypto.hash(password: password).raw)
         argon2Crypto.context.hashLength = -1

@@ -55,7 +55,7 @@ let argon2MinHashLength = 4
 let argon2MaxHashLength = Int(UInt32.max)
 
 /// Context for Argon2 crypto.
-public struct CatArgon2Context {
+public class CatArgon2Context {
 
     /// Number of iterations.
     public var iterations: Int = argon2DefaultIterations {
@@ -137,7 +137,7 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     ///
     /// - Parameter password: Password string.
     /// - Returns: Return a tuple that include error code and raw output.
-    func argon2Hash(password: String) -> (errorCode: CInt, output: [UInt8]) {
+    func argon2Hash(password: String) -> (errorCode: Int32, output: [UInt8]) {
         let passwordCString = password.cString(using: .utf8)
         let passwordLength = password.lengthOfBytes(using: .utf8)
         let saltCString = context.salt.cString(using: .utf8)
@@ -166,7 +166,7 @@ public class CatArgon2Crypto: Contextual, Hashing, Verification {
     ///   - password: Password string.
     /// - Returns: Return an error code.
     func argon2Verify(hash: String,
-                      password: String) -> CInt {
+                      password: String) -> Int32 {
         let passwordLength = password.lengthOfBytes(using: .utf8)
         switch context.mode {
         case .argon2d: return argon2d_verify(hash.cString(using: .utf8), password.cString(using: .utf8), passwordLength)

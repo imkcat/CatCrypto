@@ -47,12 +47,22 @@ public struct CatCryptoResult {
         return ""
     }
 
-    /// Process to hex string value.
+    /// Process to hexadecimal string value.
     ///
-    /// - Returns: Hex string value.
+    /// - Returns: Hexadecimal string value.
     public func hexStringValue() -> String {
         if raw is [UInt8] {
-            return (raw as? [UInt8])?.hexEncode() ?? ""
+            return (raw as? [UInt8])?.encode(encodeMode: .hex) ?? ""
+        }
+        return ""
+    }
+
+    /// Process to base64 string value.
+    ///
+    /// - Returns: Base64 string value.
+    public func base64StringValue() -> String {
+        if raw is [UInt8] {
+            return (raw as? [UInt8])?.encode(encodeMode: .base64) ?? ""
         }
         return ""
     }

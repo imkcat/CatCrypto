@@ -21,46 +21,22 @@
 
 import Foundation
 
-/// Encode modes.
-public enum StringEncodeMode {
-
-    /// Hexadecimal.
-    case hex
-
-    // TODO: Base64 encode
-    /// Base64.
-    case base64
-
-}
-
 extension String {
 
-    /// Encode to hexadecimal string.
+    /// Decode string with desire mode.
     ///
-    /// - Returns: Encoded string.
-    func hexEncode() -> String {
-        let source = self.cString(using: .utf8) ?? []
-        var hexString = String()
-        for index in 0 ..< source.count {
-            hexString = hexString.appendingFormat("%02x", source[index])
-        }
-        return hexString
-    }
-
-    /// Decode string with desire encode mode.
-    ///
-    /// - Parameter encodeMode: Mode for encode.
-    /// - Returns: Bytes array.
-    func decode(encodeMode: StringEncodeMode = .hex) -> [UInt8] {
+    /// - Parameter encodeMode: Mode for Decode.
+    /// - Returns: Bytes.
+    func decode(encodeMode: EncodeMode = .hex) -> [UInt8] {
         switch encodeMode {
         case .hex: return self.hexDecode()
-        default: return []
+        case .base64: return self.base64Decode()
         }
     }
 
-    /// Decode to bytes array.
+    /// Decode hexadecimal string to bytes.
     ///
-    /// - Returns: Decoded bytes array.
+    /// - Returns: Decoded bytes.
     func hexDecode() -> [UInt8] {
         var start = startIndex
         return (0...count/2).compactMap {  _ in
@@ -68,6 +44,15 @@ extension String {
             defer { start = end }
             return UInt8(String(self[start..<end]), radix: 16)
         }
+    }
+
+    /// Decode base64 string to bytes.
+    ///
+    /// - Returns: Decoded bytes.
+    func base64Decode() -> [UInt8] {
+        let base64Data = Data(base64Encoded: self)
+        let decodeString = String(data: base64Data ?? Data(), encoding: String.Encoding.utf8) ?? ""
+        return [UInt8](decodeString.utf8)
     }
 
     /// Generate an appoint length string fill by zero.
