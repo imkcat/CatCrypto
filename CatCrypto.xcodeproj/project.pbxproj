@@ -609,6 +609,7 @@
 					};
 					C3E273721FE4259D0026655E = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -1185,7 +1186,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/MacOSX";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1214,7 +1215,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/Sources/ModuleMaps/Argon2 ${PROJECT_DIR}/Sources/ModuleMaps/MD6 ${PROJECT_DIR}/Sources/ModuleMaps/SHA3 ${PROJECT_DIR}/Sources/ModuleMaps/CommonCrypto/MacOSX";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
