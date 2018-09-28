@@ -55,15 +55,15 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
 
 - Hashing
   - Message-Digest
-    _ [MD2](https://tools.ietf.org/html/rfc1319)
-    _ [MD4](https://tools.ietf.org/html/rfc1320)
-    _ [MD5](https://tools.ietf.org/html/rfc1321)
-    _ [MD6](http://groups.csail.mit.edu/cis/md6/)
+    - [MD2](https://tools.ietf.org/html/rfc1319)
+    - [MD4](https://tools.ietf.org/html/rfc1320)
+    - [MD5](https://tools.ietf.org/html/rfc1321)
+    - [MD6](http://groups.csail.mit.edu/cis/md6/)
   - Secure Hash Algorithm
     - [SHA-1](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
     - [SHA-2](https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf)
     - [SHA-3](http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf)
-      - [Argon2](https://github.com/P-H-C/phc-winner-argon2)
+  - [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
 ## Upcoming Functions
 
