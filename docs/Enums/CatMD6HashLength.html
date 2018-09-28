@@ -14,7 +14,7 @@
     <a title="CatMD6HashLength Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CatCrypto Docs</a> (100% documented)</p>
+        <p><a href="../index.html">CatCrypto Docs</a> (98% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -33,28 +33,13 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/CatArgon2Context.html">CatArgon2Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CatCCHashCrypto.html">CatCCHashCrypto</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoDecryptResult.html">CatCryptoDecryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoEncryptResult.html">CatCryptoEncryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoError.html">CatCryptoError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoHashResult.html">CatCryptoHashResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoResult.html">CatCryptoResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoVerifyResult.html">CatCryptoVerifyResult</a>
+                <a href="../Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatMD2Crypto.html">CatMD2Crypto</a>
@@ -66,10 +51,16 @@
                 <a href="../Classes/CatMD5Crypto.html">CatMD5Crypto</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/CatMD6Context.html">CatMD6Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/CatMD6Crypto.html">CatMD6Crypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatSHA1Crypto.html">CatSHA1Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Context.html">CatSHA2Context</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
@@ -93,6 +84,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CatSHA3HashLength.html">CatSHA3HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EncodeMode.html">EncodeMode</a>
               </li>
             </ul>
           </li>
@@ -120,13 +114,10 @@
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/CatArgon2Context.html">CatArgon2Context</a>
+                <a href="../Structs/CatCryptoError.html">CatCryptoError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CatMD6Context.html">CatMD6Context</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/CatSHA2Context.html">CatSHA2Context</a>
+                <a href="../Structs/CatCryptoResult.html">CatCryptoResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/CatSHA3Context.html">CatSHA3Context</a>
@@ -141,7 +132,7 @@
             <h1>CatMD6HashLength</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CatMD6HashLength</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CatMD6HashLength</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                 </div>
               </div>
@@ -154,9 +145,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit224A2CmF"></a>
+                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit224yA2CmF"></a>
                     <a name="//apple_ref/swift/Element/bit224" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit224A2CmF">bit224</a>
+                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit224yA2CmF">bit224</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -171,23 +162,19 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit224</span> <span class="o">=</span> <span class="mi">28</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bit224</span> <span class="o">=</span> <span class="mi">28</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit256A2CmF"></a>
+                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit256yA2CmF"></a>
                     <a name="//apple_ref/swift/Element/bit256" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit256A2CmF">bit256</a>
+                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit256yA2CmF">bit256</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -202,23 +189,19 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit256</span> <span class="o">=</span> <span class="mi">32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bit256</span> <span class="o">=</span> <span class="mi">32</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit384A2CmF"></a>
+                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit384yA2CmF"></a>
                     <a name="//apple_ref/swift/Element/bit384" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit384A2CmF">bit384</a>
+                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit384yA2CmF">bit384</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -233,23 +216,19 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit384</span> <span class="o">=</span> <span class="mi">48</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bit384</span> <span class="o">=</span> <span class="mi">48</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit512A2CmF"></a>
+                    <a name="/s:9CatCrypto0A13MD6HashLengthO6bit512yA2CmF"></a>
                     <a name="//apple_ref/swift/Element/bit512" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit512A2CmF">bit512</a>
+                    <a class="token" href="#/s:9CatCrypto0A13MD6HashLengthO6bit512yA2CmF">bit512</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -264,7 +243,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bit512</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bit512</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
 
                         </div>
                       </div>
@@ -276,8 +255,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2018-01-08)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">Kcat</a>. All rights reserved. (Last updated: 2018-09-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

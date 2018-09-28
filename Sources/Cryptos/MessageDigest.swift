@@ -23,7 +23,7 @@ import Foundation
 import CommonCryptoFramework
 import MD6
 
-enum MD6ErrorCode: CInt, EnumDescription {
+enum MD6ErrorCode: Int32, EnumDescription {
 
     case success = 0
     case fail = 1
@@ -121,7 +121,7 @@ public enum CatMD6HashLength: Int {
 }
 
 /// Context for MD6 crypto.
-public struct CatMD6Context {
+public class CatMD6Context {
 
     /// Desired bit-length of the hash function output.
     public var hashLength: CatMD6HashLength = .bit512
@@ -147,41 +147,26 @@ public class CatMD6Crypto: Contextual, Hashing {
     /// Hash with MD6 function.
     ///
     /// - Parameter password: Password string.
-    /// - Returns: Return a tuple that include error code and hashed string.
-    func md6Hash(password: String) -> (errorCode: MD6ErrorCode, hash: String) {
+    /// - Returns: Return a tuple that include error code and raw output.
+    func md6Hash(password: String) -> (errorCode: MD6ErrorCode, output: [UInt8]) {
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: self.context.hashLength.rawValue)
-        defer {
-            result.deallocate()
-        }
-        let data = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?
-            .withMemoryRebound(to: CUnsignedChar.self,
-                               capacity: passwordLength, { point in
-                                return point
-            })
-        let rawErrorCode = md6_hash(CInt(self.context.hashLength.rawValue * 8),
-                                     data,
-                                     CUnsignedLongLong(passwordLength), result)
+        var result: [UInt8] = Array(repeating: 0, count: self.context.hashLength.rawValue)
+        var data: [UInt8] = [UInt8](password.utf8)
+        let rawErrorCode = md6_hash(Int32(self.context.hashLength.rawValue * 8), &data,
+                                    UInt64(passwordLength), &result)
         let errorCode = MD6ErrorCode(rawValue: rawErrorCode) ?? MD6ErrorCode.fail
-        let hash = String.hexString(source: result,
-                                    length: self.context.hashLength.rawValue)
-        return (errorCode, hash)
+        return (errorCode, result)
     }
 
     // MARK: - Hashing
-    public func hash(password: String) -> CatCryptoHashResult {
+    public func hash(password: String) -> CatCryptoResult {
         let result = md6Hash(password: password)
-        let hashResult = CatCryptoHashResult()
         switch result.errorCode {
         case .success:
-            hashResult.value = result.hash
+            return CatCryptoResult(raw: result.output)
         default:
-            let error = CatCryptoError()
-            error.errorCode = Int(result.errorCode.rawValue)
-            error.errorDescription = result.errorCode.description
-            hashResult.error = error
+            return CatCryptoResult(error: CatCryptoError(errorCode: Int(result.errorCode.rawValue), errorDescription: result.errorCode.description))
         }
-        return hashResult
     }
 
 }

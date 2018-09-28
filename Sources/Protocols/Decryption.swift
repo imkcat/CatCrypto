@@ -26,8 +26,10 @@ public protocol Decryption {
 
     /// Decrypt password string with decryption function.
     ///
-    /// - Parameter encryptedPassword: Encrypted password string for decrypt.
-    /// - Returns: Return a decrypted result when decryption task finish.
-    func decrypt(encryptedPassword: String) -> CatCryptoDecryptResult
+    /// - Parameters:
+    ///   - encryptedPassword: Encrypted password string for decrypt.
+    ///   - encodeMode: Encrypted password encode mode.
+    /// - Returns: Return a result when decryption task finish.
+    func decrypt(encryptedPassword: String, encodeMode: EncodeMode) -> CatCryptoResult
 
 }

@@ -13,7 +13,7 @@
     <a title="CatCrypto  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">CatCrypto Docs</a> (100% documented)</p>
+        <p><a href="index.html">CatCrypto Docs</a> (98% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -32,28 +32,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/CatArgon2Context.html">CatArgon2Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CatCCHashCrypto.html">CatCCHashCrypto</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoDecryptResult.html">CatCryptoDecryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoEncryptResult.html">CatCryptoEncryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoError.html">CatCryptoError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoHashResult.html">CatCryptoHashResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoResult.html">CatCryptoResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoVerifyResult.html">CatCryptoVerifyResult</a>
+                <a href="Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CatMD2Crypto.html">CatMD2Crypto</a>
@@ -65,10 +50,16 @@
                 <a href="Classes/CatMD5Crypto.html">CatMD5Crypto</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CatMD6Context.html">CatMD6Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/CatMD6Crypto.html">CatMD6Crypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CatSHA1Crypto.html">CatSHA1Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatSHA2Context.html">CatSHA2Context</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
@@ -92,6 +83,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Enums/CatSHA3HashLength.html">CatSHA3HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/EncodeMode.html">EncodeMode</a>
               </li>
             </ul>
           </li>
@@ -119,13 +113,10 @@
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/CatArgon2Context.html">CatArgon2Context</a>
+                <a href="Structs/CatCryptoError.html">CatCryptoError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CatMD6Context.html">CatMD6Context</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/CatSHA2Context.html">CatSHA2Context</a>
+                <a href="Structs/CatCryptoResult.html">CatCryptoResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/CatSHA3Context.html">CatSHA3Context</a>
@@ -139,24 +130,25 @@
           <section class="section">
             
             <p align="center">
-    <img src="https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png" alt="Logo">
+  <img src="https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png" alt="Logo">
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat" alt="Language">
-    <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat" alt="Support Platform"></a>
-    <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat" alt="License"></a>
+  <img src="https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat" alt="Language">
+  <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat" alt="Support Platform"></a>
+  <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat" alt="License"></a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-    <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat" alt="CocoaPods Version"></a>
+  <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+  <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat" alt="CocoaPods Version"></a>
 </p>
 
 <p align="center">
-    <a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
-    <a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
-    <a href="https://codecov.io/gh/ImKcat/CatCrypto"><img src="https://codecov.io/gh/ImKcat/CatCrypto/branch/master/graph/badge.svg" /></a>
+  <a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
+  <a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
+      <a href="https://codecov.io/gh/ImKcat/CatCrypto"><img src="https://codecov.io/gh/ImKcat/CatCrypto/branch/master/graph/badge.svg" alt="Codecov"></a>
+  <a href="https://beerpay.io/ImKcat/CatCrypto"><img src="https://beerpay.io/ImKcat/CatCrypto/badge.svg?style=flat" alt="Beerpay"></a>
 </p>
 
 <p>CatCrypto include a series of hashing and encryption functions and more functions in progress!</p>
@@ -165,8 +157,10 @@
 <h2 id='content' class='heading'>Content</h2>
 
 <ul>
+<li><a href="#content">Content</a></li>
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#support-functions">Support Functions</a></li>
+<li><a href="#upcoming-functions">Upcoming Functions</a></li>
 <li><a href="#usage">Usage</a>
 
 <ul>
@@ -174,9 +168,19 @@
 <li><a href="#hashing">Hashing</a></li>
 <li><a href="#verification">Verification</a></li>
 </ul></li>
-<li><a href="#installation">Installation</a></li>
+<li><a href="#installation">Installation</a>
+
+<ul>
+<li><a href="#cocoapods">CocoaPods</a></li>
+<li><a href="#carthage">Carthage</a></li>
+</ul></li>
 <li><a href="#documentation">Documentation</a></li>
-<li><a href="#interacting">Interacting</a></li>
+<li><a href="#interacting">Interacting</a>
+
+<ul>
+<li><a href="#need-help">Need Help</a></li>
+<li><a href="#contribute">Contribute</a></li>
+</ul></li>
 <li><a href="#license">License</a></li>
 </ul>
 <h2 id='requirements' class='heading'>Requirements</h2>
@@ -195,22 +199,26 @@
 
 <ul>
 <li>Message-Digest
-
-<ul>
-<li><a href="https://tools.ietf.org/html/rfc1319">MD2</a></li>
-<li><a href="https://tools.ietf.org/html/rfc1320">MD4</a></li>
-<li><a href="https://tools.ietf.org/html/rfc1321">MD5</a></li>
-<li><a href="http://groups.csail.mit.edu/cis/md6/">MD6</a></li>
-</ul></li>
-<li>Secure Hash Algorithm
-
-<ul>
+_ <a href="https://tools.ietf.org/html/rfc1319">MD2</a>
+_ <a href="https://tools.ietf.org/html/rfc1320">MD4</a>
+_ <a href="https://tools.ietf.org/html/rfc1321">MD5</a>
+_ <a href="http://groups.csail.mit.edu/cis/md6/">MD6</a></li>
+<li>Secure Hash Algorithm</li>
 <li><a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-1</a></li>
 <li><a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-2</a></li>
-<li><a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf">SHA-3</a></li>
-</ul></li>
+<li><a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf">SHA-3</a>
+
+<ul>
 <li><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a></li>
 </ul></li>
+</ul></li>
+</ul>
+<h2 id='upcoming-functions' class='heading'>Upcoming Functions</h2>
+
+<ul>
+<li>Advanced Encryption Standard (AES)</li>
+<li>Data Encryption Standard (DES)</li>
+<li>Triple DES (3DES)</li>
 </ul>
 <h2 id='usage' class='heading'>Usage</h2>
 <h3 id='context' class='heading'>Context</h3>
@@ -228,7 +236,7 @@
 <p>Simply hashing string with <code>MD6</code> function crypto:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">md6Crypto</span> <span class="o">=</span> <span class="kt">CatMD6Crypto</span><span class="p">()</span>
 <span class="n">md6Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">hashLength</span> <span class="o">=</span> <span class="o">.</span><span class="n">bit512</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">md6Crypto</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">!</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">md6Crypto</span><span class="o">.</span><span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="nf">hexStringValue</span><span class="p">())</span>
 
 <span class="c1">// 3ad3003383633c40281bb5185424ee56a5a1c6dfa3a0e7c3a9e381c58d253323e146feb3f04cb9ebcde47186e042ce63109b8d19f3ca760ea00c90654eb2b272</span>
 </code></pre>
@@ -241,7 +249,7 @@
 <span class="k">let</span> <span class="nv">argon2Crypto</span> <span class="o">=</span> <span class="kt">CatArgon2Crypto</span><span class="p">()</span>
 <span class="n">argon2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="o">.</span><span class="n">argon2i</span>
 <span class="n">argon2Crypto</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">salt</span> <span class="o">=</span> <span class="s">"CatCrypto"</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">argon2Crypto</span><span class="o">.</span><span class="nf">verify</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span> <span class="n">hash</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">argon2Crypto</span><span class="o">.</span><span class="nf">verify</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span> <span class="n">hash</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="s">"CatCrypto"</span><span class="p">)</span><span class="o">.</span><span class="nf">boolValue</span><span class="p">())</span>
 
 <span class="c1">// true</span>
 </code></pre>
@@ -264,12 +272,11 @@
 
 <ul>
 <li><a href="https://imkcat.github.io/CatCrypto/">API Reference</a></li>
-<li><a href="https://github.com/ImKcat/CatCrypto/blob/master/CHANGELOG.md">Change Logs</a></li>
 </ul>
 <h2 id='interacting' class='heading'>Interacting</h2>
 
 <p>CatCrypto is always trying to support more functions and keep itself easy to use, please reading down below to interacting with CatCrypto.</p>
-<h4 id='need-help' class='heading'>Need Help?</h4>
+<h3 id='need-help' class='heading'>Need Help</h3>
 
 <ul>
 <li>Reading <a href="https://github.com/ImKcat/CatCrypto#usage">usage</a> section and <a href="https://imkcat.github.io/CatCrypto/">API Reference</a></li>
@@ -278,7 +285,7 @@
 <li>Report bug? <a href="https://github.com/ImKcat/CatCrypto/issues/new">Open a bug type issue</a></li>
 <li>Need new feature? <a href="https://github.com/ImKcat/CatCrypto/issues/new">Open a feature type issue</a></li>
 </ul>
-<h4 id='contribute' class='heading'>Contribute</h4>
+<h3 id='contribute' class='heading'>Contribute</h3>
 
 <p>If you want to contribute with CatCrypto, please reading <a href="https://github.com/ImKcat/CatCrypto/blob/master/CONTRIBUTING.md">Contribute Guidelines</a> at first.</p>
 <h2 id='license' class='heading'>License</h2>
@@ -288,8 +295,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2018-01-08)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">Kcat</a>. All rights reserved. (Last updated: 2018-09-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -10,10 +10,11 @@
     
   </head>
   <body>
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">CatCrypto Docs</a> (100% documented)</p>
+        <p><a href="index.html">CatCrypto Docs</a> (98% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -32,28 +33,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/CatArgon2Context.html">CatArgon2Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/CatCCHashCrypto.html">CatCCHashCrypto</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoDecryptResult.html">CatCryptoDecryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoEncryptResult.html">CatCryptoEncryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoError.html">CatCryptoError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoHashResult.html">CatCryptoHashResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoResult.html">CatCryptoResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CatCryptoVerifyResult.html">CatCryptoVerifyResult</a>
+                <a href="Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CatMD2Crypto.html">CatMD2Crypto</a>
@@ -65,10 +51,16 @@
                 <a href="Classes/CatMD5Crypto.html">CatMD5Crypto</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/CatMD6Context.html">CatMD6Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/CatMD6Crypto.html">CatMD6Crypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CatSHA1Crypto.html">CatSHA1Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CatSHA2Context.html">CatSHA2Context</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
@@ -92,6 +84,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Enums/CatSHA3HashLength.html">CatSHA3HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/EncodeMode.html">EncodeMode</a>
               </li>
             </ul>
           </li>
@@ -119,13 +114,10 @@
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/CatArgon2Context.html">CatArgon2Context</a>
+                <a href="Structs/CatCryptoError.html">CatCryptoError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/CatMD6Context.html">CatMD6Context</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/CatSHA2Context.html">CatSHA2Context</a>
+                <a href="Structs/CatCryptoResult.html">CatCryptoResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/CatSHA3Context.html">CatSHA3Context</a>
@@ -147,6 +139,245 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9CatCrypto0a9CCHashingB0C"></a>
+                    <a name="//apple_ref/swift/Class/CatCCHashingCrypto" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0a9CCHashingB0C">CatCCHashingCrypto</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>CatCCHashingCrypto</code> just for code convenient and coupling, and it just as super class for hash function crypto class depend on <code>CommonCrypto</code>.</p>
+
+                        <a href="Classes/CatCCHashingCrypto.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCCHashingCrypto</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0A13Argon2ContextC"></a>
+                    <a name="//apple_ref/swift/Class/CatArgon2Context" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextC">CatArgon2Context</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Context for Argon2 crypto.</p>
+
+                        <a href="Classes/CatArgon2Context.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatArgon2Context</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0a6Argon2B0C"></a>
+                    <a name="//apple_ref/swift/Class/CatArgon2Crypto" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0a6Argon2B0C">CatArgon2Crypto</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>CatArgon2Crypto</code> is the crypto for Argon2 function.</p>
+
+<p><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a> is the password-hashing function that won the
+<a href="https://password-hashing.net/">Password Hashing Competition (PHC)</a>.</p>
+
+                        <a href="Classes/CatArgon2Crypto.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatArgon2Crypto</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Verification.html">Verification</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0a3MD2B0C"></a>
+                    <a name="//apple_ref/swift/Class/CatMD2Crypto" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0a3MD2B0C">CatMD2Crypto</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>CatMD2Crypto</code> is the crypto for <a href="https://tools.ietf.org/html/rfc1319">MD2</a> function.</p>
+
+                        <a href="Classes/CatMD2Crypto.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD2Crypto</span> <span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0a3MD4B0C"></a>
+                    <a name="//apple_ref/swift/Class/CatMD4Crypto" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0a3MD4B0C">CatMD4Crypto</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>CatMD4Crypto</code> is the crypto for <a href="https://tools.ietf.org/html/rfc1320">MD4</a> function.</p>
+
+                        <a href="Classes/CatMD4Crypto.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD4Crypto</span> <span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0a3MD5B0C"></a>
+                    <a name="//apple_ref/swift/Class/CatMD5Crypto" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0a3MD5B0C">CatMD5Crypto</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>CatMD5Crypto</code> is the crypto for <a href="https://tools.ietf.org/html/rfc1321">MD5</a> function.</p>
+
+                        <a href="Classes/CatMD5Crypto.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD5Crypto</span> <span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0A10MD6ContextC"></a>
+                    <a name="//apple_ref/swift/Class/CatMD6Context" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A10MD6ContextC">CatMD6Context</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Context for MD6 crypto.</p>
+
+                        <a href="Classes/CatMD6Context.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD6Context</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0a3MD6B0C"></a>
+                    <a name="//apple_ref/swift/Class/CatMD6Crypto" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0a3MD6B0C">CatMD6Crypto</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>CatMD6Crypto</code> is the crypto for <a href="http://groups.csail.mit.edu/cis/md6/">MD6</a> function.</p>
+
+                        <a href="Classes/CatMD6Crypto.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD6Crypto</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9CatCrypto0a4SHA1B0C"></a>
                     <a name="//apple_ref/swift/Class/CatSHA1Crypto" class="dashAnchor"></a>
                     <a class="token" href="#/s:9CatCrypto0a4SHA1B0C">CatSHA1Crypto</a>
@@ -158,8 +389,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>CatSHA1Crypto</code> is the crypto for
-<a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-1</a>
-function.</p>
+<a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-1</a> function.</p>
 
                         <a href="Classes/CatSHA1Crypto.html" class="slightly-smaller">See more</a>
                       </div>
@@ -167,7 +397,35 @@ function.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA1Crypto</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashCrypto.html">CatCCHashCrypto</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA1Crypto</span> <span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0A11SHA2ContextC"></a>
+                    <a name="//apple_ref/swift/Class/CatSHA2Context" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A11SHA2ContextC">CatSHA2Context</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Context for SHA-2 crypto.</p>
+
+                        <a href="Classes/CatSHA2Context.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA2Context</span></code></pre>
 
                         </div>
                       </div>
@@ -188,8 +446,7 @@ function.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>CatSHA2Crypto</code> is the crypto for
-<a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-2</a>
-function.</p>
+<a href="https://csrc.nist.gov/csrc/media/publications/fips/180/4/final/documents/fips180-4-draft-aug2014.pdf">SHA-2</a> function.</p>
 
                         <a href="Classes/CatSHA2Crypto.html" class="slightly-smaller">See more</a>
                       </div>
@@ -197,7 +454,7 @@ function.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA2Crypto</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashCrypto.html">CatCCHashCrypto</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA2Crypto</span> <span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span></code></pre>
 
                         </div>
                       </div>
@@ -226,368 +483,7 @@ function.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA3Crypto</span><span class="p">:</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0aB6ResultC"></a>
-                    <a name="//apple_ref/swift/Class/CatCryptoResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0aB6ResultC">CatCryptoResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Base result class for encrypt, decrypt, hash or verify.</p>
-
-                        <a href="Classes/CatCryptoResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCryptoResult</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0aB10HashResultC"></a>
-                    <a name="//apple_ref/swift/Class/CatCryptoHashResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0aB10HashResultC">CatCryptoHashResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Hash result class, include a string value.</p>
-
-                        <a href="Classes/CatCryptoHashResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCryptoHashResult</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCryptoResult.html">CatCryptoResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0aB12VerifyResultC"></a>
-                    <a name="//apple_ref/swift/Class/CatCryptoVerifyResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0aB12VerifyResultC">CatCryptoVerifyResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Verify result class, include a boolean value.</p>
-
-                        <a href="Classes/CatCryptoVerifyResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCryptoVerifyResult</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCryptoResult.html">CatCryptoResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0aB13EncryptResultC"></a>
-                    <a name="//apple_ref/swift/Class/CatCryptoEncryptResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0aB13EncryptResultC">CatCryptoEncryptResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Encrypt result class, include a string value.</p>
-
-                        <a href="Classes/CatCryptoEncryptResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCryptoEncryptResult</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCryptoResult.html">CatCryptoResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0aB13DecryptResultC"></a>
-                    <a name="//apple_ref/swift/Class/CatCryptoDecryptResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0aB13DecryptResultC">CatCryptoDecryptResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Decrypt result class, include a string value.</p>
-
-                        <a href="Classes/CatCryptoDecryptResult.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCryptoDecryptResult</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCryptoResult.html">CatCryptoResult</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0aB5ErrorC"></a>
-                    <a name="//apple_ref/swift/Class/CatCryptoError" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0aB5ErrorC">CatCryptoError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Error for descript result.</p>
-
-                        <a href="Classes/CatCryptoError.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCryptoError</span><span class="p">:</span> <span class="kt">LocalizedError</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0a6CCHashB0C"></a>
-                    <a name="//apple_ref/swift/Class/CatCCHashCrypto" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a6CCHashB0C">CatCCHashCrypto</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CatCCHashCrypto</code> just for code convenient and coupling, and it just as
-father class for hash function crypto class depend on <code>CommonCrypto</code>.</p>
-
-                        <a href="Classes/CatCCHashCrypto.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatCCHashCrypto</span><span class="p">:</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0a6Argon2B0C"></a>
-                    <a name="//apple_ref/swift/Class/CatArgon2Crypto" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a6Argon2B0C">CatArgon2Crypto</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CatArgon2Crypto</code> is the crypto for Argon2 function.</p>
-
-<p><a href="https://github.com/P-H-C/phc-winner-argon2">Argon2</a> is the password-hashing
-function that won the
-<a href="https://password-hashing.net/">Password Hashing Competition (PHC)</a>.</p>
-
-                        <a href="Classes/CatArgon2Crypto.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatArgon2Crypto</span><span class="p">:</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Verification.html">Verification</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0a3MD2B0C"></a>
-                    <a name="//apple_ref/swift/Class/CatMD2Crypto" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a3MD2B0C">CatMD2Crypto</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CatMD2Crypto</code> is the crypto for <a href="https://tools.ietf.org/html/rfc1319">MD2</a>
-function.</p>
-
-                        <a href="Classes/CatMD2Crypto.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD2Crypto</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashCrypto.html">CatCCHashCrypto</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0a3MD4B0C"></a>
-                    <a name="//apple_ref/swift/Class/CatMD4Crypto" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a3MD4B0C">CatMD4Crypto</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CatMD4Crypto</code> is the crypto for <a href="https://tools.ietf.org/html/rfc1320">MD4</a>
-function.</p>
-
-                        <a href="Classes/CatMD4Crypto.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD4Crypto</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashCrypto.html">CatCCHashCrypto</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0a3MD5B0C"></a>
-                    <a name="//apple_ref/swift/Class/CatMD5Crypto" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a3MD5B0C">CatMD5Crypto</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CatMD5Crypto</code> is the crypto for <a href="https://tools.ietf.org/html/rfc1321">MD5</a>
-function.</p>
-
-                        <a href="Classes/CatMD5Crypto.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD5Crypto</span><span class="p">:</span> <span class="kt"><a href="Classes/CatCCHashCrypto.html">CatCCHashCrypto</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0a3MD6B0C"></a>
-                    <a name="//apple_ref/swift/Class/CatMD6Crypto" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0a3MD6B0C">CatMD6Crypto</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CatMD6Crypto</code> is the crypto for <a href="http://groups.csail.mit.edu/cis/md6/">MD6</a>
-function.</p>
-
-                        <a href="Classes/CatMD6Crypto.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD6Crypto</span><span class="p">:</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatSHA3Crypto</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/Hashing.html">Hashing</a></span></code></pre>
 
                         </div>
                       </div>
@@ -599,8 +495,8 @@ function.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2018-01-08)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">Kcat</a>. All rights reserved. (Last updated: 2018-09-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -17,13 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		92A6063520AE87C5001DF859 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C328B7921FF4DC4900943D75;
-			remoteInfo = "CatCrypto-iOSTests";
-		};
 		C3945EA01FE3CD51009A203D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
@@ -45,19 +38,19 @@
 			remoteGlobalIDString = C3945EAD1FE3CE48009A203D;
 			remoteInfo = "CatCrypto-watchOS";
 		};
-		C3945EBA1FE3CEB2009A203D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C330B4951FDE93AB005AEECC;
-			remoteInfo = "CatCrypto-iOS";
-		};
 		C3A43C711FDEBDB3004E32E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C330B4961FDE93AB005AEECC;
-			remoteInfo = CatCrypto;
+			remoteInfo = "CatCrypto-iOS";
+		};
+		C3F453422157EB7300CFA3D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3A43C671FDEBDB3004E32E6 /* CatCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C328B7921FF4DC4900943D75;
+			remoteInfo = "CatCrypto-iOSTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -145,7 +138,7 @@
 				C3945EA11FE3CD51009A203D /* CatCrypto.framework */,
 				C3945EA31FE3CD51009A203D /* CatCrypto.framework */,
 				C3945EB71FE3CE8B009A203D /* CatCrypto.framework */,
-				92A6063620AE87C5001DF859 /* CatCrypto-iOSTests.xctest */,
+				C3F453432157EB7300CFA3D8 /* CatCrypto-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,11 +173,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = imkcat;
 				TargetAttributes = {
 					C330B4E31FDEBC99005AEECC = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -214,13 +208,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		92A6063620AE87C5001DF859 /* CatCrypto-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "CatCrypto-iOSTests.xctest";
-			remoteRef = 92A6063520AE87C5001DF859 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		C3945EA11FE3CD51009A203D /* CatCrypto.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -247,6 +234,13 @@
 			fileType = wrapper.framework;
 			path = CatCrypto.framework;
 			remoteRef = C3A43C711FDEBDB3004E32E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3F453432157EB7300CFA3D8 /* CatCrypto-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CatCrypto-iOSTests.xctest";
+			remoteRef = C3F453422157EB7300CFA3D8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -280,7 +274,6 @@
 		C3945EBB1FE3CEB2009A203D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CatCrypto-iOS";
-			targetProxy = C3945EBA1FE3CEB2009A203D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -421,7 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-iOS";
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -440,7 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.imkcat.Example-iOS";
 				PRODUCT_NAME = Example;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

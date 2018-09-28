@@ -15,9 +15,9 @@ class RootViewController: UIViewController {
 
     let sourceString: String = "CatCrypto"
 
-    let hashCryptos: [Hashing] = [CatMD2Crypto(), CatMD4Crypto(), CatMD5Crypto(), CatMD6Crypto(),
-                                  CatSHA1Crypto(), CatSHA2Crypto(), CatSHA3Crypto(),
+    let hashCryptos: [Hashing] = [CatMD2Crypto(), CatMD4Crypto(), CatMD5Crypto(), CatMD6Crypto(), CatSHA1Crypto(), CatSHA2Crypto(), CatSHA3Crypto(),
                                   CatArgon2Crypto()]
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -47,7 +47,7 @@ class RootViewController: UIViewController {
                 hashTimer.resume()
                 print("Crypto name: " + String(describing: hashCrypto.self))
                 let hashResult = hashCrypto.hash(password: self.sourceString)
-                print("Result: " + (hashResult.error == nil ? hashResult.value! : hashResult.error!.errorDescription!))
+                print("Result: " + (hashResult.error == nil ? hashResult.hexStringValue() : hashResult.error!.errorDescription!))
                 hashTimer.cancel()
                 print("Cost: " + String(format: "%0.3f", timeCost) + "s\n")
             })

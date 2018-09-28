@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92D09986215CC7A8009AF0A6 /* ResultValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D09985215CC7A8009AF0A6 /* ResultValueTests.swift */; };
+		C3077C542010408F00407FDF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3077C532010408F00407FDF /* ArrayExtension.swift */; };
+		C3077C552010408F00407FDF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3077C532010408F00407FDF /* ArrayExtension.swift */; };
+		C3077C562010408F00407FDF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3077C532010408F00407FDF /* ArrayExtension.swift */; };
+		C3077C572010408F00407FDF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3077C532010408F00407FDF /* ArrayExtension.swift */; };
 		C31E52FC1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
 		C31E52FD1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
 		C31E52FE1FE906B2004C1F12 /* md6_mode.c in Sources */ = {isa = PBXBuildFile; fileRef = C31E52EB1FE906B2004C1F12 /* md6_mode.c */; };
@@ -121,6 +126,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92D09985215CC7A8009AF0A6 /* ResultValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultValueTests.swift; sourceTree = "<group>"; };
+		C3077C532010408F00407FDF /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		C31E52EB1FE906B2004C1F12 /* md6_mode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md6_mode.c; sourceTree = "<group>"; };
 		C31E52EC1FE906B2004C1F12 /* md6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md6.h; sourceTree = "<group>"; };
 		C31E52ED1FE906B2004C1F12 /* md6_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md6_compress.c; sourceTree = "<group>"; };
@@ -241,6 +248,7 @@
 		C328B7931FF4DC4900943D75 /* CatCrypto-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				92D09985215CC7A8009AF0A6 /* ResultValueTests.swift */,
 				C328B79D1FF4DCC400943D75 /* MessageDigestCryptoTests.swift */,
 				C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */,
 				C3DF7A301FF73BB4007BDC59 /* ArgonTests.swift */,
@@ -337,9 +345,9 @@
 		C36729161FF49724005BE1A8 /* Cryptos */ = {
 			isa = PBXGroup;
 			children = (
-				C39EDD761FECF9D00081108F /* Argon.swift */,
 				C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */,
 				C367290B1FF4920E005BE1A8 /* SHA.swift */,
+				C39EDD761FECF9D00081108F /* Argon.swift */,
 			);
 			path = Cryptos;
 			sourceTree = "<group>";
@@ -359,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				C393A5B91FF0F85600B69167 /* StringExtension.swift */,
+				C3077C532010408F00407FDF /* ArrayExtension.swift */,
 				C39EDD6C1FECF6F80081108F /* Helper.swift */,
 				C36729101FF496D4005BE1A8 /* Crypto.swift */,
 			);
@@ -577,15 +586,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = imkcat;
 				TargetAttributes = {
 					C328B7911FF4DC4900943D75 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					C330B4951FDE93AB005AEECC = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					C3945E841FE3CBAE009A203D = {
@@ -675,7 +686,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -684,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D09986215CC7A8009AF0A6 /* ResultValueTests.swift in Sources */,
 				C3B0F84D1FF6024300FB4DC8 /* SHATests.swift in Sources */,
 				C328B79E1FF4DCC400943D75 /* MessageDigestCryptoTests.swift in Sources */,
 				C3DF7A311FF73BB4007BDC59 /* ArgonTests.swift in Sources */,
@@ -699,6 +711,7 @@
 				C39EDD6D1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FC1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729111FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3077C542010408F00407FDF /* ArrayExtension.swift in Sources */,
 				C3BDFE181FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD771FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD721FECF95C0081108F /* Verification.swift in Sources */,
@@ -729,6 +742,7 @@
 				C39EDD6F1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FE1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729131FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3077C562010408F00407FDF /* ArrayExtension.swift in Sources */,
 				C3BDFE1A1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD791FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD741FECF95C0081108F /* Verification.swift in Sources */,
@@ -759,6 +773,7 @@
 				C39EDD701FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FF1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729141FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3077C572010408F00407FDF /* ArrayExtension.swift in Sources */,
 				C3BDFE1B1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD7A1FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD751FECF95C0081108F /* Verification.swift in Sources */,
@@ -789,6 +804,7 @@
 				C39EDD6E1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FD1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729121FF496D4005BE1A8 /* Crypto.swift in Sources */,
+				C3077C552010408F00407FDF /* ArrayExtension.swift in Sources */,
 				C3BDFE191FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD781FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD731FECF95C0081108F /* Verification.swift in Sources */,

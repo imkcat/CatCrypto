@@ -22,7 +22,7 @@
 import Foundation
 import CommonCryptoFramework
 
-enum CatCCCryptoErrorCode: EnumDescription {
+enum CatCCCryptoErrorCode: Int, EnumDescription {
 
     case success
     case fail
@@ -32,6 +32,11 @@ enum CatCCCryptoErrorCode: EnumDescription {
     case alignmentError
     case decodeError
     case unimplemented
+    case overflow
+    case rngFailure
+    case unspecifiedError
+    case callSequenceError
+    case keySizeError
 
     var description: String? {
         switch self {
@@ -43,16 +48,15 @@ enum CatCCCryptoErrorCode: EnumDescription {
         case .alignmentError: return "Input size was not aligned properly"
         case .decodeError: return "Input data did not decode or decrypt properly"
         case .unimplemented: return "Function not implemented for the current algorithm"
+        case .overflow: return "Overflow"
+        case .rngFailure: return "RNG failure"
+        case .unspecifiedError: return "Unspecified error"
+        case .callSequenceError: return "Call sequence error"
+        case .keySizeError: return "Key size error"
         }
     }
 
-}
-
-extension CatCCCryptoErrorCode: ExpressibleByIntegerLiteral {
-
-    typealias IntegerLiteralType = Int
-
-    init(integerLiteral value: Int) {
+    init(errorCode value: Int) {
         switch value {
         case kCCSuccess: self = .success
         case kCCParamError: self = .paramError
@@ -61,7 +65,27 @@ extension CatCCCryptoErrorCode: ExpressibleByIntegerLiteral {
         case kCCAlignmentError: self = .alignmentError
         case kCCDecodeError: self = .decodeError
         case kCCUnimplemented: self = .unimplemented
+        case kCCOverflow: self = .overflow
+        case kCCRNGFailure: self = .rngFailure
+        case kCCUnspecifiedError: self = .unspecifiedError
+        case kCCCallSequenceError: self = .callSequenceError
+        case kCCKeySizeError: self = .keySizeError
         default: self = .fail
+        }
+    }
+
+}
+
+/// Operation for CommonCrypto.
+enum CatCCOperation {
+
+    case encrypt
+    case decrypt
+
+    var ccValue: CCOperation {
+        switch self {
+        case .encrypt: return CCOperation(kCCEncrypt)
+        case .decrypt: return CCOperation(kCCDecrypt)
         }
     }
 
@@ -96,10 +120,10 @@ enum CatCCHashingAlgorithm {
 
 }
 
-/// `CatCCHashingCrypto` just for code convenient and coupling, and it just as father class for hash function crypto class depend on `CommonCrypto`.
+/// `CatCCHashingCrypto` just for code convenient and coupling, and it just as super class for hash function crypto class depend on `CommonCrypto`.
 public class CatCCHashingCrypto: Hashing {
 
-    /// Algorithm to switch function from CommonCrypto.
+    /// Algorithm to switch function for CommonCrypto.
     var algorithm: CatCCHashingAlgorithm = .md5 {
         didSet {
             switch algorithm {
@@ -124,33 +148,28 @@ public class CatCCHashingCrypto: Hashing {
     /// Hash password string with desire hash function from `CommonCrypto`.
     ///
     /// - Parameter password: Password string to hasing.
-    /// - Returns: Return a tuple that include error code and hashed string.
-    func commonCryptoHash(password: String) -> (errorCode: CatCCCryptoErrorCode, hash: String) {
+    /// - Returns: Return a tuple that include error code and raw output.
+    func commonCryptoHash(password: String) -> (errorCode: CatCCCryptoErrorCode, output: [UInt8]) {
         let passwordCString = password.cString(using: .utf8)
-        let passwordLength = CC_LONG(password.lengthOfBytes(using: .utf8))
-        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
-        defer {
-            result.deallocate()
-        }
+        let passwordLength = UInt32(password.lengthOfBytes(using: .utf8))
+        var result: [UInt8] = Array(repeating: 0, count: digestLength)
         switch algorithm {
-        case .md2: CC_MD2(passwordCString, passwordLength, result)
-        case .md4: CC_MD4(passwordCString, passwordLength, result)
-        case .md5: CC_MD5(passwordCString, passwordLength, result)
-        case .sha1: CC_SHA1(passwordCString, passwordLength, result)
-        case .sha224: CC_SHA224(passwordCString, passwordLength, result)
-        case .sha256: CC_SHA256(passwordCString, passwordLength, result)
-        case .sha384: CC_SHA384(passwordCString, passwordLength, result)
-        case .sha512: CC_SHA512(passwordCString, passwordLength, result)
+        case .md2: CC_MD2(passwordCString, passwordLength, &result)
+        case .md4: CC_MD4(passwordCString, passwordLength, &result)
+        case .md5: CC_MD5(passwordCString, passwordLength, &result)
+        case .sha1: CC_SHA1(passwordCString, passwordLength, &result)
+        case .sha224: CC_SHA224(passwordCString, passwordLength, &result)
+        case .sha256: CC_SHA256(passwordCString, passwordLength, &result)
+        case .sha384: CC_SHA384(passwordCString, passwordLength, &result)
+        case .sha512: CC_SHA512(passwordCString, passwordLength, &result)
         }
-        return (.success, String.hexString(source: result, length: digestLength))
+        return (.success, result)
     }
 
     // MARK: - Hashing
-    public func hash(password: String) -> CatCryptoHashResult {
+    public func hash(password: String) -> CatCryptoResult {
         let result = commonCryptoHash(password: password)
-        let hashResult = CatCryptoHashResult()
-        hashResult.value = result.hash
-        return hashResult
+        return CatCryptoResult(raw: result.output)
     }
 
 }

@@ -1,6 +1,12 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/vlang/Developer/Git/CatCrypto/Sources/Cryptos/SHA.swift",
+      "line": 76,
+      "symbol": "CatSHA2Crypto.hash(password:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/kcat/Developer/Git/CatCrypto"
+  "source_directory": "/Users/vlang/Developer/Git/CatCrypto"
 }

@@ -27,7 +27,6 @@ public protocol Encryption {
     /// Encrypt password string with encryption function.
     ///
     /// - Parameter password: Password string for encrypt.
-    /// - Returns: Return a encrypted result when encryption task finish.
-    func encrypt(password: String) -> CatCryptoEncryptResult
-
+    /// - Returns: Return a result when encryption task finish.
+    func encrypt(password: String) -> CatCryptoResult
 }

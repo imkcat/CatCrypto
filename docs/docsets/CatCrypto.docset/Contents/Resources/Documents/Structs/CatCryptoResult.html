@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CatArgon2Context Structure Reference</title>
+    <title>CatCryptoResult Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,11 +10,11 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/CatArgon2Context" class="dashAnchor"></a>
-    <a title="CatArgon2Context Structure Reference"></a>
+    <a name="//apple_ref/swift/Struct/CatCryptoResult" class="dashAnchor"></a>
+    <a title="CatCryptoResult Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CatCrypto Docs</a> (100% documented)</p>
+        <p><a href="../index.html">CatCrypto Docs</a> (98% documented)</p>
         <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">CatCrypto Reference</a>
         <img id="carat" src="../img/carat.png" />
-        CatArgon2Context Structure Reference
+        CatCryptoResult Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -33,28 +33,13 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/CatArgon2Context.html">CatArgon2Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/CatCCHashCrypto.html">CatCCHashCrypto</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoDecryptResult.html">CatCryptoDecryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoEncryptResult.html">CatCryptoEncryptResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoError.html">CatCryptoError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoHashResult.html">CatCryptoHashResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoResult.html">CatCryptoResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/CatCryptoVerifyResult.html">CatCryptoVerifyResult</a>
+                <a href="../Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatMD2Crypto.html">CatMD2Crypto</a>
@@ -66,10 +51,16 @@
                 <a href="../Classes/CatMD5Crypto.html">CatMD5Crypto</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/CatMD6Context.html">CatMD6Context</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/CatMD6Crypto.html">CatMD6Crypto</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatSHA1Crypto.html">CatSHA1Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Context.html">CatSHA2Context</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
@@ -93,6 +84,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/CatSHA3HashLength.html">CatSHA3HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EncodeMode.html">EncodeMode</a>
               </li>
             </ul>
           </li>
@@ -120,13 +114,10 @@
             <a href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/CatArgon2Context.html">CatArgon2Context</a>
+                <a href="../Structs/CatCryptoError.html">CatCryptoError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CatMD6Context.html">CatMD6Context</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/CatSHA2Context.html">CatSHA2Context</a>
+                <a href="../Structs/CatCryptoResult.html">CatCryptoResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/CatSHA3Context.html">CatSHA3Context</a>
@@ -138,14 +129,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>CatArgon2Context</h1>
+            <h1>CatCryptoResult</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CatArgon2Context</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CatCryptoResult</span></code></pre>
 
                 </div>
               </div>
-            <p>Context for Argon2 crypto.</p>
+            <p>Base result class for encrypt, decrypt, hash or verify.</p>
 
           </section>
           <section class="section task-group-section">
@@ -154,9 +145,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13Argon2ContextV10iterationsSiv"></a>
-                    <a name="//apple_ref/swift/Property/iterations" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextV10iterationsSiv">iterations</a>
+                    <a name="/s:9CatCrypto0aB6ResultV3rawypSgvp"></a>
+                    <a name="//apple_ref/swift/Property/raw" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0aB6ResultV3rawypSgvp">raw</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -164,14 +155,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Number of iterations.</p>
+                        <p>Raw object.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">iterations</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">argon2DefaultIterations</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">raw</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -181,9 +172,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13Argon2ContextV6memorySiv"></a>
-                    <a name="//apple_ref/swift/Property/memory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextV6memorySiv">memory</a>
+                    <a name="/s:9CatCrypto0aB6ResultV9boolValueSbyF"></a>
+                    <a name="//apple_ref/swift/Method/boolValue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0aB6ResultV9boolValueSbyF">boolValue()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -191,16 +182,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Memory usage.</p>
+                        <p>Process to bool value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">memory</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">argon2DefaultMemory</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">boolValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bool value.</p>
                       </div>
                     </section>
                   </div>
@@ -208,9 +203,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13Argon2ContextV11parallelismSiv"></a>
-                    <a name="//apple_ref/swift/Property/parallelism" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextV11parallelismSiv">parallelism</a>
+                    <a name="/s:9CatCrypto0aB6ResultV11stringValueSSyF"></a>
+                    <a name="//apple_ref/swift/Method/stringValue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0aB6ResultV11stringValueSSyF">stringValue()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -218,16 +213,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Number of threads and compute lanes.</p>
+                        <p>Process to string value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">parallelism</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">argon2DefaultParallelism</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stringValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>String value.</p>
                       </div>
                     </section>
                   </div>
@@ -235,9 +234,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13Argon2ContextV4modeAA0aC4ModeOv"></a>
-                    <a name="//apple_ref/swift/Property/mode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextV4modeAA0aC4ModeOv">mode</a>
+                    <a name="/s:9CatCrypto0aB6ResultV14hexStringValueSSyF"></a>
+                    <a name="//apple_ref/swift/Method/hexStringValue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0aB6ResultV14hexStringValueSSyF">hexStringValue()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -245,16 +244,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The mode of Argon2.</p>
+                        <p>Process to hexadecimal string value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Enums/CatArgon2Mode.html">CatArgon2Mode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">argon2i</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hexStringValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Hexadecimal string value.</p>
                       </div>
                     </section>
                   </div>
@@ -262,9 +265,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13Argon2ContextV4saltSSv"></a>
-                    <a name="//apple_ref/swift/Property/salt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextV4saltSSv">salt</a>
+                    <a name="/s:9CatCrypto0aB6ResultV17base64StringValueSSyF"></a>
+                    <a name="//apple_ref/swift/Method/base64StringValue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0aB6ResultV17base64StringValueSSyF">base64StringValue()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -272,16 +275,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>String to salt.</p>
+                        <p>Process to base64 string value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">salt</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"somesalt"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">base64StringValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Base64 string value.</p>
                       </div>
                     </section>
                   </div>
@@ -289,9 +296,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto0A13Argon2ContextV10hashLengthSiv"></a>
-                    <a name="//apple_ref/swift/Property/hashLength" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextV10hashLengthSiv">hashLength</a>
+                    <a name="/s:9CatCrypto0aB6ResultV5errorAA0aB5ErrorVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0aB6ResultV5errorAA0aB5ErrorVSgvp">error</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -299,41 +306,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Desired length of the hash.</p>
+                        <p>Error for result.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashLength</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">argon2DefaultHashLength</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9CatCrypto0A13Argon2ContextVACycfc"></a>
-                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto0A13Argon2ContextVACycfc">init()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Initialize the context.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Structs/CatCryptoError.html">CatCryptoError</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -345,8 +325,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">ImKcat</a>. All rights reserved. (Last updated: 2018-01-08)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">Kcat</a>. All rights reserved. (Last updated: 2018-09-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

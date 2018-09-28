@@ -49,7 +49,7 @@ public enum CatSHA2HashLength {
 }
 
 /// Context for SHA-2 crypto.
-public struct CatSHA2Context {
+public class CatSHA2Context {
 
     /// Desired bit-length of the hash function output.
     public var hashLength: CatSHA2HashLength = .bit512
@@ -65,21 +65,22 @@ public class CatSHA2Crypto: CatCCHashingCrypto, Contextual {
 
     public typealias Context = CatSHA2Context
 
-    public var context: CatSHA2Context {
-        didSet {
-            switch context.hashLength {
-            case .bit224: algorithm = .sha224
-            case .bit256: algorithm = .sha256
-            case .bit384: algorithm = .sha384
-            case .bit512: algorithm = .sha512
-            }
-        }
-    }
+    public var context: CatSHA2Context
 
     public required init(context: Context = CatSHA2Context()) {
         self.context = context
         super.init()
-        algorithm = .sha512
+    }
+
+    // MARK: - Hashing
+    public override func hash(password: String) -> CatCryptoResult {
+        switch context.hashLength {
+        case .bit224: algorithm = .sha224
+        case .bit256: algorithm = .sha256
+        case .bit384: algorithm = .sha384
+        case .bit512: algorithm = .sha512
+        }
+        return super.hash(password: password)
     }
 
 }
@@ -128,43 +129,33 @@ public class CatSHA3Crypto: Contextual, Hashing {
     /// Hash with SHA-3 function.
     ///
     /// - Parameter password: Password string.
-    /// - Returns: Result code of hashing function, 0 if successful, 1 otherwise.
-    func sha3Hash(password: String) -> (errorCode: CInt, hash: String) {
+    /// - Returns: Return a tuple that include error code and raw output.
+    func sha3Hash(password: String) -> (errorCode: Int32, output: [UInt8]) {
         let passwordLength = password.lengthOfBytes(using: .utf8)
-        let passwordCString = UnsafeMutablePointer<CChar>(mutating: password.cString(using: .utf8))?
-            .withMemoryRebound(to: CUnsignedChar.self,
-                               capacity: passwordLength, { point in
-                                return point
-            })
-        var result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: context.hashLength.rawValue)
-        defer {
-            result.deallocate()
-        }
-        var errorCode: CInt
+        let input: [UInt8] = [UInt8](password.utf8)
+        var result: [UInt8] = Array(repeating: 0, count: context.hashLength.rawValue)
+        var errorCode: Int32
         switch context.hashLength {
-        case .bit224: errorCode = SHA3_224(result, passwordCString, passwordLength)
-        case .bit256: errorCode = SHA3_256(result, passwordCString, passwordLength)
-        case .bit384: errorCode = SHA3_384(result, passwordCString, passwordLength)
-        case .bit512: errorCode = SHA3_512(result, passwordCString, passwordLength)
+        case .bit224:
+            errorCode = SHA3_224(&result, input, passwordLength)
+        case .bit256:
+            errorCode = SHA3_256(&result, input, passwordLength)
+        case .bit384:
+            errorCode = SHA3_384(&result, input, passwordLength)
+        case .bit512:
+            errorCode = SHA3_512(&result, input, passwordLength)
         }
-        let hash = String.hexString(source: result,
-                                    length: context.hashLength.rawValue)
-        return (errorCode, hash)
+        return (errorCode, result)
     }
 
     // MARK: - Hashing
-    public func hash(password: String) -> CatCryptoHashResult {
+    public func hash(password: String) -> CatCryptoResult {
         let result = sha3Hash(password: password)
-        let hashResult = CatCryptoHashResult()
         if result.errorCode == 0 {
-            hashResult.value = result.hash
+            return CatCryptoResult(raw: result.output)
         } else {
-            let error = CatCryptoError()
-            error.errorCode = Int(result.errorCode)
-            error.errorDescription = "Fail"
-            hashResult.error = error
+            return CatCryptoResult(error: CatCryptoError(errorCode: Int(result.errorCode), errorDescription: "Fail"))
         }
-        return hashResult
     }
 
 }

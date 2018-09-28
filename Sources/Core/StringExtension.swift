@@ -23,18 +23,36 @@ import Foundation
 
 extension String {
 
-    /// Process a hex string from an unsigned char array point.
+    /// Decode string with desire mode.
     ///
-    /// - Parameters:
-    ///   - source: Unsigned char array point to process.
-    ///   - length: Array length.
-    /// - Returns: Desired hex string.
-    static func hexString(source: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
-        var hexString = String()
-        for index in 0 ..< length {
-            hexString = hexString.appendingFormat("%02x", source[index])
+    /// - Parameter encodeMode: Mode for Decode.
+    /// - Returns: Bytes.
+    func decode(encodeMode: EncodeMode = .hex) -> [UInt8] {
+        switch encodeMode {
+        case .hex: return self.hexDecode()
+        case .base64: return self.base64Decode()
         }
-        return hexString
+    }
+
+    /// Decode hexadecimal string to bytes.
+    ///
+    /// - Returns: Decoded bytes.
+    func hexDecode() -> [UInt8] {
+        var start = startIndex
+        return (0...count/2).compactMap {  _ in
+            let end = index(start, offsetBy: 2, limitedBy: endIndex) ?? endIndex
+            defer { start = end }
+            return UInt8(String(self[start..<end]), radix: 16)
+        }
+    }
+
+    /// Decode base64 string to bytes.
+    ///
+    /// - Returns: Decoded bytes.
+    func base64Decode() -> [UInt8] {
+        let base64Data = Data(base64Encoded: self)
+        let decodeString = String(data: base64Data ?? Data(), encoding: String.Encoding.utf8) ?? ""
+        return [UInt8](decodeString.utf8)
     }
 
     /// Generate an appoint length string fill by zero.

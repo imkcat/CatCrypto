@@ -1,7 +1,7 @@
 #!/bin/bash
-
+rm -rf docs/
 jazzy -c \
--a ImKcat \
+-a Kcat \
 -u https://imkcat.com \
 -g https://github.com/ImKcat/CatCrypto \
 -r https://imkcat.github.io/CatCrypto/ \

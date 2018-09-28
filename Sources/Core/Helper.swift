@@ -22,47 +22,70 @@
 import Foundation
 
 /// Base result class for encrypt, decrypt, hash or verify.
-public class CatCryptoResult {
+public struct CatCryptoResult {
+
+    /// Raw object.
+    public var raw: Any?
+
+    /// Process to bool value.
+    ///
+    /// - Returns: Bool value.
+    public func boolValue() -> Bool {
+        if raw is Bool {
+            return (raw as? Bool)!
+        }
+        return false
+    }
+
+    /// Process to string value.
+    ///
+    /// - Returns: String value.
+    public func stringValue() -> String {
+        if raw is [UInt8] {
+            return String(bytes: raw as? [UInt8] ?? [], encoding: .utf8) ?? ""
+        }
+        return ""
+    }
+
+    /// Process to hexadecimal string value.
+    ///
+    /// - Returns: Hexadecimal string value.
+    public func hexStringValue() -> String {
+        if raw is [UInt8] {
+            return (raw as? [UInt8])?.encode(encodeMode: .hex) ?? ""
+        }
+        return ""
+    }
+
+    /// Process to base64 string value.
+    ///
+    /// - Returns: Base64 string value.
+    public func base64StringValue() -> String {
+        if raw is [UInt8] {
+            return (raw as? [UInt8])?.encode(encodeMode: .base64) ?? ""
+        }
+        return ""
+    }
 
     /// Error for result.
     public var error: CatCryptoError?
 
 }
 
-/// Hash result class, include a string value.
-public class CatCryptoHashResult: CatCryptoResult {
+extension CatCryptoResult {
 
-    /// Hashed value.
-    public var value: String?
+    init(raw: Any?) {
+        self.raw = raw
+    }
 
-}
-
-/// Verify result class, include a boolean value.
-public class CatCryptoVerifyResult: CatCryptoResult {
-
-    /// Verification result.
-    public var value: Bool = false
-
-}
-
-/// Encrypt result class, include a string value.
-public class CatCryptoEncryptResult: CatCryptoResult {
-
-    /// Encrypted value.
-    public var value: String?
-
-}
-
-/// Decrypt result class, include a string value.
-public class CatCryptoDecryptResult: CatCryptoResult {
-
-    /// Decrypted value.
-    public var value: String?
+    init(error: CatCryptoError?) {
+        self.error = error
+    }
 
 }
 
 /// Error for descript result.
-public class CatCryptoError: LocalizedError {
+public struct CatCryptoError: LocalizedError {
 
     /// Code number for error condition.
     public var errorCode: Int = 0
