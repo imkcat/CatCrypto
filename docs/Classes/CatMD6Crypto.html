@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CatMD6Crypto Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CatMD6Crypto" class="dashAnchor"></a>
+    <a title="CatMD6Crypto Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">CatCrypto Docs</a> (98% documented)</p>
+        <p class="header-right"><a href="https://github.com/ImKcat/CatCrypto"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fimkcat%2Egithub%2Eio%2FCatCrypto%2Fdocsets%2FCatCrypto%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">CatCrypto Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CatMD6Crypto Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CatArgon2Context.html">CatArgon2Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatArgon2Crypto.html">CatArgon2Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatCCHashingCrypto.html">CatCCHashingCrypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatMD2Crypto.html">CatMD2Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatMD4Crypto.html">CatMD4Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatMD5Crypto.html">CatMD5Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatMD6Context.html">CatMD6Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatMD6Crypto.html">CatMD6Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA1Crypto.html">CatSHA1Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Context.html">CatSHA2Context</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA2Crypto.html">CatSHA2Crypto</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CatSHA3Crypto.html">CatSHA3Crypto</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CatArgon2Mode.html">CatArgon2Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CatMD6HashLength.html">CatMD6HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CatSHA2HashLength.html">CatSHA2HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CatSHA3HashLength.html">CatSHA3HashLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EncodeMode.html">EncodeMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Contextual.html">Contextual</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Decryption.html">Decryption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Encryption.html">Encryption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hashing.html">Hashing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Verification.html">Verification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CatCryptoError.html">CatCryptoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CatCryptoResult.html">CatCryptoResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CatSHA3Context.html">CatSHA3Context</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CatMD6Crypto</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CatMD6Crypto</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Contextual.html">Contextual</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/Hashing.html">Hashing</a></span></code></pre>
+
+                </div>
+              </div>
+            <p><code>CatMD6Crypto</code> is the crypto for <a href="http://groups.csail.mit.edu/cis/md6/">MD6</a> function.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Contextual"></a>
+                <a name="//apple_ref/swift/Section/Contextual" class="dashAnchor"></a>
+                <a href="#/Contextual">
+                  <h3 class="section-name">Contextual</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto10ContextualP7ContextQa"></a>
+                    <a name="//apple_ref/swift/Alias/Context" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto10ContextualP7ContextQa">Context</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Context</span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatMD6Context.html">CatMD6Context</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto10ContextualP7context7ContextQzvp"></a>
+                    <a name="//apple_ref/swift/Property/context" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto10ContextualP7context7ContextQzvp">context</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Classes/CatMD6Context.html">CatMD6Context</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto10ContextualP7contextx7ContextQz_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto10ContextualP7contextx7ContextQz_tcfc">init(context:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Classes/CatMD6Crypto.html#/s:9CatCrypto10ContextualP7ContextQa">Context</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/CatMD6Context.html">CatMD6Context</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Hashing"></a>
+                <a name="//apple_ref/swift/Section/Hashing" class="dashAnchor"></a>
+                <a href="#/Hashing">
+                  <h3 class="section-name">Hashing</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto7HashingP4hash8passwordAA0aB6ResultVSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/hash(password:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto7HashingP4hash8passwordAA0aB6ResultVSS_tF">hash(password:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hash</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CatCryptoResult.html">CatCryptoResult</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://imkcat.com" target="_blank" rel="external">Kcat</a>. All rights reserved. (Last updated: 2018-09-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
