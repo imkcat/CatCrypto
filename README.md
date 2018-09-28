@@ -1,23 +1,23 @@
 <p align="center">
-	<img src="https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png" alt="Logo">
+  <img src="https://github.com/ImKcat/CatCrypto/raw/master/CatCrypto-Logo.png" alt="Logo">
 </p>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat" alt="Language">
-	<a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat" alt="Support Platform"></a>
-	<a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat" alt="License"></a>
+  <img src="https://img.shields.io/badge/Language-swift4-EF5138.svg?style=flat" alt="Language">
+  <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/p/CatCrypto.svg?style=flat" alt="Support Platform"></a>
+  <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/l/CatCrypto.svg?style=flat" alt="License"></a>
 </p>
 
 <p align="center">
-	<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-	<a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat" alt="CocoaPods Version"></a>
+  <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+  <a href="http://cocoapods.org/pods/CatCrypto"><img src="https://img.shields.io/cocoapods/v/CatCrypto.svg?style=flat" alt="CocoaPods Version"></a>
 </p>
 
 <p align="center">
-	<a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
-	<a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
-    	<a href="https://codecov.io/gh/ImKcat/CatCrypto"><img src="https://codecov.io/gh/ImKcat/CatCrypto/branch/master/graph/badge.svg" alt="Codecov"></a>
-	<a href="https://beerpay.io/ImKcat/CatCrypto"><img src="https://beerpay.io/ImKcat/CatCrypto/badge.svg?style=flat" alt="Beerpay"></a>
+  <a href="https://travis-ci.org/ImKcat/CatCrypto"><img src="http://img.shields.io/travis/ImKcat/CatCrypto.svg?style=flat" alt="Travis CI Status"></a>
+  <a href="https://codebeat.co/projects/github-com-imkcat-catcrypto-master"><img src="https://codebeat.co/badges/003d39ba-cbd6-4166-ab28-57630fc60f9f" alt="Codebeat"></a>
+      <a href="https://codecov.io/gh/ImKcat/CatCrypto"><img src="https://codecov.io/gh/ImKcat/CatCrypto/branch/master/graph/badge.svg" alt="Codecov"></a>
+  <a href="https://beerpay.io/ImKcat/CatCrypto"><img src="https://beerpay.io/ImKcat/CatCrypto/badge.svg?style=flat" alt="Beerpay"></a>
 </p>
 
 CatCrypto include a series of hashing and encryption functions and more functions in progress!
@@ -31,16 +31,16 @@ CatCrypto also contains Swift bindings of [Argon2](https://github.com/P-H-C/phc-
 - [Support Functions](#support-functions)
 - [Upcoming Functions](#upcoming-functions)
 - [Usage](#usage)
-	- [Context](#context)
-	- [Hashing](#hashing)
-	- [Verification](#verification)
+  - [Context](#context)
+  - [Hashing](#hashing)
+  - [Verification](#verification)
 - [Installation](#installation)
-	- [CocoaPods](#cocoapods)
-	- [Carthage](#carthage)
+  - [CocoaPods](#cocoapods)
+  - [Carthage](#carthage)
 - [Documentation](#documentation)
 - [Interacting](#interacting)
-	- [Need Help?](#need-help)
-		- [Contribute](#contribute)
+  - [Need Help](#need-help)
+  - [Contribute](#contribute)
 - [License](#license)
 
 ## Requirements
@@ -93,7 +93,7 @@ Simply hashing string with `MD6` function crypto:
 ```swift
 let md6Crypto = CatMD6Crypto()
 md6Crypto.context.hashLength = .bit512
-print(md6Crypto.hash(password: "CatCrypto").value!)
+print(md6Crypto.hash(password: "CatCrypto").hexStringValue())
 
 // 3ad3003383633c40281bb5185424ee56a5a1c6dfa3a0e7c3a9e381c58d253323e146feb3f04cb9ebcde47186e042ce63109b8d19f3ca760ea00c90654eb2b272
 ```
@@ -109,7 +109,7 @@ let hash = "$argon2i$v=19$m=4096,t=3,p=1$Q2F0Q3J5cHRv$Ad6gXMVLvZ3uQOeTi6nCmU4Ns2
 let argon2Crypto = CatArgon2Crypto()
 argon2Crypto.context.mode = .argon2i
 argon2Crypto.context.salt = "CatCrypto"
-print(argon2Crypto.verify(hash: hash, password: "CatCrypto").value)
+print(argon2Crypto.verify(hash: hash, password: "CatCrypto").boolValue())
 
 // true
 ```
@@ -144,7 +144,7 @@ github "ImKcat/CatCrypto"
 
 CatCrypto is always trying to support more functions and keep itself easy to use, please reading down below to interacting with CatCrypto.
 
-### Need Help?
+### Need Help
 
 - Reading [usage](https://github.com/ImKcat/CatCrypto#usage) section and [API Reference](https://imkcat.github.io/CatCrypto/)
 - Searched in [issues](https://github.com/ImKcat/CatCrypto/issues) to find duplicated or related issues
@@ -152,7 +152,7 @@ CatCrypto is always trying to support more functions and keep itself easy to use
 - Report bug? [Open a bug type issue](https://github.com/ImKcat/CatCrypto/issues/new)
 - Need new feature? [Open a feature type issue](https://github.com/ImKcat/CatCrypto/issues/new)
 
-#### Contribute
+### Contribute
 
 If you want to contribute with CatCrypto, please reading [Contribute Guidelines](https://github.com/ImKcat/CatCrypto/blob/master/CONTRIBUTING.md) at first.
 

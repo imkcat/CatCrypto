@@ -4,12 +4,10 @@
 - [ ] Feature
 - [ ] Question
 
-
 <!-- Use appoint type issue template down below -->
 
-
 <!-- Bug issue template -->
-<!-- 
+<!--
 
 ## Environment
 
@@ -21,9 +19,8 @@
 
 -->
 
-
 <!-- Feature issue template -->
-<!-- 
+<!--
 
 ## Feature priority
 
@@ -32,7 +29,6 @@
 - [ ] Low
 
 -->
-
 
 <!-- Question issue template -->
 <!--
@@ -43,7 +39,6 @@
 - [ ] Searched in [issues](https://github.com/ImKcat/CatCrypto/issues) to find duplicated or related issues
 
 -->
-
 
 ## Desciption
 

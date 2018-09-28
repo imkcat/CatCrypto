@@ -1,14 +1,14 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ## [0.2.3](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.3)
 
-### Added 
+### Added
 
 - Add `SHA-3` function crypto: `CatSHA3Crypto`
-
 
 ## [0.2.2.2](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.2.2)
 
@@ -17,13 +17,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Every context class base on struct
 - Reorganization file structure
 
-
 ## [0.2.2.1](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.2.1)
 
 ### Fixed
 
 - Fix SHA-2 hash length issue
-
 
 ## [0.2.2](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.2)
 
@@ -35,7 +33,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 - Optimize project file structure
 
-
 ## [0.2.1.2](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.1.2)
 
 ### Added
@@ -45,7 +42,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Optimize codes
-
 
 ## [0.2.1.1](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.1.1)
 
@@ -58,7 +54,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Rename `CatArgon2ContextMode` to `CatArgonMode`
 - Optimize codes
 
-
 ## [0.2.1](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.1)
 
 ### Changed
@@ -66,13 +61,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Split `CatMessageDigestCrypto` to single crypto such as: `CatMD2Crypto`
 - Optimize code
 
-
 ## [0.2.0](https://github.com/ImKcat/CatCrypto/releases/tag/0.2.0)
 
 ### Changed
 
 - Redesign code
-
 
 ## [0.1.5](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.5)
 
@@ -80,13 +73,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 - Add `MD6` function crypto: `CatMD6Crypto`
 
-
 ## [0.1.4](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.4)
 
 ### Added
 
 - Add Message-Digest function cryptos: `CatMD2Crypto`, `CatMD4Crypto` and `CatMD5Crypto`
-
 
 ## [0.1.3](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.3)
 
@@ -98,7 +89,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 - Rewrite with Swift type to interact C type
 
-
 ## [0.1.2](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.2)
 
 ### Fixed
@@ -106,13 +96,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Fix memory leak from `Argon2` hashing and verification
 - Fix build warnings
 
-
 ## [0.1.1](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.1)
 
 ### Added
 
 - Add more documents
-
 
 ## [0.1.0](https://github.com/ImKcat/CatCrypto/releases/tag/0.1.0)
 
