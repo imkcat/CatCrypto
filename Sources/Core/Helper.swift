@@ -42,7 +42,7 @@ public struct CatCryptoResult {
     /// - Returns: String value.
     public func stringValue() -> String {
         if raw is [UInt8] {
-            return String(bytes: raw as? [UInt8] ?? [], encoding: .utf8) ?? ""
+            return (String(bytes: raw as? [UInt8] ?? [], encoding: .utf8) ?? "").filter { $0 != "\0" }
         }
         return ""
     }
