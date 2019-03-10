@@ -209,13 +209,6 @@
 		C39EDD711FECF95C0081108F /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		C39EDD761FECF9D00081108F /* Argon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argon.swift; sourceTree = "<group>"; };
 		C39EDD7B1FECFB0B0081108F /* MessageDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDigest.swift; sourceTree = "<group>"; };
-		C3A12E961FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12E981FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12E9A1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12E9C1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12E9E1FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12EA01FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		C3A12EA21FE3A3D2007BA5FA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3B0F84C1FF6024300FB4DC8 /* SHATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHATests.swift; sourceTree = "<group>"; };
 		C3BDFE011FFE6C3100E060F6 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C3BDFE031FFE6C9400E060F6 /* SimpleFIPS202.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFIPS202.h; sourceTree = "<group>"; };
@@ -357,20 +350,6 @@
 			path = Argon2;
 			sourceTree = "<group>";
 		};
-		C358E7921FE2700600A352D0 /* CommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12E9B1FE3A3D2007BA5FA /* AppleTVOS */,
-				C3A12E951FE3A3D2007BA5FA /* AppleTVSimulator */,
-				C3A12E991FE3A3D2007BA5FA /* iPhoneOS */,
-				C3A12EA11FE3A3D2007BA5FA /* iPhoneSimulator */,
-				C3A12E9F1FE3A3D2007BA5FA /* MacOSX */,
-				C3A12E9D1FE3A3D2007BA5FA /* WatchOS */,
-				C3A12E971FE3A3D2007BA5FA /* WatchSimulator */,
-			);
-			path = CommonCrypto;
-			sourceTree = "<group>";
-		};
 		C36729151FF4970C005BE1A8 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,7 +378,6 @@
 			children = (
 				C3BDFE001FFE6BDB00E060F6 /* SHA3 */,
 				C356173F1FDD765D005316BF /* Argon2 */,
-				C358E7921FE2700600A352D0 /* CommonCrypto */,
 				C31E52E71FE90668004C1F12 /* MD6 */,
 			);
 			path = ModuleMaps;
@@ -414,62 +392,6 @@
 				C36729101FF496D4005BE1A8 /* Crypto.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		C3A12E951FE3A3D2007BA5FA /* AppleTVSimulator */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12E961FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = AppleTVSimulator;
-			sourceTree = "<group>";
-		};
-		C3A12E971FE3A3D2007BA5FA /* WatchSimulator */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12E981FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = WatchSimulator;
-			sourceTree = "<group>";
-		};
-		C3A12E991FE3A3D2007BA5FA /* iPhoneOS */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12E9A1FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = iPhoneOS;
-			sourceTree = "<group>";
-		};
-		C3A12E9B1FE3A3D2007BA5FA /* AppleTVOS */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12E9C1FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = AppleTVOS;
-			sourceTree = "<group>";
-		};
-		C3A12E9D1FE3A3D2007BA5FA /* WatchOS */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12E9E1FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = WatchOS;
-			sourceTree = "<group>";
-		};
-		C3A12E9F1FE3A3D2007BA5FA /* MacOSX */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12EA01FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = MacOSX;
-			sourceTree = "<group>";
-		};
-		C3A12EA11FE3A3D2007BA5FA /* iPhoneSimulator */ = {
-			isa = PBXGroup;
-			children = (
-				C3A12EA21FE3A3D2007BA5FA /* module.modulemap */,
-			);
-			path = iPhoneSimulator;
 			sourceTree = "<group>";
 		};
 		C3BDFE001FFE6BDB00E060F6 /* SHA3 */ = {
