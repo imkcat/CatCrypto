@@ -130,6 +130,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6097CDD62235D66500D7CEC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C35617041FDD74A5005316BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6097CDD12235D30E00D7CEC8;
+			remoteInfo = CommonCryptoModuleMap;
+		};
+		6097CDD82235D66C00D7CEC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C35617041FDD74A5005316BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6097CDD12235D30E00D7CEC8;
+			remoteInfo = CommonCryptoModuleMap;
+		};
+		6097CDDA2235D67100D7CEC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C35617041FDD74A5005316BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6097CDD12235D30E00D7CEC8;
+			remoteInfo = CommonCryptoModuleMap;
+		};
+		6097CDDC2235D67600D7CEC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C35617041FDD74A5005316BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6097CDD12235D30E00D7CEC8;
+			remoteInfo = CommonCryptoModuleMap;
+		};
 		C328B7981FF4DC4900943D75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C35617041FDD74A5005316BF /* Project object */;
@@ -533,6 +561,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6097CDD72235D66500D7CEC8 /* PBXTargetDependency */,
 			);
 			name = "CatCrypto-iOS";
 			productName = CatCrypto;
@@ -551,6 +580,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6097CDDB2235D67100D7CEC8 /* PBXTargetDependency */,
 			);
 			name = "CatCrypto-tvOS";
 			productName = "CatCrypto-tvOS";
@@ -569,6 +599,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6097CDDD2235D67600D7CEC8 /* PBXTargetDependency */,
 			);
 			name = "CatCrypto-watchOS";
 			productName = "CatCrypto-watchOS";
@@ -587,6 +618,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6097CDD92235D66C00D7CEC8 /* PBXTargetDependency */,
 			);
 			name = "CatCrypto-macOS";
 			productName = CatCrypto;
@@ -866,6 +898,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6097CDD72235D66500D7CEC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6097CDD12235D30E00D7CEC8 /* CommonCryptoModuleMap */;
+			targetProxy = 6097CDD62235D66500D7CEC8 /* PBXContainerItemProxy */;
+		};
+		6097CDD92235D66C00D7CEC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6097CDD12235D30E00D7CEC8 /* CommonCryptoModuleMap */;
+			targetProxy = 6097CDD82235D66C00D7CEC8 /* PBXContainerItemProxy */;
+		};
+		6097CDDB2235D67100D7CEC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6097CDD12235D30E00D7CEC8 /* CommonCryptoModuleMap */;
+			targetProxy = 6097CDDA2235D67100D7CEC8 /* PBXContainerItemProxy */;
+		};
+		6097CDDD2235D67600D7CEC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6097CDD12235D30E00D7CEC8 /* CommonCryptoModuleMap */;
+			targetProxy = 6097CDDC2235D67600D7CEC8 /* PBXContainerItemProxy */;
+		};
 		C328B7991FF4DC4900943D75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C330B4951FDE93AB005AEECC /* CatCrypto-iOS */;
@@ -879,7 +931,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx watchos watchsimulator appletvos appletvsimulator";
 			};
 			name = Debug;
 		};
@@ -888,7 +940,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx watchos watchsimulator appletvos appletvsimulator";
 			};
 			name = Release;
 		};
