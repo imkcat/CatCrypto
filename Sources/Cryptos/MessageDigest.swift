@@ -20,7 +20,7 @@
 //
 
 import Foundation
-import CommonCryptoFramework
+import CommonCrypto
 import MD6
 
 enum MD6ErrorCode: Int32, EnumDescription {

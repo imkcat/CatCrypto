@@ -20,7 +20,7 @@
 //
 
 import Foundation
-import CommonCryptoFramework
+import CommonCrypto
 import SHA3
 
 ///  `CatSHA1Crypto` is the crypto for
