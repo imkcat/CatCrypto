@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Encryption Protocol Reference</title>
+    <title>CatArgon2HashResultType Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/Encryption" class="dashAnchor"></a>
-    <a title="Encryption Protocol Reference"></a>
+    <a name="//apple_ref/swift/Enum/CatArgon2HashResultType" class="dashAnchor"></a>
+    <a title="CatArgon2HashResultType Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">CatCrypto Docs</a> (98% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">CatCrypto Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Encryption Protocol Reference
+        CatArgon2HashResultType Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -132,14 +132,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Encryption</h1>
+            <h1>CatArgon2HashResultType</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Encryption</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CatArgon2HashResultType</span></code></pre>
 
                 </div>
               </div>
-            <p><code>Encryption</code> protocol defines the interface about encryption.</p>
+            <p><code>CatArgon2HashResultType</code> has two options either returns raw hash or encoded hash which is default</p>
 
           </section>
           <section class="section task-group-section">
@@ -148,9 +148,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9CatCrypto10EncryptionP7encrypt8passwordAA0aB6ResultVSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/encrypt(password:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9CatCrypto10EncryptionP7encrypt8passwordAA0aB6ResultVSS_tF">encrypt(password:)</a>
+                    <a name="/s:9CatCrypto0A20Argon2HashResultTypeO7hashRawyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/hashRaw" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A20Argon2HashResultTypeO7hashRawyA2CmF">hashRaw</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,39 +158,43 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Encrypt password string with encryption function.</p>
+                        <p>Returns raw hash</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">encrypt</span><span class="p">(</span><span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CatCryptoResult.html">CatCryptoResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">hashRaw</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>password</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Password string for encrypt.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9CatCrypto0A20Argon2HashResultTypeO11hashEncodedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/hashEncoded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9CatCrypto0A20Argon2HashResultTypeO11hashEncodedyA2CmF">hashEncoded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns encoded hash</p>
+
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Return a result when encryption task finish.</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">hashEncoded</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
