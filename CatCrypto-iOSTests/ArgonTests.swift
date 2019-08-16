@@ -18,7 +18,16 @@ class ArgonTests: XCTestCase {
         argon2Crypto = CatArgon2Crypto()
     }
 
-    func testNormalHashing() {
+    func testNormalHashingRaw() {
+        argon2Crypto.context.hashResultType = .hashRaw
+        let password = "Hi CatCrypto!"
+        let result = argon2Crypto.hash(password: password)
+        XCTAssertNotNil(result.raw)
+        print(result.hexStringValue())
+    }
+
+    func testNormalHashingEncoded() {
+        argon2Crypto.context.hashResultType = .hashEncoded
         let password = "Hi CatCrypto!"
         let result = argon2Crypto.hash(password: password)
         XCTAssertNotNil(result.raw)
