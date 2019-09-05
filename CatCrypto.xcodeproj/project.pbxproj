@@ -47,6 +47,9 @@
 		C33EB1912320CF9C00988497 /* blake2.h in Headers */ = {isa = PBXBuildFile; fileRef = C33EB18C2320CF9C00988497 /* blake2.h */; };
 		C33EB1922320CF9C00988497 /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C33EB18D2320CF9C00988497 /* blake2b.c */; };
 		C33EB1932320CF9C00988497 /* blake2-impl.h in Headers */ = {isa = PBXBuildFile; fileRef = C33EB18E2320CF9C00988497 /* blake2-impl.h */; };
+		C33EB1952320D4C000988497 /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C33EB18D2320CF9C00988497 /* blake2b.c */; };
+		C33EB1962320D54700988497 /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C33EB18D2320CF9C00988497 /* blake2b.c */; };
+		C33EB1972320D54F00988497 /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C33EB18D2320CF9C00988497 /* blake2b.c */; };
 		C358E78F1FE2318C00A352D0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C358E78E1FE2318C00A352D0 /* LICENSE */; };
 		C367290C1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
 		C367290D1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
@@ -305,18 +308,6 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		C33EB1892320CF9C00988497 /* blake2 */ = {
-			isa = PBXGroup;
-			children = (
-				C33EB18A2320CF9C00988497 /* blamka-round-ref.h */,
-				C33EB18B2320CF9C00988497 /* blamka-round-opt.h */,
-				C33EB18C2320CF9C00988497 /* blake2.h */,
-				C33EB18D2320CF9C00988497 /* blake2b.c */,
-				C33EB18E2320CF9C00988497 /* blake2-impl.h */,
-			);
-			path = blake2;
-			sourceTree = "<group>";
-		};
 		C35617031FDD74A5005316BF = {
 			isa = PBXGroup;
 			children = (
@@ -341,7 +332,11 @@
 		C356173F1FDD765D005316BF /* Argon2 */ = {
 			isa = PBXGroup;
 			children = (
-				C33EB1892320CF9C00988497 /* blake2 */,
+				C33EB18A2320CF9C00988497 /* blamka-round-ref.h */,
+				C33EB18B2320CF9C00988497 /* blamka-round-opt.h */,
+				C33EB18C2320CF9C00988497 /* blake2.h */,
+				C33EB18D2320CF9C00988497 /* blake2b.c */,
+				C33EB18E2320CF9C00988497 /* blake2-impl.h */,
 				C356174B1FDD7C9A005316BF /* argon2.c */,
 				C35617411FDD765D005316BF /* argon2.h */,
 				C356175C1FDD7C9B005316BF /* core.c */,
@@ -708,8 +703,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C367290C1FF4920E005BE1A8 /* SHA.swift in Sources */,
+				C33EB1922320CF9C00988497 /* blake2b.c in Sources */,
 				C330B4C41FDE94E9005AEECC /* argon2.c in Sources */,
+				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
+				C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */,
+				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
+				C330B4D11FDE94E9005AEECC /* thread.c in Sources */,
+				C367290C1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C39EDD6D1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FC1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729111FF496D4005BE1A8 /* Crypto.swift in Sources */,
@@ -720,16 +720,11 @@
 				C3BDFE121FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C38A78F42003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
-				C33EB1922320CF9C00988497 /* blake2b.c in Sources */,
 				C39EDD681FECF6440081108F /* Hashing.swift in Sources */,
-				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
 				C39EDD7C1FECFB0B0081108F /* MessageDigest.swift in Sources */,
-				C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */,
 				C38A78F92003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2A1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BA1FF0F85600B69167 /* StringExtension.swift in Sources */,
-				C330B4CF1FDE94E9005AEECC /* ref.c in Sources */,
-				C330B4D11FDE94E9005AEECC /* thread.c in Sources */,
 				C31E53041FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3FD6D36200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
@@ -739,8 +734,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C367290E1FF4920E005BE1A8 /* SHA.swift in Sources */,
+				C33EB1962320D54700988497 /* blake2b.c in Sources */,
+				C3E2738C1FE42B010026655E /* argon2.c in Sources */,
+				C3E2738E1FE42B010026655E /* core.c in Sources */,
+				C3E2738F1FE42B010026655E /* encoding.c in Sources */,
 				C3E273901FE42B010026655E /* ref.c in Sources */,
+				C3E273911FE42B010026655E /* thread.c in Sources */,
+				C367290E1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C39EDD6F1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FE1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729131FF496D4005BE1A8 /* Crypto.swift in Sources */,
@@ -748,18 +748,14 @@
 				C3BDFE1A1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD791FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD741FECF95C0081108F /* Verification.swift in Sources */,
-				C3E2738C1FE42B010026655E /* argon2.c in Sources */,
 				C3BDFE141FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C38A78F62003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2C1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6A1FECF6440081108F /* Hashing.swift in Sources */,
-				C3E2738F1FE42B010026655E /* encoding.c in Sources */,
 				C39EDD7E1FECFB0B0081108F /* MessageDigest.swift in Sources */,
-				C3E2738E1FE42B010026655E /* core.c in Sources */,
 				C38A78FB2003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2C1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */,
-				C3E273911FE42B010026655E /* thread.c in Sources */,
 				C31E53061FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3FD6D38200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
@@ -769,8 +765,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C367290F1FF4920E005BE1A8 /* SHA.swift in Sources */,
+				C33EB1972320D54F00988497 /* blake2b.c in Sources */,
+				C3E273921FE42B020026655E /* argon2.c in Sources */,
+				C3E273941FE42B020026655E /* core.c in Sources */,
+				C3E273951FE42B020026655E /* encoding.c in Sources */,
 				C3E273961FE42B020026655E /* ref.c in Sources */,
+				C3E273971FE42B020026655E /* thread.c in Sources */,
+				C367290F1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C39EDD701FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FF1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729141FF496D4005BE1A8 /* Crypto.swift in Sources */,
@@ -778,18 +779,14 @@
 				C3BDFE1B1FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD7A1FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD751FECF95C0081108F /* Verification.swift in Sources */,
-				C3E273921FE42B020026655E /* argon2.c in Sources */,
 				C3BDFE151FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C38A78F72003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2D1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD6B1FECF6440081108F /* Hashing.swift in Sources */,
-				C3E273951FE42B020026655E /* encoding.c in Sources */,
 				C39EDD7F1FECFB0B0081108F /* MessageDigest.swift in Sources */,
-				C3E273941FE42B020026655E /* core.c in Sources */,
 				C38A78FC2003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2D1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BD1FF0F85600B69167 /* StringExtension.swift in Sources */,
-				C3E273971FE42B020026655E /* thread.c in Sources */,
 				C31E53071FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3FD6D39200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
@@ -799,8 +796,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C367290D1FF4920E005BE1A8 /* SHA.swift in Sources */,
+				C33EB1952320D4C000988497 /* blake2b.c in Sources */,
+				C3E273861FE42B000026655E /* argon2.c in Sources */,
+				C3E273881FE42B000026655E /* core.c in Sources */,
+				C3E273891FE42B000026655E /* encoding.c in Sources */,
 				C3E2738A1FE42B000026655E /* ref.c in Sources */,
+				C3E2738B1FE42B000026655E /* thread.c in Sources */,
+				C367290D1FF4920E005BE1A8 /* SHA.swift in Sources */,
 				C39EDD6E1FECF6F80081108F /* Helper.swift in Sources */,
 				C31E52FD1FE906B2004C1F12 /* md6_mode.c in Sources */,
 				C36729121FF496D4005BE1A8 /* Crypto.swift in Sources */,
@@ -808,18 +810,14 @@
 				C3BDFE191FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD781FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD731FECF95C0081108F /* Verification.swift in Sources */,
-				C3E273861FE42B000026655E /* argon2.c in Sources */,
 				C3BDFE131FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C38A78F52003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2B1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
 				C39EDD691FECF6440081108F /* Hashing.swift in Sources */,
-				C3E273891FE42B000026655E /* encoding.c in Sources */,
 				C39EDD7D1FECFB0B0081108F /* MessageDigest.swift in Sources */,
-				C3E273881FE42B000026655E /* core.c in Sources */,
 				C38A78FA2003C2260028D981 /* Decryption.swift in Sources */,
 				C3BDFE2B1FFE716000E060F6 /* KeccakP-1600-reference.c in Sources */,
 				C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */,
-				C3E2738B1FE42B000026655E /* thread.c in Sources */,
 				C31E53051FE906B2004C1F12 /* md6_compress.c in Sources */,
 				C3FD6D37200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
