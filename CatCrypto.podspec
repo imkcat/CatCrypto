@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CatCrypto'
-  s.version          = '0.4.0'
+  s.version          = '0.3.2'
   s.summary          = 'An easy way for hashing and encryption.'
  s.description      = <<-DESC
  CatCrypto include a series of hashing and encryption functions.

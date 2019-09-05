@@ -38,11 +38,15 @@
 		C328B79E1FF4DCC400943D75 /* MessageDigestCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328B79D1FF4DCC400943D75 /* MessageDigestCryptoTests.swift */; };
 		C330B4A81FDE93AC005AEECC /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C330B4C41FDE94E9005AEECC /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
-		C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
 		C330B4CB1FDE94E9005AEECC /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = C356175C1FDD7C9B005316BF /* core.c */; };
 		C330B4CD1FDE94E9005AEECC /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
 		C330B4CF1FDE94E9005AEECC /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
 		C330B4D11FDE94E9005AEECC /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
+		C33EB18F2320CF9C00988497 /* blamka-round-ref.h in Headers */ = {isa = PBXBuildFile; fileRef = C33EB18A2320CF9C00988497 /* blamka-round-ref.h */; };
+		C33EB1902320CF9C00988497 /* blamka-round-opt.h in Headers */ = {isa = PBXBuildFile; fileRef = C33EB18B2320CF9C00988497 /* blamka-round-opt.h */; };
+		C33EB1912320CF9C00988497 /* blake2.h in Headers */ = {isa = PBXBuildFile; fileRef = C33EB18C2320CF9C00988497 /* blake2.h */; };
+		C33EB1922320CF9C00988497 /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C33EB18D2320CF9C00988497 /* blake2b.c */; };
+		C33EB1932320CF9C00988497 /* blake2-impl.h in Headers */ = {isa = PBXBuildFile; fileRef = C33EB18E2320CF9C00988497 /* blake2-impl.h */; };
 		C358E78F1FE2318C00A352D0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C358E78E1FE2318C00A352D0 /* LICENSE */; };
 		C367290C1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
 		C367290D1FF4920E005BE1A8 /* SHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C367290B1FF4920E005BE1A8 /* SHA.swift */; };
@@ -106,19 +110,16 @@
 		C3DF7A311FF73BB4007BDC59 /* ArgonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF7A301FF73BB4007BDC59 /* ArgonTests.swift */; };
 		C3E273851FE4267D0026655E /* CatCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C330B4981FDE93AC005AEECC /* CatCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3E273861FE42B000026655E /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
-		C3E273871FE42B000026655E /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
 		C3E273881FE42B000026655E /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = C356175C1FDD7C9B005316BF /* core.c */; };
 		C3E273891FE42B000026655E /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
 		C3E2738A1FE42B000026655E /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
 		C3E2738B1FE42B000026655E /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
 		C3E2738C1FE42B010026655E /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
-		C3E2738D1FE42B010026655E /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
 		C3E2738E1FE42B010026655E /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = C356175C1FDD7C9B005316BF /* core.c */; };
 		C3E2738F1FE42B010026655E /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
 		C3E273901FE42B010026655E /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
 		C3E273911FE42B010026655E /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176B1FDD7E44005316BF /* thread.c */; };
 		C3E273921FE42B020026655E /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = C356174B1FDD7C9A005316BF /* argon2.c */; };
-		C3E273931FE42B020026655E /* blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617551FDD7C9B005316BF /* blake2b.c */; };
 		C3E273941FE42B020026655E /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = C356175C1FDD7C9B005316BF /* core.c */; };
 		C3E273951FE42B020026655E /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = C35617501FDD7C9B005316BF /* encoding.c */; };
 		C3E273961FE42B020026655E /* ref.c in Sources */ = {isa = PBXBuildFile; fileRef = C356176E1FDD7E5A005316BF /* ref.c */; };
@@ -180,22 +181,21 @@
 		C330B4961FDE93AB005AEECC /* CatCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CatCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C330B4981FDE93AC005AEECC /* CatCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatCrypto.h; sourceTree = "<group>"; };
 		C330B4991FDE93AC005AEECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33EB18A2320CF9C00988497 /* blamka-round-ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "blamka-round-ref.h"; sourceTree = "<group>"; };
+		C33EB18B2320CF9C00988497 /* blamka-round-opt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "blamka-round-opt.h"; sourceTree = "<group>"; };
+		C33EB18C2320CF9C00988497 /* blake2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2.h; sourceTree = "<group>"; };
+		C33EB18D2320CF9C00988497 /* blake2b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blake2b.c; sourceTree = "<group>"; };
+		C33EB18E2320CF9C00988497 /* blake2-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "blake2-impl.h"; sourceTree = "<group>"; };
 		C35617411FDD765D005316BF /* argon2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = argon2.h; sourceTree = "<group>"; };
 		C35617421FDD765D005316BF /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C356174B1FDD7C9A005316BF /* argon2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = argon2.c; sourceTree = "<group>"; };
 		C356174D1FDD7C9A005316BF /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
 		C35617501FDD7C9B005316BF /* encoding.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = encoding.c; sourceTree = "<group>"; };
-		C35617521FDD7C9B005316BF /* blamka-round-ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "blamka-round-ref.h"; sourceTree = "<group>"; };
-		C35617531FDD7C9B005316BF /* blamka-round-opt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "blamka-round-opt.h"; sourceTree = "<group>"; };
-		C35617541FDD7C9B005316BF /* blake2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blake2.h; sourceTree = "<group>"; };
-		C35617551FDD7C9B005316BF /* blake2b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blake2b.c; sourceTree = "<group>"; };
-		C35617561FDD7C9B005316BF /* blake2-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "blake2-impl.h"; sourceTree = "<group>"; };
 		C356175C1FDD7C9B005316BF /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core.c; sourceTree = "<group>"; };
 		C356175D1FDD7C9B005316BF /* encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encoding.h; sourceTree = "<group>"; };
 		C356176B1FDD7E44005316BF /* thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread.c; sourceTree = "<group>"; };
 		C356176C1FDD7E44005316BF /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
 		C356176E1FDD7E5A005316BF /* ref.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ref.c; sourceTree = "<group>"; };
-		C356176F1FDD7E5B005316BF /* ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ref.h; sourceTree = "<group>"; };
 		C358E78E1FE2318C00A352D0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C367290B1FF4920E005BE1A8 /* SHA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA.swift; sourceTree = "<group>"; };
 		C36729101FF496D4005BE1A8 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
@@ -305,6 +305,18 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		C33EB1892320CF9C00988497 /* blake2 */ = {
+			isa = PBXGroup;
+			children = (
+				C33EB18A2320CF9C00988497 /* blamka-round-ref.h */,
+				C33EB18B2320CF9C00988497 /* blamka-round-opt.h */,
+				C33EB18C2320CF9C00988497 /* blake2.h */,
+				C33EB18D2320CF9C00988497 /* blake2b.c */,
+				C33EB18E2320CF9C00988497 /* blake2-impl.h */,
+			);
+			path = blake2;
+			sourceTree = "<group>";
+		};
 		C35617031FDD74A5005316BF = {
 			isa = PBXGroup;
 			children = (
@@ -329,19 +341,14 @@
 		C356173F1FDD765D005316BF /* Argon2 */ = {
 			isa = PBXGroup;
 			children = (
+				C33EB1892320CF9C00988497 /* blake2 */,
 				C356174B1FDD7C9A005316BF /* argon2.c */,
 				C35617411FDD765D005316BF /* argon2.h */,
-				C35617521FDD7C9B005316BF /* blamka-round-ref.h */,
-				C35617531FDD7C9B005316BF /* blamka-round-opt.h */,
-				C35617541FDD7C9B005316BF /* blake2.h */,
-				C35617551FDD7C9B005316BF /* blake2b.c */,
-				C35617561FDD7C9B005316BF /* blake2-impl.h */,
 				C356175C1FDD7C9B005316BF /* core.c */,
 				C356174D1FDD7C9A005316BF /* core.h */,
 				C35617501FDD7C9B005316BF /* encoding.c */,
 				C356175D1FDD7C9B005316BF /* encoding.h */,
 				C356176E1FDD7E5A005316BF /* ref.c */,
-				C356176F1FDD7E5B005316BF /* ref.h */,
 				C356176B1FDD7E44005316BF /* thread.c */,
 				C356176C1FDD7E44005316BF /* thread.h */,
 				C35617421FDD765D005316BF /* module.modulemap */,
@@ -422,6 +429,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C330B4A81FDE93AC005AEECC /* CatCrypto.h in Headers */,
+				C33EB18F2320CF9C00988497 /* blamka-round-ref.h in Headers */,
+				C33EB1902320CF9C00988497 /* blamka-round-opt.h in Headers */,
+				C33EB1912320CF9C00988497 /* blake2.h in Headers */,
+				C33EB1932320CF9C00988497 /* blake2-impl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,10 +717,10 @@
 				C3BDFE181FFE6D6300E060F6 /* KeccakSpongeWidth1600.c in Sources */,
 				C39EDD771FECF9D00081108F /* Argon.swift in Sources */,
 				C39EDD721FECF95C0081108F /* Verification.swift in Sources */,
-				C330B4C91FDE94E9005AEECC /* blake2b.c in Sources */,
 				C3BDFE121FFE6C9400E060F6 /* SimpleFIPS202.c in Sources */,
 				C38A78F42003C01C0028D981 /* Encryption.swift in Sources */,
 				C3D6DD2A1FF39FFE0005C3D1 /* Contextual.swift in Sources */,
+				C33EB1922320CF9C00988497 /* blake2b.c in Sources */,
 				C39EDD681FECF6440081108F /* Hashing.swift in Sources */,
 				C330B4CB1FDE94E9005AEECC /* core.c in Sources */,
 				C39EDD7C1FECFB0B0081108F /* MessageDigest.swift in Sources */,
@@ -750,7 +761,6 @@
 				C393A5BC1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273911FE42B010026655E /* thread.c in Sources */,
 				C31E53061FE906B2004C1F12 /* md6_compress.c in Sources */,
-				C3E2738D1FE42B010026655E /* blake2b.c in Sources */,
 				C3FD6D38200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,7 +791,6 @@
 				C393A5BD1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E273971FE42B020026655E /* thread.c in Sources */,
 				C31E53071FE906B2004C1F12 /* md6_compress.c in Sources */,
-				C3E273931FE42B020026655E /* blake2b.c in Sources */,
 				C3FD6D39200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -812,7 +821,6 @@
 				C393A5BB1FF0F85600B69167 /* StringExtension.swift in Sources */,
 				C3E2738B1FE42B000026655E /* thread.c in Sources */,
 				C31E53051FE906B2004C1F12 /* md6_compress.c in Sources */,
-				C3E273871FE42B000026655E /* blake2b.c in Sources */,
 				C3FD6D37200368BC001394CF /* EnumDescription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

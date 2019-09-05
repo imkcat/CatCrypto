@@ -4,7 +4,7 @@
  * Copyright 2015
  * Daniel Dinu, Dmitry Khovratovich, Jean-Philippe Aumasson, and Samuel Neves
  *
- * You may use this work under the terms of a Creative Commons CC0 1.0 
+ * You may use this work under the terms of a Creative Commons CC0 1.0
  * License/Waiver or the Apache Public License 2.0, at your option. The terms of
  * these licenses can be found at:
  *
@@ -25,15 +25,17 @@
 #endif
 #define VC_GE_2005(version) (version >= 1400)
 
-#include <inttypes.h>
+/* for explicit_bzero() on glibc */
+#define _DEFAULT_SOURCE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #include "core.h"
 #include "thread.h"
-#include "blake2.h"
-#include "blake2-impl.h"
+#include "blake2/blake2.h"
+#include "blake2/blake2-impl.h"
 
 #ifdef GENKAT
 #include "genkat.h"
@@ -121,12 +123,20 @@ void free_memory(const argon2_context *context, uint8_t *memory,
     }
 }
 
+#if defined(__OpenBSD__)
+#define HAVE_EXPLICIT_BZERO 1
+#elif defined(__GLIBC__) && defined(__GLIBC_PREREQ)
+#if __GLIBC_PREREQ(2,25)
+#define HAVE_EXPLICIT_BZERO 1
+#endif
+#endif
+
 void NOT_OPTIMIZED secure_wipe_memory(void *v, size_t n) {
 #if defined(_MSC_VER) && VC_GE_2005(_MSC_VER)
     SecureZeroMemory(v, n);
 #elif defined memset_s
     memset_s(v, n, 0, n);
-#elif defined(__OpenBSD__)
+#elif defined(HAVE_EXPLICIT_BZERO)
     explicit_bzero(v, n);
 #else
     static void *(*const volatile memset_sec)(void *, int, size_t) = &memset;
@@ -246,6 +256,26 @@ uint32_t index_alpha(const argon2_instance_t *instance,
     return absolute_position;
 }
 
+/* Single-threaded version for p=1 case */
+static int fill_memory_blocks_st(argon2_instance_t *instance) {
+    uint32_t r, s, l;
+
+    for (r = 0; r < instance->passes; ++r) {
+        for (s = 0; s < ARGON2_SYNC_POINTS; ++s) {
+            for (l = 0; l < instance->lanes; ++l) {
+                argon2_position_t position = {r, l, (uint8_t)s, 0};
+                fill_segment(instance, position);
+            }
+        }
+#ifdef GENKAT
+        internal_kat(instance, r); /* Print all memory blocks */
+#endif
+    }
+    return ARGON2_OK;
+}
+
+#if !defined(ARGON2_NO_THREADS)
+
 #ifdef _WIN32
 static unsigned __stdcall fill_segment_thr(void *thread_data)
 #else
@@ -258,16 +288,12 @@ static void *fill_segment_thr(void *thread_data)
     return 0;
 }
 
-int fill_memory_blocks(argon2_instance_t *instance) {
+/* Multi-threaded version for p > 1 case */
+static int fill_memory_blocks_mt(argon2_instance_t *instance) {
     uint32_t r, s;
     argon2_thread_handle_t *thread = NULL;
     argon2_thread_data *thr_data = NULL;
     int rc = ARGON2_OK;
-
-    if (instance == NULL || instance->lanes == 0) {
-        rc = ARGON2_THREAD_FAIL;
-        goto fail;
-    }
 
     /* 1. Allocating space for threads */
     thread = calloc(instance->lanes, sizeof(argon2_thread_handle_t));
@@ -284,7 +310,7 @@ int fill_memory_blocks(argon2_instance_t *instance) {
 
     for (r = 0; r < instance->passes; ++r) {
         for (s = 0; s < ARGON2_SYNC_POINTS; ++s) {
-            uint32_t l;
+            uint32_t l, ll;
 
             /* 2. Calling threads */
             for (l = 0; l < instance->lanes; ++l) {
@@ -309,6 +335,9 @@ int fill_memory_blocks(argon2_instance_t *instance) {
                        sizeof(argon2_position_t));
                 if (argon2_thread_create(&thread[l], &fill_segment_thr,
                                          (void *)&thr_data[l])) {
+                    /* Wait for already running threads */
+                    for (ll = 0; ll < l; ++ll)
+                        argon2_thread_join(thread[ll]);
                     rc = ARGON2_THREAD_FAIL;
                     goto fail;
                 }
@@ -340,6 +369,20 @@ fail:
         free(thr_data);
     }
     return rc;
+}
+
+#endif /* ARGON2_NO_THREADS */
+
+int fill_memory_blocks(argon2_instance_t *instance) {
+	if (instance == NULL || instance->lanes == 0) {
+	    return ARGON2_INCORRECT_PARAMETER;
+    }
+#if defined(ARGON2_NO_THREADS)
+    return fill_memory_blocks_st(instance);
+#else
+    return instance->threads == 1 ?
+			fill_memory_blocks_st(instance) : fill_memory_blocks_mt(instance);
+#endif
 }
 
 int validate_inputs(const argon2_context *context) {
@@ -471,8 +514,8 @@ int validate_inputs(const argon2_context *context) {
 
 void fill_first_blocks(uint8_t *blockhash, const argon2_instance_t *instance) {
     uint32_t l;
-    /* Make the first and second block in each lane as G(H0||i||0) or
-       G(H0||i||1) */
+    /* Make the first and second block in each lane as G(H0||0||i) or
+       G(H0||1||i) */
     uint8_t blockhash_bytes[ARGON2_BLOCK_SIZE];
     for (l = 0; l < instance->lanes; ++l) {
 
