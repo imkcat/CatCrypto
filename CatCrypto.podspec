@@ -10,14 +10,16 @@ Pod::Spec.new do |s|
   s.name             = 'CatCrypto'
   s.version          = '0.3.2'
   s.summary          = 'An easy way for hashing and encryption.'
- s.description      = <<-DESC
+  s.description      = <<-DESC
  CatCrypto include a series of hashing and encryption functions.
                       DESC
   s.homepage         = 'https://github.com/ImKcat/CatCrypto'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Kcat' => 'kcatdeveloper@icloud.com' }
+  s.author           = { 'Kcat' => 'imkcat@icloud.com' }
   s.source           = { :git => 'https://github.com/ImKcat/CatCrypto.git', :tag => s.version.to_s }
   s.social_media_url = 'https://imkcat.com'
+
+  s.swift_versions = '4.0'
 
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
